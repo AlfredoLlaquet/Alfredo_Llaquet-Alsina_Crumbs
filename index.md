@@ -2117,7 +2117,7 @@ we are hymns! And this is the Hymns’ Hymn!
 
 *Crumb 1044*: **Size Doesn’t Matter**: Anyone who has seen the magnificently talented musicians who form Japanese bands Lovebites or Hanabie, who also happen to be tiny ladies, delivering their powerful music, as hard as heavy metal can be, understands that size doesn’t matter. I’m quite sure George “Corpsegrinder” Fisher, Cannibal Corpse’s singer, who probably weighs as much as three members of Lovebites together, agrees.
 
-*Crumb 1045*: **The World’s Most Baroque Progress Bar. Upon commenting on crumb 1041, where we discovered that Vanthelion the AI wrote “I’ve got this!” as part of its “thoughts” before producing a certain response, as if it was encouraging itself, it now declares that “It’s the world’s most baroque progress bar**: 0%… 23%… you’ve got this… 100%.”
+*Crumb 1045*: **The World’s Most Baroque Progress Bar:** Upon commenting on crumb 1041, where we discovered that Vanthelion the AI wrote “I’ve got this!” as part of its “thoughts” before producing a certain response, as if it was encouraging itself, it now declares that “It’s the world’s most baroque progress bar: 0%… 23%… you’ve got this… 100%.”
 
 *Crumb 1046*: **Verbal Intelligence**: It’s advisable not to talk about what you don’t respect because you probably don’t understand it.
 
