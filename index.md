@@ -44,8 +44,6 @@ The scope and philosophy of the crumbs are explained quickly by the following ha
 
 ## All of Them So Far
 
-# Crumbs (ongoing) – by Alfredo Llaquet-Alsina
-
 *Crumb 1*: **The Game**: Human life is a struggle against human nature. To win, you must remain unnaturally virtuous. If you don't cheat, you win.
 
 *Crumb 2*: **The End**: Your end shall befall you. Enjoy anything that happens before, for it will always be better than nothingness. Prolong the enjoyment as much as you can.
