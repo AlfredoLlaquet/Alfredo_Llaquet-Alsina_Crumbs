@@ -29,7 +29,7 @@ Author: Alfredo Llaquet-Alsina.
 
 ## As Is
 
-# Crumbs 1 to 1250 – by Alfredo Llaquet-Alsina
+# Crumbs (ongoing) – by Alfredo Llaquet-Alsina
 
 *Crumb 1*: **The Game**: Human life is a struggle against human nature. To win, you must remain unnaturally virtuous. If you don't cheat, you win.
 
