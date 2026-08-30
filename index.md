@@ -22,7 +22,7 @@ Author: Alfredo Llaquet-Alsina.
 - [Crumbs Volume III](Crumbs501-750.pdf)
 - [Crumbs Volume IV](Crumbs751-1000.pdf)
 - [Crumbs Volume V](Crumbs1001-1250.pdf)
-- [Crumbs Volume VI](Crumbs1250-1500.pdf)
+- [Crumbs Volume VI](Crumbs1251-1500.pdf)
 - [Crumbs Volume VII](Crumbs1501-1750.pdf)
 - [Crumbs Volume VIII](Crumbs1751-2000.pdf)
 
