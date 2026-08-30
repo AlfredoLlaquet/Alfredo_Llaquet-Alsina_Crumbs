@@ -28,7 +28,7 @@ Author: Alfredo Llaquet-Alsina.
 
 ## What Are the Crumbs?
 
-The scope and philosophy of the crumbs explained quickly by a handful of them.
+The scope and philosophy of the crumbs are explained quickly by the following handful of them.
 
 *Crumb 1545*: **This Is Unix-lit**: My crumbs take the fundamental principle of the Unix OS (a collection of small programs, each devised to do one task and do it well) into literature: a collection of small literary artifacts, each conceived to convey one idea and convey it well.
 
