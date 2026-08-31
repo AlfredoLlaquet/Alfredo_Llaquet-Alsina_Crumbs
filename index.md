@@ -17,7 +17,7 @@ Author: Alfredo Llaquet-Alsina.
 
 ## In a single text file
 
-- [Crumbs.txt (ongoing)](Crumbs.txt)
+- [Crumbs.txt (ongoing)](https://raw.githubusercontent.com/AlfredoLlaquet/Alfredo_Llaquet-Alsina_Crumbs/refs/heads/main/Crumbs.txt)
 
 ## In PDF format
 
