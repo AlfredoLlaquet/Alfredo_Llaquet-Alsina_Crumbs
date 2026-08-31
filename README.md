@@ -32,7 +32,7 @@ The scope and philosophy of the crumbs are explained quickly by the following ha
 
 ## In a single text file
 
-- [Crumbs.txt (ongoing)](Crumbs.txt)
+- [Crumbs.txt (ongoing)](https://raw.githubusercontent.com/AlfredoLlaquet/Alfredo_Llaquet-Alsina_Crumbs/refs/heads/main/Crumbs.txt)
 
 ## In PDF format
 
