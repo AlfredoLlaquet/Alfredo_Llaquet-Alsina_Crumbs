@@ -26,6 +26,21 @@ The scope and philosophy of the crumbs are explained quickly by the following ha
 
 *Crumb 2075*: **Apocryphal Crumbs**: In the future, many apocryphal crumbs will be written for several reasons, one of them being the intention of some people to assert the relevance of a certain person by falsely claiming their appearance in the crumbs. Fortunately, they have a unique authentic source: the UTF-8 text file Crumbs.txt stored in the Internet Archive by user AlfredoLlaquet.
 
+## In a single text file
+
+- [Crumbs.txt (ongoing)](Crumbs.txt)
+
+## In PDF format
+
+- [Crumbs Volume I](Crumbs1-250.pdf)
+- [Crumbs Volume II](Crumbs251-500.pdf)
+- [Crumbs Volume III](Crumbs501-750.pdf)
+- [Crumbs Volume IV](Crumbs751-1000.pdf)
+- [Crumbs Volume V](Crumbs1001-1250.pdf)
+- [Crumbs Volume VI](Crumbs1251-1500.pdf)
+- [Crumbs Volume VII](Crumbs1501-1750.pdf)
+- [Crumbs Volume VIII](Crumbs1751-2000.pdf)
+
 ## All the Crumbs So Far
 
 *Crumb 1*: **The Game**: Human life is a struggle against human nature. To win, you must remain unnaturally virtuous. If you don't cheat, you win.
