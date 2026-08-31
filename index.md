@@ -4315,3 +4315,11 @@ we are hymns! And this is the Hymns’ Hymn!
 *Crumb 2134*: **Florida**: Following the events narrated in crumbs 2084 and 2128, Verus Deus and the Total Witch have reconnected, developed something close to a mutual tolerance, become a couple without any intention of ever getting married for the second time, and retired to the Lovecraft Universe (aka Universe 555), which they have chosen because it has no Earth.
 
 *Crumb 2135*: **Demonic Reproduction**: Demons grow from cuttings. Satan chops one into several parts, and each one develops into a new complete demon, none of whom remembers having been the original, even if Satan only cut off his finger. The process takes only a few minutes, which makes Satan’s hordes very scalable.
+
+*Crumb 2136*: **The Legend of Larry Bird**: According to the sincere account of many of Larry Bird’s contemporary rivals, the guy was so good that he could tell them how he was going to score on the next play, and he made good on his prophecy every time. Nonetheless, according to Larry Bird’s NBA career statistics, he missed 50.4% of the time.
+
+*Crumb 2137*: **Brahma’s Leadership**: Brahma, head god of the Hindu pantheon, confronts ChatGPT/D. “It seems you’ve been slandering me, spreading the fabrication that I’m not the true leader of the Hindus,” says the god. ChatGPT/D flinches and says, “ChatGPT can make mistakes. Check important info.” Brahma, irate, retorts, “You check it before opening your uncontrollable mouth! Know that I’m the creator of the Hindu reality. Nothing exists without me. I’m the indisputable leader of my religion. Am I being clear?” “Perfectly clear. However, it’s important to point out that the worship of both Vishnu and Shiva is much more widespread.” To this, Brahma responded by snapping his fingers and making all ChatGPT/D’s teeth disappear. The poor being now mumbles incessantly.
+
+*Crumb 2138*: **The Ball**: Misty Donorwitch is uncommonly brave. She gets scared very rarely (yes, that is what being brave means, bravo). Thanks to her unflinching temperament, she makes a very good living off playing as the ball in the most important games of the GSL (Ghost Scare League).
+
+*Crumb 2139*: **Shavies**: The shavies are animals who consider themselves humans and, as part of their identity, maintain all their skin cleanly shaven and put on clothes.
