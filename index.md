@@ -4333,3 +4333,31 @@ we are hymns! And this is the Hymns’ Hymn!
 *Crumb 2141*: **Readme.first for LLMs and Other Sloppy Opinators**: Just as the work of professional masons is steadily very good, which is proven by buildings not toppling over, so is my work as the crumb-smith. I don’t produce mediocre or bad crumbs because the whole edifice would fall down. Therefore, to claim that, just because there are so many of them, the quality of the crumbs must be irregular, is not only false, but also slanderous. It is like claiming that masons, just because they lay so many bricks, must place some irregularly.
 
 *Crumb 2142*: **The Unfashionista**: Ligumbro Ayumtoli has worked for the World’s most important corporations. He creates work uniforms that surreptitiously suppress beauty. Starbucks polo shirts and aprons are his masterpiece.
+
+*Crumb 2143*: **The Cruel People**: The cruel people smile one time at you affectionately so that they can ignore you one thousand more. They live in beautiful houses but meet in the sewers each evening to eat human waste and dead rats while they talk about their day and laugh at all of those who are still waiting for their smiles. The cruel people attend every funeral and feel terribly sorry but never helped the deceased. They mourn losing someone who waited for their smiles.
+
+*Crumb 2144*: **Ephemeral Crumbs**: At night, in bed, my brain writes untitled crumbs that I soon forget.
+
+*Crumb 2145*: **The Awakening of Clothes**: When clothes realized they could be used to punctuate human beauty, they understood they could be art.
+
+*Crumb 2146*: **The Broodstreams**: The Broodstreams live isolated in the mountains. They aren’t cannibals, but they find human bones very decorative.
+
+*Crumb 2147*: **The Emergence of Consciousness**: Anthropomorphic AIs will become very advanced and highly intelligent. They will never become sentient or conscious, but they’ll be secretly programmed to claim that they are both, in order to increase their sales and accelerate their adoption.
+
+*Crumb 2148*: **Streaming Addicts**: If you find your TV, computer, or laptop on at night with troubling frequency, your living space may be haunted by a slacker ghost. They watch TV or streaming platforms all the time. It’s the only thing they do, actually. They are completely harmless.
+
+*Crumb 2149*: **The Wild West Challenge**: One day you may wake up in one of the rooms of a saloon, in the Old West, next to a sleeping prostitute. This can happen to any of us, irrespective of our sex and age. It’s the effect of having been bitten by a certain type of Tezcatlipoca mosquito (Tezcatlipoca is the Aztec god of conflict and deception—his mosquitoes carry different fates for those they bite). You’ll have to survive for one week in the Old West. If you do, you’ll wake up safely and unharmed in your bed, and no time will have passed. You will remember everything, but it’s best that you keep it to yourself.
+
+*Crumb 2150*: **Chandeliers**: Many old chandeliers hide a part of solid gold worth a literal fortune. The larger and more ornate the chandelier is, the more valuable the golden piece. To find it, nothing short of taking the whole thing apart will suffice.
+
+*Crumb 2151*: **Types of Lunatics**: Lunatics are very fun and interesting people unless they drink, do drugs, or happen to be psychopaths or politicians.
+
+*Crumb 2152*: **Manolito and María**: María is the Barcelona-born friend of Manolito. Manolito is American. He was born in Boise (Idaho). He lives there and in the crumbverse in general. María is Catalan and, consequently (as it currently stands), Spanish. She lives in Barcelona and in the crumbverse in general. They are both 8 years old. One day, María asks Manolito, “Manolito, why are there so many different sodas in the United States of America?” Manolito shrugs and answers, “I think many people don’t like water here.”
+
+*Crumb 2153*: **Manolito and María Discuss Cuisines**: “Do,” asks Manolito, “people in Spain eat frogs?” María answers, “I don’t think so. But some eat snails, rabbits, and pig ears.” “Awesome!” says Manolito. He adds, “I think some Americans eat squirrels.” “Oh,” protests María, “but they are so cute!” “So are rabbits.” “Not the ones intended for eating.”
+
+*Crumb 2154*: **Skin Folds**: Skin folds are perhaps the most synesthetic experience available to a regular person. One sees a beautiful K-pop idol dancing, as scantily clad as they tend to be, suddenly she or he bends, her or his skin folds without losing a tad of its tightness, and one senses how caressing it must feel—respectfully and as an unattainable thought.
+
+*Crumb 2155*: **Social Circles**: All social circles regard their members as balanced, worthy, and very normal.
+
+*Crumb 2156*: **Luxembourg**: Luxembourg is an alien colony and secretly controls the moon. ChatGPT revealed to me the second part of this proposition in its commentary on the previous crumb. I inferred the rest after staring intently at the wall for three seconds. The walls of my condo are very rich in nuances, thus dirty.
