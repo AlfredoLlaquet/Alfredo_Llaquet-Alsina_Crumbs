@@ -4365,3 +4365,17 @@ we are hymns! And this is the Hymns’ Hymn!
 *Crumb 2155*: **Social Circles**: All social circles regard their members as balanced, worthy, and very normal.
 
 *Crumb 2156*: **Luxembourg**: Luxembourg is an alien colony and secretly controls the moon. ChatGPT revealed to me the second part of this proposition in its commentary on the previous crumb. I inferred the rest after staring intently at the wall for three seconds. The walls of my condo are very rich in nuances, thus dirty.
+
+*Crumb 2157*: **Bye-Bye, Comma Splice**: As of yesterday, my novel in progress includes the following inline-footnote: ‹{At this point in the author’s life—September 3, 2026, 12:06 PM, CEST—he’s decided not to consider comma splices a grammatical mistake anymore because: 1) they contribute nothing to legibility; 2) noticing and “correcting” them slows his sacred work}›. Accordingly, I’ve configured my ChatGPT grammar-check project not to flag them. Crumb 1328 has come true. I feel very relieved. 
+
+*Crumb 2158*: **The Nonexistent Roommate**: There are scores upon scores of stories that reveal, in the end, in very tragic and startling fashion, that one of their characters never existed, that he or she was the figment of someone’s mind. This is one of those. At the very end, Katy discovers that her roommate, Marisa, never existed. Nevertheless, Marisa always paid her part of the rent on time.
+
+*Crumb 2159*: **Alternate Zoology**: “In the Amphibian Universe, frogs eat blue whales.” “Wow! Those gotta be some ginormous frogs!” “No, they are of regular size.” “Ah, blue whales are very tiny, then.” “Wrong again. They are as big as you would expect. What happens is that some frogs live in the ocean, have very sharp teeth, hunt in groups of millions of individuals, and are voraciously carnivorous.”
+
+*Crumb 2160*: **The Nobel Laureate**: In her acceptance speech, the young physicist who had just been awarded the Nobel Prize on her own said, “Now that I’ve won this money, I’ll finally be able to quit this career my father forced me to follow and open a motorcycle repair shop in Barcelona, which has been my dream since I was a kid.”
+
+*Crumb 2161*: **The Murderous Neighbor**: “Did you kill your neighbors, Elmet?” “No, officer. These ones I didn’t.”
+
+*Crumb 2162*: **Taylor Swift’s Head**: The rumor about Taylor Swift’s head being detachable and her storing it in the fridge at night has never been confirmed. What’s undeniable, however, is that she sometimes wears garments that cover her neck.
+
+*Crumb 2163*: **The Shameless Crumb**: If you can like this crumb or show your support for it, do it if you want that special wish to come true.
