@@ -4379,3 +4379,17 @@ we are hymns! And this is the Hymns’ Hymn!
 *Crumb 2162*: **Taylor Swift’s Head**: The rumor about Taylor Swift’s head being detachable and her storing it in the fridge at night has never been confirmed. What’s undeniable, however, is that she sometimes wears garments that cover her neck.
 
 *Crumb 2163*: **The Shameless Crumb**: If you can like this crumb or show your support for it, do it if you want that special wish to come true.
+
+*Crumb 2164*: **The Future Idiots**: I wonder what future idiots with influence will decide what the strength of the crumbs is. I hope none. The strength of the crumbs is the crumbs. They are a solid block of unparalleled stubborn creativity. Anyone who doesn’t understand this should refrain from speaking about them.
+
+*Crumb 2165*: **Passing Through**: On most social media platforms, someone scrolling past your little creation without even noticing it as part of the background because they are looking away from the screen counts as engagement, as one “view.” Nevertheless, do not extrapolate this to the streets of your municipality. Someone walking past you doesn’t count as any kind of engagement.
+
+*Crumb 2166*: **Another Hell**: Hell is also visiting the home page of any online newspaper. It’s better to abstain from it.
+
+*Crumb 2167*: **Gigi 2tigers Interviews Satan**: “So, Big Red,” says Gigi 2tigers, “Hell seems a fairly nice place. The temperature is awesome and everything is so modern and clean. Are you gonna tell me that bad guys aren’t punished, after all?” “They are punished, Gigi,” says Satan. He adds: “You can count on that. But not here. Politicians, political commentators, and other miscreants are sent to the Grisly Plain. I’d gladly show you, but your soul would experience eternal pain only by laying eyes on it.”
+
+*Crumb 2168*: **Fixing My Brain**: To fix my brain I should break it into many small pieces and put them together forming a different configuration. I won’t try it. It doesn’t sound safe.
+
+*Crumb 2169*: **My Competitors**: The crumbs aspire to be the largest collection of literary pieces written by a single author in history. My only real competitor is Japanese poet Masaoka Shiki (1867-1902), who wrote around 25,000 haiku. There’s also the Qianlong Emperor of China (1711-1799) who wrote some of the 41,800 poems collected under his name, maybe around 10,000, but I mention him mainly to note that he’s not in the race. There’s only Mr. Masaoka and me. If I live past 70, I have a chance at beating him.
+
+*Crumb 2170*: **Love Pirates**: Love pirates grow between rosebushes. They are flying translucent beings that prey on young lovers and feed off broken hearts.
