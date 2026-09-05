@@ -4390,6 +4390,6 @@ we are hymns! And this is the Hymns’ Hymn!
 
 *Crumb 2168*: **Fixing My Brain**: To fix my brain I should break it into many small pieces and put them together forming a different configuration. I won’t try it. It doesn’t sound safe.
 
-*Crumb 2169*: **My Competitors**: The crumbs aspire to be the largest collection of literary pieces written by a single author in history. My only real competitor is Japanese poet Masaoka Shiki (1867-1902), who wrote around 25,000 haiku. There’s also the Qianlong Emperor of China (1711-1799) who wrote some of the 41,800 poems collected under his name, maybe around 10,000, but I mention him mainly to note that he’s not in the race. There’s only Mr. Masaoka and me. If I live past 70, I have a chance at beating him.
+*Crumb 2169*: **My Competitors**: The crumbs aspire to be the largest collection of literary pieces written by a single author in history. My only real competitor is Japanese poet Takahama Kyoshi (1874-1959), who wrote more than 30,000 haiku. There’s also the Qianlong Emperor of China (1711-1799), who wrote some of the 41,800 poems collected under his name, maybe around 10,000, but I mention him mainly to note that he’s not in the race. There’s only Mr. Takahama and me. If I live to 75, I have a chance at beating him.
 
 *Crumb 2170*: **Love Pirates**: Love pirates grow between rosebushes. They are flying translucent beings that prey on young lovers and feed off broken hearts.
