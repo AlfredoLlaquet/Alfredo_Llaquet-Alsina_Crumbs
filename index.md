@@ -4411,3 +4411,7 @@ we are hymns! And this is the Hymns’ Hymn!
 *Crumb 2178*: **Children**: Defending children should be the point where we all agree.
 
 *Crumb 2179*: **Don’t Lose Weight**: If your stomach is flat or virtually flat or almost flat, please don’t lose any weight. Human beings are meant to have some flesh on their bones. Skeletons are funny, not attractive.
+
+*Crumb 2180*: **The Cake Universe**: In the Cake Universe, Earth is populated by intelligent, self-aware cakes all of whose family names are Cake. For instance, the president of the US is Donald Cake and the world’s most famous pop singer is Taylor Cake. The species’s designation is cake sapiens. The majority religion, Sugarism, worships an omnipotent creator called Baker. The afterlife is divided between Fridge, where good souls rest, and Celebration, where the souls of the evildoers are cut apart, eaten, and rebaked in an eternal loop of suffering.
+
+*Crumb 2181*: **The Beautiful Reader Issues National IDs**: “Alfredo, sweetie,” says the beautiful reader, concerned about the previous crumb, “a planet where all its inhabitants shared the same family name would be very confusing, don’t you think?” I say, “You Koreans are the ones to talk.”
