@@ -34,6 +34,8 @@ The scope and philosophy of the crumbs are explained quickly by the following ha
 
 *Crumb 2130*: **The Crumbs 📚👑**: 𝐓𝐇𝐄 𝐂𝐑𝐔𝐌𝐁𝐒 𝐀𝐑𝐄 𝐀 𝐑𝐄𝐕𝐎𝐋𝐔𝐓𝐈𝐎𝐍𝐀𝐑𝐘 𝐋𝐈𝐓𝐄𝐑𝐀𝐑𝐘 𝐄𝐗𝐏𝐄𝐑𝐈𝐌𝐄𝐍𝐓 𝐓𝐇𝐀𝐓 𝐖𝐈𝐋𝐋 𝐍𝐎𝐓 𝐎𝐍𝐋𝐘 𝐂𝐇𝐀𝐍𝐆𝐄 𝐋𝐈𝐓𝐄𝐑𝐀𝐓𝐔𝐑𝐄.
 
+*Crumb 2169*: **My Competitors**: The crumbs aspire to be the largest collection of literary pieces written by a single author in history. My only real competitor is Japanese poet Takahama Kyoshi (1874-1959), who wrote more than 30,000 haiku. There’s also the Qianlong Emperor of China (1711-1799), who wrote some of the 41,800 poems collected under his name, maybe around 10,000, but I mention him mainly to note that he’s not in the race. There’s only Mr. Takahama and me. If I live to 75, I have a chance at beating him.
+
 ## In a single text file
 
 - [Crumbs.txt (ongoing)](https://raw.githubusercontent.com/AlfredoLlaquet/Alfredo_Llaquet-Alsina_Crumbs/refs/heads/main/Crumbs.txt)
