@@ -68,10 +68,15 @@ The scope and philosophy of the crumbs are explained quickly by the following ha
 
 - [Image-versions on DeviantArt](https://www.deviantart.com/alfredollaquet)
 
-## Contact Alfredo
+## Follow Me
+
+I post every new crumb on X.
+
+- X: [@alfredollaquet](https://x.com/alfredollaquet)
+
+## Contact Me
 
 - email: inquiries.llaquet@gmail.com
-- X: [@alfredollaquet](https://x.com/alfredollaquet)
 
 ## The Crumbs in Here
 
