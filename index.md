@@ -1,4 +1,4 @@
-# The rumbs – by Alfredo Llaquet-Alsina
+# The Crumbs by Alfredo Llaquet-Alsina
 
 The Original Crumbs by Alfredo Llaquet-Alsina
 
