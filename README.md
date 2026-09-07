@@ -1,3 +1,5 @@
+![TheCrumbs.org](img/TheCrumbSmithWithSigilAndTitleBack.jpg)
+
 # The Crumbs by Alfredo Llaquet-Alsina
 The Original Crumbs by Alfredo Llaquet-Alsina
 
