@@ -68,7 +68,12 @@ The scope and philosophy of the crumbs are explained quickly by the following ha
 
 - [Image-versions on DeviantArt](https://www.deviantart.com/alfredollaquet)
 
-## In Here
+## Contact Alfredo
+
+- email: inquiries.llaquet@gmail.com
+- X: [@alfredollaquet](https://x.com/alfredollaquet)
+
+## The Crumbs in Here
 
 *Crumb 1*: **The Game**: Human life is a struggle against human nature. To win, you must remain unnaturally virtuous. If you don't cheat, you win.
 
