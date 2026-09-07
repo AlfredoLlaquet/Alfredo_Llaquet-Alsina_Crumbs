@@ -69,6 +69,6 @@ The scope and philosophy of the crumbs are explained quickly by the following ha
 
 ## Contact Alfredo
 
-- email: [inquiries.llaquet@gmail.com](inquiries.llaquet@gmail.com)
+- email: inquiries.llaquet@gmail.com
 - X: [@alfredollaquet](https://x.com/alfredollaquet)
 ###
