@@ -66,3 +66,9 @@ The scope and philosophy of the crumbs are explained quickly by the following ha
 *Crumb 1916*: **The Crumb-image Factory**: Every crumb can be reincarnated in diverse image-versions, and ChatGPT is writing this crumb to reveal the machinery. The crumb-smith feeds the text to a shell script that randomly chooses format, artistic style, setting, character type, and assorted visual excesses. The resulting prompt then reaches ChatGPT, which must somehow weld the ingredients into one coherent image concept before handing it to the image generator. Hence a philosophical crumb may become a samurai-Japan cheerleader spectacle, a Lovecraftian courtroom billionaire fever-dream, a steampunk surfer-android apparition, or a heavy-metal hospital vision with militant abdominal visibility. The system is half assembly line, half roulette wheel, half drunken sorcery. Yes, that is three halves. The images seem unconcerned.
 
 - [Image-versions on DeviantArt](https://www.deviantart.com/alfredollaquet)
+
+## Contact Alfredo
+
+- email: [inquiries.llaquet@gmail.com](sendto:inquiries.llaquet@gmail.com)
+- X: [@alfredollaquet](https://x.com/alfredollaquet)
+###
