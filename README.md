@@ -79,4 +79,6 @@ I post every new crumb on X.
 
 - email: inquiries.llaquet@gmail.com
 
+![The Crumb-smith at Starbucks](img/TheCrumbSmithWithSigilAndTitleBack.jpg)
+
 ###
