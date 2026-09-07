@@ -37,6 +37,10 @@ The scope and philosophy of the crumbs are explained quickly by the following ha
 
 *Crumb 2169*: **My Competitors**: The crumbs aspire to be the largest collection of literary pieces written by a single author in history. My only real competitor is Japanese poet Takahama Kyoshi (1874-1959), who wrote more than 30,000 haiku. There’s also the Qianlong Emperor of China (1711-1799), who wrote some of the 41,800 poems collected under his name, maybe around 10,000, but I mention him mainly to note that he’s not in the race. There’s only Mr. Takahama and me. If I live to 75, I have a chance at beating him.
 
+## Free Immortality Offered
+
+*Crumb 1898*: **You Can Also Become Part of the Crumbs**: Leave your anecdote or especial request somewhere the crumb-smith can run into it, and he will turn it into a crumb. Offer expires with the crumb-smith himself. Faithfulness to your request will never be taken into account for the making of the crumb.
+
 ## In a single text file
 
 - [Crumbs.txt (ongoing)](https://raw.githubusercontent.com/AlfredoLlaquet/Alfredo_Llaquet-Alsina_Crumbs/refs/heads/main/Crumbs.txt)
