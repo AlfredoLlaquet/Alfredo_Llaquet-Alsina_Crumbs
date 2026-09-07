@@ -59,7 +59,7 @@ The scope and philosophy of the crumbs are explained quickly by the following ha
 
 *Crumb 901*: **The YouTube Forest**: Most people assume that uploading a video on YouTube equates to making it available to the public so anyone can find it and watch it, but the truth is that if you are no one and don’t plan on investing time or money in any kind of promotion, as is my case, you could as well copy the video to a thumb drive and leave the latter under a tree in a forest. My crumbs exist in video-book form (a vertical video showing them in order, one at a time, for thirty seconds each) on YouTube—three 250-crumb videos, so far. Has anyone read them? Not at all. Am I complaining? Not at all.
 
-- [YouTube Crumbs Video-bools Playlist](https://www.youtube.com/playlist?list=PLovT_flKHoP7BnuG-Y0ShL2_ZGuxyImDV)
+- [YouTube Crumbs Video-books Playlist](https://www.youtube.com/playlist?list=PLovT_flKHoP7BnuG-Y0ShL2_ZGuxyImDV)
 
 ## Image-versions
 
