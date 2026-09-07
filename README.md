@@ -40,20 +40,20 @@ The scope and philosophy of the crumbs are explained quickly by the following ha
 
 *Crumb 1898*: **You Can Also Become Part of the Crumbs**: Leave your anecdote or especial request somewhere the crumb-smith can run into it, and he will turn it into a crumb. Offer expires with the crumb-smith himself. Faithfulness to your request will never be taken into account for the making of the crumb.
 
-## In PDF format
+## In PDF format (at The Internet Archive)
 
-- [Crumbs Volume I](Crumbs1-250.pdf)
-- [Crumbs Volume II](Crumbs251-500.pdf)
-- [Crumbs Volume III](Crumbs501-750.pdf)
-- [Crumbs Volume IV](Crumbs751-1000.pdf)
-- [Crumbs Volume V](Crumbs1001-1250.pdf)
-- [Crumbs Volume VI](Crumbs1251-1500.pdf)
-- [Crumbs Volume VII](Crumbs1501-1750.pdf)
-- [Crumbs Volume VIII](Crumbs1751-2000.pdf)
+- [Crumbs Volume I](https://archive.org/details/alfredollaquet-alsina-crumbs-volI)
+- [Crumbs Volume II](https://archive.org/details/alfredollaquet-alsina-crumbs-volII)
+- [Crumbs Volume III](https://archive.org/details/alfredollaquet-alsina-crumbs-volIII)
+- [Crumbs Volume IV](https://archive.org/details/alfredollaquet-alsina-crumbs-volIV)
+- [Crumbs Volume V](https://archive.org/details/alfredollaquet-alsina-crumbs-volV)
+- [Crumbs Volume VI](https://archive.org/details/crumbs-1251-1500)
+- [Crumbs Volume VII](https://archive.org/details/crumbs-1501-1750)
+- [Crumbs Volume VIII](https://archive.org/details/crumbs-1751-2000)
 
-## In a single text file
+## In a single text file (at the Internet Archive)
 
-- [Crumbs.txt (ongoing)](https://raw.githubusercontent.com/AlfredoLlaquet/Alfredo_Llaquet-Alsina_Crumbs/refs/heads/main/Crumbs.txt)
+- [Crumbs.txt (ongoing)](https://dn721900.ca.archive.org/0/items/crumbs_202608/Crumbs.txt)
 
 ## In Video-books
 
