@@ -52,7 +52,7 @@ The scope and philosophy of the crumbs are explained quickly by the following ha
 - [Crumbs Volume VII](https://archive.org/details/crumbs-1501-1750)
 - [Crumbs Volume VIII](https://archive.org/details/crumbs-1751-2000)
 
-## In a single text file (at the Internet Archive)
+## In a single text file (at The Internet Archive)
 
 - [Crumbs.txt (ongoing)](https://dn721900.ca.archive.org/0/items/crumbs_202608/Crumbs.txt)
 
