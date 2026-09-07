@@ -1,3 +1,5 @@
+![TheCrumbs.org](img/TheCrumbSmithWithSigilAndTitleBack.jpg)
+
 # The Crumbs by Alfredo Llaquet-Alsina
 
 The Original Crumbs by Alfredo Llaquet-Alsina
@@ -77,6 +79,9 @@ I post every new crumb on X.
 ## Contact Me
 
 - email: inquiries.llaquet@gmail.com
+
+![The Crumb-smith at Starbucks](img/TheCrumbSmithAtStarbucks.jpg)
+
 
 ## The Crumbs in Here
 
