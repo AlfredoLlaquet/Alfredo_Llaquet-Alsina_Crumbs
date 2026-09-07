@@ -40,10 +40,6 @@ The scope and philosophy of the crumbs are explained quickly by the following ha
 
 *Crumb 1898*: **You Can Also Become Part of the Crumbs**: Leave your anecdote or especial request somewhere the crumb-smith can run into it, and he will turn it into a crumb. Offer expires with the crumb-smith himself. Faithfulness to your request will never be taken into account for the making of the crumb.
 
-## In a single text file
-
-- [Crumbs.txt (ongoing)](https://raw.githubusercontent.com/AlfredoLlaquet/Alfredo_Llaquet-Alsina_Crumbs/refs/heads/main/Crumbs.txt)
-
 ## In PDF format
 
 - [Crumbs Volume I](Crumbs1-250.pdf)
@@ -54,3 +50,15 @@ The scope and philosophy of the crumbs are explained quickly by the following ha
 - [Crumbs Volume VI](Crumbs1251-1500.pdf)
 - [Crumbs Volume VII](Crumbs1501-1750.pdf)
 - [Crumbs Volume VIII](Crumbs1751-2000.pdf)
+
+## In a single text file
+
+- [Crumbs.txt (ongoing)](https://raw.githubusercontent.com/AlfredoLlaquet/Alfredo_Llaquet-Alsina_Crumbs/refs/heads/main/Crumbs.txt)
+
+## In Video-books
+
+- [YouTube Crumbs Video-bools Playlist](https://www.youtube.com/playlist?list=PLovT_flKHoP7BnuG-Y0ShL2_ZGuxyImDV)
+
+## Image-versions
+
+- [Image-versions on DeviantArt](https://www.deviantart.com/alfredollaquet)
