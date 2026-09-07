@@ -43,7 +43,7 @@ The scope and philosophy of the crumbs are explained quickly by the following ha
 
 *Crumb 1898*: **You Can Also Become Part of the Crumbs**: Leave your anecdote or especial request somewhere the crumb-smith can run into it, and he will turn it into a crumb. Offer expires with the crumb-smith himself. Faithfulness to your request will never be taken into account for the making of the crumb.
 
-## In PDF format (at The Internet Archive)
+## In PDF Format (on the Internet Archive)
 
 - [Crumbs Volume I](https://archive.org/details/alfredollaquet-alsina-crumbs-volI)
 - [Crumbs Volume II](https://archive.org/details/alfredollaquet-alsina-crumbs-volII)
@@ -54,17 +54,17 @@ The scope and philosophy of the crumbs are explained quickly by the following ha
 - [Crumbs Volume VII](https://archive.org/details/crumbs-1501-1750)
 - [Crumbs Volume VIII](https://archive.org/details/crumbs-1751-2000)
 
-## In a single text file (at The Internet Archive)
+## In a Single Text File (on the Internet Archive)
 
 - [Crumbs.txt (ongoing)](https://dn721900.ca.archive.org/0/items/crumbs_202608/Crumbs.txt)
 
-## In Video-books
+## In Video-books (on YouTube)
 
 *Crumb 901*: **The YouTube Forest**: Most people assume that uploading a video on YouTube equates to making it available to the public so anyone can find it and watch it, but the truth is that if you are no one and don’t plan on investing time or money in any kind of promotion, as is my case, you could as well copy the video to a thumb drive and leave the latter under a tree in a forest. My crumbs exist in video-book form (a vertical video showing them in order, one at a time, for thirty seconds each) on YouTube—three 250-crumb videos, so far. Has anyone read them? Not at all. Am I complaining? Not at all.
 
 - [YouTube Crumbs Video-books Playlist](https://www.youtube.com/playlist?list=PLovT_flKHoP7BnuG-Y0ShL2_ZGuxyImDV)
 
-## Image-versions
+## Image-versions (on DeviantArt)
 
 *Crumb 1916*: **The Crumb-image Factory**: Every crumb can be reincarnated in diverse image-versions, and ChatGPT is writing this crumb to reveal the machinery. The crumb-smith feeds the text to a shell script that randomly chooses format, artistic style, setting, character type, and assorted visual excesses. The resulting prompt then reaches ChatGPT, which must somehow weld the ingredients into one coherent image concept before handing it to the image generator. Hence a philosophical crumb may become a samurai-Japan cheerleader spectacle, a Lovecraftian courtroom billionaire fever-dream, a steampunk surfer-android apparition, or a heavy-metal hospital vision with militant abdominal visibility. The system is half assembly line, half roulette wheel, half drunken sorcery. Yes, that is three halves. The images seem unconcerned.
 
