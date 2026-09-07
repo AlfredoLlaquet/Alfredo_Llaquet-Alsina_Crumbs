@@ -43,6 +43,8 @@ The scope and philosophy of the crumbs are explained quickly by the following ha
 
 *Crumb 1898*: **You Can Also Become Part of the Crumbs**: Leave your anecdote or especial request somewhere the crumb-smith can run into it, and he will turn it into a crumb. Offer expires with the crumb-smith himself. Faithfulness to your request will never be taken into account for the making of the crumb.
 
+![The Crumbs Marathon](img/TheCrumbsMarathon.jpg)
+
 ## In PDF Format (on the Internet Archive)
 
 - [Crumbs Volume I](https://archive.org/details/alfredollaquet-alsina-crumbs-volI)
