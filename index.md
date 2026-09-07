@@ -1,4 +1,4 @@
-# Crumbs – by Alfredo Llaquet-Alsina
+# The rumbs – by Alfredo Llaquet-Alsina
 
 The Original Crumbs by Alfredo Llaquet-Alsina
 
@@ -58,9 +58,13 @@ The scope and philosophy of the crumbs are explained quickly by the following ha
 
 ## In Video-books
 
+*Crumb 901*: **The YouTube Forest**: Most people assume that uploading a video on YouTube equates to making it available to the public so anyone can find it and watch it, but the truth is that if you are no one and don’t plan on investing time or money in any kind of promotion, as is my case, you could as well copy the video to a thumb drive and leave the latter under a tree in a forest. My crumbs exist in video-book form (a vertical video showing them in order, one at a time, for thirty seconds each) on YouTube—three 250-crumb videos, so far. Has anyone read them? Not at all. Am I complaining? Not at all.
+
 - [YouTube Crumbs Video-bools Playlist](https://www.youtube.com/playlist?list=PLovT_flKHoP7BnuG-Y0ShL2_ZGuxyImDV)
 
 ## Image-versions
+
+*Crumb 1916*: **The Crumb-image Factory**: Every crumb can be reincarnated in diverse image-versions, and ChatGPT is writing this crumb to reveal the machinery. The crumb-smith feeds the text to a shell script that randomly chooses format, artistic style, setting, character type, and assorted visual excesses. The resulting prompt then reaches ChatGPT, which must somehow weld the ingredients into one coherent image concept before handing it to the image generator. Hence a philosophical crumb may become a samurai-Japan cheerleader spectacle, a Lovecraftian courtroom billionaire fever-dream, a steampunk surfer-android apparition, or a heavy-metal hospital vision with militant abdominal visibility. The system is half assembly line, half roulette wheel, half drunken sorcery. Yes, that is three halves. The images seem unconcerned.
 
 - [Image-versions on DeviantArt](https://www.deviantart.com/alfredollaquet)
 
