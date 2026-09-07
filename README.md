@@ -51,7 +51,7 @@ The scope and philosophy of the crumbs are explained quickly by the following ha
 - [Crumbs Volume VII](https://archive.org/details/crumbs-1501-1750)
 - [Crumbs Volume VIII](https://archive.org/details/crumbs-1751-2000)
 
-## In a single text file (at the Internet Archive)
+## In a single text file (at The Internet Archive)
 
 - [Crumbs.txt (ongoing)](https://dn721900.ca.archive.org/0/items/crumbs_202608/Crumbs.txt)
 
@@ -67,8 +67,14 @@ The scope and philosophy of the crumbs are explained quickly by the following ha
 
 - [Image-versions on DeviantArt](https://www.deviantart.com/alfredollaquet)
 
-## Contact Alfredo
+## Follow Me
+
+I post every new crumb on X.
+
+- X: [@alfredollaquet](https://x.com/alfredollaquet)
+
+## Contact Me
 
 - email: inquiries.llaquet@gmail.com
-- X: [@alfredollaquet](https://x.com/alfredollaquet)
+
 ###
