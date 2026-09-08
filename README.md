@@ -2,8 +2,6 @@
 
 # The Crumbs by Alfredo Llaquet-Alsina
 
-The original crumbs by Alfredo Llaquet-Alsina
-
 ## Why?
 
 The crumbs are fun to read because they always surprise you and make you think, and you never know what the next one will be about. Also, they are tiny—each can be read in less than 30 seconds.
