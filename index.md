@@ -2,7 +2,7 @@
 
 # The Crumbs by Alfredo Llaquet-Alsina
 
-The Original Crumbs by Alfredo Llaquet-Alsina
+The original crumbs by Alfredo Llaquet-Alsina
 
 ## Why?
 
