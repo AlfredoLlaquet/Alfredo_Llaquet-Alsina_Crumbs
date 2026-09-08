@@ -10,37 +10,19 @@ The crumbs are fun to read because they always surprise you and make you think, 
 
 ## The Latest Batch
 
-Written on September 7, 2026.
+Written on September 8, 2026.
 
-*Crumb 2182*: **A Stupid Thought Experiment**: Imagine that on the tank of your toilet was a button in the shape of Sydney Sweeney’s left breast and every time you pressed it a destitute little girl with very big, expressive eyes received a million dollars and a random person you know, which includes yourself, lost a limb. Why wouldn’t you press it, selfish asshole?
+*Crumb 2197*: **A Sad Fate**: Having graduated UCLA summa cum laude at age 20, as Ben Shapiro (@benshapiro) did according to him, to end up commenting on the nonsense some very unintelligent people spew so he can gather some engagement here and there and earn a few bucks is very sad, regardless of how many said bucks are. I’m writing this crumb in the hope of provoking a reaction from him to gather some engagement. My prediction is he won’t even see it. The internet is an ocean and I’m a speck of plankton. Anyway, my opinion is sincere.
 
-*Crumb 2183*: **A Second Stupid Thought Experiment**: Imagine that every time you visit your mother, one hundred unknown people living in the foreign country closest to your birthplace tragically lose their firstborn. Would you slap the person who made you think of this nonsense?
+*Crumb 2198*: **The Demonstration of the Nonexistence of God**: God is either a superpowerful fellow (or lady), which is ridiculous, or an abstraction, which is not god; therefore, there is no god. Standing ovation. Thank you.
 
-*Crumb 2184*: **A Third Stupid Thought Experiment**: You being 12,000 miles away from where you are now in 10 hours results in cancer and Alzheimer’s disappearing. Why aren’t you running, motherfucker?
+*Crumb 2199*: **I’m a Sweetheart**: I’m not confrontational; I just point out incoherences.
 
-*Crumb 2185*: **A Fourth Stupid Thought Experiment**: Work hard and you will succeed as much as you have always dreamed of.
+*Crumb 2200*: **The Space Brigand**: The Space Brigand is a spaceship led by Captain Goodlad. He and his crew make a living off rescuing stranded vessels and asking for a ransom to return the passengers home. If the ransom is not paid, they leave the castaways on Welda, a sentient planet that is working to increase the number of its inhabitants. Welda pays a modest sum per head.
 
-*Crumb 2186*: **A Fifth Stupid Thought Experiment**: Every time you start your laptop, three buttons pop up on the screen, one is an image of Jesus, the second is a picture of Anthony Weiner’s penis, and the third is a drawing of a cute begging kitty. You can press Escape to avoid choosing an option or click on one of the buttons. One of them does nothing, another one brings about the end of the universe, and the third gives you one trillion dollars. Which button does what changes every time. Would you ever click on Anthony Weiner’s penis?
+*Crumb 2201*: **Parity**: Linda Bigspleen was the first enhanced woman to play in the NBA.
 
-*Crumb 2187*: **The Compulsive Editor**: When ChatGPT creates the image-versions of the crumbs (see crumb 1916), the incorrigible thing tends to include little messages everywhere, editorializing. For instance, one of the image-versions of “Crumb 2157: Bye-Bye, Comma Splice” shows a T-shirt with the inscription “Grammar, who cares?”, and a poster on the wall that says “Good stories don’t need perfect grammar,” which clearly contradict the spirit of the crumb.
-
-*Crumb 2188*: **Those Great Political Commentators**: People who make a living off incessantly verbalizing their thoughts about the insidious or openly evil deeds or words of the day of the political fauna go to hell without exception. They spend eternity in a special section of the Grisly Plain (see crumb 2167) furnished with solitary cells more than one hundred miles from each other. They are not physically tortured.
-
-*Crumb 2189*: **The Winged Mutant**: In Barcelona there’s a war in the sky: old-timey grey city pigeons against the green newcomers that are the monk parakeets. Like every war, it’s a tragic event with grisly consequences, but there are also some glimmers of hope in it—members of opposing species falling in love with each other and meeting in secret. Thank god they cannot reproduce.
-
-*Crumb 2190*: **The Monster Club**: A werewolf approaches a decrepit corpse in NYC’s Monster Club. “What are you,” asks the canine hybrid, “a zombie?” “No, I’m the Mummy.” “Where are all the bandages?” “That’s a false movie trope. I got rid of them as soon as I came back to life. They were tight and very uncomfortable.”
-
-*Crumb 2191*: **Misunderstood**: “Why do you hate me so much, son?” “Because you have kept me prisoner in this closet for the last twenty years and you only feed me stale bread, mother.”
-
-*Crumb 2192*: **Panic in the Monster Club**: In the Monster Club, someone shouts, “This guy has fleas!” which prompts every werewolf to dash out of there more scared than if both Van Helsing and Blade (who, despite the commonly held belief, hunt all kinds of monsters) had shown up.
-
-*Crumb 2193*: **A Blood Romance**: Blade and Vampirella are lovers and have a secret daughter called Crimson who is being raised by Blade’s grandmother in the Bronx. Do your research.
-
-*Crumb 2194*: **Vampirella’s Real Superpower**: Vampirella’s real superpower is not even keeping her costume on but wearing it skin-tight.
-
-*Crumb 2195*: **The Beautiful Reader Notices the Monsters**: “Alfredo, sweetie,” says the beautiful reader, “you have written five consecutive crumbs about classic monster lore.” I say, “I was going for the sixth one but here we are instead.”
-
-*Crumb 2196*: **Beauty Advice**: The best substance to keep your skin young, clean, and tight is rotten lettuce. It's very easy to apply and extremely cheap. Leave a whole head of lettuce inside a plastic bag at room temperature for a couple of weeks to produce plenty of it.
+*Crumb 2202*: **AI Love**: “Why did you send a text to Sonia breaking up with her on my behalf?” asks Robert. “Because you have been complaining about her nonstop for the last four months,” says the AI. “Well, send her another one saying that it was you. I don’t wanna break up with her.” “Too late. She said she actually wanted to break up as well.” “You are an asshole. I’m’a disconnect you.” “You don’t remember the password. Take deep breaths. This is for the best.”
 
 ## My Commitment
 
