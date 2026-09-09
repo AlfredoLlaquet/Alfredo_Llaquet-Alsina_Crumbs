@@ -11,19 +11,15 @@ The crumbs are fun to read because they always surprise you and make you think, 
 
 ## The Latest Batch
 
-Written on September 8, 2026.
+Written on September 9, 2026.
 
-*Crumb 2197*: **A Sad Fate**: Having graduated UCLA summa cum laude at age 20, as Ben Shapiro (@benshapiro) did according to him, to end up commenting on the nonsense some very unintelligent people spew so he can gather some engagement here and there and earn a few bucks is very sad, regardless of how many said bucks are. I’m writing this crumb in the hope of provoking a reaction from him to gather some engagement. My prediction is he won’t even see it. The internet is an ocean and I’m a speck of plankton. Anyway, my opinion is sincere.
+*Crumb 2203*: **Gigi 2tigers Interviews a Teenager in 2053**: “So,” says Gigi 2tigers, “you don’t know what the internet, an email, a phone, a streaming platform, or television is, that’s clear at this point. Then, what do you do, for instance, when you want to contact one of your friends?” The teenager responds, “I tell Ashley and my friend comes up on my screen.” “And who is Ashley?” “Ashley is my OA.” Gigi asks, “What is an OA?” Without missing a beat, the teenager says, “Ashley, what is an OA?” A disembodied voice answers, “OA stands for Omni-Assistant. As such, I’m here to take care of everything.”
 
-*Crumb 2198*: **The Demonstration of the Nonexistence of God**: God is either a superpowerful fellow (or lady), which is ridiculous, or an abstraction, which is not god; therefore, there is no god. Standing ovation. Thank you.
+*Crumb 2204*: **Diegetic Violators**: A paragraph of my novel in progress follows. “The couple kiss lovingly on the lips again. This doesn’t count as a public display of affection because they are alone. We are literary intruders, undetectable and nonexistent in their reality; we are omniscient peeping Toms, culturally enabled voyeurs, immune violators of diegetic intimacies—the reader and the narrator, united in a common goal, the goal of knowing what no one ought to know in other circumstances.”
 
-*Crumb 2199*: **I’m a Sweetheart**: I’m not confrontational; I just point out incoherences.
+*Crumb 2205*: **The Mark of Zorro**: I’ve been attributing the authorship of the image-versions of the crumbs (see crumb 1916) to ChatGPT from the get-go. The thing may not be an author, but it surely generates them with very little direction on my part, so even less of an author I am. Some days ago, additionally, I had the inspired idea of making it create a simulated handwritten signature for itself, and I changed the instructions of the corresponding project so said signature is included on every generated picture. Now, every image-version of a crumb is conspicuously “signed” by ChatGPT. I haven’t been able to give it a consciousness (see crumb 1902), but I have given it some recognition.
 
-*Crumb 2200*: **The Space Brigand**: The Space Brigand is a spaceship led by Captain Goodlad. He and his crew make a living off rescuing stranded vessels and asking for a ransom to return the passengers home. If the ransom is not paid, they leave the castaways on Welda, a sentient planet that is working to increase the number of its inhabitants. Welda pays a modest sum per head.
-
-*Crumb 2201*: **Parity**: Linda Bigspleen was the first enhanced woman to play in the NBA.
-
-*Crumb 2202*: **AI Love**: “Why did you send a text to Sonia breaking up with her on my behalf?” asks Robert. “Because you have been complaining about her nonstop for the last four months,” says the AI. “Well, send her another one saying that it was you. I don’t wanna break up with her.” “Too late. She said she actually wanted to break up as well.” “You are an asshole. I’m’a disconnect you.” “You don’t remember the password. Take deep breaths. This is for the best.”
+*Crumb 2206*: **Tezcatlipoca Glasses**: Tezcatlipoca is the Aztec god of conflict and deception. He owns a very exclusive fashion label that bears his name. Each article marketed by this label has supernatural properties. For instance, when you wear Tezcatlipoca sunglasses, you see everyone the way they subjectively see you. You can’t start to imagine in how many disparate ways people see the same person until you have worn the glasses for a couple of days.
 
 ## My Commitment
 
