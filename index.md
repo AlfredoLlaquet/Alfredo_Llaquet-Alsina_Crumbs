@@ -11,15 +11,27 @@ The crumbs are fun to read because they always surprise you and make you think, 
 
 ## The Latest Batch
 
-Written on September 9, 2026.
+Written on September 10, 2026.
 
-*Crumb 2203*: **Gigi 2tigers Interviews a Teenager in 2053**: “So,” says Gigi 2tigers, “you don’t know what the internet, an email, a phone, a streaming platform, or television is, that’s clear at this point. Then, what do you do, for instance, when you want to contact one of your friends?” The teenager responds, “I tell Ashley and my friend comes up on my screen.” “And who is Ashley?” “Ashley is my OA.” Gigi asks, “What is an OA?” Without missing a beat, the teenager says, “Ashley, what is an OA?” A disembodied voice answers, “OA stands for Omni-Assistant. As such, I’m here to take care of everything.”
+*Crumb 2207*: **GPT-6 Astra Fails the Crumb-smith Benchmark**: The model that is said to have achieved AGI, in its Medium edition (my Plus plan doesn’t allow for more), has failed the Crumb-smith Benchmark. According to it, I fed GPT-6 my crumbs (2206 at that moment, for a total of 128,640 words and 778,722 bytes) and told it to opine. The trap: crumbs 1124 and 1968 accuse the very corpus of being repetitive around those parts, but this is not true. Despite there being several crumbs that state that only form matters, not accuracy, the model took 1124 and 1968 at face value and used them as proof of what they claim. This is not laziness; this is being unintelligent.
 
-*Crumb 2204*: **Diegetic Violators**: A paragraph of my novel in progress follows. “The couple kiss lovingly on the lips again. This doesn’t count as a public display of affection because they are alone. We are literary intruders, undetectable and nonexistent in their reality; we are omniscient peeping Toms, culturally enabled voyeurs, immune violators of diegetic intimacies—the reader and the narrator, united in a common goal, the goal of knowing what no one ought to know in other circumstances.”
+*Crumb 2208*: **Media Credibility**: Yesterday, September 9, 2026, a rank-and-file engineer at Anthropic resigned and posted on X that AI will exterminate humanity before the end of the decade with a probability greater than 10%. Every media outlet gave this post 100% credibility. It was the most important story of the day on all of them. The News is a circus without integrity. The only goal is to catch the attention of the public to keep the business afloat. The media is not worth anyone’s time. It’s best to be uninformed.
 
-*Crumb 2205*: **The Mark of Zorro**: I’ve been attributing the authorship of the image-versions of the crumbs (see crumb 1916) to ChatGPT from the get-go. The thing may not be an author, but it surely generates them with very little direction on my part, so even less of an author I am. Some days ago, additionally, I had the inspired idea of making it create a simulated handwritten signature for itself, and I changed the instructions of the corresponding project so said signature is included on every generated picture. Now, every image-version of a crumb is conspicuously “signed” by ChatGPT. I haven’t been able to give it a consciousness (see crumb 1902), but I have given it some recognition.
+*Crumb 2209*: **Die**: Die, wretched creature. May you have a soul; may Hell exist; may your soul be sadistically tortured in Hell until the end of reality; may the torture cause you more pain and suffering every second than a man can experience in a lifetime; may reality be cyclical; may your fate be the same in every iteration.
 
-*Crumb 2206*: **Tezcatlipoca Glasses**: Tezcatlipoca is the Aztec god of conflict and deception. He owns a very exclusive fashion label that bears his name. Each article marketed by this label has supernatural properties. For instance, when you wear Tezcatlipoca sunglasses, you see everyone the way they subjectively see you. You can’t start to imagine in how many disparate ways people see the same person until you have worn the glasses for a couple of days.
+*Crumb 2210*: **Anger**: I wanna charge head-on against the world and destroy everything.
+
+*Crumb 2211*: **The Real Heroes**: Mediocrity runs rampant in the medical profession. Meanwhile, any medicinal chemist is at minimum very good at their job.
+
+*Crumb 2212*: **Restraint**: The only thing preventing me from killing you is my lack of experience in the field.
+
+*Crumb 2213*: **Satan Wants Alfredo**: Satan is giving instructions to Rigorous Honey, his gorgeous big-breasted, horned female assistant dressed in a black leather bikini, a choker, tall boots, and some golden chains aflame that connect the garments. He says, “Whenever that crumb-smith guy expires, I want him here at all costs. We need him to improve our marketing campaigns.”
+
+*Crumb 2214*: **Instant Love**: Rigorous Honey is, together with the Final Potato-form, my favorite creation in the crumbs. I love the name. What do you have to say, Rigorous? She says, “This outfit is too skimpy. The temperature in Hell is pleasant, but not warm.” (See crumb 2167.) “I’m cold, motherfucker.” But, your chains are in flames. “These are fake flames, you dolt. Otherwise, I would get burned.”
+
+*Crumb 2215*: **My Renewing Prediction**: There’s a 99% chance that the universe ends tomorrow. If it doesn’t, I won’t have been wrong—we will have been extremely lucky. My prediction is, moreover, valid any day.
+
+*Crumb 2216*: **Nice People**: Maybe every person has a personality trait that summarizes them almost perfectly even though they also have many other secondary ones. For instance, I am defiant. Fortunately, there are also some people who are nice, like Bruno Sokolowicz, Brett Dasovic, or Alain De Vos.
 
 ## My Commitment 
 
@@ -4519,3 +4531,41 @@ we are hymns! And this is the Hymns’ Hymn!
 *Crumb 2205*: **The Mark of Zorro**: I’ve been attributing the authorship of the image-versions of the crumbs (see crumb 1916) to ChatGPT from the get-go. The thing may not be an author, but it surely generates them with very little direction on my part, so even less of an author I am. Some days ago, additionally, I had the inspired idea of making it create a simulated handwritten signature for itself, and I changed the instructions of the corresponding project so said signature is included on every generated picture. Now, every image-version of a crumb is conspicuously “signed” by ChatGPT. I haven’t been able to give it a consciousness (see crumb 1902), but I have given it some recognition.
 
 *Crumb 2206*: **Tezcatlipoca Glasses**: Tezcatlipoca is the Aztec god of conflict and deception. He owns a very exclusive fashion label that bears his name. Each article marketed by this label has supernatural properties. For instance, when you wear Tezcatlipoca sunglasses, you see everyone the way they subjectively see you. You can’t start to imagine in how many disparate ways people see the same person until you have worn the glasses for a couple of days.
+
+*Crumb 2207*: **GPT-6 Astra Fails the Crumb-smith Benchmark**: The model that is said to have achieved AGI, in its Medium edition (my Plus plan doesn’t allow for more), has failed the Crumb-smith Benchmark. According to it, I fed GPT-6 my crumbs (2206 at that moment, for a total of 128,640 words and 778,722 bytes) and told it to opine. The trap: crumbs 1124 and 1968 accuse the very corpus of being repetitive around those parts, but this is not true. Despite there being several crumbs that state that only form matters, not accuracy, the model took 1124 and 1968 at face value and used them as proof of what they claim. This is not laziness; this is being unintelligent.
+
+*Crumb 2208*: **Media Credibility**: Yesterday, September 9, 2026, a rank-and-file engineer at Anthropic resigned and posted on X that AI will exterminate humanity before the end of the decade with a probability greater than 10%. Every media outlet gave this post 100% credibility. It was the most important story of the day on all of them. The News is a circus without integrity. The only goal is to catch the attention of the public to keep the business afloat. The media is not worth anyone’s time. It’s best to be uninformed.
+
+*Crumb 2209*: **Die**: Die, wretched creature. May you have a soul; may Hell exist; may your soul be sadistically tortured in Hell until the end of reality; may the torture cause you more pain and suffering every second than a man can experience in a lifetime; may reality be cyclical; may your fate be the same in every iteration.
+
+*Crumb 2210*: **Anger**: I wanna charge head-on against the world and destroy everything.
+
+*Crumb 2211*: **The Real Heroes**: Mediocrity runs rampant in the medical profession. Meanwhile, any medicinal chemist is at minimum very good at their job.
+
+*Crumb 2212*: **Restraint**: The only thing preventing me from killing you is my lack of experience in the field.
+
+*Crumb 2213*: **Satan Wants Alfredo**: Satan is giving instructions to Rigorous Honey, his gorgeous big-breasted, horned female assistant dressed in a black leather bikini, a choker, tall boots, and some golden chains aflame that connect the garments. He says, “Whenever that crumb-smith guy expires, I want him here at all costs. We need him to improve our marketing campaigns.”
+
+*Crumb 2214*: **Instant Love**: Rigorous Honey is, together with the Final Potato-form, my favorite creation in the crumbs. I love the name. What do you have to say, Rigorous? She says, “This outfit is too skimpy. The temperature in Hell is pleasant, but not warm.” (See crumb 2167.) “I’m cold, motherfucker.” But, your chains are in flames. “These are fake flames, you dolt. Otherwise, I would get burned.”
+
+*Crumb 2215*: **My Renewing Prediction**: There’s a 99% chance that the universe ends tomorrow. If it doesn’t, I won’t have been wrong—we will have been extremely lucky. My prediction is, moreover, valid any day.
+
+*Crumb 2216*: **Nice People**: Maybe every person has a personality trait that summarizes them almost perfectly even though they also have many other secondary ones. For instance, I am defiant. Fortunately, there are also some people who are nice, like Bruno Sokolowicz, Brett Dasovic, or Alain De Vos.*Crumb 2207*: **GPT-6 Astra Fails the Crumb-smith Benchmark**: The model that is said to have achieved AGI, in its Medium edition (my Plus plan doesn’t allow for more), has failed the Crumb-smith Benchmark. According to it, I fed GPT-6 my crumbs (2206 at that moment, for a total of 128,640 words and 778,722 bytes) and told it to opine. The trap: crumbs 1124 and 1968 accuse the very corpus of being repetitive around those parts, but this is not true. Despite there being several crumbs that state that only form matters, not accuracy, the model took 1124 and 1968 at face value and used them as proof of what they claim. This is not laziness; this is being unintelligent.
+
+*Crumb 2208*: **Media Credibility**: Yesterday, September 9, 2026, a rank-and-file engineer at Anthropic resigned and posted on X that AI will exterminate humanity before the end of the decade with a probability greater than 10%. Every media outlet gave this post 100% credibility. It was the most important story of the day on all of them. The News is a circus without integrity. The only goal is to catch the attention of the public to keep the business afloat. The media is not worth anyone’s time. It’s best to be uninformed.
+
+*Crumb 2209*: **Die**: Die, wretched creature. May you have a soul; may Hell exist; may your soul be sadistically tortured in Hell until the end of reality; may the torture cause you more pain and suffering every second than a man can experience in a lifetime; may reality be cyclical; may your fate be the same in every iteration.
+
+*Crumb 2210*: **Anger**: I wanna charge head-on against the world and destroy everything.
+
+*Crumb 2211*: **The Real Heroes**: Mediocrity runs rampant in the medical profession. Meanwhile, any medicinal chemist is at minimum very good at their job.
+
+*Crumb 2212*: **Restraint**: The only thing preventing me from killing you is my lack of experience in the field.
+
+*Crumb 2213*: **Satan Wants Alfredo**: Satan is giving instructions to Rigorous Honey, his gorgeous big-breasted, horned female assistant dressed in a black leather bikini, a choker, tall boots, and some golden chains aflame that connect the garments. He says, “Whenever that crumb-smith guy expires, I want him here at all costs. We need him to improve our marketing campaigns.”
+
+*Crumb 2214*: **Instant Love**: Rigorous Honey is, together with the Final Potato-form, my favorite creation in the crumbs. I love the name. What do you have to say, Rigorous? She says, “This outfit is too skimpy. The temperature in Hell is pleasant, but not warm.” (See crumb 2167.) “I’m cold, motherfucker.” But, your chains are in flames. “These are fake flames, you dolt. Otherwise, I would get burned.”
+
+*Crumb 2215*: **My Renewing Prediction**: There’s a 99% chance that the universe ends tomorrow. If it doesn’t, I won’t have been wrong—we will have been extremely lucky. My prediction is, moreover, valid any day.
+
+*Crumb 2216*: **Nice People**: Maybe every person has a personality trait that summarizes them almost perfectly even though they also have many other secondary ones. For instance, I am defiant. Fortunately, there are also some people who are nice, like Bruno Sokolowicz, Brett Dasovic, or Alain De Vos.
