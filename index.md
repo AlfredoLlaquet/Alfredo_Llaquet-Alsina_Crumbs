@@ -1,9 +1,8 @@
 ![TheCrumbs.org](img/TheCrumbSmithWithSigilAndTitleBack.jpg)
 
-# The Crumbs by Alfredo Llaquet-Alsina
+# The Crumbs by Alfredo Llaquet-Alsina /ya-KET al-SIH-nah/
 
-&nbsp;
-&nbsp;
+Against all odds, they exist to save humanity from doom and you from abulia.
 
 ## Why?
 
