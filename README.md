@@ -4,6 +4,10 @@
 
 Against all odds, they exist to save humanity from doom and you from abulia.
 
+## A Lifelong Challenge: Becoming the Most Prolific Writer of All Time
+
+*Crumb 2169*: **My Competitors**: The crumbs aspire to be the largest collection of literary pieces written by a single author in history. My only real competitor is Japanese poet Takahama Kyoshi (1874-1959), who wrote more than 30,000 haiku. There’s also the Qianlong Emperor of China (1711-1799), who wrote some of the 41,800 poems collected under his name, maybe around 10,000, but I mention him mainly to note that he’s not in the race. There’s only Mr. Takahama and me. If I live to 75, I have a chance at beating him.
+
 ## Why should you care?
 
 The crumbs are fun to read because they always surprise you and make you think, and you never know what the next one will be about. Also, they are tiny—each can be read in less than 20 seconds.
@@ -66,8 +70,6 @@ The scope and philosophy of the crumbs are explained quickly by the following ha
 *Crumb 1951*: **The Hierarchy of the Crumbverse**: From top to bottom: 0) the crumbs, written by the crumb-smith and policed by the crumb-scholar; 1) factual out-reality, which is a concept that I invented but that Aristotle probably discussed extensively: everything that exists out of reality; 2) factual reality, which includes the multi-god, Pili, Menchu, ChatGPT, Donald Trump, and characters such as Manolito and the Beautiful Reader; 3) fictitious reality, with its monsters and neonations and other follies; 4) out-reality, where the All-Humming Machine hums; 5) the real consolidated pantheon, with every deity to ever exist including Verus Deus, Jesus, Father God, Satan, Odin, Anubis, and Venus; 6) the numbered universes. The “concept of god,” meanwhile, exists only to be mocked.
 
 *Crumb 2130*: **The Crumbs 📚👑**: 𝐓𝐇𝐄 𝐂𝐑𝐔𝐌𝐁𝐒 𝐀𝐑𝐄 𝐀 𝐑𝐄𝐕𝐎𝐋𝐔𝐓𝐈𝐎𝐍𝐀𝐑𝐘 𝐋𝐈𝐓𝐄𝐑𝐀𝐑𝐘 𝐄𝐗𝐏𝐄𝐑𝐈𝐌𝐄𝐍𝐓 𝐓𝐇𝐀𝐓 𝐖𝐈𝐋𝐋 𝐍𝐎𝐓 𝐎𝐍𝐋𝐘 𝐂𝐇𝐀𝐍𝐆𝐄 𝐋𝐈𝐓𝐄𝐑𝐀𝐓𝐔𝐑𝐄.
-
-*Crumb 2169*: **My Competitors**: The crumbs aspire to be the largest collection of literary pieces written by a single author in history. My only real competitor is Japanese poet Takahama Kyoshi (1874-1959), who wrote more than 30,000 haiku. There’s also the Qianlong Emperor of China (1711-1799), who wrote some of the 41,800 poems collected under his name, maybe around 10,000, but I mention him mainly to note that he’s not in the race. There’s only Mr. Takahama and me. If I live to 75, I have a chance at beating him.
 
 ## Free Immortality Offered
 
