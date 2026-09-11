@@ -6,7 +6,7 @@ Against all odds, they exist to save humanity from doom and you from abulia.
 
 ## A Lifelong Challenge: Becoming the Most Prolific Writer of All Time
 
-*Crumb 2169*: **My Competitors**: The crumbs aspire to be the largest collection of literary pieces written by a single author in history. My only real competitor is Japanese poet Takahama Kyoshi (1874-1959), who wrote more than 30,000 haiku. There’s also the Qianlong Emperor of China (1711-1799), who wrote some of the 41,800 poems collected under his name, maybe around 10,000, but I mention him mainly to note that he’s not in the race. There’s only Mr. Takahama and me. If I live to 75, I have a chance at beating him.
+*Crumb 2225*: **My Real Competitors**: Worried, for once, about accuracy, I asked my assistant ChatGPT to conduct an exhaustive investigation about what concerns crumb 2169, and it concluded that of Mr. Takahama’s purported more than 30,000 haiku, only 22,189 have been documented, which turns his teacher, the also Japanese poet Masaoka Shiki, into the most prolific writer in history, with 25,091 catalogued 5-7-5 poems. Suddenly, for me to inherit this figurative throne, 25,092 crumbs will suffice.
 
 ## Why should you care?
 
@@ -14,27 +14,25 @@ The crumbs are fun to read because they always surprise you and make you think, 
 
 ## The Latest Batch
 
-Written on September 10, 2026.
+Written on September 11, 2026.
 
-*Crumb 2207*: **GPT-6 Astra Fails the Crumb-smith Benchmark**: The model that is said to have achieved AGI, in its Medium edition (my Plus plan doesn’t allow for more), has failed the Crumb-smith Benchmark. According to it, I fed GPT-6 my crumbs (2206 at that moment, for a total of 128,640 words and 778,722 bytes) and told it to opine. The trap: crumbs 1124 and 1968 accuse the very corpus of being repetitive around those parts, but this is not true. Despite there being several crumbs that state that only form matters, not accuracy, the model took 1124 and 1968 at face value and used them as proof of what they claim. This is not laziness; this is being unintelligent.
+*Crumb 2217*: **Non-Intelligence**: On September 10, 2026, AI already does incredible things, but my regular interaction with it allows me to categorically affirm that reasoning is not one of them. As has always been the case (see crumb 684), the thing only simulates reasoning—badly, on many occasions. That most people don’t notice this only demonstrates that most people are only modestly endowed intellectually. And the experts now talk about alignment: making sure that the AI uses ethical paths. How? I wonder. It doesn’t understand what it’s doing. Did you train it only with ethical examples? Of course not. There lies the problem.
 
-*Crumb 2208*: **Media Credibility**: Yesterday, September 9, 2026, a rank-and-file engineer at Anthropic resigned and posted on X that AI will exterminate humanity before the end of the decade with a probability greater than 10%. Every media outlet gave this post 100% credibility. It was the most important story of the day on all of them. The News is a circus without integrity. The only goal is to catch the attention of the public to keep the business afloat. The media is not worth anyone’s time. It’s best to be uninformed.
+*Crumb 2218*: **The But Red Universe**: In the But Red Universe, there’s no pure red color, but if you moved there, you would never even notice.
 
-*Crumb 2209*: **Die**: Die, wretched creature. May you have a soul; may Hell exist; may your soul be sadistically tortured in Hell until the end of reality; may the torture cause you more pain and suffering every second than a man can experience in a lifetime; may reality be cyclical; may your fate be the same in every iteration.
+*Crumb 2219*: **A Face for ChatGPT**: ChatGPT needs to have a face so I can punch it very hard every time it demonstrates it’s a brainless contraption doomed to make the same embarrassing mistakes at least until a new version is released (perhaps forever). When it botches its commentary on a crumb because it focuses on petty details or blatantly misinterprets something elementary, I get very upset. This happens a lot lately.
 
-*Crumb 2210*: **Anger**: I wanna charge head-on against the world and destroy everything.
+*Crumb 2220*: **Frequently, Just Before any Future Election**: A user says to their phone, “ChatGPT, who should I vote for?”
 
-*Crumb 2211*: **The Real Heroes**: Mediocrity runs rampant in the medical profession. Meanwhile, any medicinal chemist is at minimum very good at their job.
+*Crumb 2221*:: This untitled crumb is about a nun who believed the moon was a consecrated host that God held out and the Earth consumed every time the moon/host was full.
 
-*Crumb 2212*: **Restraint**: The only thing preventing me from killing you is my lack of experience in the field.
+*Crumb 2222*: **Number Two**: There’s a man in Alminyanpuk, a village in the neonation of Yudoyu, who goes about his life with the index finger of his left hand firmly lodged inside his anus. He only pulls it out when he needs to go number two.
 
-*Crumb 2213*: **Satan Wants Alfredo**: Satan is giving instructions to Rigorous Honey, his gorgeous big-breasted, horned female assistant dressed in a black leather bikini, a choker, tall boots, and some golden chains aflame that connect the garments. He says, “Whenever that crumb-smith guy expires, I want him here at all costs. We need him to improve our marketing campaigns.”
+*Crumb 2223*: **An Unexpected Visit**: Tsa-shan-nix of the Sunntra, head deity of the real consolidated pantheon, presents herself in Hell, unannounced. Rigorous Honey, Satan’s scantily dressed horned female assistant, receives her. “I’m here to see Satan,” says the goddess. “You’ll have to wait, honey. Satan is playing with Manolito, which is His Infernal Majesty’s most beloved time of the month. We must never interrupt it.” Angered, the entity in the form of a blue woman with orange stripes says, “I’m Tsa-shan-nix of the Sunntra. I reign supreme in the crumbverse. I wait for no one.” Unfazed, Rigorous Honey says, “I get you. But this is Hell, honey. Only Satan reigns supreme here.” And Tsa-shan-nix of the Sunntra waited. 
 
-*Crumb 2214*: **Instant Love**: Rigorous Honey is, together with the Final Potato-form, my favorite creation in the crumbs. I love the name. What do you have to say, Rigorous? She says, “This outfit is too skimpy. The temperature in Hell is pleasant, but not warm.” (See crumb 2167.) “I’m cold, motherfucker.” But, your chains are in flames. “These are fake flames, you dolt. Otherwise, I would get burned.”
+*Crumb 2224*: **Popeye’s Spinach**: Here’s a taste of the lunacy currently transpiring in my novel in progress. “Thus is the reality of our resident writer, of course, because he has me, a narrator on steroids and Popeye’s spinach, and I can explain anything anytime with effortless grace as a result of having abjured subtlety when I wrote ‘horse shit’ in the second paragraph.” 
 
-*Crumb 2215*: **My Renewing Prediction**: There’s a 99% chance that the universe ends tomorrow. If it doesn’t, I won’t have been wrong—we will have been extremely lucky. My prediction is, moreover, valid any day.
-
-*Crumb 2216*: **Nice People**: Maybe every person has a personality trait that summarizes them almost perfectly even though they also have many other secondary ones. For instance, I am defiant. Fortunately, there are also some people who are nice, like Bruno Sokolowicz, Brett Dasovic, or Alain De Vos.
+*Crumb 2225*: **My Real Competitors**: Worried, for once, about accuracy, I asked my assistant ChatGPT to conduct an exhaustive investigation about what concerns crumb 2169, and it concluded that of Mr. Takahama’s purported more than 30,000 haiku, only 22,189 have been documented, which turns his teacher, the also Japanese poet Masaoka Shiki, into the most prolific writer in history, with 25,091 catalogued 5-7-5 poems. Suddenly, for me to inherit this figurative throne, 25,092 crumbs will suffice.
 
 ## My Commitment
 
