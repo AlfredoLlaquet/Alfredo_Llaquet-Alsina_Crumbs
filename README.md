@@ -8,9 +8,9 @@ Against all odds, they exist to save humanity from doom and you from abulia.
 
 *Crumb 2225*: **My Real Competitors**: Worried, for once, about accuracy, I asked my assistant ChatGPT to conduct an exhaustive investigation about what concerns crumb 2169, and it concluded that of Mr. Takahama’s purported more than 30,000 haiku, only 22,189 have been documented, which turns his teacher, the also Japanese poet Masaoka Shiki, into the most prolific writer in history, with 25,091 catalogued 5-7-5 poems. Suddenly, for me to inherit this figurative throne, 25,092 crumbs will suffice.
 
-## Why should you care?
+## Why Should You Care?
 
-The crumbs are fun to read because they always surprise you and make you think, and you never know what the next one will be about. Also, they are tiny—each can be read in less than 20 seconds.
+The crumbs are fun to read because they always surprise you and make you think, and you never know what the next one will be about. Also, they are very short—each can be read in less than 20 seconds.
 
 ## The Latest Batch
 
