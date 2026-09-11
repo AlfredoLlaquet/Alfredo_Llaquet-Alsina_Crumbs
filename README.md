@@ -4,7 +4,7 @@
 
 Against all odds, they exist to save humanity from doom and you from abulia.
 
-## A Lifelong Challenge: Becoming the Most Prolific Writer of All Time
+## My Goal Is to Write More than 25,091 Tiny Literary Pieces to Become the Most Prolific Writer in History
 
 *Crumb 2225*: **My Real Competitors**: Worried, for once, about accuracy, I asked my assistant ChatGPT to conduct an exhaustive investigation about what concerns crumb 2169, and it concluded that of Mr. Takahama’s purported more than 30,000 haiku, only 22,189 have been documented, which turns his teacher, the also Japanese poet Masaoka Shiki, into the most prolific writer in history, with 25,091 catalogued 5-7-5 poems. Suddenly, for me to inherit this figurative throne, 25,092 crumbs will suffice.
 
