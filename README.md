@@ -14,7 +14,7 @@ The crumbs are fun to read because they always surprise you and make you think, 
 
 ## The Latest Batch
 
-Written on September 11, 2026.
+Written on September 11, 2026. I wrote the first crumb on March 28, 2025.
 
 *Crumb 2217*: **Non-Intelligence**: On September 10, 2026, AI already does incredible things, but my regular interaction with it allows me to categorically affirm that reasoning is not one of them. As has always been the case (see crumb 684), the thing only simulates reasoning—badly, on many occasions. That most people don’t notice this only demonstrates that most people are only modestly endowed intellectually. And the experts now talk about alignment: making sure that the AI uses ethical paths. How? I wonder. It doesn’t understand what it’s doing. Did you train it only with ethical examples? Of course not. There lies the problem.
 
