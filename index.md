@@ -14,37 +14,23 @@ The crumbs are fun to read because they always surprise you and make you think, 
 
 ## The Latest Batch
 
-Written on September 16, 2026. I wrote the first crumb on March 28, 2025.
+Written on September 17, 2026. I wrote the first crumb on March 28, 2025.
 
-*Crumb 2242*: **The Beautiful Reader Worries about Mistakes**: “Alfredo, sweetie,” says the beautiful reader, “if I’m not understanding you incorrectly, both the crumbs and your novels will have grammatical errors that you and your tools didn’t detect, and you’re fine with that.” I say, “I’m more than fine; I think it’s indispensable if my work is to be art by a single author. Painters and sculptors don’t have editors or proofreaders, and neither should writers. Those who allow their books to be a team effort should sign with their name followed by ‘and the editorial team at whatever publisher.’”
+*Crumb 2257*: **Will “AI” Kill Us All?**: Yes, it will—from boredom of hearing about the thing.
 
-*Crumb 2243*: **Real Talent**: Real talent is innate. The great majority of people don’t have it and never will, regardless of how much they strive or wish for it.
+*Crumb 2258*: **The Beautiful Reader Scolds Alfredo**: “Alfredo, sweetie,” says the beautiful reader, in a tone of voice less affectionate than usual, “it seems good old vermaden (see crumb 2245) proved you wrong (see crumb 2251), didn’t he? He appreciated your little homage by reposting it and writing a heartfelt thank-you. Not everybody fits your cynical vision of the world. I hope you learn from this and become less bitter.” And I say nothing because she’s right.
 
-*Crumb 2244*: **The First Reader of the Crumbs**: The first reader of the crumbs who identified himself to me as such was rbranco, a user of the FreeBSD Forums. The second one was thoughtful Octavia. The third one, attentive Vuccala.
+*Crumb 2259*: **We Won’t Be So Lucky as to Live the Extermination of Humanity by “AI”**: Many humans wish secretly, as they grow old, that everything died with them. If humanity were to be extinct soon, we’d all have the incomparable fortune of fulfilling the fantasy of our end being the end of all, the apocalypse, Ragnarök. All in all, we all have to die, so the drama isn’t as great as we like to conjecture: no more humans would ever be born, but that would affect no one directly. Anyway, we won’t be so lucky—biology is a much better builder of humans than humans are of machines. We will prevail and keep fearing our personal finales.
 
-*Crumb 2245*: **A Heart of Steel**: Someone good and tenacious has a heart of steel. Nobody deserves such a description more than Slawomir Wojciech Wojtczak (vermaden), who has become an important personality in the BSD, UNIX, and computer fields by gifting his Valuable News to the world uninterruptedly since March 16, 2018, and many essential technical articles on his WordPress blog since the day before. Today, anyone who is interested in computer servers and OSs knows who vermaden is, except Wikipedia, sadly.
+*Crumb 2260*: **The Renegade Batter**: The Renegade Batter wears a faceless black mask and hides behind dumpsters in back alleys of big cities, waiting for anyone to approach alone. When this happens, he jumps them and hits them in the head with his heavy iron bat repeatedly, until all that is left is a mixture of squashed brain and bits of bone, flesh, and hair. Finally, he takes a picture for his personal collection, clutches the victim’s wallet and valuables, removes his mask, and has a cheeseburger with small fries and a medium cherry soda in the nearest fast-food joint.
 
-*Crumb 2246*: **Your True Self**: If you watch your reflection in the passing tinted window of an SUV going at exactly 30 mph, when the window forms a 30-degree angle with the straight line that joins the tips of your big toes you’ll see for an instant your true self instead of your physical reflection. If you are missing a big toe or both, you’ll have to look for an alternative method.
+*Crumb 2261*: **Not “Maybe Later” in a Million Years**: No, motherfucker, I won’t be interested in your stupid offer “Maybe Later” even if that is all I can click besides “Yes.”
 
-*Crumb 2247*: **A Stark Incongruity**: That most euthanasia proponents are atheists and most who oppose it believe in god is an interesting incongruity. I’m a firm atheist, therefore I’m against euthanasia vehemently: you only have this existence, motherfucker, don’t let anyone convince you out of it.
+*Crumb 2262*: **The Washing Machine**: I live alone and yet keep finding pieces of clothing that aren’t mine or even my size every time I do the laundry. I think my washing machine is a portal to parallel realities. I don’t think I’ve ever lost any garment of mine, however.
 
-*Crumb 2248*: **Dreams**: The girl in her early twenties assured her parents that she would be a successful movie star. They agreed with her potential and gave her some money, with which she moved to Hollywood, where she first became a regular burger-flipper and, later, when she grew tired of the drudge, a successful escort. Her parents believe she is a theater actor.
+*Crumb 2263*: **Balance Lost**: Not feeling tired becomes gradually more difficult as one ages.
 
-*Crumb 2249*: **A Sucker Punch**: “Why did you punch her in the face, Johnny?” “That was her face? Ain’t she an ugly bitch!”
-
-*Crumb 2250*: **Sympathetic Appliances, Now With MMA Defenses**: We are glad to announce that our family of sympathetic appliances (see crumb 1602) now comes with preinstalled MMA defenses. If you are known to have a wretched humor and are prone to assault and hurt or break other members of your home, human and otherwise, worry not, our new generation of sympathetic appliances will violently subdue you when necessary and only call the police if another human member of the household agrees.
-
-*Crumb 2251*: **Don’t Go Dispensing Homages if You Are a Nobody**: If you are a nobody—like I am, which is compatible with being the best writer to ever live, just ahead of Shakespeare, Cervantes, and Tolstoy—and you are keen to pay your little homages to people you like—as I did, for instance, in crumbs 2216 and 2245—said personages won’t feel honored; they’ll just think you’re a weirdo. It’s okay. Their discomfort won’t stop me.
-
-*Crumb 2252*: **Smart People**: Most people who think they are smart are not by a stretch that makes distances among galaxies pale and feel insignificant. I despise them a lot because I have an infinite reserve of despite and, consequently, can destine for them much more than they deserve.
-
-*Crumb 2253*: **The Beautiful Reader Worries about All the Fury**: “Alfredo, sweetie,” says the beautiful reader, “aren’t you a tad infuriated lately?” I say, “Perhaps, but not more than many people. The only difference is that I have a singular literary project where to vent as I see fit and they don’t.”
-
-*Crumb 2254*: **Slap Magic**: Slap magic consists of two phases. The first one is easy; the second one is not. You summon an infernal provocateur, which is a type of demon that will annoy, vex, and gravely offend you continuously and, at the same time, encourage you to slap her in the face under the assurance that she won’t retaliate. If you resist slapping the bastard for one month, you can ask her whatever you want and she will deliver it, without exceptions or questions asked. You can summon an infernal provocateur only once in your life.
-
-*Crumb 2255*: **Corpgers Asking for Regulations**: When a corpger (see crumb 109) such as OpenAI or Anthropic pleads with the government for more regulations, its aim is, unmistakably, to drown the smaller competitors in bureaucracy so that they cannot adapt and end up being absorbed or disappearing.
-
-*Crumb 2256*: **Unorthodox Butterflies**: A particular species of butterflies that live only on a small island in the middle of a big lake in Southeast Asia are known popularly as unorthodox butterflies because they don’t flutter, they glide.
+*Crumb 2264*: **To Those Who Age Gracefully**: You’ll die anyway.
 
 ## My Commitment 
 
@@ -4660,3 +4646,19 @@ we are hymns! And this is the Hymns’ Hymn!
 *Crumb 2255*: **Corpgers Asking for Regulations**: When a corpger (see crumb 109) such as OpenAI or Anthropic pleads with the government for more regulations, its aim is, unmistakably, to drown the smaller competitors in bureaucracy so that they cannot adapt and end up being absorbed or disappearing.
 
 *Crumb 2256*: **Unorthodox Butterflies**: A particular species of butterflies that live only on a small island in the middle of a big lake in Southeast Asia are known popularly as unorthodox butterflies because they don’t flutter, they glide.
+
+*Crumb 2257*: **Will “AI” Kill Us All?**: Yes, it will—from boredom of hearing about the thing.
+
+*Crumb 2258*: **The Beautiful Reader Scolds Alfredo**: “Alfredo, sweetie,” says the beautiful reader, in a tone of voice less affectionate than usual, “it seems good old vermaden (see crumb 2245) proved you wrong (see crumb 2251), didn’t he? He appreciated your little homage by reposting it and writing a heartfelt thank-you. Not everybody fits your cynical vision of the world. I hope you learn from this and become less bitter.” And I say nothing because she’s right.
+
+*Crumb 2259*: **We Won’t Be So Lucky as to Live the Extermination of Humanity by “AI”**: Many humans wish secretly, as they grow old, that everything died with them. If humanity were to be extinct soon, we’d all have the incomparable fortune of fulfilling the fantasy of our end being the end of all, the apocalypse, Ragnarök. All in all, we all have to die, so the drama isn’t as great as we like to conjecture: no more humans would ever be born, but that would affect no one directly. Anyway, we won’t be so lucky—biology is a much better builder of humans than humans are of machines. We will prevail and keep fearing our personal finales.
+
+*Crumb 2260*: **The Renegade Batter**: The Renegade Batter wears a faceless black mask and hides behind dumpsters in back alleys of big cities, waiting for anyone to approach alone. When this happens, he jumps them and hits them in the head with his heavy iron bat repeatedly, until all that is left is a mixture of squashed brain and bits of bone, flesh, and hair. Finally, he takes a picture for his personal collection, clutches the victim’s wallet and valuables, removes his mask, and has a cheeseburger with small fries and a medium cherry soda in the nearest fast-food joint.
+
+*Crumb 2261*: **Not “Maybe Later” in a Million Years**: No, motherfucker, I won’t be interested in your stupid offer “Maybe Later” even if that is all I can click besides “Yes.”
+
+*Crumb 2262*: **The Washing Machine**: I live alone and yet keep finding pieces of clothing that aren’t mine or even my size every time I do the laundry. I think my washing machine is a portal to parallel realities. I don’t think I’ve ever lost any garment of mine, however.
+
+*Crumb 2263*: **Balance Lost**: Not feeling tired becomes gradually more difficult as one ages.
+
+*Crumb 2264*: **To Those Who Age Gracefully**: You’ll die anyway.
