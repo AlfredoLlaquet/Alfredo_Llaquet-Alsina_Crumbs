@@ -14,23 +14,15 @@ The crumbs are fun to read because they always surprise you and make you think, 
 
 ## The Latest Batch
 
-Written on September 17, 2026. I wrote the first crumb on March 28, 2025.
+Written on September 18, 2026. I wrote the first crumb on March 28, 2025.
 
-*Crumb 2257*: **Will “AI” Kill Us All?**: Yes, it will—from boredom of hearing about the thing.
+*Crumb 2265*: **Blunt Force Trauma**: Most blunt-force-trauma murders where the victim receives only one fatal blow and the police can’t find any biological trace on the weapon or at the scene are carried out by the ghosts of deceased mass murderers who want to settle their final tally on a neat round number.
 
-*Crumb 2258*: **The Beautiful Reader Scolds Alfredo**: “Alfredo, sweetie,” says the beautiful reader, in a tone of voice less affectionate than usual, “it seems good old vermaden (see crumb 2245) proved you wrong (see crumb 2251), didn’t he? He appreciated your little homage by reposting it and writing a heartfelt thank-you. Not everybody fits your cynical vision of the world. I hope you learn from this and become less bitter.” And I say nothing because she’s right.
+*Crumb 2266*: **The CCP**: At some point in the next fifty years, the CCP (Chinese Communist Party) will use the incessant data collection about every little thing any Chinese citizen does, as well as its thorough storage, to cull the population to a reasonable and sustainable number. The WHO will praise the measure and the EU will try to find a way to replicate it that seems democratic. US citizens, meanwhile, will keep eating more cheeseburgers than they should and farting in public discreetly.
 
-*Crumb 2259*: **We Won’t Be So Lucky as to Live the Extermination of Humanity by “AI”**: Many humans wish secretly, as they grow old, that everything died with them. If humanity were to be extinct soon, we’d all have the incomparable fortune of fulfilling the fantasy of our end being the end of all, the apocalypse, Ragnarök. All in all, we all have to die, so the drama isn’t as great as we like to conjecture: no more humans would ever be born, but that would affect no one directly. Anyway, we won’t be so lucky—biology is a much better builder of humans than humans are of machines. We will prevail and keep fearing our personal finales.
+*Crumb 2267*: **The Llaquet-Alsina Style Guide**: If you are bad at writing, try not to write much. If you still have to do it, use short sentences, simple words, and don’t worry about anything except being clear. Alternatively, if you are good at writing, write.
 
-*Crumb 2260*: **The Renegade Batter**: The Renegade Batter wears a faceless black mask and hides behind dumpsters in back alleys of big cities, waiting for anyone to approach alone. When this happens, he jumps them and hits them in the head with his heavy iron bat repeatedly, until all that is left is a mixture of squashed brain and bits of bone, flesh, and hair. Finally, he takes a picture for his personal collection, clutches the victim’s wallet and valuables, removes his mask, and has a cheeseburger with small fries and a medium cherry soda in the nearest fast-food joint.
-
-*Crumb 2261*: **Not “Maybe Later” in a Million Years**: No, motherfucker, I won’t be interested in your stupid offer “Maybe Later” even if that is all I can click besides “Yes.”
-
-*Crumb 2262*: **The Washing Machine**: I live alone and yet keep finding pieces of clothing that aren’t mine or even my size every time I do the laundry. I think my washing machine is a portal to parallel realities. I don’t think I’ve ever lost any garment of mine, however.
-
-*Crumb 2263*: **Balance Lost**: Not feeling tired becomes gradually more difficult as one ages.
-
-*Crumb 2264*: **To Those Who Age Gracefully**: You’ll die anyway.
+*Crumb 2268*: **Global Imbecility**: “Experts” talking about AGI being close and even more esoteric possibilities, like LLMs becoming a life form, and people not laughing in their faces means that the average IQ of the planet is concerningly low. Who can use these contrivances and see anything other than predictive conversational systems, as far from intelligence as a potato is from being a K-pop idol?
 
 ## My Commitment
 
