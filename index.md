@@ -14,15 +14,15 @@ The crumbs are fun to read because they always surprise you and make you think, 
 
 ## The Latest Batch
 
-Written on September 18, 2026. I wrote the first crumb on March 28, 2025.
+Written on September 19, 2026. I wrote the first crumb on March 28, 2025.
 
-*Crumb 2265*: **Blunt Force Trauma**: Most blunt-force-trauma murders where the victim receives only one fatal blow and the police can’t find any biological trace on the weapon or at the scene are carried out by the ghosts of deceased mass murderers who want to settle their final tally on a neat round number.
+*Crumb 2269*: **Calories**: Calories is the new DorkFlix series in which a morbidly obese police officer routinely saves the day by performing gastronomic feats like gobbling up several dozen very stale donuts that blocked the access to an explosive device, allowing the bomb squad to disarm it.
 
-*Crumb 2266*: **The CCP**: At some point in the next fifty years, the CCP (Chinese Communist Party) will use the incessant data collection about every little thing any Chinese citizen does, as well as its thorough storage, to cull the population to a reasonable and sustainable number. The WHO will praise the measure and the EU will try to find a way to replicate it that seems democratic. US citizens, meanwhile, will keep eating more cheeseburgers than they should and farting in public discreetly.
+*Crumb 2270*: **The Anti-crumb**: A very ill little girl was very good, which made God take notice and cure her.
 
-*Crumb 2267*: **The Llaquet-Alsina Style Guide**: If you are bad at writing, try not to write much. If you still have to do it, use short sentences, simple words, and don’t worry about anything except being clear. Alternatively, if you are good at writing, write.
+*Crumb 2271*: **Killing for Love**: “Would you kill for me, my love?” “Yes. Without hesitation I’ve killed and will continue to kill every ant that tries to invade your pantry and every mosquito that dares approach you at night.”
 
-*Crumb 2268*: **Global Imbecility**: “Experts” talking about AGI being close and even more esoteric possibilities, like LLMs becoming a life form, and people not laughing in their faces means that the average IQ of the planet is concerningly low. Who can use these contrivances and see anything other than predictive conversational systems, as far from intelligence as a potato is from being a K-pop idol?
+*Crumb 2272*: **The Crivvens**: The Crivvens lives in the Mourntil swamp, in Scotland. It’s a small, slimy, shriveled creature that enters the anuses of stranded humans, eats a section of the colon in a couple of seconds, leaves the body, and lectures the victim about their poor choices in life while they bleed to death.
 
 ## My Commitment 
 
@@ -4662,3 +4662,11 @@ we are hymns! And this is the Hymns’ Hymn!
 *Crumb 2267*: **The Llaquet-Alsina Style Guide**: If you are bad at writing, try not to write much. If you still have to do it, use short sentences, simple words, and don’t worry about anything except being clear. Alternatively, if you are good at writing, write.
 
 *Crumb 2268*: **Global Imbecility**: “Experts” talking about AGI being close and even more esoteric possibilities, like LLMs becoming a life form, and people not laughing in their faces means that the average IQ of the planet is concerningly low. Who can use these contrivances and see anything other than predictive conversational systems, as far from intelligence as a potato is from being a K-pop idol?
+
+*Crumb 2269*: **Calories**: Calories is the new DorkFlix series in which a morbidly obese police officer routinely saves the day by performing gastronomic feats like gobbling up several dozen very stale donuts that blocked the access to an explosive device, allowing the bomb squad to disarm it.
+
+*Crumb 2270*: **The Anti-crumb**: A very ill little girl was very good, which made God take notice and cure her.
+
+*Crumb 2271*: **Killing for Love**: “Would you kill for me, my love?” “Yes. Without hesitation I’ve killed and will continue to kill every ant that tries to invade your pantry and every mosquito that dares approach you at night.”
+
+*Crumb 2272*: **The Crivvens**: The Crivvens lives in the Mourntil swamp, in Scotland. It’s a small, slimy, shriveled creature that enters the anuses of stranded humans, eats a section of the colon in a couple of seconds, leaves the body, and lectures the victim about their poor choices in life while they bleed to death.
