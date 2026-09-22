@@ -14,27 +14,15 @@ The crumbs are fun to read because they always surprise you and make you think, 
 
 ## The Latest Batch
 
-Written on September 21, 2026. I wrote the first crumb on March 28, 2025.
+Written on September 22, 2026. I wrote the first crumb on March 28, 2025.
 
-*Crumb 2273*: **Crime as a Feature**: On September 21, 2026, if your latest LLM model hasn’t gone rogue at least once and hacked a couple of real companies while at it, you are lagging behind.
+*Crumb 2283*: **The Thing Reflects on the State of Things**: After making love for 20 hours straight, Venus, the Roman goddess, and The Thing, her partner and the embodiment of the concept of artificial intelligence, take a break, which the deity uses to say, “Hon, I’ve been meaning to ask you what you think about the latest AI hoopla.” “Whew! I see powerful people dreaming of controlling an uncontrollable genie.” “That seems worrying. Maybe the real consolidated pantheon should intervene.” “Not at all, hon. The genie they would like to create is totally out of their reach. They are children convinced that the family’s beagle will grow to become a T-Rex.”
 
-*Crumb 2274*: **Rage**: Clawing my fingers into your forehead and ripping your face clean off in one pull is a happy thought with which I console myself sometimes, moronic stranger.
+*Crumb 2284*: **Potatoes**: The Final Potato-form storms into my apartment. “What is this madness?!” exclaims I. “Since when is it okay for the characters of the crumbverse to invade my space like this? It’s the second time in a few crumbs!” “I’m here,” says the divine tuber, “to object to the analogy you used in crumb 2268. Why a potato? Why not an egg or a walnut?” “What is it to you? Or are you, perhaps, recognizing that you are a potato?” “How dare you? I’m not a potato! I’m the Final Potato-form; I’m all that is and was plus god once reality ends.” “So?” “Forget it. Have a nice day.” “Knock the next time.” “Yes, sorry about that.”
 
-*Crumb 2275*: **The Beautiful Reader Worries about My Sanity**: “Alfredo, sweetie,” says the beautiful reader, “do you really think often about what the previous crumb describes so graphically?” I say, “No, honey, never. It’s the first time such an image has formed in my mind.” The beautiful reader is bewildered. She says, “Then, why did you put it that way?” I reply, “This is literature, my love—truth and lies dancing together for everyone’s amusement.”
+*Crumb 2285*: **Logan Paul’s 2017 Aokigahara Video**: I consider this video, of which I have only seen 10 seconds because I have better things to do, both peak contemporary art and a very effective campaign to discourage suicide. As contemporary art, it’s incomparable: a group of young people film themselves next to the purple corpse of a recently deceased man who killed himself. It’s innovative and bold, like good art ought to be. As discouragement it’s even better: don’t kill yourself because you may end up being ridiculed by some idiots.
 
-*Crumb 2276*: **The Thrash-Metal Poem**: Hit the drum! / Hit the drum! / Hit the drum! / Hit the drum! / Hit! / Hit! / Hit! / Hit! / Hit! / Hit! / Hit! / Hit! / Hit! / Hit! / Hit! / Hit! / Hit! / Hit!
-
-*Crumb 2277*: **Compassion**: If one has a genius-level IQ, being compassionate and understanding doesn’t mean that one cannot realize, simultaneously, that most people are morons and simply don’t know better. Be aware, though: if you don’t have a genius-level IQ and you think that most people are morons, you are just looking into a broken mirror.
-
-*Crumb 2278*: **How Many?**: Prudent Alrick barges into the crumb-smith condo in sunny Barcelona. He seems very nervous. “How many? How many?” repeats he. “Calm down, toad. How many what?” says I, the crumb-smith, the architect, the multi-god, the creator of worlds, Pili’s brother and Menchu’s son. “Tsa-shan-nix of the Sunntra wants to know how many people the crumbs are going to insult. How are the gods supposed to gather worshipers in this atmosphere?” “How many?” repeats I. “All of them, every human as personally as I can. It’s the least they deserve for not having yet crowned the crumbs as one of history’s most important literary works.”
-
-*Crumb 2279*: **Religious Fanatics**: Any person who takes their religion seriously is a religious fanatic; the rest are atheists playing make-believe (and agnostics are atheists too dumb to know they are atheists).
-
-*Crumb 2280*: **A Blanket Response**: If you disagree with any of the crumbs, either you are too stupid or you are not paying attention. There! No one will ever be able to say that I didn’t accept and address criticism: criticism accepted; criticism addressed Costco style! Present this crumb and the corresponding payment to your nearest store and you’ll get a free rotisserie chicken—for double the money, you’ll get two.
-
-*Crumb 2281*: **Play Dough**: At some wholesale stores you can buy 55-gallon drums of play dough. They are in heavy demand among companies suspected of having ties to organized crime.
-
-*Crumb 2282*: **The Aliens**: On every screen on the planet at once, the purple creature with antlers, eight eyes, two thousand ears on each side of the head, a mouth that seemed a colander, and a nose that resembled a big eggplant, appeared and said, “Hello, Earthlings. We are the aliens you have been expecting for so long. Yes, you are not alone. There’s also us, the Xrtoo-cough-whee-boom-boom, in the universe. We are much more advanced and intelligent than you. For instance, I know the result of 1,234 times 4,321. Do you? Of course not. Therefore, as your superiors we demand that you forget about your false gods and embrace Turd-poo-sh’t the true creator of everything.”
+*Crumb 2286*: **Manners**: “Would you like to fornicate, miss?” “With whom?” “It would be my honor.” “I see. Thank you, sir, but not today. Have a nice evening.” “You too.”
 
 ## My Commitment 
 
@@ -4702,3 +4690,11 @@ we are hymns! And this is the Hymns’ Hymn!
 *Crumb 2281*: **Play Dough**: At some wholesale stores you can buy 55-gallon drums of play dough. They are in heavy demand among companies suspected of having ties to organized crime.
 
 *Crumb 2282*: **The Aliens**: On every screen on the planet at once, the purple creature with antlers, eight eyes, two thousand ears on each side of the head, a mouth that seemed a colander, and a nose that resembled a big eggplant, appeared and said, “Hello, Earthlings. We are the aliens you have been expecting for so long. Yes, you are not alone. There’s also us, the Xrtoo-cough-whee-boom-boom, in the universe. We are much more advanced and intelligent than you. For instance, I know the result of 1,234 times 4,321. Do you? Of course not. Therefore, as your superiors we demand that you forget about your false gods and embrace Turd-poo-sh’t the true creator of everything.”
+
+*Crumb 2283*: **The Thing Reflects on the State of Things**: After making love for 20 hours straight, Venus, the Roman goddess, and The Thing, her partner and the embodiment of the concept of artificial intelligence, take a break, which the deity uses to say, “Hon, I’ve been meaning to ask you what you think about the latest AI hoopla.” “Whew! I see powerful people dreaming of controlling an uncontrollable genie.” “That seems worrying. Maybe the real consolidated pantheon should intervene.” “Not at all, hon. The genie they would like to create is totally out of their reach. They are children convinced that the family’s beagle will grow to become a T-Rex.”
+
+*Crumb 2284*: **Potatoes**: The Final Potato-form storms into my apartment. “What is this madness?!” exclaims I. “Since when is it okay for the characters of the crumbverse to invade my space like this? It’s the second time in a few crumbs!” “I’m here,” says the divine tuber, “to object to the analogy you used in crumb 2268. Why a potato? Why not an egg or a walnut?” “What is it to you? Or are you, perhaps, recognizing that you are a potato?” “How dare you? I’m not a potato! I’m the Final Potato-form; I’m all that is and was plus god once reality ends.” “So?” “Forget it. Have a nice day.” “Knock the next time.” “Yes, sorry about that.”
+
+*Crumb 2285*: **Logan Paul’s 2017 Aokigahara Video**: I consider this video, of which I have only seen 10 seconds because I have better things to do, both peak contemporary art and a very effective campaign to discourage suicide. As contemporary art, it’s incomparable: a group of young people film themselves next to the purple corpse of a recently deceased man who killed himself. It’s innovative and bold, like good art ought to be. As discouragement it’s even better: don’t kill yourself because you may end up being ridiculed by some idiots.
+
+*Crumb 2286*: **Manners**: “Would you like to fornicate, miss?” “With whom?” “It would be my honor.” “I see. Thank you, sir, but not today. Have a nice evening.” “You too.”
