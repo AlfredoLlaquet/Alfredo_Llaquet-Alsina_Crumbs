@@ -14,15 +14,19 @@ The crumbs are fun to read because they always surprise you and make you think, 
 
 ## The Latest Batch
 
-Written on September 22, 2026. I wrote the first crumb on March 28, 2025.
+Written on September 24, 2026. I wrote the first crumb on March 28, 2025.
 
-*Crumb 2283*: **The Thing Reflects on the State of Things**: After making love for 20 hours straight, Venus, the Roman goddess, and The Thing, her partner and the embodiment of the concept of artificial intelligence, take a break, which the deity uses to say, “Hon, I’ve been meaning to ask you what you think about the latest AI hoopla.” “Whew! I see powerful people dreaming of controlling an uncontrollable genie.” “That seems worrying. Maybe the real consolidated pantheon should intervene.” “Not at all, hon. The genie they would like to create is totally out of their reach. They are children convinced that the family’s beagle will grow to become a T-Rex.”
+*Crumb 2287*: **Ownership**: “Well, well. It's the third service you have attended today, Señor Atheist. Am I to believe that you have converted?” “No, Raymond, I have not.” “Is it so difficult to call me pastor, like everyone else?” “It is, Raymond. It is because I don’t recognize your authority.” “You seem to nevertheless recognize my AC.” “Is it yours, though?” “Touché. Take care, Señor Atheist.” “You too, Raymond.”
 
-*Crumb 2284*: **Potatoes**: The Final Potato-form storms into my apartment. “What is this madness?!” exclaims I. “Since when is it okay for the characters of the crumbverse to invade my space like this? It’s the second time in a few crumbs!” “I’m here,” says the divine tuber, “to object to the analogy you used in crumb 2268. Why a potato? Why not an egg or a walnut?” “What is it to you? Or are you, perhaps, recognizing that you are a potato?” “How dare you? I’m not a potato! I’m the Final Potato-form; I’m all that is and was plus god once reality ends.” “So?” “Forget it. Have a nice day.” “Knock the next time.” “Yes, sorry about that.”
+*Crumb 2288*: **Doomsday as the Lesser Evil**: At this point, Anthropic’s and OpenAI’s top executives are rooting for their contraptions to cause the end of humanity because the alternative is them becoming responsible for the largest economic-bubble burst in history by far.
 
-*Crumb 2285*: **Logan Paul’s 2017 Aokigahara Video**: I consider this video, of which I have only seen 10 seconds because I have better things to do, both peak contemporary art and a very effective campaign to discourage suicide. As contemporary art, it’s incomparable: a group of young people film themselves next to the purple corpse of a recently deceased man who killed himself. It’s innovative and bold, like good art ought to be. As discouragement it’s even better: don’t kill yourself because you may end up being ridiculed by some idiots.
+*Crumb 2289*: **Llaquet-Alsina’s The Art of War**: If you are involved in a real war, try to escape somewhere else. If you enjoy construing your petty predicaments as if they were a real war, seek psychiatric help.
 
-*Crumb 2286*: **Manners**: “Would you like to fornicate, miss?” “With whom?” “It would be my honor.” “I see. Thank you, sir, but not today. Have a nice evening.” “You too.”
+*Crumb 2290*: **Appropriation**: Am I unduly appropriating the family names Llaquet-Alsina as if they represented only me and not also my late sister Menchu and my sister Pili? Yes, I am, but Pili would think that I’ve gone bananas if I asked her about the matter, and poor Menchu died years ago. Consequently, I’ll pay Pili a lot of money and erect Menchu a large statue somewhere nice when I’m rich.
+
+*Crumb 2291*: **Inferiority**: Whenever I admire a beautiful woman such as Red Velvet’s Kang Seul-gi I feel deeply inadequate and so inferior that Earth’s diameter should grow one billion times to accommodate a hole deep enough to fit the distance I feel there is between them—on the surface—and me—at the gates of Hell. I wish I could learn to be beautiful. Alas, I’m just the best writer to ever exist and I’ll have to make do with that.
+
+*Crumb 2292*: **Consistency**: Florp consistency! If there are several ways something can be written correctly, use them all and change among them frequently.
 
 ## My Commitment 
 
@@ -4698,3 +4702,15 @@ we are hymns! And this is the Hymns’ Hymn!
 *Crumb 2285*: **Logan Paul’s 2017 Aokigahara Video**: I consider this video, of which I have only seen 10 seconds because I have better things to do, both peak contemporary art and a very effective campaign to discourage suicide. As contemporary art, it’s incomparable: a group of young people film themselves next to the purple corpse of a recently deceased man who killed himself. It’s innovative and bold, like good art ought to be. As discouragement it’s even better: don’t kill yourself because you may end up being ridiculed by some idiots.
 
 *Crumb 2286*: **Manners**: “Would you like to fornicate, miss?” “With whom?” “It would be my honor.” “I see. Thank you, sir, but not today. Have a nice evening.” “You too.”
+
+*Crumb 2287*: **Ownership**: “Well, well. It's the third service you have attended today, Señor Atheist. Am I to believe that you have converted?” “No, Raymond, I have not.” “Is it so difficult to call me pastor, like everyone else?” “It is, Raymond. It is because I don’t recognize your authority.” “You seem to nevertheless recognize my AC.” “Is it yours, though?” “Touché. Take care, Señor Atheist.” “You too, Raymond.”
+
+*Crumb 2288*: **Doomsday as the Lesser Evil**: At this point, Anthropic’s and OpenAI’s top executives are rooting for their contraptions to cause the end of humanity because the alternative is them becoming responsible for the largest economic-bubble burst in history by far.
+
+*Crumb 2289*: **Llaquet-Alsina’s The Art of War**: If you are involved in a real war, try to escape somewhere else. If you enjoy construing your petty predicaments as if they were a real war, seek psychiatric help.
+
+*Crumb 2290*: **Appropriation**: Am I unduly appropriating the family names Llaquet-Alsina as if they represented only me and not also my late sister Menchu and my sister Pili? Yes, I am, but Pili would think that I’ve gone bananas if I asked her about the matter, and poor Menchu died years ago. Consequently, I’ll pay Pili a lot of money and erect Menchu a large statue somewhere nice when I’m rich.
+
+*Crumb 2291*: **Inferiority**: Whenever I admire a beautiful woman such as Red Velvet’s Kang Seul-gi I feel deeply inadequate and so inferior that Earth’s diameter should grow one billion times to accommodate a hole deep enough to fit the distance I feel there is between them—on the surface—and me—at the gates of Hell. I wish I could learn to be beautiful. Alas, I’m just the best writer to ever exist and I’ll have to make do with that.
+
+*Crumb 2292*: **Consistency**: Florp consistency! If there are several ways something can be written correctly, use them all and change among them frequently.
