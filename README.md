@@ -1,4 +1,4 @@
-![TheCrumbs.org](img/TheCrumbSmithWithSigilAndTitleBack.jpg)
+![TheCrumbs.org](img/TheCrumbs.org.jpg)
 
 # The Crumbs by Alfredo Llaquet-Alsina /ya-KET al-SIH-nah/
 
