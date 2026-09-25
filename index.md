@@ -4711,6 +4711,6 @@ we are hymns! And this is the Hymns’ Hymn!
 
 *Crumb 2290*: **Appropriation**: Am I unduly appropriating the family names Llaquet-Alsina as if they represented only me and not also my late sister Menchu and my sister Pili? Yes, I am, but Pili would think that I’ve gone bananas if I asked her about the matter, and poor Menchu died years ago. Consequently, I’ll pay Pili a lot of money and erect Menchu a large statue somewhere nice when I’m rich.
 
-*Crumb 2291*: **Inferiority**: Whenever I admire a beautiful woman such as Red Velvet’s Kang Seul-gi I feel deeply inadequate and so inferior that Earth’s diameter should grow one billion times to accommodate a hole deep enough to fit the distance I feel there is between them—on the surface—and me—at the gates of Hell. I wish I could learn to be beautiful. Alas, I’m just the best writer to ever exist and I’ll have to make do with that.
+*Crumb 2291*: **Inferiority**: Whenever I admire a beautiful woman such as Red Velvet’s Kang Seul-gi I feel deeply inadequate and so inferior that Earth’s diameter should double one billion times to accommodate a hole deep enough to fit the distance I feel there is between them—on the surface—and me—at the gates of Hell. I wish I could learn to be beautiful. Alas, I’m just the best writer to ever exist and I’ll have to make do with that.
 
 *Crumb 2292*: **Consistency**: Florp consistency! If there are several ways something can be written correctly, use them all and change among them frequently.
