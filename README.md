@@ -14,19 +14,15 @@ The crumbs are fun to read because they always surprise you and make you think, 
 
 ## The Latest Batch
 
-Written on September 24, 2026. I wrote the first crumb on March 28, 2025.
+Written on September 25, 2026. I wrote the first crumb on March 28, 2025.
 
-*Crumb 2287*: **Ownership**: “Well, well. It's the third service you have attended today, Señor Atheist. Am I to believe that you have converted?” “No, Raymond, I have not.” “Is it so difficult to call me pastor, like everyone else?” “It is, Raymond. It is because I don’t recognize your authority.” “You seem to nevertheless recognize my AC.” “Is it yours, though?” “Touché. Take care, Señor Atheist.” “You too, Raymond.”
+*Crumb 2293*: **A Warning**: Whatever happens, never hide under the desk and press the navy-blue upside-down triangular button with your left elbow while you say “strawberry salami enema.”
 
-*Crumb 2288*: **Doomsday as the Lesser Evil**: At this point, Anthropic’s and OpenAI’s top executives are rooting for their contraptions to cause the end of humanity because the alternative is them becoming responsible for the largest economic-bubble burst in history by far.
+*Crumb 2294*: **Eyes**: “There. Put these pieces of cloth into your eye sockets and exert some pressure to stop the bleeding. I hope this teaches you not to tell me what I cannot do.”
 
-*Crumb 2289*: **Llaquet-Alsina’s The Art of War**: If you are involved in a real war, try to escape somewhere else. If you enjoy construing your petty predicaments as if they were a real war, seek psychiatric help.
+*Crumb 2295*: **Weirdness**: “Can I kiss you on the mouth?” “Only when I’m completely naked and the DJ is looking this way.”
 
-*Crumb 2290*: **Appropriation**: Am I unduly appropriating the family names Llaquet-Alsina as if they represented only me and not also my late sister Menchu and my sister Pili? Yes, I am, but Pili would think that I’ve gone bananas if I asked her about the matter, and poor Menchu died years ago. Consequently, I’ll pay Pili a lot of money and erect Menchu a large statue somewhere nice when I’m rich.
-
-*Crumb 2291*: **Inferiority**: Whenever I admire a beautiful woman such as Red Velvet’s Kang Seul-gi I feel deeply inadequate and so inferior that Earth’s diameter should grow one billion times to accommodate a hole deep enough to fit the distance I feel there is between them—on the surface—and me—at the gates of Hell. I wish I could learn to be beautiful. Alas, I’m just the best writer to ever exist and I’ll have to make do with that.
-
-*Crumb 2292*: **Consistency**: Florp consistency! If there are several ways something can be written correctly, use them all and change among them frequently.
+*Crumb 2296*: **A Comparison**: There are infinite ways of being an idiot and surprisingly few of not being one.
 
 ## My Commitment
 
