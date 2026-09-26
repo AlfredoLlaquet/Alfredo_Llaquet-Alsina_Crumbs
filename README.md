@@ -14,15 +14,15 @@ The crumbs are fun to read because they always surprise you and make you think, 
 
 ## The Latest Batch
 
-Written on September 25, 2026. I wrote the first crumb on March 28, 2025.
+Written on September 26, 2026. I wrote the first crumb on March 28, 2025.
 
-*Crumb 2293*: **A Warning**: Whatever happens, never hide under the desk and press the navy-blue upside-down triangular button with your left elbow while you say “strawberry salami enema.”
+*Crumb 2297*: **Pride**: I’m not sure whether I should feel proud of still being alive but it’s proving to be very challenging.
 
-*Crumb 2294*: **Eyes**: “There. Put these pieces of cloth into your eye sockets and exert some pressure to stop the bleeding. I hope this teaches you not to tell me what I cannot do.”
+*Crumb 2298*: **The Loss of Contrast**: Sometimes you can lose even the ability to experience joy or amusement and yet you are deeply sad and bored.
 
-*Crumb 2295*: **Weirdness**: “Can I kiss you on the mouth?” “Only when I’m completely naked and the DJ is looking this way.”
+*Crumb 2299*: **The Supremacy of Female Beauty**: Human female beauty trumps everything. Human female beauty is god, the meaning of life, the constant that anchors reality, and the only reason anyone needs to keep breathing. Human female beauty encompasses all senses and has no limits. There is existence because there must be female beauty.
 
-*Crumb 2296*: **A Comparison**: There are infinite ways of being an idiot and surprisingly few of not being one.
+*Crumb 2300*: **Being a Man**: Being a man is knowing that pushed to the extreme of having your family threatened you would instantly begin worshiping Mars and believing in nothing else than war and extreme violence.
 
 ## My Commitment
 
