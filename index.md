@@ -14,15 +14,17 @@ The crumbs are fun to read because they always surprise you and make you think, 
 
 ## The Latest Batch
 
-Written on September 26, 2026. I wrote the first crumb on March 28, 2025.
+Written on September 30, 2026. I wrote the first crumb on March 28, 2025.
 
-*Crumb 2297*: **Pride**: I’m not sure whether I should feel proud of still being alive but it’s proving to be very challenging.
+*Crumb 2301*: **Another Visit**: Someone knocks at the door of my condo. “This is new,” thinks I. I get up, take a few steps, open the door, and see Mars, the Roman god of war, standing out on the landing. “It only took you 2,300 crumbs to mention me, weakling. You are forgiven because it was a worthy crumb. Have you seen Thor around? I owe him a punch in the face.”
 
-*Crumb 2298*: **The Loss of Contrast**: Sometimes you can lose even the ability to experience joy or amusement and yet you are deeply sad and bored.
+*Crumb 2302*: **Veracity**: The first time a newspaper reported on the stock market prices was the first time a newspaper reported on something truthful. Since then, the sports results and little else have contributed to enlarging the real-information section.
 
-*Crumb 2299*: **The Supremacy of Female Beauty**: Human female beauty trumps everything. Human female beauty is god, the meaning of life, the constant that anchors reality, and the only reason anyone needs to keep breathing. Human female beauty encompasses all senses and has no limits. There is existence because there must be female beauty.
+*Crumb 2303*: **An Outlandish Exaggeration That Is Not**: The previous crumb will seem an extreme exaggeration to anyone who is not an expert in any field. On the contrary, if you happen to be an expert in any field and extrapolate the accuracy of the media when reporting on it, you’ll sadly have to nod in agreement.
 
-*Crumb 2300*: **Being a Man**: Being a man is knowing that pushed to the extreme of having your family threatened you would instantly begin worshiping Mars and believing in nothing else than war and extreme violence.
+*Crumb 2304*: **Happy Fat People**: Some people are fat and happy. I am not one of them. To me being fat makes me unhappy. Moreover, I don’t want to learn to be one of them. I want my incentives to lose weight intact.
+
+*Crumb 2305*: **Not Making Friends**: “Alfredo, sweetie,” says the beautiful reader, “it really seems you are taking seriously the goal you set in crumb 2278 about insulting every human being. In the previous three crumbs you have added every journalist and any overweight person who feels good about themselves to the list.” “Who cares?” says I. “No one reads the crumbs anyway. These are numbered messages put into bottles and thrown into the sea of a deserted world.”
 
 ## My Commitment 
 
@@ -4726,3 +4728,13 @@ we are hymns! And this is the Hymns’ Hymn!
 *Crumb 2299*: **The Supremacy of Female Beauty**: Human female beauty trumps everything. Human female beauty is god, the meaning of life, the constant that anchors reality, and the only reason anyone needs to keep breathing. Human female beauty encompasses all senses and has no limits. There is existence because there must be female beauty.
 
 *Crumb 2300*: **Being a Man**: Being a man is knowing that pushed to the extreme of having your family threatened you would instantly begin worshiping Mars and believing in nothing else than war and extreme violence.
+
+*Crumb 2301*: **Another Visit**: Someone knocks at the door of my condo. “This is new,” thinks I. I get up, take a few steps, open the door, and see Mars, the Roman god of war, standing out on the landing. “It only took you 2,300 crumbs to mention me, weakling. You are forgiven because it was a worthy crumb. Have you seen Thor around? I owe him a punch in the face.”
+
+*Crumb 2302*: **Veracity**: The first time a newspaper reported on the stock market prices was the first time a newspaper reported on something truthful. Since then, the sports results and little else have contributed to enlarging the real-information section.
+
+*Crumb 2303*: **An Outlandish Exaggeration That Is Not**: The previous crumb will seem an extreme exaggeration to anyone who is not an expert in any field. On the contrary, if you happen to be an expert in any field and extrapolate the accuracy of the media when reporting on it, you’ll sadly have to nod in agreement.
+
+*Crumb 2304*: **Happy Fat People**: Some people are fat and happy. I am not one of them. To me being fat makes me unhappy. Moreover, I don’t want to learn to be one of them. I want my incentives to lose weight intact.
+
+*Crumb 2305*: **Not Making Friends**: “Alfredo, sweetie,” says the beautiful reader, “it really seems you are taking seriously the goal you set in crumb 2278 about insulting every human being. In the previous three crumbs you have added every journalist and any overweight person who feels good about themselves to the list.” “Who cares?” says I. “No one reads the crumbs anyway. These are numbered messages put into bottles and thrown into the sea of a deserted world.”
