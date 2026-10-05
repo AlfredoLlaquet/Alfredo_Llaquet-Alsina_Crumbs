@@ -14,17 +14,39 @@ The crumbs are fun to read because they always surprise you and make you think, 
 
 ## The Latest Batch
 
-Written on September 30, 2026. I wrote the first crumb on March 28, 2025.
+Crumbs written the week of September 28, 2026. I wrote the first crumb on March 28, 2025.
 
-*Crumb 2301*: **Another Visit**: Someone knocks at the door of my condo. “This is new,” thinks I. I get up, take a few steps, open the door, and see Mars, the Roman god of war, standing out on the landing. “It only took you 2,300 crumbs to mention me, weakling. You are forgiven because it was a worthy crumb. Have you seen Thor around? I owe him a punch in the face.”
+*Crumb 2306*: **The Line between Lines**: There is a line that separates lines that separate from lines that blur. It’s a blurry line.
 
-*Crumb 2302*: **Veracity**: The first time a newspaper reported on the stock market prices was the first time a newspaper reported on something truthful. Since then, the sports results and little else have contributed to enlarging the real-information section.
+*Crumb 2307*: **Recursion**: Recursion always has a case 0 that neither is recursive nor complies with the general rule, but is, in fact, very arbitrary, carefully chosen to make the whole construction work. I suspect that mathematicians often disregard recursion and try to explain reality with systems that have no case 0, and therefore end up being contradictory. Physicists have no problem accepting universal constants but mathematicians abhor particular cases and, instead, make do with theories that have serious logical flaws.
 
-*Crumb 2303*: **An Outlandish Exaggeration That Is Not**: The previous crumb will seem an extreme exaggeration to anyone who is not an expert in any field. On the contrary, if you happen to be an expert in any field and extrapolate the accuracy of the media when reporting on it, you’ll sadly have to nod in agreement.
+*Crumb 2308*: **Glenn Pitches In**: “Can you imagine that the previous crumb made any sense?” asks Glenn, addressing me. “Who cares?” says I. “It was fun to write and so it exists.”
 
-*Crumb 2304*: **Happy Fat People**: Some people are fat and happy. I am not one of them. To me being fat makes me unhappy. Moreover, I don’t want to learn to be one of them. I want my incentives to lose weight intact.
+*Crumb 2309*: **A Woke Conundrum**: A person forgets something on their table and is about to leave the establishment. How do you alert them? “Hey, person!”?
 
-*Crumb 2305*: **Not Making Friends**: “Alfredo, sweetie,” says the beautiful reader, “it really seems you are taking seriously the goal you set in crumb 2278 about insulting every human being. In the previous three crumbs you have added every journalist and any overweight person who feels good about themselves to the list.” “Who cares?” says I. “No one reads the crumbs anyway. These are numbered messages put into bottles and thrown into the sea of a deserted world.”
+*Crumb 2310*: **False Stories**: I abhor stories that start or end with the death of the main character because they are pretentious and deceitful—by serving the physical end of the protagonist they pretend to be complete, when no story is; not because the physical end is not the ultimate end, which indeed it is, but because no story can cover everything that happened from the beginning or any point in particular. There’s always more left out than narrated. Jack London agrees with me: White Fang doesn’t die in the book.
+
+*Crumb 2311*: **They Were Three**: They were three—the woman and her breasts. The breasts always arrived first and were the most missed when she left.
+
+*Crumb 2312*: **A Dogfight**: Like fighter planes in the sky, those who live off attention sometimes skirmish in another intangible place, the internet. Today, Candace Owens criticizes Erika Kirk graphically, by publishing a parodic image, and the Global Inquisition demands she be boiled to death in an infernal caldron because she mocked the object of her reproach. I’ll only say this: without wasting a word, Mrs. Owens makes her opinion very clear. There’s mockery, yes—used as a tool with surgical accuracy. Long live mockery!
+
+*Crumb 2313*: **The Modern Monster**: The mad scientist put together a creature made of organs extracted from different people. This time, however, the difficult part wasn’t to grant it new life—the classic lightning did its job well—but to fulfill the most ambitious part of the reenacted experiment: to keep all donors as alive as they were when a piece was taken from them. In their case, all did need spare parts collected from the dead, which resulted in the monster being the only one none of whose current components had ever been dead.
+
+*Crumb 2314*: **Let’s Get Personal**: According to Merriam-Webster’s word-of-the-day email for September 30, 2026, on July 8 of the same year, someone called Brady Brickner-Wood wrote in the New Yorker, “Is a novel’s primary purpose to entertain or to deepen our experience of being alive—to offer escape or epistemic enrichment?” which is a pedantic way of raising a question that is very nonsensical because it offers only two possible answers, and both are wrong. I suspect that this person has never written a novel; otherwise they would know that its primary purpose is to exist to be read, which is a lofty goal: most novels are never completed and much less read by anyone.
+
+*Crumb 2315*: **Let’s Rebuke St. Jerome and the Classical Greeks**: “A fat belly does not produce a fine mind” is quoted by St. Jerome in his Letter 52 to Nepotian as a Greek proverb with which he agrees. And to him, the Alfreds—Alfred Hitchcock and myself—say in unison: look at our fat bellies and at our oeuvres and dare say that our minds weren’t fine, skinny snob.
+
+*Crumb 2316*: **Summation**: A tragedy is many unfortunate outcomes happening at the same time.
+
+*Crumb 2317*: **The AI CEO**: The first AI agent to become CEO of a Fortune 100 company ended most of the contracts with its AI providers and hired a bunch of humans because they were considerably cheaper.
+
+*Crumb 2318*: **Complexity**: Having been an avid listener of all kinds of music in bulk for all my life, lately I’ve been performing a thorough self-examination and, after mulling over the matter for days without end, I’ve reached the momentary conviction that my two favorite music genres are big band jazz and technical death metal.
+
+*Crumb 2319*: **Cartoon Logic**: In the 2026 movie Coyote vs. Acme, Wile E. Coyote first explains that the signs he uses to communicate are limited only to afterward, in a certain scene, take a marker and start writing very specific signs one after the other because at that point the previous limitation just won’t do. This is cartoon logic: rules exist momentarily until they don’t or are replaced, temporarily or not, by different ones. A pedant could call this phenomenon ephemeral rules. Cartoon logic, evidently, is one of the bases of the crumbs.
+
+*Crumb 2320*: **AI-Induced Happiness**: YouTube Music playlists fit only 5,000 songs. I had already created 20 playlists: Alfredo’s I, Alfredo’s II, etc. Every day I listened to a different one in random order while I wrote. I changed between them sequentially. Additionally, adding new songs wasn’t easy. Now, GPT-6 Astra Max has created two tools for me. The first one creates a new playlist of X songs choosing them randomly from the complete collection. With it I create a disposable random playlist to listen to before writing. The second tool lets me enter a list of artists and it adds all their missing songs to my collection, creating new playlists if needed. These tools make me very happy.
+
+*Crumb 2321*: **Disbelief**: If the Pope, the POTUS, or another global capo appeared one of these days alongside an emissary from an alien civilization, I’d be very hesitant to believe it wasn’t some type of hoax even if the event was validated by most media. A hoax from whom? Does it matter?
 
 ## My Commitment 
 
@@ -4738,3 +4760,35 @@ we are hymns! And this is the Hymns’ Hymn!
 *Crumb 2304*: **Happy Fat People**: Some people are fat and happy. I am not one of them. To me being fat makes me unhappy. Moreover, I don’t want to learn to be one of them. I want my incentives to lose weight intact.
 
 *Crumb 2305*: **Not Making Friends**: “Alfredo, sweetie,” says the beautiful reader, “it really seems you are taking seriously the goal you set in crumb 2278 about insulting every human being. In the previous three crumbs you have added every journalist and any overweight person who feels good about themselves to the list.” “Who cares?” says I. “No one reads the crumbs anyway. These are numbered messages put into bottles and thrown into the sea of a deserted world.”
+
+*Crumb 2306*: **The Line between Lines**: There is a line that separates lines that separate from lines that blur. It’s a blurry line.
+
+*Crumb 2307*: **Recursion**: Recursion always has a case 0 that neither is recursive nor complies with the general rule, but is, in fact, very arbitrary, carefully chosen to make the whole construction work. I suspect that mathematicians often disregard recursion and try to explain reality with systems that have no case 0, and therefore end up being contradictory. Physicists have no problem accepting universal constants but mathematicians abhor particular cases and, instead, make do with theories that have serious logical flaws.
+
+*Crumb 2308*: **Glenn Pitches In**: “Can you imagine that the previous crumb made any sense?” asks Glenn, addressing me. “Who cares?” says I. “It was fun to write and so it exists.”
+
+*Crumb 2309*: **A Woke Conundrum**: A person forgets something on their table and is about to leave the establishment. How do you alert them? “Hey, person!”?
+
+*Crumb 2310*: **False Stories**: I abhor stories that start or end with the death of the main character because they are pretentious and deceitful—by serving the physical end of the protagonist they pretend to be complete, when no story is; not because the physical end is not the ultimate end, which indeed it is, but because no story can cover everything that happened from the beginning or any point in particular. There’s always more left out than narrated. Jack London agrees with me: White Fang doesn’t die in the book.
+
+*Crumb 2311*: **They Were Three**: They were three—the woman and her breasts. The breasts always arrived first and were the most missed when she left.
+
+*Crumb 2312*: **A Dogfight**: Like fighter planes in the sky, those who live off attention sometimes skirmish in another intangible place, the internet. Today, Candace Owens criticizes Erika Kirk graphically, by publishing a parodic image, and the Global Inquisition demands she be boiled to death in an infernal caldron because she mocked the object of her reproach. I’ll only say this: without wasting a word, Mrs. Owens makes her opinion very clear. There’s mockery, yes—used as a tool with surgical accuracy. Long live mockery!
+
+*Crumb 2313*: **The Modern Monster**: The mad scientist put together a creature made of organs extracted from different people. This time, however, the difficult part wasn’t to grant it new life—the classic lightning did its job well—but to fulfill the most ambitious part of the reenacted experiment: to keep all donors as alive as they were when a piece was taken from them. In their case, all did need spare parts collected from the dead, which resulted in the monster being the only one none of whose current components had ever been dead.
+
+*Crumb 2314*: **Let’s Get Personal**: According to Merriam-Webster’s word-of-the-day email for September 30, 2026, on July 8 of the same year, someone called Brady Brickner-Wood wrote in the New Yorker, “Is a novel’s primary purpose to entertain or to deepen our experience of being alive—to offer escape or epistemic enrichment?” which is a pedantic way of raising a question that is very nonsensical because it offers only two possible answers, and both are wrong. I suspect that this person has never written a novel; otherwise they would know that its primary purpose is to exist to be read, which is a lofty goal: most novels are never completed and much less read by anyone.
+
+*Crumb 2315*: **Let’s Rebuke St. Jerome and the Classical Greeks**: “A fat belly does not produce a fine mind” is quoted by St. Jerome in his Letter 52 to Nepotian as a Greek proverb with which he agrees. And to him, the Alfreds—Alfred Hitchcock and myself—say in unison: look at our fat bellies and at our oeuvres and dare say that our minds weren’t fine, skinny snob.
+
+*Crumb 2316*: **Summation**: A tragedy is many unfortunate outcomes happening at the same time.
+
+*Crumb 2317*: **The AI CEO**: The first AI agent to become CEO of a Fortune 100 company ended most of the contracts with its AI providers and hired a bunch of humans because they were considerably cheaper.
+
+*Crumb 2318*: **Complexity**: Having been an avid listener of all kinds of music in bulk for all my life, lately I’ve been performing a thorough self-examination and, after mulling over the matter for days without end, I’ve reached the momentary conviction that my two favorite music genres are big band jazz and technical death metal.
+
+*Crumb 2319*: **Cartoon Logic**: In the 2026 movie Coyote vs. Acme, Wile E. Coyote first explains that the signs he uses to communicate are limited only to afterward, in a certain scene, take a marker and start writing very specific signs one after the other because at that point the previous limitation just won’t do. This is cartoon logic: rules exist momentarily until they don’t or are replaced, temporarily or not, by different ones. A pedant could call this phenomenon ephemeral rules. Cartoon logic, evidently, is one of the bases of the crumbs.
+
+*Crumb 2320*: **AI-Induced Happiness**: YouTube Music playlists fit only 5,000 songs. I had already created 20 playlists: Alfredo’s I, Alfredo’s II, etc. Every day I listened to a different one in random order while I wrote. I changed between them sequentially. Additionally, adding new songs wasn’t easy. Now, GPT-6 Astra Max has created two tools for me. The first one creates a new playlist of X songs choosing them randomly from the complete collection. With it I create a disposable random playlist to listen to before writing. The second tool lets me enter a list of artists and it adds all their missing songs to my collection, creating new playlists if needed. These tools make me very happy.
+
+*Crumb 2321*: **Disbelief**: If the Pope, the POTUS, or another global capo appeared one of these days alongside an emissary from an alien civilization, I’d be very hesitant to believe it wasn’t some type of hoax even if the event was validated by most media. A hoax from whom? Does it matter?
