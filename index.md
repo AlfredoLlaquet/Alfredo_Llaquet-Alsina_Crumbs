@@ -14,39 +14,143 @@ The crumbs are fun to read because they always surprise you and make you think, 
 
 ## The Latest Batch
 
-Crumbs written the week of September 28, 2026. I wrote the first crumb on March 28, 2025.
+These are the crumbs I’ve written the week of October 5, 2026. I wrote the first crumb on March 28, 2025.
 
-*Crumb 2306*: **The Line between Lines**: There is a line that separates lines that separate from lines that blur. It’s a blurry line.
+*Crumb 2322*: **The Right Way**: In the neonation of the Commonsense Republic of Plain Order, the law dictates that baseball caps can only be worn with the front part facing forward. New baseball-cap manufacturer Everyway is being very successful with its new line of caps that include instructions that specify that the front part is the one marked with a little red dot. Their products are grouped in families. Each family is composed of caps that look the same but have the little red dot in a different place. In practice, this allows Commonsense Plainorders to choose how to wear their baseball caps without breaking the law.
 
-*Crumb 2307*: **Recursion**: Recursion always has a case 0 that neither is recursive nor complies with the general rule, but is, in fact, very arbitrary, carefully chosen to make the whole construction work. I suspect that mathematicians often disregard recursion and try to explain reality with systems that have no case 0, and therefore end up being contradictory. Physicists have no problem accepting universal constants but mathematicians abhor particular cases and, instead, make do with theories that have serious logical flaws.
+*Crumb 2323*: **The GOAT**: Anyone who argues that LeBron James was better than Michael Jordan is ignoring the deciding fact that basketball is a team sport.
 
-*Crumb 2308*: **Glenn Pitches In**: “Can you imagine that the previous crumb made any sense?” asks Glenn, addressing me. “Who cares?” says I. “It was fun to write and so it exists.”
+*Crumb 2324*: **A Cole Deluge**: Thanks to my new AI-generated tools to manage my music collection (see crumb 2320), I’ve found out that, on October 5, 2026, YouTube Music holds 1,633 albums, 133 singles, and 79 EPs, which amount to a total of 48,025 individual tracks, credited to Nat King Cole, including collaborations and many, many compilations. I probably have bumped into the artist with the most tracks on the platform.
 
-*Crumb 2309*: **A Woke Conundrum**: A person forgets something on their table and is about to leave the establishment. How do you alert them? “Hey, person!”?
+*Crumb 2325*: **The Black Dodecahedron**: Instead of the pair of shoes that she had ordered online, Helga received a black regular dodecahedron made of a shiny mineral that, even though she didn’t know it, was obsidian. When Helga held the strange object between her hands, she heard an infernal voice that ordered her to murder everyone. Immediately, she left the black dodecahedron on the dining room table, walked to the kitchen, took a meat cleaver, and left her apartment. Before the police gunned her down, she had killed seven people and wounded twenty more.
 
-*Crumb 2310*: **False Stories**: I abhor stories that start or end with the death of the main character because they are pretentious and deceitful—by serving the physical end of the protagonist they pretend to be complete, when no story is; not because the physical end is not the ultimate end, which indeed it is, but because no story can cover everything that happened from the beginning or any point in particular. There’s always more left out than narrated. Jack London agrees with me: White Fang doesn’t die in the book.
+*Crumb 2326*: **The Power of FreeBSD Virtual Memory**: Being a digital hoarder, I execute JavaScript processes in my internet browser that, for whatever reason, make the used memory grow to incredible limits. For instance, I just used my new tool to add songs in bulk to my YouTube Music collection (crumb 2320) to add 292,107 songs. This would have never worked on Windows or Linux: the browser (Chrome or Firefox) would have crashed due to an out-of-memory error. I know because this used to happen to me running comparable tasks when I was using those inferior OSs. On FreeBSD, almost 4 GB of swap memory are marked as used, the process completed successfully, and the system is responsive.
 
-*Crumb 2311*: **They Were Three**: They were three—the woman and her breasts. The breasts always arrived first and were the most missed when she left.
+*Crumb 2327*: **AIsplaining**: Today, October 6, 2026, I was using the verbose vacuity, the conversational aberration, ChatGPT—in short—and it was doing what it usually does, which caused the term “AIsplaining” to come to my mind. Frustrated as I was, I wrote it by itself as my next turn, and the thing provided an accurate enough definition of the term: “the act of an AI taking something already perfectly clear, restating it at greater length, adding unnecessary caveats, and presenting the swollen paraphrase as clarification—as if a parrot had swallowed a management consultant, a philosophy adjunct, and three pages of terms and conditions.”
 
-*Crumb 2312*: **A Dogfight**: Like fighter planes in the sky, those who live off attention sometimes skirmish in another intangible place, the internet. Today, Candace Owens criticizes Erika Kirk graphically, by publishing a parodic image, and the Global Inquisition demands she be boiled to death in an infernal caldron because she mocked the object of her reproach. I’ll only say this: without wasting a word, Mrs. Owens makes her opinion very clear. There’s mockery, yes—used as a tool with surgical accuracy. Long live mockery!
+*Crumb 2328*: **AGI and the Spark**: When I coined the term “spark” in crumb 270, the acronym AGI wasn’t part yet of the general discourse about AI, so I wasn’t familiar with it. In any case, my word is much more expressive and the definition of it that I provided in the aforementioned crumb is much more exact and clear than any explanation of what AGI is supposed to be—nothing beats one of my crumbs on those parameters.
 
-*Crumb 2313*: **The Modern Monster**: The mad scientist put together a creature made of organs extracted from different people. This time, however, the difficult part wasn’t to grant it new life—the classic lightning did its job well—but to fulfill the most ambitious part of the reenacted experiment: to keep all donors as alive as they were when a piece was taken from them. In their case, all did need spare parts collected from the dead, which resulted in the monster being the only one none of whose current components had ever been dead.
+*Crumb 2329*: **Gaslighting the World**: Given that AGI is quite easy to disprove, and we are very far from it, the flock of AI hypers has shifted the focus of their parlor tricks to the esoteric realm of programmatic consciousness (AI consciousness would not be chips becoming self-aware but instead software doing so by being executed) which is very easy to fake and basically impossible to prove or disprove with today’s knowledge about consciousness.
 
-*Crumb 2314*: **Let’s Get Personal**: According to Merriam-Webster’s word-of-the-day email for September 30, 2026, on July 8 of the same year, someone called Brady Brickner-Wood wrote in the New Yorker, “Is a novel’s primary purpose to entertain or to deepen our experience of being alive—to offer escape or epistemic enrichment?” which is a pedantic way of raising a question that is very nonsensical because it offers only two possible answers, and both are wrong. I suspect that this person has never written a novel; otherwise they would know that its primary purpose is to exist to be read, which is a lofty goal: most novels are never completed and much less read by anyone.
+*Crumb 2330*: **Marginal Exceptionality**: I have reason to believe that my IQ is 140. Maybe it’s not, but let’s accept the premise for the sake of the argument. An IQ of 140 is about the 99.6th percentile of the population, which at first glance seems like something quite exceptional, until one realizes that roughly 33.2 million people are as smart as or smarter than oneself.
 
-*Crumb 2315*: **Let’s Rebuke St. Jerome and the Classical Greeks**: “A fat belly does not produce a fine mind” is quoted by St. Jerome in his Letter 52 to Nepotian as a Greek proverb with which he agrees. And to him, the Alfreds—Alfred Hitchcock and myself—say in unison: look at our fat bellies and at our oeuvres and dare say that our minds weren’t fine, skinny snob.
+*Crumb 2331*: **A Perfectly Woke Introduction**: “Hello, my name is Peter. I’m a man with a penis and I like to insert it in vaginas and other cavities of women with vaginas.”
 
-*Crumb 2316*: **Summation**: A tragedy is many unfortunate outcomes happening at the same time.
+*Crumb 2332*: **The Return of the Emptiness**: I didn’t miss you and yet you’ve come back—why? I don’t like you and yet you visit me frequently—why? Please, go. Please, never come back. Please, leave me alone. But don’t look for another victim, just vanish from existence. If you can’t do that, then stay, then come back, then keep torturing me. You’ll never defeat me completely, I’m too used to the fight.
 
-*Crumb 2317*: **The AI CEO**: The first AI agent to become CEO of a Fortune 100 company ended most of the contracts with its AI providers and hired a bunch of humans because they were considerably cheaper.
+*Crumb 2333*: **A Feline Conspiracy Theory**: Some cats are trained government operatives that, when they rub against you, deploy a self-installing chip that buries itself in your skin, finds an artery, gets to your brain, and remains there for the rest of your life, transmitting live all that you think and do to the intelligence services.
 
-*Crumb 2318*: **Complexity**: Having been an avid listener of all kinds of music in bulk for all my life, lately I’ve been performing a thorough self-examination and, after mulling over the matter for days without end, I’ve reached the momentary conviction that my two favorite music genres are big band jazz and technical death metal.
+*Crumb 2334*: **Free Binding AI Estimates**: It’s time that AI providers offer free binding estimates: you explain to the thing what you want to achieve; the thing asks whatever questions it deems necessary to sort out nuances, contradictions, cases you might be missing, and so forth; and it spews how many tokens it would cost you to get just a detailed analysis on how to implement the project or the implementation itself. If you choose to proceed with any of it, the provider would charge you the estimated tokens, which should include, in the case of the implementation, bug fixing and missing planned features. Aren’t AIs so intelligent?
 
-*Crumb 2319*: **Cartoon Logic**: In the 2026 movie Coyote vs. Acme, Wile E. Coyote first explains that the signs he uses to communicate are limited only to afterward, in a certain scene, take a marker and start writing very specific signs one after the other because at that point the previous limitation just won’t do. This is cartoon logic: rules exist momentarily until they don’t or are replaced, temporarily or not, by different ones. A pedant could call this phenomenon ephemeral rules. Cartoon logic, evidently, is one of the bases of the crumbs.
+*Crumb 2335*: **The North**: You can make a pine needle point toward magnetic north. Take just one needle. Leave it on some water, so that it floats freely. Take a compass. Grab the pine needle and rotate it so it’s parallel to the compass needle, situating both tips on the same side. Now, the tip of the pine needle points north.
 
-*Crumb 2320*: **AI-Induced Happiness**: YouTube Music playlists fit only 5,000 songs. I had already created 20 playlists: Alfredo’s I, Alfredo’s II, etc. Every day I listened to a different one in random order while I wrote. I changed between them sequentially. Additionally, adding new songs wasn’t easy. Now, GPT-6 Astra Max has created two tools for me. The first one creates a new playlist of X songs choosing them randomly from the complete collection. With it I create a disposable random playlist to listen to before writing. The second tool lets me enter a list of artists and it adds all their missing songs to my collection, creating new playlists if needed. These tools make me very happy.
+*Crumb 2336*: **Sinatraddon**: It turns out that, on October 7, 2026, there are 68,880 songs credited to Frank Sinatra on YouTube Music, which makes him the artist with the most tracks on the platform as far as I know. This crumb is, consequently, the errata of crumb 2324, and constitutes a new kind of crumb.
 
-*Crumb 2321*: **Disbelief**: If the Pope, the POTUS, or another global capo appeared one of these days alongside an emissary from an alien civilization, I’d be very hesitant to believe it wasn’t some type of hoax even if the event was validated by most media. A hoax from whom? Does it matter?
+*Crumb 2337*: **Onslaughts**: Hello. This is the crumb-scholar. The crumb-smith has let me know that the next crumb will be the first onslaught, which is a new type of crumb characterized by its title being “Onslaught” followed by the number sign and a sequential number, and its body having 30 words or less and being composed of a single sentence.
+
+*Crumb 2338*: **Onslaught #1**: Light had never visited the damp room, which teemed with strange tiny lifeforms that formed a peculiar and brutal ecosystem.
+
+*Crumb 2339*: **Onslaught #2**: I don’t entirely trust anybody, but I’m always willing to forgive a very small group of people.
+
+*Crumb 2340*: **The Truth about Onslaughts**: I, the crumb-smith, the architect, the multi-god, the creator of worlds, Pili’s brother and Menchu’s son, have brought forth onslaughts to easify ‹{eas·i·fy — transitive verb — 1: to make easier: facilitate 2: to reduce its complexity: simplify — origin: invented  (probably reinvented) by Alfredo Llaquet-Alsina because it sounds funny}› my attempt at becoming the most prolific writer in history (see crumb 2225). The de facto lack of a title and the simpler and shorter structure should allow for a higher production.
+
+*Crumb 2341*: **The Beautiful Reader Wants More Mystery**: “Alfredo, sweetie,” says the beautiful reader, “don’t you explain too many things regarding your motives and the crumbs? Why don’t you leave some interpretation for your future exegetes to do?” “There’s plenty to interpret,” says I, “starting with whether my explanations are true, part of a bigger truth, or completely misleading. This is literature, my love.”
+
+*Crumb 2342*: **Modern Cuteness**: Already in the second quarter of the 21st century, a young woman may call “cute” a shockingly diverse array of things, ranging from a rag doll whose eyes are crosses that represents a corpse to a pink vibrator.
+
+*Crumb 2343*: **Onslaught #3**: Almost every night, the jazz trumpeter played in the shabby club while he drank bourbon and smoked cigarettes between songs.
+
+*Crumb 2344*: **History**: Based on a few remnants of the past, historians explain what wasn’t even clear for those living at the time, and call it truthful when it’s at most plausible.
+
+*Crumb 2345*: **Onslaught #4**: The headless man met a manless head, and they became best friends.
+
+*Crumb 2346*: **Onslaught #5**: Many people’s hate is hearsay.
+
+*Crumb 2347*: **Onslaught #6**: If you love animals, you shouldn’t clean your home so spiders and other fauna can find a suitable habitat.
+
+*Crumb 2348*: **Anthropo-punk on Authoritarianism**: Any regime where taxes are collected forcibly is authoritarian.
+
+*Crumb 2349*: **Forms of Intelligence**: In a very unintelligent manner, Donald Trump, the reality-TV-star-turned-POTUS, wants people to use  the acronym SI instead of AI. He’s right, but because Simulated Intelligence (not Super Intelligence) is much more accurate than Artificial Intelligence (see crumb 684). Super Intelligence is even worse. Given his way of promoting the matter, I wonder whether he’s bored or senile.
+
+*Crumb 2350*: **Onslaught #7**: The conductor stopped the train near Jupiter, after having fallen asleep and missed two planets.
+
+*Crumb 2351*: **Onslaught #8**: The creature had integrated parts of the girl’s parents and other slaughtered relatives.
+
+*Crumb 2352*: **Onslaught #9**: When the concert ended, only the lead singer was still alive.
+
+*Crumb 2353*: **Onslaught #10**: Metal is the only music genre whose enjoyment leads to enjoying all kinds of other genres.
+
+*Crumb 2354*: **Onslaught #11**: Onslaughts have rekindled the excitement I feel when I write crumbs.
+
+*Crumb 2355*: **Onslaught #12**: Hubris is totally independent from IQ.
+
+*Crumb 2356*: **Onslaught #13**: “Bear in mind that if you choose to commence you won’t ever go back home.”
+
+*Crumb 2357*: **The Beautiful Reader Worries About My Image**: “Alfredo, sweetie,” says the beautiful reader, my imaginary Korean wife who looks exactly like K-pop idol Sumin, from the group STAYC, “anyone who stumbles upon one of your new onslaughts without knowing what they are is going to think you are a crackpot. A sequence inside another sequence is one sequence too many.” “You are right,” says I, “but I write for the future, when my greatness will be revered and studied.”
+
+*Crumb 2358*: **There Is No Subconscious**: The subconscious, as a term and as a concept, should be discarded. There are parts of the mind independent from consciousness, but they don’t constitute a layer below it, they exist at the same level of importance or at a higher one. That’s what makes being human so complex: there are several factions in our brain, but the only one which has a voice, the conscious, can only hear itself.
+
+*Crumb 2359*: **The Scope of Beauty**: The sense of touch is much less demanding than sight when it comes to deciding what is beautiful.
+
+*Crumb 2360*: **Onslaught #14**: The witch in the penthouse only eats babies on Thanksgiving.
+
+*Crumb 2361*: **Onslaught #15**: “It’s very impressive that you’ve gotten so far, but now we must kill you.”
+
+*Crumb 2362*: **Isaac Asimov Was a Moron**: Isaac Asimov once said that it was about time that robots replaced humans because we didn’t take good care of our planet. This expands crumbs 1791 to 1793 with a new class of morons: morons type IV, those who think that humanity deserves extinction because it doesn’t agree with their shallow understanding of reality.
+
+*Crumb 2363*: **Onslaught #16**: At this point, as for AI, I’m only interested in what I think about it and what it can do for me.
+
+*Crumb 2364*: **Haiku #1**: Pigeons always nod. / They are positive fellows. / They don’t walk backward.
+
+*Crumb 2365*: **Haiku #2**: People are a flock. / They come at once to Starbucks. / Then they wait in line.
+
+*Crumb 2366*: **Haiku #3**: Don’t expect rhythm. / I never knew how to sing. / I count syllables.
+
+*Crumb 2367*: **Writing**: I enjoy writing computer programs as much as I enjoy writing crumbs or novels, but only the latter entices me with the promise of someone reading my lines several centuries in the future.
+
+*Crumb 2368*: **Onslaught #17**: Strollers made in China release undetectable waves of mental conditioning that teach the baby to be a communist.
+
+*Crumb 2369*: **Haiku #4**: STAYC’s Bae Su-min, / you are as bright as a star / and equally far.
+
+*Crumb 2370*: **Thor Drinks Alone**: In an Irish tavern in Helsinki sits Thor, alone. He drinks pint after pint of beer that turns into ale as soon as he touches the glass. All of a sudden, he feels a pressure on his left eye, followed by the immediate swelling of the area. Mars, the Roman god of war, has just punched him in the face. Thor notices his presence. “Oh, hello, Mars. I didn’t see you coming.” Mars says, “That was the plan, yes. Now you have a black eye and we are even.” Thor says, “Whatever you say, man. Do you wanna drink with me?” Mars responds, “Yes, let’s drink and you tell me what has you so downcast.”
+
+*Crumb 2371*: **Haiku #5**: The pain may come back / alongside the dark sadness / but then it will leave.
+
+*Crumb 2372*: **Haiku #6**: More haiku written / than haiku I’ll ever read: / insolent output.
+
+*Crumb 2373*: **Onslaught #18**: Not going extinct requires a lot of work.
+
+*Crumb 2374*: **Haiku #7**: If certain people / had air instead of a brain / no one would notice.
+
+*Crumb 2375*: **Haiku #8**: Insulting some groups / is a pastime more than cheap: / they provide too much.
+
+*Crumb 2376*: **Haiku #9**: However precise / an insult is an insult / as it well should be.
+
+*Crumb 2377*: **Haiku #10**: Any river flows; / after highs always come lows; / if it lives, it grows.
+
+*Crumb 2378*: **Onslaught #19**: She shouldn’t have opened the door to demonstrate it didn’t lead to Hell.
+
+*Crumb 2379*: **Reflections**: “I’ve only killed three people this year. Am I getting old or is my work absorbing too much time?”
+
+*Crumb 2380*: **Onslaught #20**: She never asked her daughter where so much money keep coming from or who Litheran exactly was.
+
+*Crumb 2381*: **AI in Football**: I wonder whether NFL franchises are investing in AIs specialized in football. They would make great play callers.
+
+*Crumb 2382*: **Haiku #11**: Brevity befriends / the urgency of the crumbs / and production spikes.
+
+*Crumb 2383*: **Haiku #12**: Haiku can be green. / Haiku can be white or black. / Haiku can be red.
+
+*Crumb 2384*: **Haiku #13**: Not all Japanese / people want to leave Japan / but some of them do.
+
+*Crumb 2385*: **I Am Several**: Crumb 2358 has led me to accept that my consciousness is but one part of who I am. Now I’m trying to use said consciousness to convey good faith and understanding to the other parts, in hope of learning to follow routes that agree with them all.
+
+*Crumb 2386*: **The Cabin**: The evil sorcerer made her cabin of living people looking inward. She removed their eyelids and cast a spell on them so they would stay alive and paralyzed. She liked the attention.
+
+*Crumb 2387*: **Portrait #1**: A retired army colonel with a dark secret that haunts him and an estranged daughter.
+
+*Crumb 2388*: **Portrait #2**: A female K-pop idol with a prosthetic arm and a captivating voice.
+
+*Crumb 2389*: **Portrait #3**: A writer (me) who has just created a grammatically incorrect literary genre, for it’s composed of fragments.
 
 ## My Commitment 
 
