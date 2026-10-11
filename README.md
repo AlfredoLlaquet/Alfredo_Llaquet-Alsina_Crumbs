@@ -99,6 +99,7 @@ The scope and philosophy of the crumbs are explained quickly by the following ha
 - [Crumbs Volume VI](https://archive.org/details/crumbs-1251-1500)
 - [Crumbs Volume VII](https://archive.org/details/crumbs-1501-1750)
 - [Crumbs Volume VIII](https://archive.org/details/crumbs-1751-2000)
+- [Crumbs Volume IX](https://archive.org/details/crumbs-2001-2250)
 
 ## In a Single Text File (on the Internet Archive)
 
