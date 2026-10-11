@@ -14,7 +14,7 @@ The crumbs are fun to read because they always surprise you and make you think, 
 
 ## The Latest Batch
 
-Crumbs written the week of October 5, 2026. I wrote the first crumb on March 28, 2025.
+These are the crumbs I’ve written the week of October 5, 2026. I wrote the first crumb on March 28, 2025.
 
 *Crumb 2322*: **The Right Way**: In the neonation of the Commonsense Republic of Plain Order, the law dictates that baseball caps can only be worn with the front part facing forward. New baseball-cap manufacturer Everyway is being very successful with its new line of caps that include instructions that specify that the front part is the one marked with a little red dot. Their products are grouped in families. Each family is composed of caps that look the same but have the little red dot in a different place. In practice, this allows Commonsense Plainorders to choose how to wear their baseball caps without breaking the law.
 
