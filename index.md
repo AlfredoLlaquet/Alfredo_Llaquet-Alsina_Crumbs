@@ -132,7 +132,7 @@ These are the crumbs I’ve written the week of October 5, 2026. I wrote the fir
 
 *Crumb 2379*: **Reflections**: “I’ve only killed three people this year. Am I getting old or is my work absorbing too much time?”
 
-*Crumb 2380*: **Onslaught #20**: She never asked her daughter where so much money keep coming from or who Litheran exactly was.
+*Crumb 2380*: **Onslaught #20**: She never asked her daughter where so much money kept coming from or who Lytheran exactly was.
 
 *Crumb 2381*: **AI in Football**: I wonder whether NFL franchises are investing in AIs specialized in football. They would make great play callers.
 
