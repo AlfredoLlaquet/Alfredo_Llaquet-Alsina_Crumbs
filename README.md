@@ -12,7 +12,10 @@ Against all odds, they exist to save humanity from doom and you from abulia.
 
 ## Why Should You Care?
 
-The crumbs are fun to read because they always surprise you and make you think, and you never know what the next one will be about. Also, they are very short—each can be read in less than 20 seconds.
+- The crumbs are fun.
+- They jolt you into creating movies in your head.
+- You never know what the next one will be about.
+- They are very short—each can be read in less than 20 seconds.
 
 ## The Latest Batch
 
