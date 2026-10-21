@@ -380,4 +380,3 @@ I post every new crumb on X.
 
 ![The Crumb-smith at Starbucks](img/TheCrumbSmithAtStarbucks.jpg)
 
-###
