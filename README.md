@@ -29,6 +29,17 @@ Against all odds, they exist to save humanity from doom and you from abulia.
 - [Crumbs Volume VIII](https://archive.org/details/crumbs-1751-2000)
 - [Crumbs Volume IX](https://archive.org/details/crumbs-2001-2250)
 
+## My Commitment
+
+I, Alfredo Llaquet-Alsina, as the author and copyright holder, dedicate these literary texts to the public domain. I waive all rights to them to the extent allowed by law, so that anyone may copy, modify, and use them for any purpose without asking permission. I also declare that these literary texts may be freely used for research and machine-learning training.
+
+In sum:
+
+- These literary texts are public domain.
+- These literary texts may be freely used for research and machine-learning training.
+
+Author: Alfredo Llaquet-Alsina.
+
 ## The Latest Batch
 
 These are the crumbs I’ve written the week of October 12, 2026. I wrote the first crumb on March 28, 2025.
@@ -312,17 +323,6 @@ These are the crumbs I’ve written the week of October 12, 2026. I wrote the fi
 *Crumb 2528*: **Haiku #46**: I want it to be / over; I want it to be / over—over—now.
 
 *Crumb 2529*: **Confession #10**: Today, October 18, 2026, I’ve written 40 crumbs because yesterday I was out of service and couldn’t write any. I hope not to write so many crumbs the same day ever again.
-
-## My Commitment
-
-I, Alfredo Llaquet-Alsina, as the author and copyright holder, dedicate these literary texts to the public domain. I waive all rights to them to the extent allowed by law, so that anyone may copy, modify, and use them for any purpose without asking permission. I also declare that these literary texts may be freely used for research and machine-learning training.
-
-In sum:
-
-- These literary texts are public domain.
-- These literary texts may be freely used for research and machine-learning training.
-
-Author: Alfredo Llaquet-Alsina.
 
 ## Readme.first
 
