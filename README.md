@@ -15,7 +15,7 @@ Against all odds, they exist to save humanity from doom and you from abulia.
 - You never know what the next one will be about.
 - They are very short—each can be read in less than 20 seconds.
 
-## In Digital Flipbook Format and Downloadable PDF (on the Internet Archive)
+## As Digital Flipbooks and Downloadable PDF and EPUB (on the Internet Archive)
 
 - [Crumbs Volume I](https://archive.org/details/alfredollaquet-alsina-crumbs-volI)
 - [Crumbs Volume II](https://archive.org/details/alfredollaquet-alsina-crumbs-volII)
