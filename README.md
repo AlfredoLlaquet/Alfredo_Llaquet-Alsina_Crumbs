@@ -17,6 +17,18 @@ Against all odds, they exist to save humanity from doom and you from abulia.
 - You never know what the next one will be about.
 - They are very short—each can be read in less than 20 seconds.
 
+## In PDF Format (on the Internet Archive)
+
+- [Crumbs Volume I](https://archive.org/details/alfredollaquet-alsina-crumbs-volI)
+- [Crumbs Volume II](https://archive.org/details/alfredollaquet-alsina-crumbs-volII)
+- [Crumbs Volume III](https://archive.org/details/alfredollaquet-alsina-crumbs-volIII)
+- [Crumbs Volume IV](https://archive.org/details/alfredollaquet-alsina-crumbs-volIV)
+- [Crumbs Volume V](https://archive.org/details/alfredollaquet-alsina-crumbs-volV)
+- [Crumbs Volume VI](https://archive.org/details/crumbs-1251-1500)
+- [Crumbs Volume VII](https://archive.org/details/crumbs-1501-1750)
+- [Crumbs Volume VIII](https://archive.org/details/crumbs-1751-2000)
+- [Crumbs Volume IX](https://archive.org/details/crumbs-2001-2250)
+
 ## The Latest Batch
 
 These are the crumbs I’ve written the week of October 12, 2026. I wrote the first crumb on March 28, 2025.
@@ -341,18 +353,6 @@ The scope and philosophy of the crumbs are explained quickly by the following ha
 *Crumb 1898*: **You Can Also Become Part of the Crumbs**: Leave your anecdote or especial request somewhere the crumb-smith can run into it, and he will turn it into a crumb. Offer expires with the crumb-smith himself. Faithfulness to your request will never be taken into account for the making of the crumb.
 
 ![The Crumbs Marathon](img/TheCrumbsMarathon.jpg)
-
-## In PDF Format (on the Internet Archive)
-
-- [Crumbs Volume I](https://archive.org/details/alfredollaquet-alsina-crumbs-volI)
-- [Crumbs Volume II](https://archive.org/details/alfredollaquet-alsina-crumbs-volII)
-- [Crumbs Volume III](https://archive.org/details/alfredollaquet-alsina-crumbs-volIII)
-- [Crumbs Volume IV](https://archive.org/details/alfredollaquet-alsina-crumbs-volIV)
-- [Crumbs Volume V](https://archive.org/details/alfredollaquet-alsina-crumbs-volV)
-- [Crumbs Volume VI](https://archive.org/details/crumbs-1251-1500)
-- [Crumbs Volume VII](https://archive.org/details/crumbs-1501-1750)
-- [Crumbs Volume VIII](https://archive.org/details/crumbs-1751-2000)
-- [Crumbs Volume IX](https://archive.org/details/crumbs-2001-2250)
 
 ## In a Single Text File (on the Internet Archive)
 
