@@ -15,7 +15,7 @@ Against all odds, they exist to save humanity from doom and you from abulia.
 - You never know what the next one will be about.
 - They are very short—each can be read in less than 20 seconds.
 
-## In Digital Flipbook Format and Downloadable PDF and EPUB (on the Internet Archive)
+## As Digital Flipbooks and Downloadable PDF and EPUB (on the Internet Archive)
 
 - [Crumbs Volume I](https://archive.org/details/alfredollaquet-alsina-crumbs-volI)
 - [Crumbs Volume II](https://archive.org/details/alfredollaquet-alsina-crumbs-volII)
@@ -352,11 +352,11 @@ The scope and philosophy of the crumbs are explained quickly by the following ha
 
 ![The Crumbs Marathon](img/TheCrumbsMarathon.jpg)
 
-## In a Single Text File (on the Internet Archive)
+## As a Single Text File (on the Internet Archive)
 
 - [Crumbs.txt (ongoing)](https://dn721900.ca.archive.org/0/items/crumbs_202608/Crumbs.txt)
 
-## In Video-books (on YouTube)
+## As Video-books (on YouTube)
 
 *Crumb 901*: **The YouTube Forest**: Most people assume that uploading a video on YouTube equates to making it available to the public so anyone can find it and watch it, but the truth is that if you are no one and don’t plan on investing time or money in any kind of promotion, as is my case, you could as well copy the video to a thumb drive and leave the latter under a tree in a forest. My crumbs exist in video-book form (a vertical video showing them in order, one at a time, for thirty seconds each) on YouTube—three 250-crumb videos, so far. Has anyone read them? Not at all. Am I complaining? Not at all.
 
