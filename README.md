@@ -26,6 +26,7 @@ Against all odds, they exist to save humanity from doom and you from abulia.
 - [Crumbs Volume VII](https://archive.org/details/crumbs-1501-1750)
 - [Crumbs Volume VIII](https://archive.org/details/crumbs-1751-2000)
 - [Crumbs Volume IX](https://archive.org/details/crumbs-2001-2250)
+- [Crumbs Volume X](https://archive.org/details/crumbs-2251-2500)
 
 ## My Commitment
 
