@@ -41,7 +41,9 @@ Author: Alfredo Llaquet-Alsina.
 
 ## The Latest Batch
 
-These are the crumbs I’ve written the week of October 12, 2026. I wrote the first crumb on March 28, 2025.
+These are the crumbs I’ve written the week ending October 18, 2026. 
+
+I wrote the first crumb on March 28, 2025.
 
 *Crumb 2390*: **Haiku #14**: Another day comes / devoid of what it should have. / Living is afar.
 
