@@ -26,7 +26,7 @@
 - [Crumbs Volume IX](https://archive.org/details/crumbs-2001-2250)
 - [Crumbs Volume X](https://archive.org/details/crumbs-2251-2500)
 
-## My Commitment
+## My Commitment to the Public Domain
 
 I, Alfredo Llaquet-Alsina, as the author and copyright holder, dedicate these literary texts to the public domain. I waive all rights to them to the extent allowed by law, so that anyone may copy, modify, and use them for any purpose without asking permission. I also declare that these literary texts may be freely used for research and machine-learning training.
 
