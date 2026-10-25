@@ -5,7 +5,11 @@
 **My goal is to write more than 25,091 tiny literary pieces (crumbs) to become the most prolific writer in history.**
 
 *Crumb 2225*: **My Real Competitors**: Worried, for once, about accuracy, I asked my assistant ChatGPT to conduct an exhaustive investigation about what concerns crumb 2169, and it concluded that of Mr. Takahama’s purported more than 30,000 haiku, only 22,189 have been documented, which turns his teacher, the also Japanese poet Masaoka Shiki, into the most prolific writer in history, with 25,091 catalogued 5-7-5 poems. Suddenly, for me to inherit this figurative throne, 25,092 crumbs will suffice.
-![TheCrumbs.org](img/Progress.jpg) 
+<picture>
+  <source media="(max-width: 600px)" srcset="img/ProgressP.jpg">
+  <img src="img/Progress.jpg" alt="TheCrumbs.org">
+</picture>
+
 ## Why Should You Care?
 
 - The crumbs are fun.
