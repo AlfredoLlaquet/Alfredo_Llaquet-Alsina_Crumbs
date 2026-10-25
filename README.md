@@ -13,9 +13,7 @@
   <img src="img/Progress.jpg" alt="TheCrumbs.org">
 </picture>
 
-## Why Should You Care?
-
-Because:
+## What Is in It for You?
 
 - The crumbs are fun.
 - They jolt you into creating movies in your head.
