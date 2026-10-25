@@ -344,3 +344,14 @@ html {
     pointer-events: none;
   }
 }
+
+@media (min-width: 601px) {
+  .markdown-body .crumbs-compact-brand {
+    left: -1px;
+    right: -1px;
+    width: auto;
+    box-sizing: border-box;
+    border-left: 1px solid #d1d9e0;
+    border-right: 1px solid #d1d9e0;
+  }
+}
