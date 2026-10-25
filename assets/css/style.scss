@@ -111,6 +111,13 @@ html {
   border-bottom: 1px solid #d1d9e0;
 }
 
+/* Separate the desktop menu from the introductory heading. */
+@media (min-width: 601px) {
+  .markdown-body .crumbs-nav + h2 {
+    margin-top: 56px;
+  }
+}
+
 .markdown-body .crumbs-nav.is-stuck {
   top: var(--crumbs-brand-height, 90px);
   box-shadow: 0 5px 12px rgba(0, 0, 0, 0.1);
