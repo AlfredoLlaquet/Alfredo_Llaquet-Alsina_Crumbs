@@ -11,3 +11,67 @@
 .markdown-body > .footer {
   display: none;
 }
+
+.markdown-body table.crumb-volumes-table,
+.markdown-body table.recent-crumbs-table {
+  display: block;
+  width: 100%;
+  max-width: 100%;
+  margin-bottom: 16px;
+  border: 0;
+  border-collapse: collapse;
+  overflow: visible;
+}
+
+.markdown-body .crumb-volumes-table > tbody,
+.markdown-body .recent-crumbs-table > tbody {
+  display: grid;
+  border-top: 1px solid #d1d9e0;
+  border-left: 1px solid #d1d9e0;
+}
+
+.markdown-body .crumb-volumes-table > tbody {
+  grid-template-columns: repeat(10, minmax(0, 1fr));
+}
+
+.markdown-body .recent-crumbs-table > tbody {
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+}
+
+.markdown-body .crumb-volumes-table > tbody > tr,
+.markdown-body .recent-crumbs-table > tbody > tr {
+  display: contents;
+}
+
+.markdown-body .crumb-volumes-table > tbody > tr > td,
+.markdown-body .recent-crumbs-table > tbody > tr > td {
+  display: block;
+  box-sizing: border-box;
+  min-width: 0;
+  width: auto;
+  border: 0;
+  border-right: 1px solid #d1d9e0;
+  border-bottom: 1px solid #d1d9e0;
+  vertical-align: top;
+  overflow-wrap: anywhere;
+}
+
+.markdown-body .crumb-volumes-table > tbody > tr > td {
+  padding: 8px 2px;
+  text-align: center;
+}
+
+.markdown-body .recent-crumbs-table > tbody > tr > td {
+  padding: 16px;
+  text-align: left;
+}
+
+@media (max-width: 600px) {
+  .markdown-body .crumb-volumes-table > tbody {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
+
+  .markdown-body .recent-crumbs-table > tbody {
+    grid-template-columns: minmax(0, 1fr);
+  }
+}
