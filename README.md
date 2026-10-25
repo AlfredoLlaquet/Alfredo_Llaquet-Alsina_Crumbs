@@ -1,4 +1,7 @@
-![TheCrumbs.org](img/TheCrumbs.org.jpg)
+<picture>
+  <source media="(max-width: 600px)" srcset="img/TheCrumbs.orgP.jpg">
+  <img src="img/TheCrumbs.org.jpg" alt="TheCrumbs.org">
+</picture>
 
 # By Alfredo Llaquet-Alsina /ya-KET al-SIH-nah/
 
