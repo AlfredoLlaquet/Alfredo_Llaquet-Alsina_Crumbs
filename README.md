@@ -420,7 +420,7 @@ The scope and philosophy of the crumbs are explained quickly by the following ha
 
 <h2 id="contact">Contact Me</h2>
 
-- email: inquiries.llaquet@gmail.com
+- email: [inquiries.llaquet@gmail.com](mailto:inquiries.llaquet@gmail.com)
 
 ![The Crumb-smith at Starbucks](img/TheCrumbSmithAtStarbucks.jpg)
 
