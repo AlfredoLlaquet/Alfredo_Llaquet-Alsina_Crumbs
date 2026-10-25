@@ -11,7 +11,6 @@
 </picture>
 
 ## Why Should You Care?
-
 - The crumbs are fun.
 - They jolt you into creating movies in your head.
 - You never know what the next one will be about.
