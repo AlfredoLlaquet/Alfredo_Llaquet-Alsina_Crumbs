@@ -3,7 +3,7 @@
   <img src="img/TheCrumbs.org.jpg" alt="TheCrumbs.org">
 </picture>
 
-# By Alfredo Llaquet-Alsina /ya-KET al-SIH-nah/
+## By Alfredo Llaquet-Alsina /ya-KET al-SIH-nah/
 
 **My goal is to write more than 25,091 tiny literary pieces (crumbs) to become the most prolific writer in history.**
 
