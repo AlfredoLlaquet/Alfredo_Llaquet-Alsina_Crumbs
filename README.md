@@ -15,16 +15,13 @@
 
 ## As Digital Flipbooks and Downloadable PDF and EPUB (on the Internet Archive)
 
-- [Crumbs Volume I](https://archive.org/details/alfredollaquet-alsina-crumbs-volI)
-- [Crumbs Volume II](https://archive.org/details/alfredollaquet-alsina-crumbs-volII)
-- [Crumbs Volume III](https://archive.org/details/alfredollaquet-alsina-crumbs-volIII)
-- [Crumbs Volume IV](https://archive.org/details/alfredollaquet-alsina-crumbs-volIV)
-- [Crumbs Volume V](https://archive.org/details/alfredollaquet-alsina-crumbs-volV)
-- [Crumbs Volume VI](https://archive.org/details/crumbs-1251-1500)
-- [Crumbs Volume VII](https://archive.org/details/crumbs-1501-1750)
-- [Crumbs Volume VIII](https://archive.org/details/crumbs-1751-2000)
-- [Crumbs Volume IX](https://archive.org/details/crumbs-2001-2250)
-- [Crumbs Volume X](https://archive.org/details/crumbs-2251-2500)
+| | | |
+| --- | --- | --- |
+| [Volume I](https://archive.org/details/alfredollaquet-alsina-crumbs-volI) | [Volume II](https://archive.org/details/alfredollaquet-alsina-crumbs-volII) | [Volume III](https://archive.org/details/alfredollaquet-alsina-crumbs-volIII) |
+| [Volume IV](https://archive.org/details/alfredollaquet-alsina-crumbs-volIV) | [Volume V](https://archive.org/details/alfredollaquet-alsina-crumbs-volV) | [Volume VI](https://archive.org/details/crumbs-1251-1500) |
+| [Volume VII](https://archive.org/details/crumbs-1501-1750) | [Volume VIII](https://archive.org/details/crumbs-1751-2000) | [Volume IX](https://archive.org/details/crumbs-2001-2250) |
+| [Volume X](https://archive.org/details/crumbs-2251-2500) | | |
+| | | |
 
 ## My Commitment to the Public Domain
 
