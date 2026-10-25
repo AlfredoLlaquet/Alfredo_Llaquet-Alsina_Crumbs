@@ -7,3 +7,7 @@
 .markdown-body h2 {
   border-bottom: none;
 }
+
+.markdown-body > .footer {
+  display: none;
+}
