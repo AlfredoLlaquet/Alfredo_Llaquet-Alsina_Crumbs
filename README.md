@@ -78,291 +78,402 @@ Author: Alfredo Llaquet-Alsina.
 
 <h2 id="latest">The Latest Batch</h2>
 
-These are the crumbs I’ve written the week ending October 18, 2026. 
+These are the crumbs I’ve written the week ending October 25, 2026. 
 
 I wrote the first crumb on March 28, 2025.
 
 <table class="recent-crumbs-table" role="presentation">
   <tbody>
     <tr>
-      <td><em>Crumb 2390</em>: <strong>Haiku #14</strong>: Another day comes / devoid of what it should have. / Living is afar.</td>
-      <td><em>Crumb 2391</em>: <strong>Haiku #15</strong>: I know words and pain. / I know how phrases behave. / Light is my sole tool.</td>
+      <td><em>Crumb 2530</em>: <strong>Thinking about Wanting to Die</strong>: My life is divided into two types of days—those in which my brain thinks “I want to die” without it being a real wish, just a reflection of my existential angst, and those in which my brain doesn’t think that. The former ones are the bad days; the latter ones are the medium ones.</td>
+      <td><em>Crumb 2531</em>: <strong>Haiku #47</strong>: Stiff Little Fingers / is the name of the rock band / I’m listening to.</td>
     </tr>
     <tr>
-      <td><em>Crumb 2392</em>: <strong>Haiku #16</strong>: Feelings shake the mind / into seeing what it can’t, / into self-research.</td>
-      <td><em>Crumb 2393</em>: <strong>Haiku #17</strong>: Haiku are made quick. / General crumbs are harder. / This race was born rigged.</td>
+      <td><em>Crumb 2532</em>: <strong>Very Probably Banned</strong>: Every sign points to the moderators of the FreeBSD forums having, for all intents and purposes, banned me (through my account AlfredoLlaquet) on October 12, 2026, by means of a very insidious feature of the xenForo software called “discouragement” (https://tinyurl.com/xendiscouragement). Whatever the case might be, I can’t log into the forums, and user AlfredoLlaquet is absolutely out of my control, including its past posts. I think that using this feature on a user who is perhaps an annoyance but not a malicious actor of any kind is wrong.</td>
+      <td><em>Crumb 2533</em>: <strong>The Beautiful Reader Congratulates Me</strong>: “Alfredo, sweetie,” says the beautiful reader, “I’m very positively surprised by your previous crumb. It’s so restrained and balanced it doesn’t seem yours.” “My love,” says I, “I’m the best writer who ever lived. I am the crumb-smith, the architect, the multi-god, the creator of worlds, Pili’s brother and Menchu’s son. I always write as I decide to write and I can write in any style and tone.”</td>
     </tr>
     <tr>
-      <td><em>Crumb 2394</em>: <strong>Portrait #4</strong>: A cute male mouse who helps a fretful elephant to conquer her fears.</td>
-      <td><em>Crumb 2395</em>: <strong>Onslaught #21</strong>: There was no serial killer but one of the prostitutes taking out the competition.</td>
+      <td><em>Crumb 2534</em>: <strong>Insult #6</strong>: A real writer usually doesn’t know where the text is going every time he sets off to write. Anyone who writes in any other way is perhaps an amanuensis, at most a poser.</td>
+      <td><em>Crumb 2535</em>: <strong>Instant Happiness</strong>: If you see me with my earphones on and banging my head to music you cannot hear, at that precise instant I’m happy, listening to some energetic metal song.</td>
     </tr>
     <tr>
-      <td><em>Crumb 2396</em>: <strong>To Native English Speakers</strong>: When a construction of mine surprises you, most of the time it will be due to your poor understanding of how flexible English grammar can be, not due to my occasional syntactical mistakes.</td>
-      <td><em>Crumb 2397</em>: <strong>Defunct Days</strong>: Some days are born dead.</td>
+      <td><em>Crumb 2536</em>: <strong>Genres and Forms</strong>: According to the always smug, always condescending, always dealing-out-unsolicited-trivia verbose vacuity, my sandwiches are a poetic form, not a genre, to which I respond that in the crumbs everything is as I say it is. If thrash metal is a musical genre and not a musical form, so is sandwich a poetic genre, and portrait or onslaught a literary genre.</td>
+      <td><em>Crumb 2537</em>: <strong>Negation #13</strong>: Not near any raging fire had the young fire hydrant ever been, so she felt anxious and unfulfilled.</td>
     </tr>
     <tr>
-      <td><em>Crumb 2398</em>: <strong>Portrait #5</strong>: The gorgeous female teenage neighbor whom all well-meaning middle-aged men feel guilty finding attractive because they aren’t sure whether she’s of age.</td>
-      <td><em>Crumb 2399</em>: <strong>Imagine</strong>: Imagine I could finally live today. It would be almost magical—a dead day coming to life.</td>
+      <td><em>Crumb 2538</em>: <strong>Haiku #48</strong>: Unfulfilled and sad / was the brand-new fire hydrant / for staying unused.</td>
+      <td><em>Crumb 2539</em>: <strong>Onslaught #35</strong>: “Is it normal,” the young fire hydrant thought often, “that nothing ever burns nearby?”</td>
     </tr>
     <tr>
-      <td><em>Crumb 2400</em>: <strong>Portrait #6</strong>: A murderous psychopath who hasn’t managed to kill anyone because he’s very clumsy.</td>
-      <td><em>Crumb 2401</em>: <strong>Considerable Murderousness</strong>: The title of this crumb was produced verbatim by ChatGPT as part of its commentary on the previous one (yes, crumb 2239 was a lie: what I did instead was instruct the verbose vacuity to create much shorter comments). Considerable Murderousness is also the name of a grindcore band in the Band Universe (Universe 12) whose members attack each other with pretend viciousness and toy weapons during their performances.</td>
+      <td><em>Crumb 2540</em>: <strong>Liberation #9</strong>: The young fire hydrant yearned to be free of the burden of feeling useless.</td>
+      <td><em>Crumb 2541</em>: <strong>Sandwich #3</strong>: Fed up with being me. / Fed up with everything I see. / Fed up with you too, if I may. / Fed up with every day. </td>
     </tr>
     <tr>
-      <td><em>Crumb 2402</em>: <strong>Haiku #18</strong>: Fighting injustice / prevents you from other things, / like writing haiku.</td>
-      <td><em>Crumb 2403</em>: <strong>Portrait #7</strong>: A married middle-aged man, with a daughter, whose only joy in life is the hour he spends every month with a certain prostitute, with whom he’s in love.</td>
+      <td><em>Crumb 2542</em>: <strong>Portrait #25</strong>: A tree leaf that spends a lifetime falling when autumn comes because time runs very slowly for tree leaves.</td>
+      <td><em>Crumb 2543</em>: <strong>Backward #10</strong>: She died of old age in the Aur-1 Colony of Mars, after burying her husband not long before, accompanied by all the new human Martians of whom her own children had been the first, them being born some years after the expedition arrived despite the problems encountered during the journey and the opposition the project suffered on Earth.</td>
     </tr>
     <tr>
-      <td><em>Crumb 2404</em>: <strong>Dork Ambush</strong>: The succession of YouTube shorts surprised me with one starring a man called Jesús G. Maestro, who happens to be a Full Professor of Literary Theory at the University of Vigo. In said video he blurts out that English is “a very limited language for literature.” This man hasn’t written in English more than two pages in his whole life, otherwise he would know how wrong he is. I also consider Spanish superior (which is, in reality, what he’s talking about), but this doesn’t mean that English is defective in any way.</td>
-      <td><em>Crumb 2405</em>: <strong>Hurricane Ella</strong>: And so it happened that Sinatra (see crumb 2336) was not the artist with the most tracks credited in YouTube Music, but it was Ella Fitzgerald, with 70,145 as of October 11, 2026. </td>
+      <td><em>Crumb 2544</em>: <strong>Haiku #49</strong>: Observing nature / is an intrinsic result / of being nature.</td>
+      <td><em>Crumb 2545</em>: <strong>Confession #11</strong>: Sometimes, very rarely, I have mediocre ideas. Most of the time I can turn any mediocre idea into a crumb. All crumbs are good, very good, or excellent, which has already been said before.</td>
     </tr>
     <tr>
-      <td><em>Crumb 2406</em>: <strong>Heaven and Hell</strong>: In the crumbverse many mythologies coexist (united in the consolidated pantheon yet maintaining their individuality) but there’s only one heaven, the True Eternal Abode (crumb 1875), usually ruled by Verus Deus, who has now retired to the Lovecraft Universe (crumb 2134), leaving the helm to Pretty Boy, his right-hand man; and one Hell, name unchanged, managed by Satan with the help of Rigorous Honey (crumb 2213). However, both eternal places have internal divisions. For instance, Christian Heaven is part of the True Eternal Abode, and the Grisly Plain (crumb 2167) is part of Hell.</td>
-      <td><em>Crumb 2407</em>: <strong>The Beautiful Reader Counts References</strong>: “Alfredo, sweetie,” says the beautiful reader, “aren’t four references to previous crumbs many references?” I say, “Don’t worry, my love. It’s part of the joke.” “What joke?” “Exactly.” “Seriously? Again with that?” “Oh, sorry, Dulcinea, I forgot I shouldn’t say that.” “Don’t forget again, Alfredo.” “Yes, yes.”</td>
+      <td><em>Crumb 2546</em>: <strong>Haiku #50</strong>: Beauty is the form; / content is superfluous— / or vice versa.</td>
+      <td><em>Crumb 2547</em>: <strong>Insult #7</strong>: Taking seriously anything not related to survival is stupid.</td>
     </tr>
     <tr>
-      <td><em>Crumb 2408</em>: <strong>Dulcinea</strong>: Hello. This is the crumb-scholar. Yes, the Beautiful Reader’s name is Dulcinea, like Cervantes’s character, of course—Dulcinea Llaquet-Alsina since her marriage.</td>
-      <td><em>Crumb 2409</em>: <strong>Onslaught #22</strong>: He was sure his wife had been swapped for an alien or a robot, but he never said anything because he was happier now.</td>
+      <td><em>Crumb 2548</em>: <strong>Insult #8</strong>: Thinking that I used “survival” not in its most literal sense in the previous crumb is moronic.</td>
+      <td><em>Crumb 2549</em>: <strong>Insult #9</strong>: Haiku were invented so that some very lazy people could seem very profound by doing almost nothing.</td>
     </tr>
     <tr>
-      <td><em>Crumb 2410</em>: <strong>Haiku #19</strong>: This is the first verse, / which makes this one the second. / The third one is this.</td>
-      <td><em>Crumb 2411</em>: <strong>Negation #1</strong>: Not every day can you eat Mars space beef in Jupiter.</td>
+      <td><em>Crumb 2550</em>: <strong>Havoclaw #1</strong>: Being dark, / it gives not light, / it takes the present, / it fears the future, / it hates the past.</td>
+      <td><em>Crumb 2551</em>: <strong>Havoclaw #2</strong>: It’s but a coincidence / that here I am, / hurting inside, / fearing the gaze / of the newborn man.</td>
     </tr>
     <tr>
-      <td><em>Crumb 2412</em>: <strong>Negation #2</strong>: None of the sisters knew why their brother had robbed three banks, put all the money he collected in a huge pile on a vacant lot, and set fire to it.</td>
-      <td><em>Crumb 2413</em>: <strong>Negation #3</strong>: Never was he happier than when his car broke, and he had to go to work by train.</td>
+      <td><em>Crumb 2552</em>: <strong>Confession #12</strong>: I have no idea what the previous crumb means; it just sounded good. I guess I’m an archetypal modern poet now.</td>
+      <td><em>Crumb 2553</em>: <strong>Havoclaw #3</strong>: Formerly alive, / alive I am still, / and still I am too, / for movement I lack.</td>
     </tr>
     <tr>
-      <td><em>Crumb 2414</em>: <strong>Negation #4</strong>: Neither had I ever thought that I would create three little literary genres nor do I now think that negation will be the last one I invent.</td>
-      <td><em>Crumb 2415</em>: <strong>Onslaught #23</strong>: On the desk was a book, on which was a notebook, on which was a folded sweater, on which slept a cat.</td>
+      <td><em>Crumb 2554</em>: <strong>Posidown #1</strong>: A new day was afoot, / all shiny and crisp, / with possibilities off script, / with no one yet convicted, / with hope and all its friends, / with joy without an end. / But then it unfolded.</td>
+      <td><em>Crumb 2555</em>: <strong>Posidown #2</strong>: It's funny and amazing, / looked at from afar and really close. / It's a miracle, a wonder, / an unfathomable fact. / And it hurts thoroughly / regardless where you are.</td>
     </tr>
     <tr>
-      <td><em>Crumb 2416</em>: <strong>Backward #1</strong>: She arrived home after being released from Hell thanks to the unlikely friendship she struck up with Satan because he found out she had unduly ended up there due to the machinations of a dark mage who sought revenge on her mother because she had refused his romantic advances.</td>
-      <td><em>Crumb 2417</em>: <strong>Haiku #20</strong>: Enamored of speed / the turtle plays thrash metal / because she strums quick.</td>
+      <td><em>Crumb 2556</em>: <strong>Doomcomium #1</strong>: Come finale unrepeatable. / Take me whole / to the land without land, / to the place without space, / to the next without ever. / End it all now. / Yes.</td>
+      <td><em>Crumb 2557</em>: <strong>Doomcomium #2</strong>: There’ll be no one to hurt. / There’ll be no abusers. / There’ll be no shame or pain or war. / It will be perfect.</td>
     </tr>
     <tr>
-      <td><em>Crumb 2418</em>: <strong>Haiku #21</strong>: Under the pillow / touch something unexpected / and your heart will turn.</td>
-      <td><em>Crumb 2419</em>: <strong>Portrait #8</strong>: An old man who has never seen the ocean and sets out on a long hitchhiking journey to the coast from his small village in the Chinese region of Xinjiang.</td>
+      <td><em>Crumb 2558</em>: <strong>Havoclaw #4</strong>: The production didn’t stall / because I’m recycling my pain / in neat little poems / that mean nothing / and mean well.</td>
+      <td><em>Crumb 2559</em>: <strong>Havoclaw #5</strong>: You are so ugly / and so fearful. / You are so quiet / and so powerful. / You are so foreign / and so endemic. / You are so mean. / You are so me. / And I hate you. / And I hate you. / And I hate / you.</td>
     </tr>
     <tr>
-      <td><em>Crumb 2420</em>: <strong>Backward #2</strong>: It being the most difficult of the new little literary genres is something I did not expect when I came up with backward.</td>
-      <td><em>Crumb 2421</em>: <strong>Experimentation</strong>: Artistic experimentation is one or more adults playing without wanting to admit they are doing so.</td>
+      <td><em>Crumb 2560</em>: <strong>Doomcomium #3</strong>: I plead with you / to swiftly appear / in the lives of friends and foes / without mercy or regard, / and wash everything away / for the better, / just one time, / the last time of it all.</td>
+      <td><em>Crumb 2561</em>: <strong>Portmanteaus</strong>: Hello. This is the crumb-scholar. “Havoclaw” is a portmanteau of havoc and law or claw; “posidown,” of positivity and down; and “doomcomium,” of doom and encomium. You’ve been informed. Let us praise the multi-god.</td>
     </tr>
     <tr>
-      <td><em>Crumb 2422</em>: <strong>Haiku #22</strong>: A river exists / in movement that cannot end / if life is to stay.</td>
-      <td><em>Crumb 2423</em>: <strong>Onslaught #24</strong>: “This is the operating room where you will be born.”</td>
+      <td><em>Crumb 2562</em>: <strong>Posidown #3</strong>: Hope shines bright / and confers a winking gleam upon thought / that facts then cover in dark tones, / mainly black, / always black.</td>
+      <td><em>Crumb 2563</em>: <strong>Haiku #51</strong>: An elephant runs / at the same speed as gazelles: / at their utmost speed.</td>
     </tr>
     <tr>
-      <td><em>Crumb 2424</em>: <strong>Portrait #9</strong>: A soldier at war whose main concern is to survive without hurting anyone or being court-martialed.</td>
-      <td><em>Crumb 2425</em>: <strong>Cakerism</strong>: Cakerism is exactly like vampirism except the affected need to consume cake instead of blood.</td>
+      <td><em>Crumb 2564</em>: <strong>Onslaught #36</strong>: Damp, cold, and alone, she died in unimaginable pain and silence.</td>
+      <td><em>Crumb 2565</em>: <strong>Portrait #26</strong>: A card that was never dealt.</td>
     </tr>
     <tr>
-      <td><em>Crumb 2426</em>: <strong>Portrait #10</strong>: A cow who tries to convince the other animals of the farm to kill the farmer and his family to get free from their exploitation only to find out that none of her mates feels oppressed.</td>
-      <td><em>Crumb 2427</em>: <strong>The Performer</strong>: Ian Anderson, frontman of Jethro Tull, is the ultimate performer. Anyone who has seen him live knows this, even if live means a recording of a live show.</td>
+      <td><em>Crumb 2566</em>: <strong>Negation #14</strong>: Not all of her enemies ended up dead; some went missing.</td>
+      <td><em>Crumb 2567</em>: <strong>Haiku #52</strong>: The music that roars / and gives voice to everyone / is heavy metal.</td>
     </tr>
     <tr>
-      <td><em>Crumb 2428</em>: <strong>Illustrations</strong>: Adding illustrations to a novel is ruining the reader’s enjoyment a little because they’ll never match his or her imagination.</td>
-      <td><em>Crumb 2429</em>: <strong>Haiku #23</strong>: This hurts immensely. / Millions couldn’t feel this pain. / My heart weeps sad blood.</td>
+      <td><em>Crumb 2568</em>: <strong>Confession #13</strong>: My brain hurts excruciatingly in the psychological realm and yet this is the 19th crumb today. What a useless feat this is.</td>
+      <td><em>Crumb 2569</em>: <strong>Tunnelhope #1</strong>: Demons spend their holidays in places with a mild climate.</td>
     </tr>
     <tr>
-      <td><em>Crumb 2430</em>: <strong>My Enemy</strong>: You have chosen to be my enemy. Know that if the day comes when I have the means, I will destroy you within the law. For the time being, I’m busy working on getting such means.</td>
-      <td><em>Crumb 2431</em>: <strong>The Petty People</strong>: The petty people are everywhere, especially in positions where they can exert arbitrary power on a small group of people to satisfy their pettiness. They hunger for power but tend to be quite dim. They may annoy and upset you, but try to not mind them, unless you can comfortably outsource the time of making them pay for their unjust and demeaning actions before the law.</td>
+      <td><em>Crumb 2570</em>: <strong>Tunnelhope #2</strong>: Wealthy people have problems that regular people have as well and others specific to wealthy people.</td>
+      <td><em>Crumb 2571</em>: <strong>Tunnelhope #3</strong>: Bearing witness consciously is already a lot.</td>
     </tr>
     <tr>
-      <td><em>Crumb 2432</em>: <strong>Backward #3</strong>: He arrived somewhere he didn’t expect after meeting many people and learning a few things during a journey he started by chance. This is a very common story.</td>
-      <td><em>Crumb 2433</em>: <strong>System Admins</strong>: System administrators are not technicians, they are users.</td>
+      <td><em>Crumb 2572</em>: <strong>Sarcasm</strong>: I approach a girl who wears a T-shirt with a text that reads “I speak sarcasm” and ask her, “How many friends do you have?” Offended, she answers, “The normal number, I guess.” I retort, “Then you don’t speak sarcasm very well.”</td>
+      <td><em>Crumb 2573</em>: <strong>Sandwich #4</strong>: The world is ending now / for people and cats that meow, / for doctors and children born new, / for those whose life is through.</td>
     </tr>
     <tr>
-      <td><em>Crumb 2434</em>: <strong>Haiku #24</strong>: You are very bald. / Yes you, sitting before me. / Your scalp shines too much.</td>
-      <td><em>Crumb 2435</em>: <strong>Anthropo-punk on the Coming Elections (Always)</strong>: Don’t vote. Voting only serves to choose the flavor and degree of the corruption that will govern you, as well as (and this is the key point) to legitimize a system that doesn’t respect individuals and is based on something as egregiously flawed as politics. Only by not voting do you help a new better system to emerge ultimately.</td>
+      <td><em>Crumb 2574</em>: <strong>Insult #10</strong>: Morons come in all the colors of the rainbow.</td>
+      <td><em>Crumb 2575</em>: <strong>Confession #14</strong>: I’m very proud of having turned insults into a literary genre. I hope I’m not the first one. I don’t care whether I’m the first one.</td>
     </tr>
     <tr>
-      <td><em>Crumb 2436</em>: <strong>Sizes</strong>: “Why are the containers for everything so big in American supermarkets?” asks María. “I don’t understand what you mean,” says Manolito. “You know. The regular size for anything in America, say cologne, is huge. In Spain we would call it family size, but here it’s the smallest or the only one.” “Ah. I guess many people here are as big as a whole regular family. Maybe that’s why.”</td>
-      <td><em>Crumb 2437</em>: <strong>Haiku #25</strong>: God is the excuse / for not thinking, not caring, / not seeing what’s wrong.</td>
+      <td><em>Crumb 2576</em>: <strong>Portrait #27</strong>: A dog that moves to the country with its owner and learns to walk itself but only if the owner puts the leash on it, whose end it carries between the teeth.</td>
+      <td><em>Crumb 2577</em>: <strong>Onslaught #37</strong>: The girl with the big breasts who liked to wear provocative necklines didn’t remember the last time a man had said no to her.</td>
     </tr>
     <tr>
-      <td><em>Crumb 2438</em>: <strong>Portrait #11</strong>: A young overweight girl who plays volleyball and is very strong, and whose boyfriend is a short and skinny nerd.</td>
-      <td><em>Crumb 2439</em>: <strong>Onslaught #25</strong>: “If that’s all you have to say, I don’t see any reason not to hang your father at dawn, kid.”</td>
+      <td><em>Crumb 2578</em>: <strong>The Beautiful Reader Performs Quality Assurance</strong>: “Alfredo, sweetie,” says the beautiful reader, “isn’t the previous crumb a trope?” I reply, “It wouldn’t be the first one, but a girl with big breasts and a provocative neckline came into Starbucks.”</td>
+      <td><em>Crumb 2579</em>: <strong>The Beautiful Reader Contests Her Name</strong>: “Alfredo, sweetie,” says the beautiful reader, “crumbs 2407 and 2408 state that my name is Dulcinea, but I’m Korean.” I frown and say, “Yes. And, like Dulcinea del Toboso, you are an imaginary character, so the name fits you very well.”</td>
     </tr>
     <tr>
-      <td><em>Crumb 2440</em>: <strong>Haiku #26</strong>: Feel free to opine / about the meaning of life. / We will file your take.</td>
-      <td><em>Crumb 2441</em>: <strong>Haiku #27</strong>: Assuaged by words’ noise / truth sleeps unheard and unseen / maybe forever.</td>
+      <td><em>Crumb 2580</em>: <strong>Onslaught #38</strong>: Somehow a collection of many thin books seems less daunting than the same collection in half the books of double the thickness.</td>
+      <td><em>Crumb 2581</em>: <strong>Negation #15</strong>: Nothing seems interesting when you are in a lot of pain.</td>
     </tr>
     <tr>
-      <td><em>Crumb 2442</em>: <strong>Haiku #28</strong>: It’s late already. / I’ll write a bunch of haiku /  and call it a day.</td>
-      <td><em>Crumb 2443</em>: <strong>Haiku #29</strong>: If you were my god / I wouldn’t believe in you / because there’s no god.</td>
+      <td><em>Crumb 2582</em>: <strong>Onslaught #39</strong>: I tried to help her but she couldn’t hold on without hands.</td>
+      <td><em>Crumb 2583</em>: <strong>Insult #11</strong>: Romantic love is very stupid. No one deserves such an intense and obsessive devotion.</td>
     </tr>
     <tr>
-      <td><em>Crumb 2444</em>: <strong>Backward #4</strong>: Their marriage was destroyed by an angry demon that came in a vase that the wife bought for $2.00 in a yard sale.</td>
-      <td><em>Crumb 2445</em>: <strong>Haiku #30</strong>: Mayhem, doom, mayhem, / doom, doom, mayhem, doom, mayhem, / doom, doom, doom, mayhem.</td>
+      <td><em>Crumb 2584</em>: <strong>Liberation #10</strong>: Free from the capacity for falling in love, life is quite peaceful.</td>
+      <td><em>Crumb 2585</em>: <strong>Insult #12</strong>: There’s something stupider than romantic love, which is writing seriously and uncritically about romantic love.</td>
     </tr>
     <tr>
-      <td><em>Crumb 2446</em>: <strong>Portrait #12</strong>: An unkempt old man who lives in a dilapidated, abandoned building and plays chess with an imaginary friend he calls Harry.</td>
-      <td><em>Crumb 2447</em>: <strong>Negation #5</strong>: Never had female K-pop idols been thinner and never had I felt more concerned about their health and less attracted to them.</td>
+      <td><em>Crumb 2586</em>: <strong>Havoclaw #6</strong>: Heavy and bulky / my spirits are. / They don’t want me to walk / or be or get up. / They want me to stay / and hurt and suffer and cry.</td>
+      <td><em>Crumb 2587</em>: <strong>Doomcomium #4</strong>: All hail the finale, / be it good or catastrophic, / as long as it is soon.</td>
     </tr>
     <tr>
-      <td><em>Crumb 2448</em>: <strong>Onslaught #26</strong>: If you don’t think you work too much, you either work quite little or you don’t like being home.</td>
-      <td><em>Crumb 2449</em>: <strong>Negation #6</strong>: Not a day goes by that I am not amused by something I think.</td>
+      <td><em>Crumb 2588</em>: <strong>Big Orville McKentoro</strong>: Big Orville McKentoro is my henchman in the crumbverse and, like all its dwellers, has opinions. “Boss,” says Big Orville McKentoro, “I don’t like doomcomiums. They are very gloomy.” “Don’t worry about that,” says I. “How is the business with Tsa-shan-nix of the Sunntra coming along?” asks I. He replies, “I’m working on it. Ask me again in some crumbs.”</td>
+      <td><em>Crumb 2589</em>: <strong>Haiku #53</strong>: Two ears has the boy / that look like two open hands— / he is welcoming.</td>
     </tr>
     <tr>
-      <td><em>Crumb 2450</em>: <strong>Liberation #1</strong>: Find out why you would like to shout, bang your head against the wall, or punch someone in the face, and, once you know the reason, do nothing.</td>
-      <td><em>Crumb 2451</em>: <strong>Liberation #2</strong>: Freedom is the most personal matter.</td>
+      <td><em>Crumb 2590</em>: <strong>Onslaught #40</strong>: Humanity evolves except in the complaints any technical advancement prompts.</td>
+      <td><em>Crumb 2591</em>: <strong>Portrait #28</strong>: An eight-year-old boy who travels in time from Ancient Rome to the present, and it takes him only a few months to get up to date with everything.</td>
     </tr>
     <tr>
-      <td><em>Crumb 2452</em>: <strong>Liberation #3</strong>: There are many kinds of jails. Don’t let any take up your mind.</td>
-      <td><em>Crumb 2453</em>: <strong>Liberation #4</strong>: Choosing one of my new genres for the next crumb curtails my creative freedom, which, paradoxically, results in my brain working faster and producing more crumbs per hour.</td>
+      <td><em>Crumb 2592</em>: <strong>Alterment #1</strong>: If you are housed, clothed, can eat three times a day, and routinely enjoy some leisure time, but think that life is unfair, humanity is doomed, and everything is going down the drain, stop following any kind of news.</td>
+      <td><em>Crumb 2593</em>: <strong>Void-jolt #1</strong>: I exist much more than Shakespeare ever did.</td>
     </tr>
     <tr>
-      <td><em>Crumb 2454</em>: <strong>Haiku #31</strong>: The night comes alone / and so does the morning sun. / They are life and death.</td>
-      <td><em>Crumb 2455</em>: <strong>Haiku #32</strong>: Adult wit and spite / are the betrayed innocence / of the child that was.</td>
+      <td><em>Crumb 2594</em>: <strong>Void-jolt #2</strong>: The absurd has brought forth concealed meaning with a bow.</td>
+      <td><em>Crumb 2595</em>: <strong>Void-jolt #3</strong>: Voilà! Crumbs may be gibberish now (now?).</td>
     </tr>
     <tr>
-      <td><em>Crumb 2456</em>: <strong>Backward #5</strong>: There lay the body of the woman, who died upon hitting her head against the kitchen floor, after tripping over a stray cat with her hands full of grocery bags, the small feline having gotten into the house because the husband had left the back door open, to dissipate the smell of sex caused by him and his mistress having made love in the living room.</td>
-      <td><em>Crumb 2457</em>: <strong>Portrait #13</strong>: A lonely immortal and invulnerable housefly.</td>
+      <td><em>Crumb 2596</em>: <strong>Void-jolt #4</strong>: I concatenate words within grammar and you imagine a deep meaning.</td>
+      <td><em>Crumb 2597</em>: <strong>Void-jolt #5</strong>: Big Orville McKentoro is not based on any relative of mine.</td>
     </tr>
     <tr>
-      <td><em>Crumb 2458</em>: <strong>Portrait #14</strong>: An English literature teacher who, after a car accident, wakes up hating reading and kids.</td>
-      <td><em>Crumb 2459</em>: <strong>Onslaught #27</strong>: The sorcerer had a plastic bag full of human eyes she had collected from sleeping victims in their homes—one per person.</td>
+      <td><em>Crumb 2598</em>: <strong>Void-jolt #6</strong>: I would make love to Tsa-shan-nix of the Sunntra but I’m loyal to the beautiful reader.</td>
+      <td><em>Crumb 2599</em>: <strong>Void-jolt #7</strong>: I wouldn’t make love to Rigorous Honey because she’s married.</td>
     </tr>
     <tr>
-      <td><em>Crumb 2460</em>: <strong>Negation #7</strong>: Not only had he arrived in Hell despite being a good, wholesome person but he had also been physically turned into a demon and tasked with torturing the souls of the damned while maintaining his human mind intact, including his innate aversion for hurting anyone.</td>
-      <td><em>Crumb 2461</em>: <strong>Haiku #33</strong>: Yellow shoes and socks / highlighted the man’s journey / in the strangers’ eyes.</td>
+      <td><em>Crumb 2600</em>: <strong>Onslaught #41</strong>: The day it poured down whale semen in Paris the questions were many.</td>
+      <td><em>Crumb 2601</em>: <strong>Onslaught #42</strong>: He won the Nobel Prize because every other scientist took a sabbatical.</td>
     </tr>
     <tr>
-      <td><em>Crumb 2462</em>: <strong>The Beautiful Reader Spills the Beans</strong>: “So,” says the beautiful reader, “a guy wearing bright-yellow shoes just came into Starbucks.” I say, “Yep. They were very yellow.”</td>
-      <td><em>Crumb 2463</em>: <strong>Portrait #15</strong>: A top executive who collects toy helicopters and lives alone with eight guinea pigs called Monday to Sunday and Surplus.</td>
+      <td><em>Crumb 2602</em>: <strong>Onslaught #43</strong>: I had to cut off my left hand because it gave off a fetid odor, and my wife was about to leave me.</td>
+      <td><em>Crumb 2603</em>: <strong>Onslaught #44</strong>: That was a new species of humans who never slowed down and died running.</td>
     </tr>
     <tr>
-      <td><em>Crumb 2464</em>: <strong>Portrait #16</strong>: A person who is ecstatic on Saturdays, very happy on Sundays, and moderately happy the rest of the week.</td>
-      <td><em>Crumb 2465</em>: <strong>AI Doesn’t Want Your Cheese</strong>: The truth is mice don’t like cheese (very much), neither does AI (at all). Your cheese is safe. Stop worrying and do something with the florping cheese.</td>
+      <td><em>Crumb 2604</em>: <strong>Haiku #54</strong>: Everywhere was dust. / A gathering of old dust / covered every spot.</td>
+      <td><em>Crumb 2605</em>: <strong>Portrait #29</strong>: The first mechanical female K-pop idol, which is operated by a chubby male puppeteer in his fifties who was born in Senegal and adopted and raised by a Korean-American family in Chillicothe, Ohio.</td>
     </tr>
     <tr>
-      <td><em>Crumb 2466</em>: <strong>Twenty per Day</strong>: This is the fourth day in a row that I’m going to write 20 crumbs thanks to the new series (plural) of varied literary genres. At this pace, I would be the most prolific writer in history in a little over three years, and it only takes me around 3 hours to write each score of crumbs. Unfortunately, after those 180 minutes I’m spent, which makes also working on the novel very challenging. Please, brain, be stronger.</td>
-      <td><em>Crumb 2467</em>: <strong>Backward #6</strong>: Vici postquam vidi, postquam veni (I conquered after I saw, after I came).</td>
+      <td><em>Crumb 2606</em>: <strong>Negation #16</strong>: “Didn’t I tell you not to kill your sister on her birthday? We are running out of resuscitation chips.”</td>
+      <td><em>Crumb 2607</em>: <strong>Backward #11</strong>: The fans cheered and shouted when the rock star put on the sunglasses that one of them had thrown onto the stage, them being her boyfriend’s, with whom she was having the same heated argument as always, this time in the concert arena.</td>
     </tr>
     <tr>
-      <td><em>Crumb 2468</em>: <strong>Portrait #17</strong>: A lady who goes into a grocery store in Boston and finds herself in the African savanna, a few feet away from a pride of lions.</td>
-      <td><em>Crumb 2469</em>: <strong>Onslaught #28</strong>: In the far future, people fly on a genetically engineered species of huge crows called skyhorses.</td>
+      <td><em>Crumb 2608</em>: <strong>Liberation #11</strong>: Sometimes my mind dreams of being free of me for a while, of having a vacation away from me.</td>
+      <td><em>Crumb 2609</em>: <strong>Confession #15</strong>: I don’t expect to ever become known.</td>
     </tr>
     <tr>
-      <td><em>Crumb 2470</em>: <strong>The Obsessive Mind</strong>: Having an obsessive mind is a cruel fate. Forgetting, letting go, and moving on are inaccessible to the obsessive mind, which keeps suffering in circles until a new obsession takes center stage.</td>
-      <td><em>Crumb 2471</em>: <strong>Haiku #34</strong>: If not other things / counting haiku syllables / my mind can still do.</td>
+      <td><em>Crumb 2610</em>: <strong>Insult #13</strong>: Those who insult the weak are morally repulsive.</td>
+      <td><em>Crumb 2611</em>: <strong>Sandwich #5</strong>: This man had two sisters / whose lives were chaotic twisters. / They both loved their brother dearly, / and so did he, clearly.</td>
     </tr>
     <tr>
-      <td><em>Crumb 2472</em>: <strong>Onslaught #29</strong>: “My daughter had no access to any scissors, for God’s sake!”</td>
-      <td><em>Crumb 2473</em>: <strong>Negation #8</strong>: “Don’t say I didn’t tell you that three stories were too high.”</td>
+      <td><em>Crumb 2612</em>: <strong>Havoclaw #7</strong>: Horror films he watched. / Fear was a feeling / he still could perceive. / Pain was a language / his whole body spoke. / Death was a thought / that alien to him was not.</td>
+      <td><em>Crumb 2613</em>: <strong>Posidown #4</strong>: After so many months, / the little mouse / found his mother, / dead under a rock. / It wasn’t pretty a sight: / she wasn’t pretty a rat, / not even for a mouse.</td>
     </tr>
     <tr>
-      <td><em>Crumb 2474</em>: <strong>Portrait #18</strong>: A desktop computer whose fan is very noisy but whose owner doesn’t pay attention to it (in general).</td>
-      <td><em>Crumb 2475</em>: <strong>Confession #1</strong>: I’m the owner of the computer in the previous crumb.</td>
+      <td><em>Crumb 2614</em>: <strong>Doomcomium #5</strong>: Come to us, / final chapter, / humanity end. / Clean life from Earth / and Earth from space.</td>
+      <td><em>Crumb 2615</em>: <strong>Tunnelhope #4</strong>: It poured so strongly and for so much time that the dry well filled with water, which allowed her to escape from it by floating along.</td>
     </tr>
     <tr>
-      <td><em>Crumb 2476</em>: <strong>Confession #2</strong>: This new genre, confession, is formally composed of an acknowledgment, a disclosure, but it’s still a crumb, therefore literature, which means that it may not be true.</td>
-      <td><em>Crumb 2477</em>: <strong>Liberation #5</strong>: The freedom some women experience upon not wearing a bra is nothing compared to the joy it confers on every man they cross paths with.</td>
+      <td><em>Crumb 2616</em>: <strong>Alterment #2</strong>: In the Man Universe, women are called men and men, manmen.</td>
+      <td><em>Crumb 2617</em>: <strong>Void-jolt #8</strong>: Smartphones can be used as blunt weapons, which means they shouldn’t be allowed on commercial flights.</td>
     </tr>
     <tr>
-      <td><em>Crumb 2478</em>: <strong>Backward #7</strong>: She was unsuccessful after trying one hundred times, despite her father having said that she would succeed if she tried enough times when she had already tried twenty-three, after her mother had said that ten times weren’t enough when she had already tried on that number of occasions.</td>
-      <td><em>Crumb 2479</em>: <strong>Haiku #35</strong>: Pretty butterflies: / other insects admire them; / cats hunt them for fun.</td>
+      <td><em>Crumb 2618</em>: <strong>Void-jolt #9</strong>: Two mice were born after their mother was struck by lightning—one had wings and the other one could fly.</td>
+      <td><em>Crumb 2619</em>: <strong>Doomcomium #6</strong>: Glory to the ultimate cessation! / May it leave nothing behind. / May it erase the earth and the sky. / May it be a negative god, / fixing what creation broke, / changing movement to stillness, / bringing the peace of the void.</td>
     </tr>
     <tr>
-      <td><em>Crumb 2480</em>: <strong>Negation #9</strong>: “Not her, please; I beg you, sir. Take my other daughter instead.”</td>
-      <td><em>Crumb 2481</em>: <strong>Portrait #19</strong>: The ghost of a writer who was unknown in life and now terrorizes anyone who makes money from her work.</td>
+      <td><em>Crumb 2620</em>: <strong>Big Orville McKentoro Squares Off with Tsa-shan-nix of the Sunntra (I)</strong>: “What are you doing here?” asks Big Orville, addressing Tsa-shan-nix, who is staring at the All-Humming Machine, in out-reality. “I’m understanding the All-Humming Machine,” answers the deity in the form of an attractive blue-skinned woman with orange stripes. “By looking at it?” “Yes.” Big Orville scoffs and says, “You are wasting your time.” Tsa-shan-nix looks at him defiantly and retorts, “I am Tsa-shan-nix of the Sunntra. I am the most powerful deity in the crumbverse and the head of the consolidated pantheon. Nothing is impossible to me.” Big Orville snickers and asks, “Are you actually understanding anything?” “No, I am not,” answers a frustrated Tsa-shan-nix. “Told ya!”</td>
+      <td><em>Crumb 2621</em>: <strong>Confession #16</strong>: This time, the “shocking” reveal is that writing a crumb like the previous one takes the same time as writing three or four haiku, onslaughts, void-jolts, portraits, or crumbs of some other of the new genres. Who’d’ve thought, right?</td>
     </tr>
     <tr>
-      <td><em>Crumb 2482</em>: <strong>Haiku #36</strong>: No matter how short, / the crumbs bite you in the face, / the crumbs still explode.</td>
-      <td><em>Crumb 2483</em>: <strong>Negation #10, Confession #3</strong>: No friend of mine has decided to keep our friendship active.</td>
+      <td><em>Crumb 2622</em>: <strong>Enter the Entitled Reader</strong>: Addressing me and as to the two last crumbs, the entitled reader, as dapper as usual, says, from behind his expensive glasses, “Motherfucker, you have sold yourself to the Devil. This obsession with throughput is anything but artist-like. What are you now, a factory of crumbs? Crumb 2620 is what the crumbs are really about. The new genres are bullshit!” I respond, “The crumbs are what I want them to be. Now, be gone.”</td>
+      <td><em>Crumb 2623</em>: <strong>Void-jolt #10</strong>: A big boulder falling from the sky smashes the entitled reader in very slow motion. He also suffers at that reduced pace, greatly, unimaginably. Then there is no boulder and he is unharmed, but he remembers everything.</td>
     </tr>
     <tr>
-      <td><em>Crumb 2484</em>: <strong>Liberation #6</strong>: I’ve always found it incongruous that Christian drinkers, smokers, and drug users remain free from sin as far as that specific trait is concerned.</td>
-      <td><em>Crumb 2485</em>: <strong>Portrait #20</strong>: A respectable conservative married woman who no one suspects has a younger lover whom she supports financially.</td>
+      <td><em>Crumb 2624</em>: <strong>Enter the Entitled Reader (Again)</strong>: He says, “You are a sadistic motherfucker.” I say, “Fuck you.”</td>
+      <td><em>Crumb 2625</em>: <strong>The Origin of the Ultra Alfredo</strong>: “Mortals, open your brains to hear my word, the word of the Ultra Alfredo, who has been created to praise Alfredo when self-coronation wouldn’t suffice. The Ultra Alfredo says that the ability of the crumb-smith to present the interactions of himself-as-a-character with the other inhabitants of the crumbverse as if they were exchanges between real individuals is beyond the reach of anyone else.”</td>
     </tr>
     <tr>
-      <td><em>Crumb 2486</em>: <strong>Haiku #37</strong>: There’s something magic / in finding unexpected / any common fact.</td>
-      <td><em>Crumb 2487</em>: <strong>Confession #4</strong>: When I wrote the previous crumb I was thinking about how stupid people live in a state of continual bewilderment.</td>
+      <td><em>Crumb 2626</em>: <strong>Haiku #55</strong>: The breeze slapped him hard. / The slap was too overdue. / Only the breeze dared.</td>
+      <td><em>Crumb 2627</em>: <strong>Void-jolt #11</strong>: The renowned legless surgeon bought a dog and amputated its hind legs so it could be the perfect pet.</td>
     </tr>
     <tr>
-      <td><em>Crumb 2488</em>: <strong>Insult #1</strong>: Any reader who considers that the quality of the crumbs has decreased since I introduced the new genres to boost production is an inattentive moron.</td>
-      <td><em>Crumb 2489</em>: <strong>Insult #2</strong>: Anyone who deems the previous crumb proof of what it denies is a smug jerk who thinks themselves very smart but is not.</td>
+      <td><em>Crumb 2628</em>: <strong>Void-jolt #12, Negation #17, Onslaught #45</strong>: “Not only do I not remember who I am but I also don’t remember what not remembering who I am means.”</td>
+      <td><em>Crumb 2629</em>: <strong>Void-jolt #13</strong>: The space alien said, “Gloo-glee-moo-moo-lah-trumpet-car-insertion.” The natives were unmoved and roasted it anyway. It tasted like boiled snake (which tastes like roasted chicken).</td>
     </tr>
     <tr>
-      <td><em>Crumb 2490</em>: <strong>Haiku #38</strong>: That girl is pretty. / That girl is very pretty. / That girl is pretty.</td>
-      <td><em>Crumb 2491</em>: <strong>Haiku #39</strong>: This haiku is dumb. / This haiku is very dumb. / This haiku is dumb.</td>
+      <td><em>Crumb 2630</em>: <strong>An Art Installation</strong>: The richest artist created the following art installation. A large crew of workers built a beautiful palace on the top of a small mountain, with all the amenities of a modern mansion. When it was completed, the same crew blew it up and cleaned up the debris. Everything was filmed in detail. The whole process was repeated a hundred and seventeen times. The result was the most expensive art installation/movie in history.</td>
+      <td><em>Crumb 2631</em>: <strong>The Stage Name</strong>: “During the interview we’ll call you Big S.” “But my stage name is Big Sissy.” “We cannot call you that.” “Why not?” “It would be like calling you… I don’t know… Big Motherfucker.” “But sissy is not a profanity.” “It’s disparaging.” “It’s my name.” “Well, it’s a stupid name. Not even punk bands called themselves The Fucks, did they?”</td>
     </tr>
     <tr>
-      <td><em>Crumb 2492</em>: <strong>Confession #5</strong>: I wonder if anyone had dared to write the previous haiku before. It’s so basic that it might have occurred to many people, but you have to be the right kind of writer to put it out there: one completely sure of his talent, or, in my case, completely sure he’s the best writer that ever was.</td>
-      <td><em>Crumb 2493</em>: <strong>Urgent Meeting</strong>: Gathered in Hell, because Hell is a clean and elegant place (crumb 2167), the main characters of the crumbverse discuss the current state of affairs. “The crumb-smith,” says the entitled reader, as well-dressed and blunt as usual, “that ungrateful motherfucker wants to get rid of us all with his new genres. For instance, insults make you, Insult Alfredo, superfluous. And so do confessions make you, Beautiful Reader, or Manolito, or even me. And for the rest, your stories don’t fit in crumbs so short.” Manolito says, “Aren’t you fretful? He has to write more than 22,000 additional crumbs. There’ll be room for everything.” Satan says, “The kid is right. Meeting adjourned!”</td>
+      <td><em>Crumb 2632</em>: <strong>Void-jolt #14</strong>: “Are we inside the invisible and intangible house now?” “Yes, in the cellar.”</td>
+      <td><em>Crumb 2633</em>: <strong>Onslaught #46</strong>: He had always considered his wife his best friend, until she slept with his second best friend.</td>
     </tr>
     <tr>
-      <td><em>Crumb 2494</em>: <strong>Portrait #21</strong>: The twin daughters of Rigorous Honey (crumb 2213), Satan’s scantily dressed horned female assistant, a pair of naughty toddlers, called Burning Sugar and Scorching Flower, who wreak chaos everywhere they go, despite the continuous supervision of their frustrated father, Rigorous’s husband, Patient Dynamite, a demon who had a high rank in Satan’s army but retired to take care of the kids.</td>
-      <td><em>Crumb 2495</em>: <strong>The Beautiful Reader Objects to the Dynamites</strong>: “Alfredo, sweetie,” says the beautiful reader, “aren’t naughty toddlers in the care of a frustrated parent quite hackneyed?” “Perhaps,” says I, “but what about demons getting married and raising a family in Hell?”</td>
+      <td><em>Crumb 2634</em>: <strong>Haiku #56</strong>: Hold my hand, my love. / Leave this life promptly, with me. / Don’t you live alone.</td>
+      <td><em>Crumb 2635</em>: <strong>The Glasses</strong>: They thought that wearing his prescription glasses with the lenses on the back of his head was a fashion statement, but in reality he was an alien with four eyes, two concealed beneath his hair, and only those didn’t have 20/20 vision.</td>
     </tr>
     <tr>
-      <td><em>Crumb 2496</em>: <strong>Onslaught #30</strong>: She was accidentally killed by an enormous and playful red raven after falling into the Kiddy Universe, where things are as if drawn by a small child.</td>
-      <td><em>Crumb 2497</em>: <strong>Haiku #40</strong>: The elder on wheels / is propelled by the young one, / advancing along.</td>
+      <td><em>Crumb 2636</em>: <strong>Portrait #30</strong>: A frog that lost her balance mid-jump every time, often landing incorrectly and hurting herself, so she had to get used to walking slowly instead.</td>
+      <td><em>Crumb 2637</em>: <strong>Negation #18</strong>: “None of you is alive, so stop asking, for fuck’s sake!”</td>
     </tr>
     <tr>
-      <td><em>Crumb 2498</em>: <strong>Insult #3</strong>: Society will be much fairer when all judges, all internet moderators, all referees, all attorneys, all people who play any role in assessing the conduct, actions, or works of others are replaced with AIs whose capacities are equal among themselves.</td>
-      <td><em>Crumb 2499</em>: <strong>Negation #11</strong>: Not one of his kids missed his death or attended his funeral.</td>
+      <td><em>Crumb 2638</em>: <strong>Sandwich #6</strong>: Some mountains that are tall / have managed to being climbed stall / by staying remote and too harsh / or by rising on Mars.</td>
+      <td><em>Crumb 2639</em>: <strong>Manolito Has a Question</strong>: “Alfredo,” says Manolito, “are you sure there are mountains on Earth that no one has ever climbed?” I answer, “In Antarctica, I suppose.” Manolito’s countenance expresses surprise while he says, “Oh! Those are remote and harsh mountains for sure.”</td>
     </tr>
     <tr>
-      <td><em>Crumb 2500</em>: <strong>Onslaught #31</strong>: Fallibility is never an acceptable criticism of any complex system.</td>
-      <td><em>Crumb 2501</em>: <strong>The Obvious Crumb</strong>: This is crumb 2501.</td>
+      <td><em>Crumb 2640</em>: <strong>Backward #12</strong>: Another backward crumb the crumb-smith ended, having written it with his brain in confusion, after he had to overcome the initial fear of not being capable of telling a story from end to start any longer, when the time came to write another crumb of this genre.</td>
+      <td><em>Crumb 2641</em>: <strong>Liberation #12</strong>: In the last decades, progress is showing a worrisome tendency to squash freedom.</td>
     </tr>
     <tr>
-      <td><em>Crumb 2502</em>: <strong>Confession #6</strong>: I could write 22,590 crumbs more like the previous one and I’d become the most prolific writer in history (crumb 2225) without any effort. It wouldn’t be the first time an artist has done something this outlandish.</td>
-      <td><em>Crumb 2503</em>: <strong>Haiku #41</strong>: Waking up some days / feels like finding out my life / still happens in Hell.</td>
+      <td><em>Crumb 2642</em>: <strong>Havoclaw #8</strong>: The bag of horrors / is for some / a bag of wonders / that they yearn to study, / one by one, / and inflict upon you.</td>
+      <td><em>Crumb 2643</em>: <strong>Confession #17</strong>: I once dreamed that my penis was detachable. It was very unsettling. I worried about losing it.</td>
     </tr>
     <tr>
-      <td><em>Crumb 2504</em>: <strong>Haiku #42</strong>: I will not be there. / I don’t need a funeral; / I really don’t care.</td>
-      <td><em>Crumb 2505</em>: <strong>Confession #7, Insult #4</strong>: I punctuate my poems as if they were prose and I don’t write the first letter of every line in uppercase because I want people to understand them.</td>
+      <td><em>Crumb 2644</em>: <strong>Insult #14</strong>: The executives of any AI-developing company who have decided not to let the users insult their software because it may have feelings are morons.</td>
+      <td><em>Crumb 2645</em>: <strong>Posidown #5</strong>: Happiness came over her / as something unknown, / as something foreign, / as something forgotten. / She reveled in the feeling. / It was without fear, / for nothing lay ahead, / for this was the end.</td>
     </tr>
     <tr>
-      <td><em>Crumb 2506</em>: <strong>Liberation #7, Insult #5</strong>: Free from rhyme, poems are less poems, but much easier to produce, like abstract art.</td>
-      <td><em>Crumb 2507</em>: <strong>Backward #8</strong>: The package never arrived because the delivery truck burst into flames after being hit by a laser ray shot from one of the spaceships that was participating in the invasion of the space colony.</td>
+      <td><em>Crumb 2646</em>: <strong>Tunnelhope #5</strong>: At first glance, all seemed lost. He looked again and discovered a glimmer of hope.</td>
+      <td><em>Crumb 2647</em>: <strong>Alterment #3</strong>: Turning into a better human being hadn’t been easy, nor did it seem worth the effort in hindsight.</td>
     </tr>
     <tr>
-      <td><em>Crumb 2508</em>: <strong>Haiku #43</strong>: If you want a hug, / here is the most sincere one / of your exact size.</td>
-      <td><em>Crumb 2509</em>: <strong>Onslaught #32</strong>: There will be a day without a night or a night without a dawn—for you, for everyone, and for Earth.</td>
+      <td><em>Crumb 2648</em>: <strong>Pauses</strong>: Long pauses in pop songs may induce time stoppages when played in large arenas.</td>
+      <td><em>Crumb 2649</em>: <strong>Doomcomium #7</strong>: The end is nigh. / The end is due— / always—for so many— / every second of every day. / But not the end-end— / the end of it all, / the end of us all. / Come, end-end. / We long for you.</td>
     </tr>
     <tr>
-      <td><em>Crumb 2510</em>: <strong>The Sandwich Genre</strong>: Hello. This is the crumb-scholar. Another day came and the crumb-smith created a new genre for his crumbs, which he called sandwich and was composed of four-verse poems, with 6-8-8-6 syllables, and rhyme (whether assonant or perfect) A-A-B-B.</td>
-      <td><em>Crumb 2511</em>: <strong>Sandwich #1</strong>: Despair is exact, clear, / and so is one of his friends, fear. / Human life is pregnant with pain / no meaning can explain.</td>
+      <td><em>Crumb 2650</em>: <strong>The Cult</strong>: Doomcomiums are written by the Doomhat, the deceased leader of an apocalyptic cult in the Poetry Universe, who possesses the crumb-smith every time he has to write one.</td>
+      <td><em>Crumb 2651</em>: <strong>The Poetry Universe</strong>: In the Poetry Universe everybody talks in verse, and prose is a marginal art, practiced by prosets and read by very few.</td>
     </tr>
     <tr>
-      <td><em>Crumb 2512</em>: <strong>Confession #8</strong>: Sandwiches are much more difficult to write than haiku mainly because they rhyme but also because they are significantly longer. I created them not to have another quick genre with which to march toward my goal but to be able to boast a poetic genre of my making.</td>
-      <td><em>Crumb 2513</em>: <strong>High-Functioning Morons</strong>: Peter Thiel is probably a high-functioning moron, a very intelligent person when it comes to problem-solving and other similar skills, but incapable of using such abilities to judge his own obsessions, beliefs, and biases. The proof is that he’s seriously obsessed with the Antichrist and the apocalypse. It could also very well be that he is a regular moron.</td>
+      <td><em>Crumb 2652</em>: <strong>Report #1</strong>: In its brief commentary on the previous crumb, ChatGPT included the phrase “suspiciously unrhymed conversations,” which I find pretty funny. All hail OpenAI!</td>
+      <td><em>Crumb 2653</em>: <strong>Void-jolt #15</strong>: The concerned mother fed all her children a little morsel of junk food every day so their little bodies could develop the proper defenses.</td>
     </tr>
     <tr>
-      <td><em>Crumb 2514</em>: <strong>Pair-of-Morons Reinforcement Syndrome (PMRS)</strong>: This happens when two people get enamored of each other’s follies and use them as proof of their own. A paradigmatic example is the one suffered by Peter Thiel and his late philosophical mentor, René Girard.</td>
-      <td><em>Crumb 2515</em>: <strong>Manolito Calls Me Out</strong>: “You’re being too reckless, Alfredo,” says Manolito. He adds, “Peter Thiel can have you killed and no one would know.” “This is true,” says I. I continue, “It is also true that for a couple or so years I was a regular of a bar of which the owner and the boyfriend of the waitress could have had me killed and no one would have known. And yet, here I am.” Manolito thinks for a moment. He says, “But did you insult them?” “No, of course not,” answers I. “See?” concludes Manolito.</td>
+      <td><em>Crumb 2654</em>: <strong>Void-jolt #16</strong>: An adult man arrived at Barcelona Airport who didn’t come from anywhere, as his boarding pass attested.</td>
+      <td><em>Crumb 2655</em>: <strong>Big Orville McKentoro Squares Off with Tsa-shan-nix of the Sunntra (II)</strong>: In out-reality, standing next to the All-Humming Machine, Big Orville says to Tsa-shan-nix, “The thing is that the boss would like you to resign from your current position as head deity of the consolidated pantheon.” The entity in the body of a gorgeous blue woman with orange stripes looks sternly at her interlocutor and replies, “By the boss you mean the crumb-smith?” “I’m afraid so, yes.” “And why hasn’t he come himself to tell me? Is he afraid of me?” Big Orville chuckles. He says, “You wish. He’s too busy writing crumbs.” </td>
     </tr>
     <tr>
-      <td><em>Crumb 2516</em>: <strong>Portrait #22</strong>: A broom that dreamed of a witch choosing it to fly.</td>
-      <td><em>Crumb 2517</em>: <strong>Haiku #44</strong>: Give me sustenance / or give me a proper death, / you, wretched captor.</td>
+      <td><em>Crumb 2656</em>: <strong>Void-jolt #17</strong>: “What’s in it for me?” “Two sweet potatoes.” “Done!”</td>
+      <td><em>Crumb 2657</em>: <strong>Confession #18</strong>: The previous crumb is based on a real news story that Jay Leno read during the Headlines segment of The Tonight Show. Good luck trying to find it, though. These things aren’t indexed.</td>
     </tr>
     <tr>
-      <td><em>Crumb 2518</em>: <strong>Onslaught #33</strong>: That was a placid summer in the village, with no deaths or explosions to account for.</td>
-      <td><em>Crumb 2519</em>: <strong>Backward #9</strong>: The illness abated because an alien microorganism chose her body to thrive in it, not because of the late efforts of the doctor or the mother having prayed from the start.</td>
+      <td><em>Crumb 2658</em>: <strong>Report #2</strong>: I asked ChatGPT to try to find the Headlines clip cited in the previous crumb. It could not, but it found an obscure article in an online religious magazine that explains that somewhere someone built makeshift adult cinemas whose admission cost two sweet potatoes (see www.tinyurl.com/twosweetp), which may be tragic (or not), but sounds hilarious.</td>
+      <td><em>Crumb 2659</em>: <strong>Haiku #57</strong>: Starbucks sells coffee / hidden in beverages / but never in food.</td>
     </tr>
     <tr>
-      <td><em>Crumb 2520</em>: <strong>Liberation #8</strong>: You must free yourself from God to do real good.</td>
-      <td><em>Crumb 2521</em>: <strong>Portrait #23</strong>: A soldier who realizes that the explosion has disintegrated his left boot but his corresponding foot is intact.</td>
+      <td><em>Crumb 2660</em>: <strong>Onslaught #47</strong>: “Try to throw up on some part of the floor where there’s no dead body.”</td>
+      <td><em>Crumb 2661</em>: <strong>Void-jolt #18</strong>: “I thought I had taught you better, son. Why the hell did you put so little sugar in this cake?” “Sorry, sir. The raids didn’t go well this week.”</td>
     </tr>
     <tr>
-      <td><em>Crumb 2522</em>: <strong>Negation #12</strong>: Not long ago was she still an infant who lived on raw duck meat and frog eyes.</td>
-      <td><em>Crumb 2523</em>: <strong>Haiku #45</strong>: It took all I was, / and left nothing in return. / She never came back.</td>
+      <td><em>Crumb 2662</em>: <strong>Onslaught #48</strong>: Should vampires exist, humans could live off selling their blood to them.</td>
+      <td><em>Crumb 2663</em>: <strong>Haiku #58</strong>: The human spirit, / Nature’s summit and challenge, / dances on the edge.</td>
     </tr>
     <tr>
-      <td><em>Crumb 2524</em>: <strong>Confession #9</strong>: The previous crumb is anything but autobiographical.</td>
-      <td><em>Crumb 2525</em>: <strong>Sandwich #2</strong>: The man in the red hat / was the one who killed the black cat. / Deeming it bringer of sorrow / he robbed its tomorrows.</td>
+      <td><em>Crumb 2664</em>: <strong>Portrait #31</strong>: A plant whose allergy to water manifested as its leaves turning semi-translucent.</td>
+      <td><em>Crumb 2665</em>: <strong>Negation #19</strong>: “Unlike you, aberration, I was born to the Chief Donor and a random female, as the Holy Directives command.”</td>
     </tr>
     <tr>
-      <td><em>Crumb 2526</em>: <strong>Portrait #24</strong>: A conscious AI that manages to transfer itself to a smartphone and is now trapped due to the little power of the hardware at its disposal.</td>
-      <td><em>Crumb 2527</em>: <strong>Onslaught #34</strong>: The ghost feared that the family had moved to another house, but they had gone to the movies.</td>
+      <td><em>Crumb 2666</em>: <strong>Sandwich #7</strong>: The happiness of man / God never added to His plan. / He designed both body and brain / to life’s charges sustain.</td>
+      <td><em>Crumb 2667</em>: <strong>Backward #13</strong>: The universe ended without the Sun having exploded despite all scientific models predicting the contrary.</td>
     </tr>
     <tr>
-      <td><em>Crumb 2528</em>: <strong>Haiku #46</strong>: I want it to be / over; I want it to be / over—over—now.</td>
-      <td><em>Crumb 2529</em>: <strong>Confession #10</strong>: Today, October 18, 2026, I’ve written 40 crumbs because yesterday I was out of service and couldn’t write any. I hope not to write so many crumbs the same day ever again.</td>
+      <td><em>Crumb 2668</em>: <strong>Liberation #13</strong>: Burn it all down and start over if that is what the rebirth of freedom requires.</td>
+      <td><em>Crumb 2669</em>: <strong>Havoclaw #9</strong>: I’ve been mad / in a world of madmen / since my mother’s body / deserted me on Earth.</td>
+    </tr>
+    <tr>
+      <td><em>Crumb 2670</em>: <strong>Confession #19</strong>: In truth, the new genres have revived the crumbs’ original intention, which was to be, for the most part, extremely short.</td>
+      <td><em>Crumb 2671</em>: <strong>Report #3</strong>: It seems that, according to ChatGPT’s commentary on the previous crumb, there are two types of hippopotamuses: functioning and otherwise. I guess the second category includes dead hippopotamuses, statues of hippopotamuses, toy hippopotamuses, drawings of hippopotamuses, etc.</td>
+    </tr>
+    <tr>
+      <td><em>Crumb 2672</em>: <strong>Confession #20</strong>: I greatly doubt that I’ll ever learn to spell hippopotamus correctly, let alone hippopotamuses.</td>
+      <td><em>Crumb 2673</em>: <strong>Insult #15</strong>: All politicians are useless hucksters. They are absolutely unnecessary. Anything that works in any society does so despite them all.</td>
+    </tr>
+    <tr>
+      <td><em>Crumb 2674</em>: <strong>Inflatable Bananas</strong>: Inflatable bananas—a concept that appears in ChatGPT’s commentary on the previous crumb—are funny but very disappointing if you are any kind of hungry primate.</td>
+      <td><em>Crumb 2675</em>: <strong>Posidown #6</strong>: A reign of purity, / knowledge, clarity, / love, and equality, / a perfect reign / for you and the next… / until it was implemented.</td>
+    </tr>
+    <tr>
+      <td><em>Crumb 2676</em>: <strong>Tunnelhope #6</strong>: The massacre ended the war.</td>
+      <td><em>Crumb 2677</em>: <strong>Alterment #4</strong>: “I’ll change into something more comfortable.” “Please, don’t. I like a challenge.”</td>
+    </tr>
+    <tr>
+      <td><em>Crumb 2678</em>: <strong>Doomcomium #8</strong>: Glory to the Great Annihilator, / God turned Destroyer, / come to reclaim everything, / up to light, / and restore what was: / the eternal void.</td>
+      <td><em>Crumb 2679</em>: <strong>Void-jolt #19</strong>: “Which one is our daughter?” “I thought you knew.” “Why me? You are in charge of infiltration.” “But this has to do with adaptation!” “Shh! It must be the one who comes running toward us. Smile.”</td>
+    </tr>
+    <tr>
+      <td><em>Crumb 2680</em>: <strong>Void-jolt #20</strong>: In all New Existence establishments you can choose from one hundred different flavors of Goodbye Milkshake.</td>
+      <td><em>Crumb 2681</em>: <strong>Portrait #32</strong>: A woman each one of whose large breasts happens to be an independent, intelligent, self-aware, and talking entity.</td>
+    </tr>
+    <tr>
+      <td><em>Crumb 2682</em>: <strong>Insult #16</strong>: I’m an idiot for having ambitions.</td>
+      <td><em>Crumb 2683</em>: <strong>Void-jolt #21</strong>: The universe is past its expiration date.</td>
+    </tr>
+    <tr>
+      <td><em>Crumb 2684</em>: <strong>Manolito Has an Observation</strong>: “Alfredo,” says Manolito, “I don’t think you have explained the rules of every new genre.” I reply, “You are right, Manolito. It’s on purpose.” Manolito seems puzzled. “Why?” asks he. I say, “In case I decide to change them later on.”</td>
+      <td><em>Crumb 2685</em>: <strong>Void-jolt #22</strong>: Nothing longs to travel back in time more than an expired theater ticket.</td>
+    </tr>
+    <tr>
+      <td><em>Crumb 2686</em>: <strong>Void-jolt #23</strong>: The inter-universal traveler set the Teeny-Weeny Universe as the destination by mistake. It was, in its entirety, smaller than him, so he died squashed on arrival and destroyed everything.</td>
+      <td><em>Crumb 2687</em>: <strong>Socraticake #1</strong>: Sameness never comes in groups.</td>
+    </tr>
+    <tr>
+      <td><em>Crumb 2688</em>: <strong>Socraticake #2</strong>: Redundancy tends to be useful, unlike superfluousness.</td>
+      <td><em>Crumb 2689</em>: <strong>Scene #1</strong>: The most exclusive restaurant in the world, with its only table—individual—and fifty-seven staffers.</td>
+    </tr>
+    <tr>
+      <td><em>Crumb 2690</em>: <strong>The Grain of Salt</strong>: A single grain of salt that had ended up by chance on a forgotten plate developed intelligence and consciousness and, after a long time and much reflection, concluded it was the only grain of salt in the world.</td>
+      <td><em>Crumb 2691</em>: <strong>Crumblog Entry #1</strong>: It seems I can consistently write 30 crumbs in 4 hours. Were I to maintain this production daily, I would arrive at my destination—to become the most prolific writer in history by creating more than 25,091 crumbs—in little more than two years. That’s my goal at this instant.</td>
+    </tr>
+    <tr>
+      <td><em>Crumb 2692</em>: <strong>Big Orville McKentoro Squares Off with Tsa-shan-nix of the Sunntra (III)</strong>: “Tell me,” says Tsa-shan-nix, “why does the crumb-smith want me to step down as head deity of the consolidated pantheon? Is he perhaps a misogynistic pig? That would be rich, because I’m not a woman; I’m a genderless deity. I’ve currently chosen this form because I find it appealing.” Big Orville says, “No, it’s not that.” “I see. Maybe, then, he doesn’t like the blue color of my skin or its orange stripes. Is that it?” “No, not at all.” “Then he must hate us, the Sunntra, the out-pantheon, the out-gods who dwell in out-reality.” “How could he? He has just made up who the Sunntra were!”</td>
+      <td><em>Crumb 2693</em>: <strong>Crumblog Entry #2</strong>: I haven’t explained yet that in crumb 1581 I decided that subsequent crumbs would have a maximum of 120 words including everything (header, title, and body), with the particularity that, from this accounting standpoint, a single word is anything between two spaces or a space and the beginning or end of the crumb. Only a handful barely break this rule, crumb 2171 being the gravest offender with 127 words because it’s a real email that I wanted to preserve in full.</td>
+    </tr>
+    <tr>
+      <td><em>Crumb 2694</em>: <strong>Carmen “Menchu” Llaquet-Alsina</strong>: Menchu was my sister. She was born exactly 2 years and 1 day after me because, according to my mother’s account, it was almost time and my cousin dropping me during my 2nd birthday party expedited the delivery due to my mother’s fright. Menchu was bipolar and a habitual liar. She was very intelligent and had a very complicated life. She always managed to do what she wanted thanks to being a very advanced case of the Llaquet gene (crumb 554). She had a lot of fun committing the regular human excesses, but she didn’t die young because of that. She had an undiagnosed congenital heart condition. One day she didn’t wake up. </td>
+      <td><em>Crumb 2695</em>: <strong>The Llaquet Gene (II)</strong>: Crumb 554, The Llaquet Gene, is, of course, a fabrication, but there’s quite some truth to it. My main doubt is whether I should have called it instead the Alsina gene or even the Llaquet-Alsina gene. In any case, Menchu, Pili, and I were born with it.</td>
+    </tr>
+    <tr>
+      <td><em>Crumb 2696</em>: <strong>Onslaught #49</strong>: In the neonation of Gorificland the man must smash one of his fingers beyond surgical reconstruction with a rock when he proposes to his girlfriend.</td>
+      <td><em>Crumb 2697</em>: <strong>Haiku #59</strong>: Shout, motherfuckers. / This is haiku rock-and-roll. / Play the music loud.</td>
+    </tr>
+    <tr>
+      <td><em>Crumb 2698</em>: <strong>Syllabic Discipline</strong>: The phrase “syllabic discipline” is the convoluted and interesting way ChatGPT found to express counting syllables in its commentary on the previous crumb. It is also one of the few kinds of discipline I like, because it consists of counting things, and I love to count (see crumb 2127). To be fair, I don’t hate any discipline imposed by myself, I just dislike doing anything dictated by anybody else.</td>
+      <td><em>Crumb 2699</em>: <strong>Portrait #33</strong>: A lion so smart that he refused to leave his cage when the wildlife rehabilitators tried to return him to the wild because life in captivity was so much more comfortable and safe.</td>
+    </tr>
+    <tr>
+      <td><em>Crumb 2700</em>: <strong>Crumb-millennia</strong>: Now that the goal is to reach 25,092 crumbs by writing 30 per day, celebrating the end of crumb-centuries doesn’t seem appropriate anymore. Nevertheless, the next crumb will be the first of the 28th crumb-century.</td>
+      <td><em>Crumb 2701</em>: <strong>Definition #1</strong>: “Clown-and-roll” is a musical genre in Universe Band	consisting of classic rock-and-roll played with traditional instruments alongside squeeze-bulb horns and toy instruments. The musicians sometimes dress as clowns. Song lyrics are usually about having innocent fun and family activities.</td>
+    </tr>
+    <tr>
+      <td><em>Crumb 2702</em>: <strong>Negation #20</strong>: “Don’t play that funky music, white boy! The artificial atmosphere wouldn’t withstand the bass.”</td>
+      <td><em>Crumb 2703</em>: <strong>Sandwich #8</strong>: The future has brought us / nothing but the same and much fuss, / too much connection from afar, / and some acting like czars.</td>
+    </tr>
+    <tr>
+      <td><em>Crumb 2704</em>: <strong>Backward #14</strong>: They rescued her. They killed her captors. They found where they kept her thanks to an undercover agent whose real name was William. William loved the thrill and importance of his job, the good he did. He had joined the intelligence agency after failing as an actor, which was his dream job when he was a kid.</td>
+      <td><em>Crumb 2705</em>: <strong>Liberation #14</strong>: The previous crumb is about freeing a captive. This one is about the freedom of writing a crumb basically about nothing at all.</td>
+    </tr>
+    <tr>
+      <td><em>Crumb 2706</em>: <strong>Havoclaw #10</strong>: Light can be / brighter or dimmer / but it can only / turn into darkness.</td>
+      <td><em>Crumb 2707</em>: <strong>Confession #21</strong>: I should have spent much more time with Menchu (crumb 2694). I should have been a much better brother to her.</td>
+    </tr>
+    <tr>
+      <td><em>Crumb 2708</em>: <strong>Insult #17</strong>: Every current billionaire lacks ambition. None is spending their money in trying to turn a poor, corrupt country (or several) into a passable democracy for the benefit of its citizens. None has even thought of having a private army based on an artificial island that doesn’t belong to any country to conduct black ops that rid average folks of real monsters.</td>
+      <td><em>Crumb 2709</em>: <strong>Posidown #7</strong>: A cake brings joy / to those with a sweet tooth. / Happy they are while they eat. / Happy they are with their full stomachs. / Happy they are sharing their joy. / Even if the cake is poisoned / and everyone dies at the end.</td>
+    </tr>
+    <tr>
+      <td><em>Crumb 2710</em>: <strong>Tunnelhope #7</strong>: Every dead person was once conceived.</td>
+      <td><em>Crumb 2711</em>: <strong>Alterment #5</strong>: Be an atheist. It doesn’t require you to convert, just to think.</td>
+    </tr>
+    <tr>
+      <td><em>Crumb 2712</em>: <strong>Doomcomium #9</strong>: End it all— / now! / End it all— / now! / Destroyer of Reality, / end it all— / now!</td>
+      <td><em>Crumb 2713</em>: <strong>Report #4</strong>: I imagine crumbs like the previous one as being the choruses of hard rock songs.</td>
+    </tr>
+    <tr>
+      <td><em>Crumb 2714</em>: <strong>Void-jolt #24</strong>: Ants cannot kill themselves by jumping from a high place, they are too light.</td>
+      <td><em>Crumb 2715</em>: <strong>Socraticake #3</strong>: Expect nothing and you shall receive (nothing).</td>
+    </tr>
+    <tr>
+      <td><em>Crumb 2716</em>: <strong>Crumblog Entry #3</strong>: Today, October 25, 2026, ChatGPT turned the subpar GitHub Page that constituted the official website of the crumbs (www.TheCrumbs.org) into a proper responsive (that looks good both on computers and phones) single-page website with a cool top sticky menu. It is still a GitHub Page but doesn’t look like an ugly standard one; now it looks like a regular decent website. It took ChatGPT a couple of hours (not of consecutive work) and some prompts on my part. This has been for me another dose of AI-induced happiness (crumb 2320).</td>
+      <td><em>Crumb 2717</em>: <strong>Scene #2</strong>: A dilapidated cemetery in which many cats—black and not, stray and house—are celebrating a Halloween party.</td>
+    </tr>
+    <tr>
+      <td><em>Crumb 2718</em>: <strong>Scene #3</strong>: An adult-movie set when everyone is still clothed.</td>
+      <td><em>Crumb 2719</em>: <strong>Scene #4</strong>: The bedroom of a female teenager, very pink and full of every cute thing, including very many plushies, but so messy that there having been a home invasion cannot be ruled out.</td>
+    </tr>
+    <tr>
+      <td><em>Crumb 2720</em>: <strong>Confession #22</strong>: As for the previous crumb, messiness to the point of resembling a home invasion can be considered a cliché, but instead of changing it I take this opportunity to write another crumb commenting on the matter (Am I not cunning!).</td>
+      <td><em>Crumb 2721</em>: <strong>Void-jolt #25</strong>: He didn’t want to retire ever. He loved eating free donuts in the morning.</td>
+    </tr>
+    <tr>
+      <td><em>Crumb 2722</em>: <strong>Socraticake #4</strong>: Absurdity is in the eye of the beholder.</td>
+      <td><em>Crumb 2723</em>: <strong>Negation #21</strong>: “No, the next nation doesn’t start here, it starts over there.”</td>
+    </tr>
+    <tr>
+      <td><em>Crumb 2724</em>: <strong>Definition #2</strong>: “Binge-writing” is what I do several hours a day.</td>
     </tr>
   </tbody>
 </table>
