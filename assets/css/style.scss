@@ -1,0 +1,9 @@
+---
+---
+
+@import "{{ site.theme }}";
+
+.markdown-body h1,
+.markdown-body h2 {
+  border-bottom: none;
+}
