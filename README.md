@@ -372,4 +372,4 @@ The scope and philosophy of the crumbs are explained quickly by the following ha
 
 ![The Crumb-smith at Starbucks](img/TheCrumbSmithAtStarbucks.jpg)
 
-###
+
