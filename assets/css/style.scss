@@ -283,7 +283,7 @@ html {
   margin-top: 48px;
 }
 
-/* Flat, single-line table borders in 60% black. */
+/* Flat, single-line table borders matching the menu. */
 .markdown-body table:is(.crumb-volumes-table, .recent-crumbs-table) {
   border: 0;
   border-collapse: collapse;
@@ -292,7 +292,7 @@ html {
 }
 
 .markdown-body :is(.crumb-volumes-table, .recent-crumbs-table) > tbody {
-  border: solid #666;
+  border: solid #d1d9e0;
   border-width: 1px 0 0 1px;
   box-shadow: none;
 }
@@ -303,7 +303,7 @@ html {
 }
 
 .markdown-body :is(.crumb-volumes-table, .recent-crumbs-table) > tbody > tr > :is(td, th) {
-  border: solid #666;
+  border: solid #d1d9e0;
   border-width: 0 1px 1px 0;
   box-shadow: none;
 }
