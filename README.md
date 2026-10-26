@@ -61,6 +61,7 @@
       <td><a href="https://archive.org/details/crumbs-1751-2000">Volume VIII</a></td>
       <td><a href="https://archive.org/details/crumbs-2001-2250">Volume IX</a></td>
       <td><a href="https://archive.org/details/crumbs-2251-2500">Volume X</a></td>
+      <td><a href="https://archive.org/details/crumbs-2501-2750">Volume XI</a></td>
     </tr>
   </tbody>
 </table>
