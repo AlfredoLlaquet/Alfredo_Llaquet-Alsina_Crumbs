@@ -14,7 +14,7 @@
     <span>Menu</span>
   </button>
   <ul id="crumbs-menu-links" class="crumbs-menu-links">
-    <li><a href="#top">Top</a></li>
+    <li><a href="#progress">Stats</a></li>
     <li><a href="#short-faq">Short FAQ</a></li>
     <li><a href="#download">Download</a></li>
     <li><a href="#legal">Legal</a></li>
@@ -29,12 +29,12 @@
   </ul>
 </nav>
 
-## By Alfredo Llaquet-Alsina /ya-KET al-SIH-nah/
+<h2 id="progress">By Alfredo Llaquet-Alsina /ya-KET al-SIH-nah/</h2>
 
 **My goal is to write more than 25,091 tiny literary pieces (crumbs) to become the most prolific writer in history.**
 
 *Crumb 2225*: **My Real Competitors**: Worried, for once, about accuracy, I asked my assistant ChatGPT to conduct an exhaustive investigation about what concerns crumb 2169, and it concluded that of Mr. Takahama’s purported more than 30,000 haiku, only 22,189 have been documented, which turns his teacher, the also Japanese poet Masaoka Shiki, into the most prolific writer in history, with 25,091 catalogued 5-7-5 poems. Suddenly, for me to inherit this figurative throne, 25,092 crumbs will suffice.
-<picture id="progress">
+<picture>
   <source media="(max-width: 600px)" srcset="img/ProgressP.jpg">
   <img src="img/Progress.jpg" alt="The Road to 25,092: Progress through Sunday, October 25, 2026 - Weekly Output: Number of crumbs written, by week ending date: 20 Sep 2026 = 38, 27 Sep 2026 = 29, 4 Oct 2026 = 20, 11 Oct 2026 = 66, 18 Oct 2026 = 140, 25 Oct 2026 = 195 - The Goal: Write 25,092 crumbs - The Record Holder: Masaoka Shiki: 25,091 haiku - Progress: 2,724 crumbs written; 10.9% completed; 22,368 remaining; 148,373 words written - Projected finish: 17 Nov 2029, at a pace of 20 crumbs/day">
 </picture>
