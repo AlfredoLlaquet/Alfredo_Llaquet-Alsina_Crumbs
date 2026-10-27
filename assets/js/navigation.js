@@ -26,7 +26,8 @@
     updatePending = false;
     const brandHeight = phone.matches ? 0 : header.clientWidth * 188 / 2048;
     header.style.setProperty("--crumbs-brand-height", `${brandHeight}px`);
-    header.classList.toggle("is-stuck", trigger.getBoundingClientRect().top <= 0);
+    // Match the sticky top inset, including the compact logo on desktop.
+    header.classList.toggle("is-stuck", trigger.getBoundingClientRect().top <= brandHeight);
 
     // Anticipate the compact desktop logo even when a link is used at the top.
     scrollOffset = Math.ceil(header.getBoundingClientRect().height + brandHeight) + 12;
