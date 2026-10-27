@@ -362,3 +362,67 @@ body,
     "Segoe UI", Helvetica, Arial, sans-serif,
     "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol";
 }
+
+/* Append to assets/css/style.scss. */
+.markdown-body .crumbs-automated-note {
+  margin-top: 56px;
+  color: #444;
+  font-size: 0.8125rem;
+  font-weight: 400;
+  line-height: 1.65;
+  text-align: left;
+  overflow-wrap: anywhere;
+}
+
+.markdown-body .crumbs-automated-note > hr {
+  height: 0;
+  margin: 0 0 20px;
+  padding: 0;
+  border: 0;
+  border-top: 1px solid #d1d9e0;
+  background: none;
+}
+
+.markdown-body .crumbs-automated-note > h2 {
+  margin: 0 0 14px;
+  padding: 0;
+  border: 0;
+  color: inherit;
+  font-size: inherit;
+  font-weight: 700;
+  line-height: inherit;
+}
+
+.markdown-body .crumbs-automated-note > h3 {
+  margin: 1.6em 0 0.65em;
+  padding: 0;
+  border: 0;
+  color: inherit;
+  font-size: inherit;
+  font-style: italic;
+  font-weight: 400;
+  line-height: inherit;
+}
+
+.markdown-body .crumbs-automated-note > p {
+  margin: 0 0 1em;
+  font-size: inherit;
+  font-weight: 400;
+  line-height: inherit;
+}
+
+.markdown-body .crumbs-automated-note > p:last-child {
+  margin-bottom: 0;
+}
+
+.markdown-body .crumbs-automated-note code {
+  font-size: inherit;
+  font-weight: 400;
+  white-space: pre-wrap;
+  overflow-wrap: anywhere;
+}
+
+.markdown-body .crumbs-automated-note h3 .anchor,
+.markdown-body .crumbs-automated-note h3 .anchorjs-link {
+  display: none;
+}
