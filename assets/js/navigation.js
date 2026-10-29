@@ -1,4 +1,4 @@
-/* Sticky desktop branding and a single-level phone menu. */
+/* Sticky branding, a single-level phone menu, and a latest-batch exit. */
 (() => {
   "use strict";
 
@@ -9,6 +9,11 @@
   const hero = document.getElementById("top");
   if (!header || !trigger || !toggle || !links || !hero) return;
 
+  const phoneBrand = header.querySelector(".crumbs-phone-brand");
+  const phoneBrandImage = phoneBrand?.querySelector("img");
+  const nextSection = document.getElementById("crumbs-next-section");
+  const latest = document.getElementById("latest");
+  const disclaimer = document.getElementById("disclaimer");
   const phone = window.matchMedia("(max-width: 600px)");
   const reducedMotion = window.matchMedia("(prefers-reduced-motion: reduce)");
   let updatePending = false;
@@ -16,10 +21,38 @@
 
   header.classList.add("js-enhanced");
 
+  // Keep the menu usable while the new image is awaiting upload.
+  if (phoneBrand && phoneBrandImage) {
+    const updatePhoneBrand = () => {
+      phoneBrand.hidden = phoneBrandImage.naturalWidth === 0;
+      scheduleUpdate();
+    };
+    phoneBrandImage.addEventListener("load", updatePhoneBrand);
+    phoneBrandImage.addEventListener("error", updatePhoneBrand);
+    if (phoneBrandImage.complete) updatePhoneBrand();
+  }
+
   function closeMenu(returnFocus = false) {
+    const wasOpen = header.classList.contains("is-menu-open");
     header.classList.remove("is-menu-open");
     toggle.setAttribute("aria-expanded", "false");
     if (returnFocus) toggle.focus();
+    if (wasOpen) scheduleUpdate();
+  }
+
+  function updateNextSection() {
+    if (!nextSection || !latest || !disclaimer) return;
+    const viewport = window.visualViewport;
+    const viewportBottom = viewport ? viewport.offsetTop + viewport.height : window.innerHeight;
+    const readingTop = Math.max(0, header.getBoundingClientRect().bottom);
+    const batchFillsView = latest.getBoundingClientRect().top <= readingTop &&
+      disclaimer.getBoundingClientRect().top >= viewportBottom;
+    nextSection.hidden = !(
+      header.classList.contains("is-stuck") &&
+      !header.classList.contains("is-menu-open") &&
+      viewportBottom - readingTop >= 160 &&
+      batchFillsView
+    );
   }
 
   function updateHeader() {
@@ -32,6 +65,7 @@
     // Anticipate the compact desktop logo even when a link is used at the top.
     scrollOffset = Math.ceil(header.getBoundingClientRect().height + brandHeight) + 12;
     document.documentElement.style.setProperty("--crumbs-scroll-offset", `${scrollOffset}px`);
+    updateNextSection();
   }
 
   function scheduleUpdate() {
@@ -64,21 +98,25 @@
     return true;
   }
 
-  toggle.addEventListener("click", () => {
-    if (!phone.matches) return;
-    const open = !header.classList.contains("is-menu-open");
-    header.classList.toggle("is-menu-open", open);
-    toggle.setAttribute("aria-expanded", String(open));
-  });
-
-  header.addEventListener("click", event => {
+  function followSectionLink(event) {
     const link = event.target.closest("a[href^='#']");
     if (!link || event.button !== 0 || event.metaKey || event.ctrlKey || event.shiftKey || event.altKey) return;
     const hash = link.getAttribute("href");
     if (!navigate(hash, true, true)) return;
     event.preventDefault();
     if (window.location.hash !== hash) window.history.pushState(window.history.state, "", hash);
+  }
+
+  toggle.addEventListener("click", () => {
+    if (!phone.matches) return;
+    const open = !header.classList.contains("is-menu-open");
+    header.classList.toggle("is-menu-open", open);
+    toggle.setAttribute("aria-expanded", String(open));
+    scheduleUpdate();
   });
+
+  header.addEventListener("click", followSectionLink);
+  nextSection?.addEventListener("click", followSectionLink);
 
   document.addEventListener("keydown", event => {
     if (event.key === "Escape" && header.classList.contains("is-menu-open")) {
@@ -95,10 +133,10 @@
   });
 
   phone.addEventListener("change", () => {
-    // Keep focus usable if a resize hides a focused phone-menu link or button.
+    // Keep focus usable when resizing hides a phone or desktop control.
     const focused = document.activeElement;
-    if (phone.matches && links.contains(focused)) toggle.focus();
-    if (!phone.matches && focused === toggle) links.querySelector("a").focus();
+    if (phone.matches && (links.contains(focused) || focused?.closest(".crumbs-compact-brand"))) toggle.focus();
+    if (!phone.matches && (focused === toggle || phoneBrand?.contains(focused))) links.querySelector("a")?.focus();
     closeMenu();
     updateHeader();
   });
@@ -107,11 +145,15 @@
   window.addEventListener("resize", scheduleUpdate, { passive: true });
   window.addEventListener("hashchange", () => navigate(window.location.hash, false, false));
   window.addEventListener("pageshow", scheduleUpdate);
+  window.visualViewport?.addEventListener("resize", scheduleUpdate, { passive: true });
+  window.visualViewport?.addEventListener("scroll", scheduleUpdate, { passive: true });
 
   if ("ResizeObserver" in window) {
     const observer = new ResizeObserver(scheduleUpdate);
     observer.observe(header);
     observer.observe(hero);
+    const content = header.closest(".markdown-body");
+    if (content) observer.observe(content);
   }
 
   function alignInitialLink() {
