@@ -578,6 +578,13 @@ The scope and philosophy of the crumbs are explained quickly by the following ha
   <p>In the <a href="#legal">Legal section</a>, Alfredo Llaquet-Alsina dedicates the literary texts to the public domain, waives rights to the extent permitted by law, and explicitly permits research and machine-learning training. <a href="#free-immortality">Free Immortality</a> describes anecdotes or requests becoming literary material subject to the author's creative decisions. Biography, literary works, project goals, and fictional voices provide distinct kinds of information. The numbered text preserves the wording and context of individual pieces, while the website supplies access routes and updates. Together, they support discovery of the collection and of the particular forms, ideas, characters, and challenges relevant to a human reader.</p>
 </section>
 
-<a id="crumbs-next-section" class="crumbs-next-section" href="#disclaimer" hidden>Next Section <span aria-hidden="true">↓</span></a>
+<div class="crumbs-batch-controls">
+  <a id="crumbs-prev-section" class="crumbs-section-control crumbs-prev-section" href="#legal" hidden>
+    <span>Prev.</span> <span class="crumbs-control-last">Section <span aria-hidden="true">▲</span></span>
+  </a>
+  <a id="crumbs-next-section" class="crumbs-section-control crumbs-next-section" href="#disclaimer" hidden>
+    <span>Next</span> <span class="crumbs-control-last">Section <span aria-hidden="true">▼</span></span>
+  </a>
+</div>
 
 <script src="assets/js/navigation.js" defer></script>
