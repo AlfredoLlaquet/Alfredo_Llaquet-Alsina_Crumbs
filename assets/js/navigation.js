@@ -1,4 +1,4 @@
-/* Sticky branding, a single-level phone menu, and a latest-batch exit. */
+/* Sticky branding, a phone menu, batch exits, and desktop section tracking. */
 (() => {
   "use strict";
 
@@ -12,12 +12,21 @@
   const phoneBrand = header.querySelector(".crumbs-phone-brand");
   const phoneBrandImage = phoneBrand?.querySelector("img");
   const nextSection = document.getElementById("crumbs-next-section");
+  const prevSection = document.getElementById("crumbs-prev-section");
+  const batchControls = [prevSection, nextSection].filter(Boolean);
   const latest = document.getElementById("latest");
   const disclaimer = document.getElementById("disclaimer");
+  const appendix = document.getElementById("automated-readers");
+  const sections = Array.from(links.querySelectorAll('a[href^="#"]'), link => ({
+    link,
+    target: document.getElementById(link.getAttribute("href").slice(1))
+  })).filter(section => section.target);
   const phone = window.matchMedia("(max-width: 600px)");
   const reducedMotion = window.matchMedia("(prefers-reduced-motion: reduce)");
+  const sectionGap = 12;
   let updatePending = false;
   let scrollOffset = 0;
+  let currentSectionLink = null;
 
   header.classList.add("js-enhanced");
 
@@ -40,19 +49,46 @@
     if (wasOpen) scheduleUpdate();
   }
 
-  function updateNextSection() {
-    if (!nextSection || !latest || !disclaimer) return;
+  function updateBatchControls() {
+    if (!latest || !disclaimer) return;
     const viewport = window.visualViewport;
     const viewportBottom = viewport ? viewport.offsetTop + viewport.height : window.innerHeight;
     const readingTop = Math.max(0, header.getBoundingClientRect().bottom);
     const batchFillsView = latest.getBoundingClientRect().top <= readingTop &&
       disclaimer.getBoundingClientRect().top >= viewportBottom;
-    nextSection.hidden = !(
+    const hidden = !(
       header.classList.contains("is-stuck") &&
       !header.classList.contains("is-menu-open") &&
       viewportBottom - readingTop >= 160 &&
       batchFillsView
     );
+    for (const control of batchControls) control.hidden = hidden;
+  }
+
+  function updateCurrentSection() {
+    let current = null;
+    if (!phone.matches) {
+      // Match the gap used by section jumps, including fractional rounding.
+      const readingLine = header.getBoundingClientRect().bottom + sectionGap + 1;
+      if (!appendix || appendix.getBoundingClientRect().top > readingLine) {
+        current = sections[0]?.link || null;
+        let closestTop = -Infinity;
+        for (const section of sections) {
+          const top = section.target.getBoundingClientRect().top;
+          if (top <= readingLine && top > closestTop) {
+            current = section.link;
+            closestTop = top;
+          }
+        }
+      }
+    }
+
+    if (current === currentSectionLink) return;
+    for (const section of sections) {
+      if (section.link === current) section.link.setAttribute("aria-current", "location");
+      else section.link.removeAttribute("aria-current");
+    }
+    currentSectionLink = current;
   }
 
   function updateHeader() {
@@ -63,9 +99,10 @@
     header.classList.toggle("is-stuck", trigger.getBoundingClientRect().top <= brandHeight);
 
     // Anticipate the compact desktop logo even when a link is used at the top.
-    scrollOffset = Math.ceil(header.getBoundingClientRect().height + brandHeight) + 12;
+    scrollOffset = Math.ceil(header.getBoundingClientRect().height + brandHeight) + sectionGap;
     document.documentElement.style.setProperty("--crumbs-scroll-offset", `${scrollOffset}px`);
-    updateNextSection();
+    updateBatchControls();
+    updateCurrentSection();
   }
 
   function scheduleUpdate() {
@@ -116,7 +153,7 @@
   });
 
   header.addEventListener("click", followSectionLink);
-  nextSection?.addEventListener("click", followSectionLink);
+  for (const control of batchControls) control.addEventListener("click", followSectionLink);
 
   document.addEventListener("keydown", event => {
     if (event.key === "Escape" && header.classList.contains("is-menu-open")) {
