@@ -1,7 +1,7 @@
 <div id="top" class="crumbs-hero" tabindex="-1">
   <picture>
     <source media="(max-width: 600px)" srcset="img/TheCrumbs.orgP.jpg" width="2048" height="512">
-    <img src="img/TheCrumbs.org.jpg" alt="TheCrumbs.org" width="2048" height="682" fetchpriority="high">
+    <img src="img/TheCrumbs.org.jpg" alt="TheCrumbs.org - Writing relentlessly to become the most prolific author ever" width="2048" height="682" fetchpriority="high">
   </picture>
 </div>
 <div id="crumbs-nav-trigger" class="crumbs-nav-trigger" aria-hidden="true"></div>
