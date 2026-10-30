@@ -222,6 +222,20 @@ html {
     scroll-padding-top: var(--crumbs-scroll-offset, 61px);
   }
 
+  /* Place the phone header image against the top edge of the viewport. */
+  html,
+  body,
+  .markdown-body {
+    margin-top: 0 !important;
+    padding-top: 0 !important;
+  }
+
+  /* Extend the image through the theme's 16px padding on each side. */
+  .markdown-body .crumbs-hero {
+    margin-right: -16px;
+    margin-left: -16px;
+  }
+
   .markdown-body .crumbs-hero img {
     aspect-ratio: 2048 / 512;
   }
