@@ -22,12 +22,25 @@
     target: document.getElementById(link.getAttribute("href").slice(1))
   })).filter(section => section.target);
   const phone = window.matchMedia("(max-width: 600px)");
+  const content = header.closest(".markdown-body");
   const reducedMotion = window.matchMedia("(prefers-reduced-motion: reduce)");
   const sectionGap = 12;
   let updatePending = false;
   let scrollOffset = 0;
   let currentSectionLink = null;
 
+  function placeHero() {
+    const hadFocus = document.activeElement === hero;
+    if (phone.matches) {
+      header.after(hero);
+    } else if (trigger.previousElementSibling !== hero) {
+      trigger.before(hero);
+    }
+    content?.classList.toggle("crumbs-menu-first", phone.matches);
+    if (hadFocus) hero.focus({ preventScroll: true });
+  }
+
+  placeHero();
   header.classList.add("js-enhanced");
 
   // Keep the menu usable while the new image is awaiting upload.
@@ -95,8 +108,11 @@
     updatePending = false;
     const brandHeight = phone.matches ? 0 : header.clientWidth * 188 / 2048;
     header.style.setProperty("--crumbs-brand-height", `${brandHeight}px`);
-    // Match the sticky top inset, including the compact logo on desktop.
-    header.classList.toggle("is-stuck", trigger.getBoundingClientRect().top <= brandHeight);
+    // The phone menu starts at the top; the desktop menu starts below the banner.
+    const isStuck = phone.matches
+      ? window.scrollY > 0
+      : trigger.getBoundingClientRect().top <= brandHeight;
+    header.classList.toggle("is-stuck", isStuck);
 
     // Anticipate the compact desktop logo even when a link is used at the top.
     scrollOffset = Math.ceil(header.getBoundingClientRect().height + brandHeight) + sectionGap;
@@ -170,6 +186,7 @@
   });
 
   phone.addEventListener("change", () => {
+    placeHero();
     // Keep focus usable when resizing hides a phone or desktop control.
     const focused = document.activeElement;
     if (phone.matches && (links.contains(focused) || focused?.closest(".crumbs-compact-brand"))) toggle.focus();
@@ -189,7 +206,6 @@
     const observer = new ResizeObserver(scheduleUpdate);
     observer.observe(header);
     observer.observe(hero);
-    const content = header.closest(".markdown-body");
     if (content) observer.observe(content);
   }
 
