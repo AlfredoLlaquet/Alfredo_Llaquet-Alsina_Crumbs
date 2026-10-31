@@ -222,6 +222,15 @@ html {
     scroll-padding-top: var(--crumbs-scroll-offset, 61px);
   }
 
+  /* Move the theme's top spacing below the menu, above the full-width image. */
+  .markdown-body.crumbs-menu-first {
+    margin-top: 0 !important;
+  }
+
+  .markdown-body.crumbs-menu-first .crumbs-nav {
+    margin-bottom: 32px;
+  }
+
   /* Extend the image through the theme's 16px padding on each side. */
   .markdown-body .crumbs-hero {
     margin-right: -16px;
