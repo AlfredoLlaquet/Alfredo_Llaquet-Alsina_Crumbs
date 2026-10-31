@@ -1,6 +1,6 @@
 <div id="top" class="crumbs-hero" tabindex="-1">
   <picture>
-    <source media="(max-width: 600px)" srcset="img/TheCrumbs.orgP.jpg" width="2048" height="512">
+    <source media="(max-width: 600px)" srcset="img/TheCrumbs.orgP.jpg" width="700" height="502">
     <img src="img/TheCrumbs.org.jpg" alt="TheCrumbs.org - Writing relentlessly to become the most prolific author ever" width="2048" height="682" fetchpriority="high">
   </picture>
 </div>
