@@ -1,0 +1,168 @@
+<!doctype html>
+<html lang="en-US">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+  <meta name="theme-color" content="#0366d6">
+  <title>Crumb Reader · TheCrumbs.org</title>
+  <meta name="description" content="My goal is to write more than 25,091 tiny literary pieces (crumbs) to become the most prolific writer in history.">
+  <link rel="canonical" href="https://www.thecrumbs.org/Reader/">
+  <meta property="og:type" content="website">
+  <meta id="og-title" property="og:title" content="Crumb Reader · The Crumbs by Alfredo Llaquet-Alsina">
+  <meta property="og:description" content="My goal is to write more than 25,091 tiny literary pieces (crumbs) to become the most prolific writer in history.">
+  <meta property="og:url" content="https://www.thecrumbs.org/Reader/">
+  <meta property="og:image" content="https://www.thecrumbs.org/Reader/img/social-preview.png">
+  <meta property="og:image:width" content="1734">
+  <meta property="og:image:height" content="907">
+  <meta property="og:image:alt" content="TheCrumbs.org. Writing relentlessly to become the most prolific author ever. Stacks of printed pages and loose sheets on a white background.">
+  <meta name="twitter:card" content="summary_large_image">
+  <meta id="twitter-title" name="twitter:title" content="Crumb Reader · The Crumbs by Alfredo Llaquet-Alsina">
+  <meta name="twitter:description" content="My goal is to write more than 25,091 tiny literary pieces (crumbs) to become the most prolific writer in history.">
+  <meta name="twitter:image" content="https://www.thecrumbs.org/Reader/img/social-preview.png">
+  <meta name="twitter:image:alt" content="TheCrumbs.org. Writing relentlessly to become the most prolific author ever. Stacks of printed pages and loose sheets on a white background.">
+  <link rel="icon" type="image/x-icon" href="favicon.ico">
+  <link rel="stylesheet" href="reader.css">
+  <script type="module" src="reader.js"></script>
+</head>
+<body>
+  <a class="skip-link" href="#reading-pane" data-hint="Move keyboard focus directly to the current crumb, past the controls.">Skip to crumb</a>
+  <svg class="icon-definitions" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
+    <defs>
+      <symbol id="icon-load" viewBox="0 0 24 24"><path d="M4 15v5h16v-5M12 16V4m-5 5 5-5 5 5"/></symbol>
+      <symbol id="icon-save" viewBox="0 0 24 24"><path d="M4 15v5h16v-5M12 4v12m-5-5 5 5 5-5"/></symbol>
+      <symbol id="icon-go" viewBox="0 0 24 24"><path d="M12 3v4m0 10v4M3 12h4m10 0h4"/><circle cx="12" cy="12" r="6"/></symbol>
+      <symbol id="icon-star" viewBox="0 0 24 24"><path d="m12 3 2.8 5.8 6.4.9-4.6 4.5 1.1 6.3-5.7-3-5.7 3 1.1-6.3L2.8 9.7l6.4-.9Z"/></symbol>
+      <symbol id="icon-back" viewBox="0 0 24 24"><path d="m10 5-7 7 7 7M3 12h18"/></symbol>
+      <symbol id="icon-forward" viewBox="0 0 24 24"><path d="m14 5 7 7-7 7M3 12h18"/></symbol>
+      <symbol id="icon-quit" viewBox="0 0 24 24"><path d="M10 4H4v16h6m5-13 5 5-5 5m-6-5h11"/></symbol>
+    </defs>
+  </svg>
+  <div class="reader-shell">
+    <header class="reader-header">
+      <div class="masthead">
+        <a id="reader-home" class="reader-home" href="../" aria-label="TheCrumbs.org homepage" data-reader-home data-hint="Return to the home page of TheCrumbs.org. Unsaved changes are checked after the first move to another crumb.">
+          <img src="img/thecrumbs-logo.jpg" alt="TheCrumbs.org" width="320" height="64">
+        </a>
+        <div class="masthead-heading">
+          <p class="eyebrow">Crumb Reader</p>
+          <h1>Crumbs by Alfredo Llaquet-Alsina</h1>
+        </div>
+        <span id="save-state" class="save-state" role="status">Loading crumbs…</span>
+      </div>
+      <nav class="top-controls" aria-label="Reading session and history">
+        <button id="load-session" type="button" data-hint="Open a saved Crumb Reader text file and restore its reading position, history, favorites, and settings." disabled><svg class="icon" aria-hidden="true"><use href="#icon-load"/></svg><span>Load session</span></button>
+        <button id="save-session" type="button" data-hint="Save the current reading session in this browser or download it as a text file." disabled><svg class="icon" aria-hidden="true"><use href="#icon-save"/></svg><span>Save session</span></button>
+        <button id="go-to" type="button" data-hint="Enter a crumb number to open that crumb directly." disabled><svg class="icon" aria-hidden="true"><use href="#icon-go"/></svg><span>Go to</span></button>
+        <button id="favorites" type="button" data-hint="List favorite crumbs by number and title, in numerical order, and open one." disabled><svg class="icon" aria-hidden="true"><use href="#icon-star"/></svg><span>Favorites</span></button>
+        <button id="back" type="button" data-hint="Return to the previous crumb in viewing history, including visits through references and favorites." disabled><svg class="icon" aria-hidden="true"><use href="#icon-back"/></svg><span>Back</span></button>
+        <button id="forward" type="button" data-hint="Move forward through viewing history after using Back." disabled><svg class="icon" aria-hidden="true"><use href="#icon-forward"/></svg><span>Forward</span></button>
+        <button id="quit" type="button" data-hint="Return to the homepage. Unsaved changes are checked after the first move to another crumb."><svg class="icon" aria-hidden="true"><use href="#icon-quit"/></svg><span>Quit</span></button>
+      </nav>
+      <div class="reading-tools">
+        <span id="reading-progress">Loading crumbs…</span>
+        <div class="reading-actions">
+          <div class="text-tools" role="group" aria-label="Text size">
+            <span class="text-size-label">Text size</span>
+            <button id="text-smaller" type="button" aria-label="Decrease text size" data-hint="Make the crumb title and body text smaller." disabled>A<span aria-hidden="true">−</span></button>
+            <button id="text-larger" type="button" aria-label="Increase text size" data-hint="Make the crumb title and body text larger." disabled>A<span aria-hidden="true">+</span></button>
+          </div>
+          <button id="reader-help" class="help-button" type="button" data-hint="Explain the Reader controls, links, and session-saving behavior."><span class="help-mark" aria-hidden="true">?</span>Help</button>
+        </div>
+      </div>
+    </header>
+    <main id="reading-pane" class="reading-pane" tabindex="-1" aria-label="Current crumb" aria-busy="true">
+      <article id="crumb" class="crumb" aria-labelledby="crumb-number crumb-title" hidden>
+        <p id="crumb-number" class="crumb-number"></p>
+        <h2 id="crumb-title" class="crumb-title"></h2>
+        <div id="crumb-body" class="crumb-body"></div>
+      </article>
+      <div id="loading-state" class="empty-state" role="status"><span class="loading-mark" aria-hidden="true"></span><p>Loading crumbs…</p></div>
+      <div id="load-error" class="empty-state" role="alert" hidden><h2>The crumbs could not be loaded.</h2><p id="load-error-detail"></p><button id="retry" type="button" class="primary" data-hint="Try loading the collection again.">Try again</button><a href="../" data-reader-home data-hint="Return to the home page of TheCrumbs.org.">Return to TheCrumbs.org</a></div>
+      <noscript><p class="noscript">The Crumb Reader needs JavaScript to display the text and save reading sessions. <a href="../">Return to TheCrumbs.org</a>.</p></noscript>
+    </main>
+    <footer class="reader-footer">
+      <label class="check-control random-control" data-hint-for="random-order"><input id="random-order" type="checkbox" data-hint="Make Next select an unvisited crumb at random. Previous is disabled; Back and Forward still follow viewing history." disabled><span>Random Order</span></label>
+      <div class="step-controls" role="group" aria-label="Read another crumb">
+        <button id="previous" type="button" data-hint="Read the preceding crumb in numerical order. Unavailable in random order." disabled><svg class="icon" aria-hidden="true"><use href="#icon-back"/></svg><span>Previous</span></button>
+        <button id="next" type="button" class="primary" data-hint="Read the next crumb in numerical order, or an unvisited crumb when Random Order is active." disabled><span>Next</span><svg class="icon" aria-hidden="true"><use href="#icon-forward"/></svg></button>
+      </div>
+      <label class="check-control favorite-control" data-hint-for="favorite"><input id="favorite" type="checkbox" data-hint="Add this crumb to Favorites, or remove it if already selected." disabled><svg class="icon" aria-hidden="true"><use href="#icon-star"/></svg><span>Favorite</span></label>
+    </footer>
+  </div>
+
+  <input id="session-file" type="file" accept=".txt,text/plain" hidden>
+  <div id="announcement" class="sr-only" role="status" aria-live="polite" aria-atomic="true"></div>
+  <div id="toast" class="toast" role="status" hidden></div>
+  <div id="hint-descriptions" class="sr-only"></div>
+  <div id="control-hint" class="control-hint" role="tooltip" hidden></div>
+
+  <dialog id="save-dialog" aria-labelledby="save-title">
+    <h2 id="save-title">Save session</h2>
+    <p>Choose where to save the current reading session.</p>
+    <button id="save-browser" type="button" class="wide primary" data-hint="Store this session in the current browser, replacing its previous saved copy. It will load automatically when the Reader opens.">Save in this browser</button>
+    <p class="dialog-note">This browser keeps one saved session and restores it when the Reader opens.</p>
+    <div class="dialog-divider"></div>
+    <label class="field-label" for="session-filename">Text file name</label>
+    <input id="session-filename" type="text" value="crumbs-session.txt" maxlength="120" autocomplete="off" spellcheck="false" data-hint="Choose a name for the session file. The .txt extension is added automatically if needed.">
+    <button id="save-file" type="button" class="wide" data-hint="Save a portable session file that can be loaded on another device. A Save As dialog appears when the browser supports it.">Save as a text file</button>
+    <p class="dialog-note">A text file can restore the session on another computer or phone. The browser controls the download location.</p>
+    <p id="save-error" class="field-error" role="alert" hidden></p>
+    <div class="dialog-actions"><button type="button" data-close="save-dialog" data-hint="Close this dialog without saving the session.">Cancel</button></div>
+  </dialog>
+
+  <dialog id="go-dialog" aria-labelledby="go-title">
+    <form id="go-form" novalidate>
+      <h2 id="go-title">Go to a crumb</h2>
+      <label id="go-help" class="field-label" for="crumb-input">Crumb number</label>
+      <input id="crumb-input" type="number" min="1" step="1" inputmode="numeric" required aria-describedby="go-error" data-hint="Enter the number of the crumb to display, within the available range.">
+      <p id="go-error" class="field-error" role="alert" hidden></p>
+      <div class="dialog-actions"><button type="button" data-close="go-dialog" data-hint="Close this dialog without changing the current crumb.">Cancel</button><button type="submit" class="primary" data-hint="Open the crumb whose number is entered above.">Go to crumb</button></div>
+    </form>
+  </dialog>
+
+  <dialog id="favorites-dialog" class="favorites-dialog" aria-labelledby="favorites-title">
+    <h2 id="favorites-title">Favorites</h2>
+    <p id="favorites-empty" hidden>No favorites yet. Use Favorite to mark a crumb.</p>
+    <ol id="favorites-list" class="favorites-list"></ol>
+    <div class="dialog-actions"><button type="button" data-close="favorites-dialog" data-hint="Close the favorites list and continue with the current crumb.">Close</button></div>
+  </dialog>
+
+  <dialog id="confirm-dialog" aria-labelledby="confirm-title" aria-describedby="confirm-text">
+    <h2 id="confirm-title"></h2><p id="confirm-text"></p>
+    <div class="dialog-actions"><button id="confirm-cancel" type="button" data-hint="Cancel this action and keep the current reading session.">Cancel</button><button id="confirm-accept" type="button" class="primary" data-hint="Confirm the action described in this dialog.">Continue</button></div>
+  </dialog>
+
+  <dialog id="message-dialog" aria-labelledby="message-title" aria-describedby="message-text">
+    <h2 id="message-title"></h2><p id="message-text"></p>
+    <div class="dialog-actions"><button type="button" class="primary" data-close="message-dialog" data-hint="Dismiss this message and return to the Reader.">Close</button></div>
+  </dialog>
+
+  <dialog id="help-dialog" class="help-dialog" aria-labelledby="help-title">
+    <h2 id="help-title">Reader help</h2>
+    <div class="help-content" tabindex="0" aria-label="Reader control explanations">
+      <dl class="help-list">
+        <dt>TheCrumbs.org logo / Quit</dt><dd>Return to the homepage. Before the first move to another crumb, leaving never triggers a save warning, even if favorites or settings have changed. After navigation, unsaved changes trigger a confirmation. Returning to the initial crumb does not reset this rule.</dd>
+        <dt>Load session</dt><dd>Choose a text file previously saved by the Reader. It restores the current crumb, visited list, favorites, random mode, viewing history, and text size. It replaces the active session, while the browser’s saved copy stays unchanged.</dd>
+        <dt>Save session</dt><dd>Choose browser storage, a text file, or Cancel. Saving is manual and is available at any point.</dd>
+        <dt>Save in this browser</dt><dd>Replace this browser’s saved session. It is restored automatically when the Reader opens. This copy stays in this browser profile.</dd>
+        <dt>Text file name / Save as a text file</dt><dd>Enter a filename and save a portable copy that can be loaded on another computer or phone. The browser controls the download location and whether a Save As dialog is available.</dd>
+        <dt>Go to</dt><dd>Enter a valid crumb number and select Go to crumb to display it directly. Cancel keeps the current crumb.</dd>
+        <dt>Favorites</dt><dd>Open the list of favorite crumbs, ordered numerically. Select a number and title to read that crumb, or Close to return.</dd>
+        <dt>Back / Forward</dt><dd>Retrace the actual viewing sequence, including reference links and favorites. The session keeps up to 100 history entries. These controls remain available in random order whenever history permits.</dd>
+        <dt>Random Order</dt><dd>Make Next choose a random crumb that has not been visited. Previous is disabled. When all crumbs have been visited, a dialog offers a new round; restarting clears the visited list and keeps favorites and history.</dd>
+        <dt>Previous / Next</dt><dd>Read the preceding or following crumb in numerical order. In random order, Next selects an unvisited crumb. Next is disabled at the last crumb in numerical order.</dd>
+        <dt>Favorite</dt><dd>Add the displayed crumb to Favorites. Clear the checkbox to remove it.</dd>
+        <dt>A− / A+</dt><dd>Decrease or increase the size of the crumb title and body. The setting is included when the session is saved.</dd>
+        <dt>Numbered references</dt><dd>Select a linked crumb number to read the referenced crumb. Back returns to the original crumb.</dd>
+        <dt>Website links</dt><dd>Open the address in another tab or window, according to browser preferences. The Reader stays open.</dd>
+        <dt>Browser Back / Forward</dt><dd>Navigate the crumb entries created during this visit. Loading a saved session restores history for the Reader’s own controls, without recreating the browser’s entire history. When leaving the Reader, eligible unsaved changes also request the browser’s standard warning; browsers may suppress that warning.</dd>
+        <dt>Saved / Unsaved changes</dt><dd>Show whether the current session matches its last save or loaded file. Initial-crumb changes can still be saved manually even though leaving before navigation does not warn.</dd>
+        <dt>Cancel / Close / Stay here</dt><dd>Dismiss the corresponding dialog without carrying out its proposed action. Confirmation buttons perform the action stated in the dialog.</dd>
+        <dt>Try again</dt><dd>Retry loading the collection if it could not be fetched.</dd>
+        <dt>Help</dt><dd>Open these explanations on computers or phones. Hover over a control or focus it with the keyboard for its individual hint. Escape dismisses a visible hint.</dd>
+      </dl>
+    </div>
+    <div class="dialog-actions"><button type="button" class="primary" data-close="help-dialog" data-hint="Close these explanations and continue reading.">Close help</button></div>
+  </dialog>
+</body>
+</html>
