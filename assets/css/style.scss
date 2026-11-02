@@ -275,6 +275,7 @@ html {
     /* Reserve the same gutter in every scroll state, keeping links in place. */
     padding-right: 44px;
     overflow-y: auto;
+    scroll-behavior: auto;
     overscroll-behavior: contain;
     background: #fff;
     border: 1px solid #d1d9e0;
@@ -293,8 +294,9 @@ html {
     width: 44px;
     height: var(--crumbs-menu-height);
     box-sizing: border-box;
-    padding: 10px 0;
+    padding: 4px 0;
     flex-direction: column;
+    gap: 4px;
     align-items: center;
     justify-content: var(--crumbs-scroll-alignment, center);
     color: #0366d6;
@@ -321,9 +323,38 @@ html {
     stroke-linejoin: round;
   }
 
-  .markdown-body .crumbs-menu-scroll-hint[data-direction="down"] .crumbs-scroll-up,
-  .markdown-body .crumbs-menu-scroll-hint[data-direction="up"] .crumbs-scroll-down {
+  .markdown-body .crumbs-menu-scroll-button {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    box-sizing: border-box;
+    flex: 0 1 44px;
+    width: 44px;
+    height: 44px;
+    min-height: 28px;
+    margin: 0;
+    padding: 0;
+    border: 0;
+    border-radius: 6px;
+    color: inherit;
+    background: transparent;
+    font: inherit;
+    cursor: pointer;
+    pointer-events: auto;
+    touch-action: manipulation;
+  }
+
+  .markdown-body .crumbs-menu-scroll-button[hidden] {
     display: none;
+  }
+
+  .markdown-body .crumbs-menu-scroll-button:active {
+    background: #edf4fc;
+  }
+
+  .markdown-body .crumbs-menu-scroll-button:focus-visible {
+    outline: 2px solid #0366d6;
+    outline-offset: -3px;
   }
 
   .markdown-body .crumbs-menu-links a {
