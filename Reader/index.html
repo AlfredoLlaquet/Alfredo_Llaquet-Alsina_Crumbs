@@ -2,7 +2,7 @@
 <html lang="en-US">
 <head>
   <meta charset="utf-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+  <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=contain">
   <meta name="theme-color" content="#0366d6">
   <title>Crumb Reader · TheCrumbs.org</title>
   <meta name="description" content="My goal is to write more than 25,091 tiny literary pieces (crumbs) to become the most prolific writer in history.">
@@ -21,8 +21,8 @@
   <meta name="twitter:image" content="https://www.thecrumbs.org/Reader/img/social-preview.png">
   <meta name="twitter:image:alt" content="TheCrumbs.org. Writing relentlessly to become the most prolific author ever. Stacks of printed pages and loose sheets on a white background.">
   <link rel="icon" type="image/x-icon" href="favicon.ico">
-  <link rel="stylesheet" href="reader.css?v=20261102">
-  <script type="module" src="reader.js?v=20261102"></script>
+  <link rel="stylesheet" href="reader.css?v=20261102-2">
+  <script type="module" src="reader.js?v=20261102-2"></script>
 </head>
 <body>
   <a class="skip-link" href="#reading-pane" data-hint="Move keyboard focus directly to the current crumb, past the controls.">Skip to crumb</a>
@@ -100,6 +100,8 @@
     <p>Choose where to save the current reading session.</p>
     <button id="save-browser" type="button" class="wide primary" data-hint="Store this session in the current browser, replacing its previous saved copy. It will load automatically when the Reader opens.">Save in this browser</button>
     <p class="dialog-note">This browser keeps one saved session and restores it when the Reader opens.</p>
+    <button id="erase-browser" type="button" class="wide" data-hint="Delete this browser’s saved Reader session. The current reading session stays open." disabled>Erase current browser data</button>
+    <p id="browser-data-status" class="dialog-note" role="status" aria-live="polite" hidden></p>
     <div class="dialog-divider"></div>
     <label class="field-label" for="session-filename">Text file name</label>
     <input id="session-filename" type="text" value="crumbs-session.txt" maxlength="120" autocomplete="off" spellcheck="false" data-hint="Choose a name for the session file. The .txt extension is added automatically if needed.">
@@ -144,6 +146,7 @@
         <dt>Load session</dt><dd>Choose a text file previously saved by the Reader. It restores the current crumb, visited list, favorites, random mode, viewing history, and text size. It replaces the active session, while the browser’s saved copy stays unchanged.</dd>
         <dt>Save session</dt><dd>Choose browser storage, a text file, or Cancel. Saving is manual. Save is disabled when the session has no changes to save, including its initial untouched state.</dd>
         <dt>Save in this browser</dt><dd>Replace this browser’s saved session. It is restored automatically when the Reader opens. This copy stays in this browser profile.</dd>
+        <dt>Erase current browser data</dt><dd>Delete the Reader session saved in this browser. The current reading session stays open, and downloaded session files are kept. The button is disabled when there is no saved session to erase.</dd>
         <dt>Text file name / Save as a text file</dt><dd>Enter a filename and save a portable copy that can be loaded on another computer or phone. The browser controls the download location and whether a Save As dialog is available.</dd>
         <dt>Go to</dt><dd>Enter a valid crumb number and select Go to crumb to display it directly. Cancel keeps the current crumb.</dd>
         <dt>Favorites</dt><dd>Open the list of favorite crumbs, ordered numerically. Select a number and title to read that crumb, or Close to return.</dd>
@@ -151,7 +154,7 @@
         <dt>Random Order</dt><dd>Use the switch on computers or the shuffle icon on phones to make Next choose a random crumb that has not been visited. Changing this setting displays a brief notice and keeps the current crumb in place. Previous is disabled. When all crumbs have been visited, a dialog offers a new round; restarting clears the visited list and keeps favorites and history.</dd>
         <dt>Previous / Next</dt><dd>Read the preceding or following crumb in numerical order. On phones, these controls use straight chevrons. In random order, Next selects an unvisited crumb. Next is disabled at the last crumb in numerical order.</dd>
         <dt>Favorite</dt><dd>Use the star to add the displayed crumb to Favorites. Select it again to remove the crumb. A filled blue star indicates a favorite.</dd>
-        <dt>A− / A+</dt><dd>Decrease or increase the size of the crumb title and body. The setting is included when the session is saved.</dd>
+        <dt>A− / A+</dt><dd>Decrease or increase the size of the crumb title and body. New sessions on phones start at the smallest size. The setting is included when the session is saved; loading a saved session restores its size.</dd>
         <dt>Numbered references</dt><dd>Select a linked crumb number to read the referenced crumb. Back returns to the original crumb.</dd>
         <dt>Website links</dt><dd>Open the address in another tab or window, according to browser preferences. The Reader stays open.</dd>
         <dt>Browser Back / Forward</dt><dd>Navigate the crumb entries created during this visit. Loading a saved session restores history for the Reader’s own controls, without recreating the browser’s entire history. When leaving the Reader, eligible unsaved changes also request the browser’s standard warning; browsers may suppress that warning.</dd>

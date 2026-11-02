@@ -160,7 +160,8 @@ dialog .dialog-note { margin: 9px 0 0; font-size: 13px; color: var(--muted); }
   .crumb-number { font-size: 15px; line-height: 1.4; }
   .crumb-title { font-size: calc(32px * var(--text-scale)); margin: 15px 0 25px; }
   .crumb-body { font-size: calc(22px * var(--text-scale)); line-height: 1.5; }
-  .reader-footer { grid-template-columns: repeat(4, minmax(0, 1fr)); gap: 0; padding: 5px max(12px, env(safe-area-inset-right, 0px)) max(5px, env(safe-area-inset-bottom, 0px)) max(12px, env(safe-area-inset-left, 0px)); }
+  /* The viewport fits within the safe area; keep the control band to one row. */
+  .reader-footer { grid-template-columns: repeat(4, minmax(0, 1fr)); grid-template-rows: 42px; gap: 0; padding: 5px 12px; }
   .reading-order, .step-controls { display: contents; }
   .reader-footer button { justify-self: center; width: 40px; min-width: 40px; height: 42px; min-height: 42px; padding: 0; }
   .reader-footer .toggle-control { border: 0; border-radius: 6px; }
@@ -173,7 +174,7 @@ dialog .dialog-note { margin: 9px 0 0; font-size: 13px; color: var(--muted); }
   .step-controls button.primary { background: var(--blue); }
   .step-controls button.primary:disabled { background: #dce7f3; }
   .random-control[aria-checked="true"], .favorite-control[aria-pressed="true"] { background: #d4e7ff; }
-  .toast { bottom: calc(64px + env(safe-area-inset-bottom, 0px)); padding: 10px 14px; font-size: 13px; }
+  .toast { bottom: 64px; padding: 10px 14px; font-size: 13px; }
   dialog { padding: 21px; }
   dialog button { min-height: 44px; }
 }
@@ -190,7 +191,7 @@ dialog .dialog-note { margin: 9px 0 0; font-size: 13px; color: var(--muted); }
   .reader-title { line-height: 12px; font-size: 9.5px; }
   .top-controls button { height: 36px; min-height: 36px; }
   .top-controls button::before { inset-block: 3px; }
-  .reader-footer { padding-top: 3px; padding-bottom: max(3px, env(safe-area-inset-bottom, 0px)); }
+  .reader-footer { grid-template-rows: 36px; padding-block: 3px; }
   .reader-footer button { height: 36px; min-height: 36px; }
   .crumb { padding-top: 18px; }
 }

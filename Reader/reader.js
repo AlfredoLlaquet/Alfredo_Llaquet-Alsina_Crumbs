@@ -15,6 +15,7 @@ const numberFormat = new Intl.NumberFormat('en-US');
 let corpus = [];
 let session = null;
 let baselineFingerprint = null;
+let baselineStorage = null;
 let allowLeave = false;
 let toastTimer;
 let unloadListener = false;
@@ -407,9 +408,24 @@ function showFavorites() {
   byId('favorites-dialog').showModal();
 }
 
-function markSaved(data) {
+function markSaved(data, storage) {
   baselineFingerprint = JSON.stringify(data);
+  baselineStorage = storage;
   updateSaveState();
+}
+
+function updateBrowserDataControl() {
+  const control = byId('erase-browser');
+  try {
+    const exists = window.localStorage.getItem(STORAGE_KEY) !== null;
+    control.disabled = saving || !exists;
+    setHint(control, exists
+      ? 'Delete this browser’s saved Reader session. The current reading session stays open.'
+      : 'There is no saved Reader session in this browser to erase.');
+  } catch {
+    control.disabled = true;
+    setHint(control, 'Browser storage is unavailable, so its saved session cannot be erased.');
+  }
 }
 
 function saveError(message) {
@@ -430,6 +446,7 @@ async function saveFile() {
   const filename = safeFilename();
   saving = true;
   updateSaveState();
+  updateBrowserDataControl();
   byId('save-file').disabled = true;
   byId('save-file').textContent = 'Saving…';
   byId('save-browser').disabled = true;
@@ -461,7 +478,7 @@ async function saveFile() {
       link.remove();
       setTimeout(() => URL.revokeObjectURL(url), 60000);
     }
-    markSaved(data);
+    markSaved(data, 'file');
     byId('save-dialog').close();
     showToast(handle ? 'Session saved to a text file.' : 'Session download started.');
   } catch {
@@ -471,6 +488,7 @@ async function saveFile() {
     byId('save-file').disabled = false;
     byId('save-file').textContent = 'Save as a text file';
     byId('save-browser').disabled = false;
+    updateBrowserDataControl();
     updateSaveState();
   }
 }
@@ -482,7 +500,7 @@ async function importFile(file) {
     const restored = await decodeSession(await file.text(), corpus.length);
     if (isDirty() && !await ask('Load another session', 'The current session has unsaved changes. Replace it with the session from this file?', 'Load session')) return;
     session = restored;
-    markSaved(snapshot(session));
+    markSaved(snapshot(session), 'file');
     initializeHistory();
     renderCrumb({ focus: true });
     showToast('Session loaded. The browser’s saved copy has not been changed.');
@@ -497,6 +515,8 @@ controls['save-session'].addEventListener('click', () => {
   if (!session || !isDirty() || saving || pendingHistory !== null) return;
   byId('session-filename').value = `crumbs-session-${session.current}.txt`;
   byId('save-error').hidden = true;
+  byId('browser-data-status').hidden = true;
+  updateBrowserDataControl();
   byId('save-dialog').showModal();
 });
 byId('save-browser').addEventListener('click', () => {
@@ -504,10 +524,29 @@ byId('save-browser').addEventListener('click', () => {
   const data = snapshot(session);
   try {
     window.localStorage.setItem(STORAGE_KEY, JSON.stringify(data));
-    markSaved(data);
+    markSaved(data, 'browser');
+    updateBrowserDataControl();
     byId('save-dialog').close();
     showToast('Session saved in this browser.');
   } catch { saveError('Browser storage is unavailable or full. Save the session as a text file instead.'); }
+});
+byId('erase-browser').addEventListener('click', () => {
+  if (saving || !session) return;
+  byId('save-error').hidden = true;
+  byId('browser-data-status').hidden = true;
+  try {
+    window.localStorage.removeItem(STORAGE_KEY);
+    if (baselineStorage === 'browser') {
+      baselineFingerprint = null;
+      baselineStorage = null;
+    }
+    updateSaveState();
+    updateBrowserDataControl();
+    byId('browser-data-status').textContent = 'The saved session in this browser has been erased. The current session remains open.';
+    byId('browser-data-status').hidden = false;
+  } catch {
+    saveError('The saved session could not be erased because browser storage is unavailable.');
+  }
 });
 byId('save-file').addEventListener('click', saveFile);
 byId('save-dialog').addEventListener('cancel', event => { if (saving) event.preventDefault(); });
@@ -595,7 +634,7 @@ async function start() {
   const abort = new AbortController();
   const timeout = setTimeout(() => abort.abort(), 20000);
   try {
-    const response = await fetch(new URL('./Crumbs.txt', import.meta.url), { cache: 'no-cache', signal: abort.signal });
+    const response = await fetch(new URL('../Crumbs.txt', import.meta.url), { cache: 'no-cache', signal: abort.signal });
     if (!response.ok) throw new Error('The text file is unavailable.');
     corpus = parseCorpus(await response.text());
     const notices = [];
@@ -603,7 +642,7 @@ async function start() {
       const stored = window.localStorage.getItem(STORAGE_KEY);
       if (stored) {
         session = restoreSession(JSON.parse(stored), corpus.length);
-        markSaved(snapshot(session));
+        markSaved(snapshot(session), 'browser');
       }
     } catch (error) {
       notices.push(error.name === 'SecurityError'
@@ -613,7 +652,9 @@ async function start() {
     const requested = crumbFromURL(new URL(window.location.href).searchParams.get('crumb'), corpus.length);
     if (!session) {
       session = createSession(Number.isInteger(requested) ? requested : 1);
+      if (window.matchMedia('(max-width: 800px), (max-height: 500px)').matches) session.textSize = 0;
       baselineFingerprint = fingerprint(session);
+      baselineStorage = 'initial';
     }
     if (Number.isNaN(requested)) notices.push(`The address contains an invalid crumb number. Available numbers are 1–${numberFormat.format(corpus.length)}.`);
     else if (requested !== null) visit(session, requested);
