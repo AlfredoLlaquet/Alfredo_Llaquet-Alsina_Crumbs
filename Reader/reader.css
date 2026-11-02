@@ -100,13 +100,13 @@ dialog { width: min(460px, calc(100% - 32px)); max-height: calc(100vh - 32px); m
 dialog::backdrop { background: #18253570; }
 dialog h2 { margin: 0 0 16px; font-size: 25px; line-height: 1.2; letter-spacing: -.025em; }
 dialog p { font-size: 15px; line-height: 1.55; }
-dialog button { min-height: 40px; }
+dialog button { min-height: 40px; white-space: normal; }
 dialog .wide { width: 100%; margin-top: 10px; }
 dialog input[type="text"], dialog input[type="number"] { width: 100%; min-height: 44px; padding: 10px 12px; border: 1px solid #aeb9c4; border-radius: 6px; font-size: 16px; color: var(--ink); background: #fff; }
 .field-label { display: block; margin: 16px 0 8px; font-size: 14px; font-weight: 600; }
 dialog .dialog-note { margin: 9px 0 0; font-size: 13px; color: var(--muted); }
 .dialog-divider { height: 1px; margin-top: 22px; background: var(--line); }
-.dialog-actions { display: flex; justify-content: flex-end; gap: 10px; margin-top: 25px; }
+.dialog-actions { display: flex; flex-wrap: wrap; justify-content: flex-end; gap: 10px; margin-top: 25px; }
 .field-error { color: #20252b; border-left: 3px solid var(--blue); padding-left: 10px; }
 .favorites-dialog { width: min(600px, calc(100% - 32px)); }
 .favorites-list { list-style: none; margin: 0; padding: 0; max-height: 55vh; overflow: auto; }

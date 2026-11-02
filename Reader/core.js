@@ -1,6 +1,7 @@
 import { topLevelDomains } from './domains.js';
 
 export const HISTORY_LIMIT = 100;
+export const SESSION_VERSION = 2;
 export const TEXT_SCALES = [0.9, 1, 1.12, 1.25, 1.4, 1.6];
 export const MAX_CRUMB_NUMBER = 1_000_000;
 
@@ -22,17 +23,17 @@ export function parseCorpus(text) {
 export function createSession(number = 1) {
   return {
     current: number, visited: new Set([number]), favorites: new Set(),
-    random: false, history: [number], historyIndex: 0, textSize: 1,
+    random: false, history: [number], historyIndex: 0, textSize: 1, autoSave: false,
   };
 }
 
 export function snapshot(session) {
   return {
-    version: 1, current: session.current,
+    version: SESSION_VERSION, current: session.current,
     visited: [...session.visited].sort((a, b) => a - b),
     favorites: [...session.favorites].sort((a, b) => a - b),
     random: session.random, history: [...session.history],
-    historyIndex: session.historyIndex, textSize: session.textSize,
+    historyIndex: session.historyIndex, textSize: session.textSize, autoSave: session.autoSave,
   };
 }
 
@@ -42,7 +43,8 @@ export function fingerprint(session) {
 
 export function restoreSession(data, total = MAX_CRUMB_NUMBER) {
   const fail = () => { throw new Error('This file does not contain a valid Crumb Reader session.'); };
-  if (!data || typeof data !== 'object' || Array.isArray(data) || data.version !== 1) fail();
+  if (!data || typeof data !== 'object' || Array.isArray(data) || ![1, SESSION_VERSION].includes(data.version)) fail();
+  if (data.version === SESSION_VERSION && typeof data.autoSave !== 'boolean') fail();
   const validNumber = n => Number.isSafeInteger(n) && n >= 1 && n <= MAX_CRUMB_NUMBER;
   if (!validNumber(data.current) || typeof data.random !== 'boolean') fail();
   for (const key of ['visited', 'favorites', 'history']) {
@@ -63,6 +65,7 @@ export function restoreSession(data, total = MAX_CRUMB_NUMBER) {
     current: data.current, visited, favorites: new Set(data.favorites),
     random: data.random, history: [...data.history],
     historyIndex: data.historyIndex, textSize: data.textSize,
+    autoSave: data.version === 1 ? false : data.autoSave,
   };
 }
 

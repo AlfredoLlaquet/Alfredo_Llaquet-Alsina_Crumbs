@@ -1,10 +1,12 @@
 import {
   HISTORY_LIMIT, TEXT_SCALES, parseCorpus, createSession, snapshot, fingerprint,
   restoreSession, visit, moveInHistory, nextRandom, restartRandom, crumbFromURL, linkTokens,
-} from './core.js';
-import { encodeSession, decodeSession, MAX_SESSION_FILE_BYTES } from './session.js';
+} from './core.js?v=2';
+import { encodeSession, decodeSession, MAX_SESSION_FILE_BYTES } from './session.js?v=2';
 
+// Keep the existing key and JSON mechanism so previous browser saves remain readable.
 const STORAGE_KEY = 'thecrumbs.reader.session.v1';
+const AUTO_SAVE_DELAY = 500;
 const byId = id => document.getElementById(id);
 const controls = Object.fromEntries([
   'load-session', 'save-session', 'go-to', 'favorites', 'back', 'forward', 'quit',
@@ -16,6 +18,10 @@ let corpus = [];
 let session = null;
 let baselineFingerprint = null;
 let baselineStorage = null;
+let browserFingerprint = null;
+let autoSaveTimer;
+let autoSaveIdle = null;
+let autoSaveFailed = false;
 let allowLeave = false;
 let toastTimer;
 let unloadListener = false;
@@ -37,26 +43,94 @@ let scheduledHintOwner = null;
 let showHintTimer;
 let hideHintTimer;
 
-function isDirty() { return session !== null && fingerprint(session) !== baselineFingerprint; }
+function isDirty() {
+  if (!session) return false;
+  const current = fingerprint(session);
+  return current !== baselineFingerprint && current !== browserFingerprint;
+}
+function needsBrowserSave() { return session !== null && fingerprint(session) !== browserFingerprint; }
 function shouldWarnBeforeLeaving() { return hasNavigated && isDirty(); }
 
 function beforeUnload(event) {
+  flushAutoSave();
   if (allowLeave || !shouldWarnBeforeLeaving()) return;
   event.preventDefault();
   event.returnValue = '';
 }
 
 function updateSaveState() {
-  const dirty = isDirty();
-  controls['save-session'].disabled = !session || !dirty || saving || pendingHistory !== null;
+  const unavailable = !session || saving || pendingHistory !== null;
+  controls['save-session'].disabled = unavailable;
   setHint(controls['save-session'], !session
-    ? 'Save becomes available after the collection loads and the reading session changes.'
-    : dirty ? 'Save the current reading session in this browser or download it as a text file.'
-    : 'Nothing new to save. Save becomes available when the reading session changes.');
+    ? 'Saving options become available after the collection loads.'
+    : 'Open saving options, enable or disable auto saving, or save a portable text file.');
+  byId('save-browser').disabled = unavailable || !needsBrowserSave();
+  byId('save-file').disabled = unavailable;
+  byId('auto-save').disabled = unavailable;
+  byId('auto-save').textContent = session?.autoSave
+    ? 'Disable auto saving in this browser' : 'Enable auto saving in this browser';
+  setHint(byId('auto-save'), session?.autoSave
+    ? 'Turn off automatic browser saving and save that choice immediately. Manual saving stays available.'
+    : 'Save this session now and automatically save later changes in this browser. Text files remain separate.');
+  byId('auto-save-status').textContent = autoSaveFailed && session?.autoSave
+    ? 'Auto saving is paused after a storage error. Save now in this browser to retry, or save a text file.'
+    : session?.autoSave ? 'Auto saving is enabled. Changes are saved shortly after activity stops.'
+    : 'Auto saving is disabled. Browser saving and text-file saving are manual.';
   const warn = shouldWarnBeforeLeaving();
   if (warn && !unloadListener) { window.addEventListener('beforeunload', beforeUnload); unloadListener = true; }
   if (!warn && unloadListener) { window.removeEventListener('beforeunload', beforeUnload); unloadListener = false; }
 }
+
+function cancelAutoSave() {
+  clearTimeout(autoSaveTimer);
+  if (autoSaveIdle !== null) window.cancelIdleCallback?.(autoSaveIdle);
+  autoSaveIdle = null;
+}
+
+function scheduleAutoSave() {
+  cancelAutoSave();
+  if (!session?.autoSave || autoSaveFailed || !needsBrowserSave() || saving || pendingHistory !== null) return;
+  // Coalesce rapid changes and let the reading interface update before writing.
+  autoSaveTimer = setTimeout(() => {
+    autoSaveIdle = typeof window.requestIdleCallback === 'function'
+      ? window.requestIdleCallback(() => { autoSaveIdle = null; flushAutoSave(); }, { timeout: 1000 })
+      : null;
+    if (typeof window.requestIdleCallback !== 'function') flushAutoSave();
+  }, AUTO_SAVE_DELAY);
+}
+
+function writeBrowserSession() {
+  const data = snapshot(session);
+  const serialized = JSON.stringify(data);
+  window.localStorage.setItem(STORAGE_KEY, serialized);
+  browserFingerprint = serialized;
+  autoSaveFailed = false;
+  markSaved(data, 'browser');
+  updateBrowserDataControl();
+}
+
+function flushAutoSave() {
+  cancelAutoSave();
+  if (!session?.autoSave || autoSaveFailed || !needsBrowserSave() || pendingHistory !== null) return;
+  try { writeBrowserSession(); }
+  catch {
+    autoSaveFailed = true;
+    updateSaveState();
+    saveError('Browser storage is unavailable or full. Save now in this browser to retry, or save a text file.');
+    showToast('Auto saving failed and is paused. Open Save to retry or save a text file.', 10000);
+  }
+}
+
+document.addEventListener('visibilitychange', () => {
+  if (document.visibilityState === 'hidden') flushAutoSave();
+});
+window.addEventListener('pagehide', flushAutoSave);
+window.addEventListener('storage', event => {
+  if (!session || event.storageArea !== window.localStorage ||
+      !((event.key === STORAGE_KEY && event.newValue === null) || event.key === null)) return;
+  forgetBrowserSave();
+  showToast('The saved browser session was erased in another tab. Auto saving is now disabled here.');
+});
 
 function setHint(control, text, describe = true) {
   control.dataset.hint = text;
@@ -170,16 +244,21 @@ function showMessage(title, message) {
   if (!byId('message-dialog').open) byId('message-dialog').showModal();
 }
 
-function ask(title, message, accept, cancel = 'Cancel') {
+function ask(title, message, accept, cancel = 'Cancel', { cancelIsPrimary = false, cancelValue = false } = {}) {
   const dialog = byId('confirm-dialog');
   byId('confirm-title').textContent = title;
   byId('confirm-text').textContent = message;
   byId('confirm-accept').textContent = accept;
   byId('confirm-cancel').textContent = cancel;
+  byId('confirm-accept').classList.toggle('primary', !cancelIsPrimary);
+  byId('confirm-cancel').classList.toggle('primary', cancelIsPrimary);
+  setHint(byId('confirm-cancel'), cancelValue === 'save'
+    ? 'Stay in the Reader and open the Save session dialog.'
+    : 'Cancel this action and keep the current reading session.');
   const acceptHints = {
     'Return home': 'Leave the Reader and open the homepage without saving the current changes.',
     'Start new round': 'Reset the visited list and choose another crumb at random. Keep favorites and viewing history.',
-    'Load session': 'Replace the active session with the selected file. Leave the browser’s saved copy unchanged.',
+    'Load session': 'Restore the selected file, including its auto-saving setting. If enabled, auto saving updates the browser copy.',
   };
   setHint(byId('confirm-accept'), acceptHints[accept] || 'Carry out the action described in this dialog.');
   return new Promise(resolve => {
@@ -194,7 +273,7 @@ function ask(title, message, accept, cancel = 'Cancel') {
       resolve(value);
     };
     const yes = () => finish(true);
-    const no = () => finish(false);
+    const no = () => finish(cancelValue);
     const escape = event => { event.preventDefault(); finish(false); };
     byId('confirm-accept').addEventListener('click', yes);
     byId('confirm-cancel').addEventListener('click', no);
@@ -283,6 +362,7 @@ function updateControls() {
   byId('reading-progress').textContent = `${numberFormat.format(session.visited.size)} of ${numberFormat.format(corpus.length)} visited`;
   document.documentElement.style.setProperty('--text-scale', TEXT_SCALES[session.textSize]);
   updateSaveState();
+  scheduleAutoSave();
 }
 
 function renderCrumb({ focus = false, restoreScroll = false } = {}) {
@@ -414,6 +494,19 @@ function markSaved(data, storage) {
   updateSaveState();
 }
 
+function forgetBrowserSave() {
+  cancelAutoSave();
+  session.autoSave = false;
+  autoSaveFailed = false;
+  browserFingerprint = null;
+  if (baselineStorage === 'browser') {
+    baselineFingerprint = null;
+    baselineStorage = null;
+  }
+  updateSaveState();
+  updateBrowserDataControl();
+}
+
 function updateBrowserDataControl() {
   const control = byId('erase-browser');
   try {
@@ -449,10 +542,11 @@ function safeFilename() {
 }
 
 async function saveFile() {
-  if (saving || !session || !isDirty()) return;
+  if (saving || !session || pendingHistory !== null) return;
   const data = snapshot(session);
   const filename = safeFilename();
   saving = true;
+  cancelAutoSave();
   updateSaveState();
   updateBrowserDataControl();
   byId('save-file').disabled = true;
@@ -498,6 +592,7 @@ async function saveFile() {
     byId('save-browser').disabled = false;
     updateBrowserDataControl();
     updateSaveState();
+    scheduleAutoSave();
   }
 }
 
@@ -507,11 +602,15 @@ async function importFile(file) {
     if (file.size > MAX_SESSION_FILE_BYTES) throw new Error('The selected session file is too large.');
     const restored = await decodeSession(await file.text(), corpus.length);
     if (isDirty() && !await ask('Load another session', 'The current session has unsaved changes. Replace it with the session from this file?', 'Load session')) return;
+    cancelAutoSave();
     session = restored;
+    autoSaveFailed = false;
     markSaved(snapshot(session), 'file');
     initializeHistory();
     renderCrumb({ focus: true });
-    showToast('Session loaded. The browser’s saved copy has not been changed.');
+    showToast(session.autoSave
+      ? 'Session loaded. Auto saving will update this browser’s saved copy.'
+      : 'Session loaded. The browser’s saved copy has not been changed.');
   } catch (error) {
     showMessage('Session could not be loaded', error instanceof SyntaxError ? 'The session file is damaged or incomplete.' : error.message);
   }
@@ -519,21 +618,35 @@ async function importFile(file) {
 
 controls['load-session'].addEventListener('click', () => { byId('session-file').value = ''; byId('session-file').click(); });
 byId('session-file').addEventListener('change', event => importFile(event.target.files[0]));
-controls['save-session'].addEventListener('click', () => {
-  if (!session || !isDirty() || saving || pendingHistory !== null) return;
+function openSaveDialog() {
+  if (!session || saving || pendingHistory !== null) return;
   byId('session-filename').value = proposedSessionFilename();
-  byId('save-error').hidden = true;
+  byId('save-error').hidden = !autoSaveFailed;
   byId('browser-data-status').hidden = true;
   updateBrowserDataControl();
+  updateSaveState();
   byId('save-dialog').showModal();
+}
+controls['save-session'].addEventListener('click', openSaveDialog);
+byId('auto-save').addEventListener('click', () => {
+  if (saving || !session || pendingHistory !== null) return;
+  cancelAutoSave();
+  session.autoSave = !session.autoSave;
+  autoSaveFailed = false;
+  byId('save-error').hidden = true;
+  byId('browser-data-status').hidden = true;
+  try { writeBrowserSession(); }
+  catch {
+    autoSaveFailed = true;
+    updateSaveState();
+    saveError('The auto-saving choice could not be saved in this browser. Save now in this browser to retry, or save a text file.');
+  }
 });
 byId('save-browser').addEventListener('click', () => {
-  if (saving || !session || !isDirty()) return;
-  const data = snapshot(session);
+  if (saving || !session || !needsBrowserSave()) return;
+  cancelAutoSave();
   try {
-    window.localStorage.setItem(STORAGE_KEY, JSON.stringify(data));
-    markSaved(data, 'browser');
-    updateBrowserDataControl();
+    writeBrowserSession();
     byId('save-dialog').close();
     showToast('Session saved in this browser.');
   } catch { saveError('Browser storage is unavailable or full. Save the session as a text file instead.'); }
@@ -544,13 +657,8 @@ byId('erase-browser').addEventListener('click', () => {
   byId('browser-data-status').hidden = true;
   try {
     window.localStorage.removeItem(STORAGE_KEY);
-    if (baselineStorage === 'browser') {
-      baselineFingerprint = null;
-      baselineStorage = null;
-    }
-    updateSaveState();
-    updateBrowserDataControl();
-    byId('browser-data-status').textContent = 'The saved session in this browser has been erased. The current session remains open.';
+    forgetBrowserSave();
+    byId('browser-data-status').textContent = 'The saved session in this browser has been erased and auto saving is disabled. The current session remains open.';
     byId('browser-data-status').hidden = false;
   } catch {
     saveError('The saved session could not be erased because browser storage is unavailable.');
@@ -606,7 +714,12 @@ for (const [id, delta] of [['text-smaller', -1], ['text-larger', 1]]) {
   });
 }
 async function returnHome() {
-  if (shouldWarnBeforeLeaving() && !await ask('Return to TheCrumbs.org', 'Do you want to return to the home page of TheCrumbs.org without saving your session?', 'Return home', 'Stay here')) return;
+  flushAutoSave();
+  if (shouldWarnBeforeLeaving()) {
+    const choice = await ask('Return to TheCrumbs.org', 'Do you want to return to the home page of TheCrumbs.org without saving your session?', 'Return home', 'Stay here and save', { cancelIsPrimary: true, cancelValue: 'save' });
+    if (choice === 'save') { openSaveDialog(); return; }
+    if (!choice) return;
+  }
   allowLeave = true;
   window.location.assign(new URL('../', window.location.href));
 }
@@ -650,6 +763,7 @@ async function start() {
       const stored = window.localStorage.getItem(STORAGE_KEY);
       if (stored) {
         session = restoreSession(JSON.parse(stored), corpus.length);
+        browserFingerprint = fingerprint(session);
         markSaved(snapshot(session), 'browser');
       }
     } catch (error) {

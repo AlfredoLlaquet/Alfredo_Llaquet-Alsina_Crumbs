@@ -1,6 +1,6 @@
-import { MAX_CRUMB_NUMBER, restoreSession, snapshot } from './core.js';
+import { MAX_CRUMB_NUMBER, SESSION_VERSION, restoreSession, snapshot } from './core.js?v=2';
 
-export const SESSION_HEADER = 'CRUMB-READER/1\n';
+export const SESSION_HEADER = `CRUMB-READER/${SESSION_VERSION}\n`;
 export const MAX_SESSION_FILE_BYTES = 2 * 1024 * 1024;
 const MAX_DECODED_BYTES = 4 * 1024 * 1024;
 const encoder = new TextEncoder();
@@ -59,17 +59,18 @@ function packBinaryCandidates(data) {
   const favorites = packSetCandidates(data.favorites);
   for (const visits of visited) {
     for (const marks of favorites) {
-      const bytes = new Uint8Array(result.length + visits.length + marks.length);
+      const bytes = new Uint8Array(result.length + visits.length + marks.length + 1);
       bytes.set(result);
       bytes.set(visits, result.length);
       bytes.set(marks, result.length + visits.length);
+      bytes[bytes.length - 1] = Number(data.autoSave);
       candidates.push(bytes);
     }
   }
   return candidates;
 }
 
-function unpackBinary(bytes) {
+function unpackBinary(bytes, version) {
   let cursor = 0;
   const invalid = () => { throw new Error('The session file is damaged.'); };
   const next = () => {
@@ -125,8 +126,10 @@ function unpackBinary(bytes) {
   }
   const visited = readSet();
   const favorites = readSet();
+  const autoSave = version === 1 ? 0 : next();
+  if (autoSave > 1) invalid();
   if (cursor !== bytes.length) invalid();
-  return { version: 1, current, random: Boolean(random), historyIndex, textSize, history, visited, favorites };
+  return { version, current, random: Boolean(random), historyIndex, textSize, history, visited, favorites, autoSave: Boolean(autoSave) };
 }
 
 function checksum(bytes) {
@@ -160,7 +163,7 @@ async function transform(bytes, name, decompress = false) {
 
 export async function encodeSession(value) {
   const data = snapshot(restoreSession(value.visited instanceof Set ? snapshot(value) : value));
-  const compact = [data.current, Number(data.random), data.historyIndex, data.textSize, data.history, data.visited, data.favorites];
+  const compact = [data.current, Number(data.random), data.historyIndex, data.textSize, data.history, data.visited, data.favorites, Number(data.autoSave)];
   const representations = [encoder.encode(JSON.stringify(compact)), ...packBinaryCandidates(data)];
   const candidates = [];
   for (let encoding = 0; encoding < representations.length; encoding++) {
@@ -176,7 +179,7 @@ export async function encodeSession(value) {
   candidates.sort((a, b) => a.bytes.length - b.bytes.length);
   const chosen = candidates[0];
   const file = new Uint8Array(9 + chosen.bytes.length);
-  file.set([67, 82, 1, chosen.encoding, chosen.compression]);
+  file.set([67, 82, SESSION_VERSION, chosen.encoding, chosen.compression]);
   file.set(chosen.bytes, 9);
   new DataView(file.buffer).setUint32(5, checksum(chosen.bytes));
   let binary = '';
@@ -187,20 +190,23 @@ export async function encodeSession(value) {
 export async function decodeSession(text, total) {
   if (text.length > MAX_SESSION_FILE_BYTES) throw new Error('The session file is too large.');
   const normalized = text.replace(/^\uFEFF/, '').replaceAll('\r\n', '\n');
-  if (!normalized.startsWith(SESSION_HEADER)) throw new Error('Choose a text file saved by the Crumb Reader.');
-  const base64 = normalized.slice(SESSION_HEADER.length).replace(/\s+/g, '');
+  const header = /^CRUMB-READER\/([12])\n/.exec(normalized);
+  if (!header) throw new Error('Choose a supported text file saved by the Crumb Reader.');
+  const version = Number(header[1]);
+  const base64 = normalized.slice(header[0].length).replace(/\s+/g, '');
   if (!/^(?:[A-Za-z0-9+/]{4})*(?:[A-Za-z0-9+/]{2}==|[A-Za-z0-9+/]{3}=)?$/.test(base64)) throw new Error('The session file is damaged.');
   const file = Uint8Array.from(atob(base64), char => char.charCodeAt(0));
-  if (file.length < 10 || file[0] !== 67 || file[1] !== 82 || file[2] !== 1 || file[3] > 1 || file[4] > 2) throw new Error('The session file has an unsupported format.');
+  if (file.length < 10 || file[0] !== 67 || file[1] !== 82 || file[2] !== version || file[3] > 1 || file[4] > 2) throw new Error('The session file has an unsupported format.');
   let bytes = file.subarray(9);
   if (new DataView(file.buffer).getUint32(5) !== checksum(bytes)) throw new Error('The session file is damaged or incomplete.');
   if (file[4]) bytes = await transform(bytes, file[4] === 1 ? 'deflate' : 'gzip', true);
   let data;
   if (file[3] === 0) {
     const parsed = JSON.parse(decoder.decode(bytes));
-    if (!Array.isArray(parsed) || parsed.length !== 7 || ![0, 1].includes(parsed[1])) throw new Error('The session file is damaged.');
-    const [current, random, historyIndex, textSize, history, visited, favorites] = parsed;
-    data = { version: 1, current, random: Boolean(random), historyIndex, textSize, history, visited, favorites };
-  } else data = unpackBinary(bytes);
+    if (!Array.isArray(parsed) || parsed.length !== (version === 1 ? 7 : 8) || ![0, 1].includes(parsed[1]) ||
+        (version === 2 && ![0, 1].includes(parsed[7]))) throw new Error('The session file is damaged.');
+    const [current, random, historyIndex, textSize, history, visited, favorites, autoSave = 0] = parsed;
+    data = { version, current, random: Boolean(random), historyIndex, textSize, history, visited, favorites, autoSave: Boolean(autoSave) };
+  } else data = unpackBinary(bytes, version);
   return restoreSession(data, total);
 }
