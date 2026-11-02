@@ -433,9 +433,17 @@ function saveError(message) {
   byId('save-error').hidden = false;
 }
 
+function proposedSessionFilename() {
+  const today = new Date();
+  const year = String(today.getFullYear()).padStart(4, '0');
+  const month = String(today.getMonth() + 1).padStart(2, '0');
+  const day = String(today.getDate()).padStart(2, '0');
+  return `crumbs-session-${year}-${month}-${day}.txt`;
+}
+
 function safeFilename() {
   let filename = byId('session-filename').value.trim().replace(/[<>:"/\\|?*\x00-\x1f]/g, '-');
-  if (!filename || /^\.+$/.test(filename)) filename = `crumbs-session-${session.current}`;
+  if (!filename || /^\.+$/.test(filename)) filename = proposedSessionFilename();
   if (!filename.toLowerCase().endsWith('.txt')) filename += '.txt';
   return filename;
 }
@@ -513,7 +521,7 @@ controls['load-session'].addEventListener('click', () => { byId('session-file').
 byId('session-file').addEventListener('change', event => importFile(event.target.files[0]));
 controls['save-session'].addEventListener('click', () => {
   if (!session || !isDirty() || saving || pendingHistory !== null) return;
-  byId('session-filename').value = `crumbs-session-${session.current}.txt`;
+  byId('session-filename').value = proposedSessionFilename();
   byId('save-error').hidden = true;
   byId('browser-data-status').hidden = true;
   updateBrowserDataControl();
