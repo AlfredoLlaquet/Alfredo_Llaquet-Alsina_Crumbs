@@ -620,8 +620,8 @@ body,
 /* Keep the Reader preview and text together in normal page flow. */
 .markdown-body .crumb-reader-intro {
   display: grid;
-  grid-template-columns: minmax(0, 1fr) 200px;
-  grid-template-areas: "copy preview";
+  grid-template-columns: 200px minmax(0, 1fr);
+  grid-template-areas: "preview copy";
   align-items: start;
   gap: 24px;
   margin-bottom: 24px;
