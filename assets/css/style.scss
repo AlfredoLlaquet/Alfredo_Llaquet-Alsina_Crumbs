@@ -217,6 +217,10 @@ html {
   background: currentColor;
 }
 
+.markdown-body .crumbs-menu-scroll-hint {
+  display: none;
+}
+
 @media (max-width: 600px) {
   html {
     scroll-padding-top: var(--crumbs-scroll-offset, 61px);
@@ -268,6 +272,8 @@ html {
     left: 0;
     max-height: calc(100vh - 64px);
     max-height: calc(100dvh - 64px);
+    /* Reserve the same gutter in every scroll state, keeping links in place. */
+    padding-right: 44px;
     overflow-y: auto;
     overscroll-behavior: contain;
     background: #fff;
@@ -277,6 +283,47 @@ html {
 
   .markdown-body .crumbs-nav.js-enhanced.is-menu-open .crumbs-menu-links {
     display: grid;
+  }
+
+  .markdown-body .crumbs-nav.js-enhanced.is-menu-open .crumbs-menu-scroll-hint:not([hidden]) {
+    display: flex;
+    position: absolute;
+    top: calc(100% + 1px);
+    right: var(--crumbs-menu-right-inset, 1px);
+    width: 44px;
+    height: var(--crumbs-menu-height);
+    box-sizing: border-box;
+    padding: 10px 0;
+    flex-direction: column;
+    align-items: center;
+    justify-content: var(--crumbs-scroll-alignment, center);
+    color: #0366d6;
+    pointer-events: none;
+  }
+
+  .markdown-body .crumbs-menu-scroll-hint[data-direction="down"] {
+    --crumbs-scroll-alignment: flex-end;
+  }
+
+  .markdown-body .crumbs-menu-scroll-hint[data-direction="up"] {
+    --crumbs-scroll-alignment: flex-start;
+  }
+
+  .markdown-body .crumbs-menu-scroll-hint svg {
+    display: block;
+    flex: 0 0 28px;
+    width: 28px;
+    height: 28px;
+    fill: none;
+    stroke: currentColor;
+    stroke-width: 2.25;
+    stroke-linecap: round;
+    stroke-linejoin: round;
+  }
+
+  .markdown-body .crumbs-menu-scroll-hint[data-direction="down"] .crumbs-scroll-up,
+  .markdown-body .crumbs-menu-scroll-hint[data-direction="up"] .crumbs-scroll-down {
+    display: none;
   }
 
   .markdown-body .crumbs-menu-links a {
