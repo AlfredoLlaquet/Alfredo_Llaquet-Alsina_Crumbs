@@ -562,13 +562,17 @@ The scope and philosophy of the crumbs are explained quickly by the following ha
 
 <h2 id="crumb-reader">Crumb Reader</h2>
 
-The Crumb Reader allows you to comfortably read the crumbs on your computer or phone and save your reading session in your browser storage or in a text file from which you can restore it afterward.
-
-You can read the crumbs in sequence from the start, in random order, or going directly to one specific one.
-
-Crumbs that refer to other crumbs allow you to click on those references to see the related crumbs and then go back to the original ones.
-
-[Go to the Crumb Reader.](Reader/)
+<div class="crumb-reader-intro">
+  <a class="crumb-reader-preview" href="Reader/" aria-label="Go to the Crumb Reader">
+    <img src="img/crumb-reader-phone.jpg" alt="Crumb Reader on a phone displaying Crumb 1, The Game." width="921" height="2048" loading="lazy" decoding="async">
+  </a>
+  <div class="crumb-reader-copy">
+    <p>The Crumb Reader allows you to comfortably read the crumbs on your computer or phone and save your reading session in your browser storage or in a text file from which you can restore it afterward.</p>
+    <p>You can read the crumbs in sequence from the start, in random order, or go directly to a specific one.</p>
+    <p>Crumbs that refer to other crumbs allow you to click on those references to see the related crumbs and then go back to the original ones.</p>
+    <p><a href="Reader/">Go to the Crumb Reader.</a></p>
+  </div>
+</div>
 
 <h2 id="contact">Contact Me</h2>
 
