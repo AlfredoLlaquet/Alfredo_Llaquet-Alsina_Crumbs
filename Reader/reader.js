@@ -14,8 +14,7 @@ const pane = byId('reading-pane');
 const numberFormat = new Intl.NumberFormat('en-US');
 let corpus = [];
 let session = null;
-let savedFingerprint = null;
-let savedWhere = '';
+let baselineFingerprint = null;
 let allowLeave = false;
 let toastTimer;
 let unloadListener = false;
@@ -37,7 +36,7 @@ let scheduledHintOwner = null;
 let showHintTimer;
 let hideHintTimer;
 
-function isDirty() { return session !== null && fingerprint(session) !== savedFingerprint; }
+function isDirty() { return session !== null && fingerprint(session) !== baselineFingerprint; }
 function shouldWarnBeforeLeaving() { return hasNavigated && isDirty(); }
 
 function beforeUnload(event) {
@@ -48,10 +47,11 @@ function beforeUnload(event) {
 
 function updateSaveState() {
   const dirty = isDirty();
-  const indicator = byId('save-state');
-  const label = !session ? 'Not loaded' : dirty ? 'Unsaved changes' : `Saved${savedWhere ? ` · ${savedWhere}` : ''}`;
-  if (indicator.textContent !== label) indicator.textContent = label;
-  indicator.classList.toggle('is-dirty', dirty);
+  controls['save-session'].disabled = !session || !dirty || saving || pendingHistory !== null;
+  setHint(controls['save-session'], !session
+    ? 'Save becomes available after the collection loads and the reading session changes.'
+    : dirty ? 'Save the current reading session in this browser or download it as a text file.'
+    : 'Nothing new to save. Save becomes available when the reading session changes.');
   const warn = shouldWarnBeforeLeaving();
   if (warn && !unloadListener) { window.addEventListener('beforeunload', beforeUnload); unloadListener = true; }
   if (!warn && unloadListener) { window.removeEventListener('beforeunload', beforeUnload); unloadListener = false; }
@@ -156,11 +156,11 @@ function initializeHints() {
   window.addEventListener('resize', hideHint);
 }
 
-function showToast(message) {
+function showToast(message, duration = 4500) {
   clearTimeout(toastTimer);
   byId('toast').textContent = message;
   byId('toast').hidden = false;
-  toastTimer = setTimeout(() => { byId('toast').hidden = true; }, 4500);
+  toastTimer = setTimeout(() => { byId('toast').hidden = true; }, duration);
 }
 
 function showMessage(title, message) {
@@ -271,8 +271,8 @@ function updateControls() {
   controls.next.disabled = unavailable || (!session.random && session.current === corpus.length);
   controls['text-smaller'].disabled = unavailable || session.textSize === 0;
   controls['text-larger'].disabled = unavailable || session.textSize === TEXT_SCALES.length - 1;
-  controls['random-order'].checked = session.random;
-  controls.favorite.checked = session.favorites.has(session.current);
+  controls['random-order'].setAttribute('aria-checked', String(session.random));
+  controls.favorite.setAttribute('aria-pressed', String(session.favorites.has(session.current)));
   setHint(controls.next, session.random
     ? 'Choose an unvisited crumb at random. When none remain, a dialog offers a new round.'
     : session.current === corpus.length ? 'This is the last available crumb in numerical order.' : 'Read the next crumb in numerical order.');
@@ -407,9 +407,8 @@ function showFavorites() {
   byId('favorites-dialog').showModal();
 }
 
-function markSaved(data, where) {
-  savedFingerprint = JSON.stringify(data);
-  savedWhere = where;
+function markSaved(data) {
+  baselineFingerprint = JSON.stringify(data);
   updateSaveState();
 }
 
@@ -426,10 +425,11 @@ function safeFilename() {
 }
 
 async function saveFile() {
-  if (saving) return;
+  if (saving || !session || !isDirty()) return;
   const data = snapshot(session);
   const filename = safeFilename();
   saving = true;
+  updateSaveState();
   byId('save-file').disabled = true;
   byId('save-file').textContent = 'Saving…';
   byId('save-browser').disabled = true;
@@ -461,7 +461,7 @@ async function saveFile() {
       link.remove();
       setTimeout(() => URL.revokeObjectURL(url), 60000);
     }
-    markSaved(data, 'text file');
+    markSaved(data);
     byId('save-dialog').close();
     showToast(handle ? 'Session saved to a text file.' : 'Session download started.');
   } catch {
@@ -471,6 +471,7 @@ async function saveFile() {
     byId('save-file').disabled = false;
     byId('save-file').textContent = 'Save as a text file';
     byId('save-browser').disabled = false;
+    updateSaveState();
   }
 }
 
@@ -481,7 +482,7 @@ async function importFile(file) {
     const restored = await decodeSession(await file.text(), corpus.length);
     if (isDirty() && !await ask('Load another session', 'The current session has unsaved changes. Replace it with the session from this file?', 'Load session')) return;
     session = restored;
-    markSaved(snapshot(session), 'text file');
+    markSaved(snapshot(session));
     initializeHistory();
     renderCrumb({ focus: true });
     showToast('Session loaded. The browser’s saved copy has not been changed.');
@@ -493,16 +494,17 @@ async function importFile(file) {
 controls['load-session'].addEventListener('click', () => { byId('session-file').value = ''; byId('session-file').click(); });
 byId('session-file').addEventListener('change', event => importFile(event.target.files[0]));
 controls['save-session'].addEventListener('click', () => {
+  if (!session || !isDirty() || saving || pendingHistory !== null) return;
   byId('session-filename').value = `crumbs-session-${session.current}.txt`;
   byId('save-error').hidden = true;
   byId('save-dialog').showModal();
 });
 byId('save-browser').addEventListener('click', () => {
-  if (saving) return;
+  if (saving || !session || !isDirty()) return;
   const data = snapshot(session);
   try {
     window.localStorage.setItem(STORAGE_KEY, JSON.stringify(data));
-    markSaved(data, 'browser');
+    markSaved(data);
     byId('save-dialog').close();
     showToast('Session saved in this browser.');
   } catch { saveError('Browser storage is unavailable or full. Save the session as a text file instead.'); }
@@ -535,10 +537,18 @@ controls.back.addEventListener('click', () => historyStep(-1));
 controls.forward.addEventListener('click', () => historyStep(1));
 controls.previous.addEventListener('click', () => { if (!session.random) navigate(session.current - 1); });
 controls.next.addEventListener('click', readNext);
-controls['random-order'].addEventListener('change', event => { session.random = event.target.checked; updateControls(); });
-controls.favorite.addEventListener('change', event => {
-  if (event.target.checked) session.favorites.add(session.current);
-  else session.favorites.delete(session.current);
+controls['random-order'].addEventListener('click', () => {
+  if (!session || pendingHistory !== null) return;
+  session.random = !session.random;
+  updateControls();
+  showToast(session.random
+    ? 'Random order is on. Next will show a randomly selected crumb you haven’t visited.'
+    : 'Sequential order is on. Next will show the next crumb in numerical order.', 6500);
+});
+controls.favorite.addEventListener('click', () => {
+  if (!session || pendingHistory !== null) return;
+  if (session.favorites.has(session.current)) session.favorites.delete(session.current);
+  else session.favorites.add(session.current);
   updateControls();
 });
 for (const [id, delta] of [['text-smaller', -1], ['text-larger', 1]]) {
@@ -580,7 +590,6 @@ async function start() {
   controls.quit.disabled = false;
   byId('loading-state').hidden = false;
   byId('load-error').hidden = true;
-  byId('save-state').textContent = 'Loading crumbs…';
   byId('reading-progress').textContent = 'Loading crumbs…';
   pane.setAttribute('aria-busy', 'true');
   const abort = new AbortController();
@@ -594,7 +603,7 @@ async function start() {
       const stored = window.localStorage.getItem(STORAGE_KEY);
       if (stored) {
         session = restoreSession(JSON.parse(stored), corpus.length);
-        markSaved(snapshot(session), 'browser');
+        markSaved(snapshot(session));
       }
     } catch (error) {
       notices.push(error.name === 'SecurityError'
@@ -602,7 +611,10 @@ async function start() {
         : 'The saved browser session could not be restored. It has been left unchanged. A fresh session is open; a saved text file can also be loaded.');
     }
     const requested = crumbFromURL(new URL(window.location.href).searchParams.get('crumb'), corpus.length);
-    if (!session) session = createSession(Number.isInteger(requested) ? requested : 1);
+    if (!session) {
+      session = createSession(Number.isInteger(requested) ? requested : 1);
+      baselineFingerprint = fingerprint(session);
+    }
     if (Number.isNaN(requested)) notices.push(`The address contains an invalid crumb number. Available numbers are 1–${numberFormat.format(corpus.length)}.`);
     else if (requested !== null) visit(session, requested);
     initializeHistory();
@@ -612,7 +624,6 @@ async function start() {
     byId('loading-state').hidden = true;
     byId('load-error').hidden = false;
     byId('load-error-detail').textContent = error.name === 'AbortError' ? 'The request did not finish. Check the connection and try again.' : `${error.message} Check the connection and try again.`;
-    byId('save-state').textContent = 'Not loaded';
     byId('reading-progress').textContent = 'Collection unavailable';
     pane.setAttribute('aria-busy', 'false');
   } finally { clearTimeout(timeout); }
