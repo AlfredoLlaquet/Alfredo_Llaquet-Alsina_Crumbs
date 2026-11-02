@@ -30,24 +30,53 @@
   let scrollOffset = 0;
   let currentSectionLink = null;
 
-  // A fixed cue beside the scrolling list; it never covers or moves a link.
+  // Fixed scroll controls beside the list; they never cover or move a link.
   const menuScrollHint = document.createElement("span");
   menuScrollHint.className = "crumbs-menu-scroll-hint";
   menuScrollHint.hidden = true;
-  menuScrollHint.setAttribute("aria-hidden", "true");
-  menuScrollHint.innerHTML = '<svg viewBox="0 0 24 24" width="28" height="28" focusable="false" aria-hidden="true"><path d="M12 2v20"/><path class="crumbs-scroll-up" d="m5 9 7-7 7 7"/><path class="crumbs-scroll-down" d="m5 15 7 7 7-7"/></svg>';
+  menuScrollHint.setAttribute("role", "group");
+  menuScrollHint.setAttribute("aria-label", "Menu scroll controls");
+  function createMenuScrollButton(direction, label, arrow) {
+    const button = document.createElement("button");
+    button.type = "button";
+    button.className = `crumbs-menu-scroll-button crumbs-scroll-${direction}`;
+    button.setAttribute("aria-label", label);
+    button.setAttribute("aria-controls", links.id);
+    button.title = label;
+    button.innerHTML = `<svg viewBox="0 0 24 24" width="28" height="28" focusable="false" aria-hidden="true"><path d="M12 2v20"/><path d="${arrow}"/></svg>`;
+    button.addEventListener("click", () => {
+      if (!phone.matches || !header.classList.contains("is-menu-open") || menuScrollHint.hidden) return;
+      links.scrollTop = direction === "up" ? 0 : links.scrollHeight - links.clientHeight;
+      updateMenuScrollHint();
+    });
+    menuScrollHint.append(button);
+    return button;
+  }
+  const menuScrollUp = createMenuScrollButton("up", "Scroll menu to top", "m5 9 7-7 7 7");
+  const menuScrollDown = createMenuScrollButton("down", "Scroll menu to bottom", "m5 15 7 7 7-7");
   header.append(menuScrollHint);
 
   function updateMenuScrollHint() {
+    const focused = document.activeElement;
     const maxScroll = links.scrollHeight - links.clientHeight;
     menuScrollHint.hidden = !phone.matches || !header.classList.contains("is-menu-open") ||
       links.clientHeight === 0 || maxScroll <= 2;
-    if (menuScrollHint.hidden) return;
+    if (menuScrollHint.hidden) {
+      if (menuScrollHint.contains(focused)) {
+        (phone.matches ? toggle : links.querySelector("a"))?.focus({ preventScroll: true });
+      }
+      return;
+    }
 
     // Clamp elastic overscroll and tolerate fractional scroll positions at either end.
     const position = Math.max(0, Math.min(maxScroll, links.scrollTop));
     menuScrollHint.dataset.direction = position <= 2 ? "down" :
       maxScroll - position <= 2 ? "up" : "both";
+    menuScrollUp.hidden = menuScrollHint.dataset.direction === "down";
+    menuScrollDown.hidden = menuScrollHint.dataset.direction === "up";
+    // Keep keyboard focus usable when a jump hides the arrow just activated.
+    if (focused === menuScrollUp && menuScrollUp.hidden) menuScrollDown.focus({ preventScroll: true });
+    else if (focused === menuScrollDown && menuScrollDown.hidden) menuScrollUp.focus({ preventScroll: true });
     menuScrollHint.style.setProperty("--crumbs-menu-height", `${links.clientHeight}px`);
     // Leave native scrollbars unobstructed, including browsers with wide scrollbars.
     const rightInset = links.offsetWidth - links.clientWidth - links.clientLeft;
@@ -217,7 +246,7 @@
     // Keep focus usable when resizing hides a phone or desktop control.
     const focused = document.activeElement;
     if (phone.matches && (links.contains(focused) || focused?.closest(".crumbs-compact-brand"))) toggle.focus();
-    if (!phone.matches && (focused === toggle || phoneBrand?.contains(focused))) links.querySelector("a")?.focus();
+    if (!phone.matches && (focused === toggle || phoneBrand?.contains(focused) || menuScrollHint.contains(focused))) links.querySelector("a")?.focus();
     closeMenu();
     updateHeader();
   });
