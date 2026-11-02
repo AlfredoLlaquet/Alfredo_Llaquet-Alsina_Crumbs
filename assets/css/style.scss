@@ -569,3 +569,67 @@ body,
     display: none;
   }
 }
+
+/* Keep the Reader preview and text together in normal page flow. */
+.markdown-body .crumb-reader-intro {
+  display: grid;
+  grid-template-columns: minmax(0, 1fr) 200px;
+  grid-template-areas: "copy preview";
+  align-items: start;
+  gap: 24px;
+  margin-bottom: 24px;
+}
+
+.markdown-body .crumb-reader-copy {
+  grid-area: copy;
+  min-width: 0;
+}
+
+.markdown-body .crumb-reader-copy p:last-child {
+  margin-bottom: 0;
+}
+
+.markdown-body .crumb-reader-preview {
+  grid-area: preview;
+  position: relative;
+  display: block;
+  width: 200px;
+  max-width: 100%;
+  aspect-ratio: 921 / 1702;
+  overflow: hidden;
+  border-radius: 8px;
+  background: #e8f2ff;
+  box-shadow: 0 0 0 1px #c7d8eb, 0 4px 12px rgba(32, 61, 98, 0.12);
+  line-height: 0;
+}
+
+.markdown-body .crumb-reader-preview img {
+  position: absolute;
+  top: 0;
+  left: 0;
+  display: block;
+  width: 100%;
+  max-width: none;
+  height: auto;
+  margin: 0;
+  /* Show original rows 230–1931: only the Reader, without browser/system bars. */
+  transform: translateY(-11.23046875%);
+}
+
+.markdown-body .crumb-reader-preview:focus-visible {
+  outline: 3px solid #0366d6;
+  outline-offset: 4px;
+}
+
+@media (max-width: 600px) {
+  .markdown-body .crumb-reader-intro {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+  }
+
+  .markdown-body .crumb-reader-preview {
+    align-self: center;
+    width: 180px;
+  }
+}
