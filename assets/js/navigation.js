@@ -30,6 +30,30 @@
   let scrollOffset = 0;
   let currentSectionLink = null;
 
+  // A fixed cue beside the scrolling list; it never covers or moves a link.
+  const menuScrollHint = document.createElement("span");
+  menuScrollHint.className = "crumbs-menu-scroll-hint";
+  menuScrollHint.hidden = true;
+  menuScrollHint.setAttribute("aria-hidden", "true");
+  menuScrollHint.innerHTML = '<svg viewBox="0 0 24 24" width="28" height="28" focusable="false" aria-hidden="true"><path d="M12 2v20"/><path class="crumbs-scroll-up" d="m5 9 7-7 7 7"/><path class="crumbs-scroll-down" d="m5 15 7 7 7-7"/></svg>';
+  header.append(menuScrollHint);
+
+  function updateMenuScrollHint() {
+    const maxScroll = links.scrollHeight - links.clientHeight;
+    menuScrollHint.hidden = !phone.matches || !header.classList.contains("is-menu-open") ||
+      links.clientHeight === 0 || maxScroll <= 2;
+    if (menuScrollHint.hidden) return;
+
+    // Clamp elastic overscroll and tolerate fractional scroll positions at either end.
+    const position = Math.max(0, Math.min(maxScroll, links.scrollTop));
+    menuScrollHint.dataset.direction = position <= 2 ? "down" :
+      maxScroll - position <= 2 ? "up" : "both";
+    menuScrollHint.style.setProperty("--crumbs-menu-height", `${links.clientHeight}px`);
+    // Leave native scrollbars unobstructed, including browsers with wide scrollbars.
+    const rightInset = links.offsetWidth - links.clientWidth - links.clientLeft;
+    menuScrollHint.style.setProperty("--crumbs-menu-right-inset", `${rightInset}px`);
+  }
+
   function placeHero() {
     const hadFocus = document.activeElement === hero;
     if (phone.matches) {
@@ -59,6 +83,7 @@
     const wasOpen = header.classList.contains("is-menu-open");
     header.classList.remove("is-menu-open");
     toggle.setAttribute("aria-expanded", "false");
+    menuScrollHint.hidden = true;
     if (returnFocus) toggle.focus();
     if (wasOpen) scheduleUpdate();
   }
@@ -118,6 +143,7 @@
     // Anticipate the compact desktop logo even when a link is used at the top.
     scrollOffset = Math.ceil(header.getBoundingClientRect().height + brandHeight) + sectionGap;
     document.documentElement.style.setProperty("--crumbs-scroll-offset", `${scrollOffset}px`);
+    updateMenuScrollHint();
     updateBatchControls();
     updateCurrentSection();
   }
@@ -197,6 +223,7 @@
   });
 
   window.addEventListener("scroll", scheduleUpdate, { passive: true });
+  links.addEventListener("scroll", scheduleUpdate, { passive: true });
   window.addEventListener("resize", scheduleUpdate, { passive: true });
   window.addEventListener("hashchange", () => navigate(window.location.hash, false, false));
   window.addEventListener("pageshow", scheduleUpdate);
@@ -207,8 +234,11 @@
     const observer = new ResizeObserver(scheduleUpdate);
     observer.observe(header);
     observer.observe(hero);
+    observer.observe(links);
     if (content) observer.observe(content);
   }
+
+  document.fonts?.ready.then(scheduleUpdate);
 
   function alignInitialLink() {
     updateHeader();
