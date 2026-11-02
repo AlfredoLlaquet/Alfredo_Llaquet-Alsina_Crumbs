@@ -622,7 +622,6 @@ function openSaveDialog() {
   if (!session || saving || pendingHistory !== null) return;
   byId('session-filename').value = proposedSessionFilename();
   byId('save-error').hidden = !autoSaveFailed;
-  byId('browser-data-status').hidden = true;
   updateBrowserDataControl();
   updateSaveState();
   byId('save-dialog').showModal();
@@ -634,8 +633,11 @@ byId('auto-save').addEventListener('click', () => {
   session.autoSave = !session.autoSave;
   autoSaveFailed = false;
   byId('save-error').hidden = true;
-  byId('browser-data-status').hidden = true;
-  try { writeBrowserSession(); }
+  try {
+    writeBrowserSession();
+    byId('save-dialog').close();
+    showToast(session.autoSave ? 'Auto saving is enabled in this browser.' : 'Auto saving is disabled in this browser.');
+  }
   catch {
     autoSaveFailed = true;
     updateSaveState();
@@ -654,12 +656,11 @@ byId('save-browser').addEventListener('click', () => {
 byId('erase-browser').addEventListener('click', () => {
   if (saving || !session) return;
   byId('save-error').hidden = true;
-  byId('browser-data-status').hidden = true;
   try {
     window.localStorage.removeItem(STORAGE_KEY);
     forgetBrowserSave();
-    byId('browser-data-status').textContent = 'The saved session in this browser has been erased and auto saving is disabled. The current session remains open.';
-    byId('browser-data-status').hidden = false;
+    byId('save-dialog').close();
+    showToast('The saved browser session was erased and auto saving is disabled. The current reading session remains open.', 7000);
   } catch {
     saveError('The saved session could not be erased because browser storage is unavailable.');
   }

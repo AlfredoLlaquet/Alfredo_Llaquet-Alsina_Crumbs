@@ -22,7 +22,7 @@
   <meta name="twitter:image:alt" content="TheCrumbs.org. Writing relentlessly to become the most prolific author ever. Stacks of printed pages and loose sheets on a white background.">
   <link rel="icon" type="image/x-icon" href="favicon.ico">
   <link rel="stylesheet" href="reader.css?v=20261102-5">
-  <script type="module" src="reader.js?v=20261102-5"></script>
+  <script type="module" src="reader.js?v=20261102-6"></script>
 </head>
 <body>
   <a class="skip-link" href="#reading-pane" data-hint="Move keyboard focus directly to the current crumb, past the controls.">Skip to crumb</a>
@@ -109,14 +109,13 @@
     <button id="save-browser" type="button" class="wide" data-hint="Store this session in the current browser, replacing its previous saved copy. It will load automatically when the Reader opens.">Save now in this browser</button>
     <p class="dialog-note">This browser keeps one saved session and restores it when the Reader opens.</p>
     <button id="erase-browser" type="button" class="wide" data-hint="Delete this browser’s saved Reader session and disable auto saving. The current reading session stays open." disabled>Erase current browser data</button>
-    <p id="browser-data-status" class="dialog-note" role="status" aria-live="polite" hidden></p>
     <div class="dialog-divider"></div>
     <label class="field-label" for="session-filename">Text file name</label>
     <input id="session-filename" type="text" value="crumbs-session.txt" maxlength="120" autocomplete="off" spellcheck="false" data-hint="Choose a name for the session file. The .txt extension is added automatically if needed.">
     <button id="save-file" type="button" class="wide" data-hint="Save a portable session file that can be loaded on another device. A Save As dialog appears when the browser supports it.">Save as a text file</button>
     <p class="dialog-note">A text file can restore the session on another computer or phone. The browser controls the download location.</p>
     <p id="save-error" class="field-error" role="alert" hidden></p>
-    <div class="dialog-actions"><button type="button" data-close="save-dialog" data-hint="Close the Save session dialog. Changes to auto saving have already taken effect.">Close</button></div>
+    <div class="dialog-actions"><button type="button" data-close="save-dialog" data-hint="Close the Save session dialog.">Close</button></div>
   </dialog>
 
   <dialog id="go-dialog" aria-labelledby="go-title">
