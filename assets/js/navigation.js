@@ -21,6 +21,7 @@
     link,
     target: document.getElementById(link.getAttribute("href").slice(1))
   })).filter(section => section.target);
+  const appendixIsLinked = sections.some(section => section.target === appendix);
   const phone = window.matchMedia("(max-width: 600px)");
   const content = header.closest(".markdown-body");
   const reducedMotion = window.matchMedia("(prefers-reduced-motion: reduce)");
@@ -83,7 +84,7 @@
     if (!phone.matches) {
       // Match the gap used by section jumps, including fractional rounding.
       const readingLine = header.getBoundingClientRect().bottom + sectionGap + 1;
-      if (!appendix || appendix.getBoundingClientRect().top > readingLine) {
+      if (appendixIsLinked || !appendix || appendix.getBoundingClientRect().top > readingLine) {
         current = sections[0]?.link || null;
         let closestTop = -Infinity;
         for (const section of sections) {
