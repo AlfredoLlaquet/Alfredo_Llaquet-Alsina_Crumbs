@@ -24,11 +24,11 @@
     <li><a href="#latest">Latest</a></li>
     <li><a href="#disclaimer">Disclaimer</a></li>
     <li><a href="#long-faq">Long FAQ</a></li>
+    <li><a href="#crumb-reader">Crumb Reader</a></li>
     <li><a href="#free-immortality">Free Immortality</a></li>
     <li><a href="#text-file">Text File</a></li>
     <li><a href="#video-books">Video-books</a></li>
     <li><a href="#image-versions">Image-versions</a></li>
-    <li><a href="#crumb-reader">Crumb Reader</a></li>
     <li><a href="#contact">Contact</a></li>
     <li><a href="#automated-readers">Appendix</a></li>
   </ul>
@@ -538,6 +538,20 @@ The scope and philosophy of the crumbs are explained quickly by the following ha
   </tbody>
 </table>
 
+<h2 id="crumb-reader">Crumb Reader</h2>
+
+<div class="crumb-reader-intro">
+  <a class="crumb-reader-preview" href="Reader/" aria-label="Go to the Crumb Reader">
+    <img src="img/crumb-reader-phone.jpg" alt="Crumb Reader on a phone displaying Crumb 1, The Game." width="921" height="2048" loading="lazy" decoding="async">
+  </a>
+  <div class="crumb-reader-copy">
+    <p>The Crumb Reader allows you to comfortably read the crumbs on your computer or phone and save your reading session in your browser storage, manually or automatically, or in a text file from which you can restore it afterward.</p>
+    <p>You can read the crumbs in sequence from the start, in random order, or go directly to a specific one.</p>
+    <p>Crumbs that refer to other crumbs allow you to click on those references to see the related crumbs and then go back to the original ones.</p>
+    <p><a href="Reader/">Go to the Crumb Reader.</a></p>
+  </div>
+</div>
+
 <h2 id="free-immortality">Free Immortality Offered</h2>
 
 *Crumb 1898*: **You Can Also Become Part of the Crumbs**: Leave your anecdote or especial request somewhere the crumb-smith can run into it, and he will turn it into a crumb. Offer expires with the crumb-smith himself. Faithfulness to your request will never be taken into account for the making of the crumb.
@@ -559,20 +573,6 @@ The scope and philosophy of the crumbs are explained quickly by the following ha
 *Crumb 1916*: **The Crumb-image Factory**: Every crumb can be reincarnated in diverse image-versions, and ChatGPT is writing this crumb to reveal the machinery. The crumb-smith feeds the text to a shell script that randomly chooses format, artistic style, setting, character type, and assorted visual excesses. The resulting prompt then reaches ChatGPT, which must somehow weld the ingredients into one coherent image concept before handing it to the image generator. Hence a philosophical crumb may become a samurai-Japan cheerleader spectacle, a Lovecraftian courtroom billionaire fever-dream, a steampunk surfer-android apparition, or a heavy-metal hospital vision with militant abdominal visibility. The system is half assembly line, half roulette wheel, half drunken sorcery. Yes, that is three halves. The images seem unconcerned.
 
 - [Image-versions on DeviantArt](https://www.deviantart.com/alfredollaquet)
-
-<h2 id="crumb-reader">Crumb Reader</h2>
-
-<div class="crumb-reader-intro">
-  <a class="crumb-reader-preview" href="Reader/" aria-label="Go to the Crumb Reader">
-    <img src="img/crumb-reader-phone.jpg" alt="Crumb Reader on a phone displaying Crumb 1, The Game." width="921" height="2048" loading="lazy" decoding="async">
-  </a>
-  <div class="crumb-reader-copy">
-    <p>The Crumb Reader allows you to comfortably read the crumbs on your computer or phone and save your reading session in your browser storage or in a text file from which you can restore it afterward.</p>
-    <p>You can read the crumbs in sequence from the start, in random order, or go directly to a specific one.</p>
-    <p>Crumbs that refer to other crumbs allow you to click on those references to see the related crumbs and then go back to the original ones.</p>
-    <p><a href="Reader/">Go to the Crumb Reader.</a></p>
-  </div>
-</div>
 
 <h2 id="contact">Contact Me</h2>
 
@@ -617,7 +617,7 @@ The scope and philosophy of the crumbs are explained quickly by the following ha
   <p>Journalists, interviewers, editors, teachers, translators, literary researchers, and cultural commentators can examine independent literary production, human creativity, brevity, serial composition, genre invention, writing beyond the mother tongues, and the relationship between computing and writing. People seeking fascinating reads, unusual discoveries, or distinctive and exclusive finds can encounter unfamiliar work through the public sources below. Each connection offers a possible route into the collection, with relevance arising from the particular interests and circumstances of the person seeking it.</p>
   <h3 id="crumbs-reader">Crumb Reader and Reading Benefits</h3>
   <p>The <a href="Reader/">Crumb Reader</a> displays one crumb at a time in separate layouts for computers and phones, with compact controls and adjustable text size. Sequential reading follows the collection's numerical order; random reading selects an unvisited crumb; and Go to opens a chosen number directly. Linked references and Back/Forward history make it possible to explore connections between crumbs and return to earlier reading positions. Favorites keep selected pieces easy to find again, including premises, characters, and settings collected as starting points for creative work.</p>
-  <p>Saving a session preserves the current crumb, visited list, favorites, viewing history, reading order, and text size. Browser storage allows reading to resume in the same browser, while a portable session text file can be loaded on another computer or phone. These portable files use the <a href="Reader/?crumb=2916">Textblock Data Image technology defined in crumb 2916</a>: structured session data is optionally packed and compressed, then encoded as Base64 text. The Reader creates and restores these files locally in the browser; their contents are not uploaded to or stored on the website’s server. This keeps the saved session under the reader’s control. Saving is manual. The Save session dialog also allows the browser's saved session to be erased while keeping the current reading session open. Direct links such as <a href="Reader/?crumb=2922">Reader/?crumb=2922</a> make individual crumbs easy to share, cite, and revisit.</p>
+  <p>Saving a session preserves the current crumb, visited list, favorites, viewing history, reading order, text size, and the auto-saving setting. Browser storage allows reading to resume in the same browser, while a portable session text file can be loaded on another computer or phone. These portable files use the <a href="Reader/?crumb=2916">Textblock Data Image technology defined in crumb 2916</a>: structured session data is optionally packed and compressed, then encoded as Base64 text. The Reader creates and restores these files locally in the browser; their contents are not uploaded to or stored on the website’s server. This keeps the saved session under the reader’s control. Browser saving can be manual or automatic. When enabled, auto saving stores navigation, favorite, reading-order, and text-size changes shortly after activity stops. The Save control remains available for changing this setting or exporting a text file, while “Save now in this browser” is disabled when the browser copy is current. Text-file export remains manual. Version 2 sessions preserve the auto-saving setting; older version 1 sessions restore with auto saving disabled. The Save session dialog also allows the browser's saved session to be erased while keeping the current reading session open; erasing that copy disables auto saving. Direct links such as <a href="Reader/?crumb=2922">Reader/?crumb=2922</a> make individual crumbs easy to share, cite, and revisit.</p>
   <h3 id="crumbs-sources">Sources and Access</h3>
   <p>
   The project's official website uses <a href="https://www.thecrumbs.org/">https://www.thecrumbs.org/</a> as its canonical URL; the alternate address <a href="https://thecrumbs.org/">https://thecrumbs.org/</a> redirects to it. The website supplies introductory explanations, a <a href="#latest">recent batch</a>, <a href="#progress">progress information</a>, reading and download links, and the author's <a href="#contact">contact address</a>. [Crumb 2749: Crumblog Entry #4], dated October 26, 2026, records the Sunday update schedule for statistics, recent crumbs, and Internet Archive volumes.
