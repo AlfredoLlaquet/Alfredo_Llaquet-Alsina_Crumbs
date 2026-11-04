@@ -202,7 +202,6 @@ dialog .dialog-note { margin: 9px 0 0; font-size: 13px; color: var(--muted); }
   body.initial-hints .top-controls > #search,
   body.initial-hints .session-controls,
   body.initial-hints #quit { margin-top: 18px; }
-  body.initial-hints .reader-footer { padding-top: 23px; }
   body.initial-hints [data-initial-hint]::after {
     content: attr(data-initial-hint); position: absolute; z-index: 3;
     left: 50%; top: calc(100% - 5px); transform: translateX(-50%);
