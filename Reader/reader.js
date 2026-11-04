@@ -2,8 +2,8 @@ import {
   HISTORY_LIMIT, TEXT_SCALES, parseCorpus, createSession, snapshot, fingerprint,
   restoreSession, visit, moveInHistory, nextRandom, restartRandom, nextSearchRandom,
   restartSearchRandom, crumbFromURL, linkTokens, MAX_SEARCH_QUERY_LENGTH,
-} from './core.js?v=3';
-import { encodeSession, decodeSession, MAX_SESSION_FILE_BYTES } from './session.js?v=3';
+} from './core.js?v=20261104-refine2';
+import { encodeSession, decodeSession, MAX_SESSION_FILE_BYTES } from './session.js?v=20261104-refine2';
 import { SearchClient } from './search.js?v=3';
 
 // Keep the existing key and JSON mechanism so previous browser saves remain readable.
@@ -137,7 +137,7 @@ function updateSaveState() {
   const unavailable = !session || saving || loadingSession || pendingHistory !== null;
   controls['save-session'].disabled = unavailable;
   setHint(controls['save-session'], !session
-    ? 'Saving options become available after the collection loads.'
+    ? 'Saving options become available after Crumbs loads.'
     : 'Open saving options, enable or disable auto saving, or save a portable text file.');
   byId('save-browser').disabled = unavailable || !needsBrowserSave();
   byId('save-file').disabled = unavailable;
@@ -901,9 +901,9 @@ byId('search-form').addEventListener('submit', async event => {
     if (abort.signal.aborted) return;
     const result = await client.run(query, mode, { signal: abort.signal });
     if (abort.signal.aborted || !byId('search-dialog').open) return;
-    const next = result.matches.find(number => number >= session.current);
+    const next = result.matches[0];
     if (next === undefined) {
-      showSearchError(message(result.matches.length ? 'search-no-later' : 'search-no-matches'));
+      showSearchError(message('search-no-matches'));
       return;
     }
     session.search = { query, mode, active: true, visited: new Set() };
@@ -1073,7 +1073,7 @@ async function start() {
     byId('loading-state').hidden = true;
     byId('load-error').hidden = false;
     byId('load-error-detail').textContent = error.name === 'AbortError' ? 'The request did not finish. Check the connection and try again.' : `${error.message} Check the connection and try again.`;
-    byId('reading-progress').textContent = 'Collection unavailable';
+    byId('reading-progress').textContent = 'Crumbs unavailable';
     pane.setAttribute('aria-busy', 'false');
   } finally { clearTimeout(timeout); }
 }
