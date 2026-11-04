@@ -1,9 +1,10 @@
 import { topLevelDomains } from './domains.js';
 
 export const HISTORY_LIMIT = 100;
-export const SESSION_VERSION = 2;
+export const SESSION_VERSION = 3;
 export const TEXT_SCALES = [0.9, 1, 1.12, 1.25, 1.4, 1.6];
 export const MAX_CRUMB_NUMBER = 1_000_000;
+export const MAX_SEARCH_QUERY_LENGTH = 8192;
 
 export function parseCorpus(text) {
   const lines = text.replace(/^\uFEFF/, '').split(/\r\n|\n|\r/);
@@ -23,7 +24,8 @@ export function parseCorpus(text) {
 export function createSession(number = 1) {
   return {
     current: number, visited: new Set([number]), favorites: new Set(),
-    random: false, history: [number], historyIndex: 0, textSize: 1, autoSave: false,
+    history: [number], historyIndex: 0, textSize: 1, autoSave: false,
+    search: { query: '', mode: 'text', active: false, visited: new Set() },
   };
 }
 
@@ -32,8 +34,12 @@ export function snapshot(session) {
     version: SESSION_VERSION, current: session.current,
     visited: [...session.visited].sort((a, b) => a - b),
     favorites: [...session.favorites].sort((a, b) => a - b),
-    random: session.random, history: [...session.history],
+    history: [...session.history],
     historyIndex: session.historyIndex, textSize: session.textSize, autoSave: session.autoSave,
+    search: {
+      query: session.search.query, mode: session.search.mode, active: session.search.active,
+      visited: [...session.search.visited].sort((a, b) => a - b),
+    },
   };
 }
 
@@ -43,10 +49,10 @@ export function fingerprint(session) {
 
 export function restoreSession(data, total = MAX_CRUMB_NUMBER) {
   const fail = () => { throw new Error('This file does not contain a valid Crumb Reader session.'); };
-  if (!data || typeof data !== 'object' || Array.isArray(data) || ![1, SESSION_VERSION].includes(data.version)) fail();
-  if (data.version === SESSION_VERSION && typeof data.autoSave !== 'boolean') fail();
+  if (!data || typeof data !== 'object' || Array.isArray(data) || ![1, 2, SESSION_VERSION].includes(data.version)) fail();
+  if (data.version >= 2 && typeof data.autoSave !== 'boolean') fail();
   const validNumber = n => Number.isSafeInteger(n) && n >= 1 && n <= MAX_CRUMB_NUMBER;
-  if (!validNumber(data.current) || typeof data.random !== 'boolean') fail();
+  if (!validNumber(data.current) || (data.version < 3 && typeof data.random !== 'boolean')) fail();
   for (const key of ['visited', 'favorites', 'history']) {
     if (!Array.isArray(data[key]) || data[key].length > MAX_CRUMB_NUMBER || !data[key].every(validNumber)) fail();
   }
@@ -55,7 +61,14 @@ export function restoreSession(data, total = MAX_CRUMB_NUMBER) {
       data.historyIndex >= data.history.length || data.history[data.historyIndex] !== data.current ||
       !Number.isInteger(data.textSize) || data.textSize < 0 || data.textSize >= TEXT_SCALES.length) fail();
   if (new Set(data.visited).size !== data.visited.length || new Set(data.favorites).size !== data.favorites.length) fail();
-  if ([data.current, ...data.history, ...data.visited, ...data.favorites].some(n => n > total)) {
+  const search = data.version < 3 ? { query: '', mode: 'text', active: false, visited: [] } : data.search;
+  if (!search || typeof search !== 'object' || Array.isArray(search) ||
+      typeof search.query !== 'string' || search.query.length > MAX_SEARCH_QUERY_LENGTH ||
+      !['text', 'regex'].includes(search.mode) || typeof search.active !== 'boolean' ||
+      (search.active && !search.query.length) || !Array.isArray(search.visited) ||
+      search.visited.length > MAX_CRUMB_NUMBER || !search.visited.every(validNumber) ||
+      new Set(search.visited).size !== search.visited.length) fail();
+  if ([data.history, data.visited, data.favorites, search.visited].some(numbers => numbers.some(n => n > total))) {
     throw new Error('This session includes crumbs beyond the loaded collection. Reload the Reader to get the latest text, then load the session again.');
   }
   const visited = new Set(data.visited);
@@ -63,9 +76,10 @@ export function restoreSession(data, total = MAX_CRUMB_NUMBER) {
   // A new random round can deliberately clear visits still present in history.
   return {
     current: data.current, visited, favorites: new Set(data.favorites),
-    random: data.random, history: [...data.history],
+    history: [...data.history],
     historyIndex: data.historyIndex, textSize: data.textSize,
     autoSave: data.version === 1 ? false : data.autoSave,
+    search: { query: search.query, mode: search.mode, active: search.active, visited: new Set(search.visited) },
   };
 }
 
@@ -102,6 +116,17 @@ export function nextRandom(session, total, random = Math.random) {
 
 export function restartRandom(session) {
   session.visited = new Set([session.current]);
+}
+
+// Matching numbers come from the current search, independent of general visits.
+export function nextSearchRandom(session, matches, random = Math.random) {
+  const remaining = matches.filter(number => !session.search.visited.has(number));
+  if (!remaining.length) return null;
+  return remaining[Math.floor(random() * remaining.length)] ?? null;
+}
+
+export function restartSearchRandom(session, matches) {
+  session.search.visited = new Set(matches.includes(session.current) ? [session.current] : []);
 }
 
 export function crumbFromURL(value, total) {

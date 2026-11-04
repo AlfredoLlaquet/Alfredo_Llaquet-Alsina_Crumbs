@@ -1,16 +1,18 @@
 import {
   HISTORY_LIMIT, TEXT_SCALES, parseCorpus, createSession, snapshot, fingerprint,
-  restoreSession, visit, moveInHistory, nextRandom, restartRandom, crumbFromURL, linkTokens,
-} from './core.js?v=2';
-import { encodeSession, decodeSession, MAX_SESSION_FILE_BYTES } from './session.js?v=2';
+  restoreSession, visit, moveInHistory, nextRandom, restartRandom, nextSearchRandom,
+  restartSearchRandom, crumbFromURL, linkTokens, MAX_SEARCH_QUERY_LENGTH,
+} from './core.js?v=3';
+import { encodeSession, decodeSession, MAX_SESSION_FILE_BYTES } from './session.js?v=3';
+import { SearchClient } from './search.js?v=3';
 
 // Keep the existing key and JSON mechanism so previous browser saves remain readable.
 const STORAGE_KEY = 'thecrumbs.reader.session.v1';
 const AUTO_SAVE_DELAY = 500;
 const byId = id => document.getElementById(id);
 const controls = Object.fromEntries([
-  'load-session', 'save-session', 'go-to', 'favorites', 'back', 'forward', 'quit',
-  'text-smaller', 'text-larger', 'previous', 'next', 'random-order', 'favorite',
+  'load-session', 'save-session', 'search', 'favorites', 'back', 'forward', 'quit',
+  'text-smaller', 'text-larger', 'previous', 'next', 'random', 'favorite',
 ].map(id => [id, byId(id)]));
 const pane = byId('reading-pane');
 const numberFormat = new Intl.NumberFormat('en-US');
@@ -36,12 +38,85 @@ let historyTimer;
 let saving = false;
 let lastDisplayedCrumb = null;
 let hasNavigated = false;
+let searchClient = null;
+let regexClient = null;
+let searchClientPromise = null;
+let searchAbort = null;
+let searchBusy = false;
+let loadingSession = false;
+let searchDraft = '';
+let previousSearchMode = 'text';
+let searchResult = { matches: [], highlights: {} };
+let searchMatchSet = new Set();
+let exitSearchTimer;
 const hintDescriptions = new WeakMap();
 let hintDescriptionCount = 0;
 let hintOwner = null;
 let scheduledHintOwner = null;
 let showHintTimer;
 let hideHintTimer;
+
+// New interface copy lives in HTML so it can be translated without editing logic.
+function message(key, values = {}) {
+  const template = byId(`message-${key}`);
+  const text = template?.content?.textContent.trim() || '';
+  return text.replace(/\{(\w+)\}/g, (match, name) => values[name] ?? match);
+}
+
+function setSearchResult(result) {
+  searchResult = result;
+  searchMatchSet = new Set(result.matches);
+}
+
+async function getSearchClient(mode) {
+  // Regex searches do not depend on the separate synonym file being reachable.
+  if (mode === 'regex') return regexClient ||= new SearchClient(corpus, '');
+  if (searchClient) return searchClient;
+  if (!searchClientPromise) {
+    searchClientPromise = (async () => {
+      const abort = new AbortController();
+      const timeout = setTimeout(() => abort.abort(), 10000);
+      try {
+        const response = await fetch(new URL('../Crumbs_Synonyms.txt', import.meta.url), { cache: 'no-cache', signal: abort.signal });
+        if (!response.ok) throw new Error('SYNONYMS_INVALID');
+        searchClient = new SearchClient(corpus, await response.text());
+        return searchClient;
+      } catch {
+        const error = new Error('SYNONYMS_INVALID');
+        error.code = 'SYNONYMS_INVALID';
+        throw error;
+      } finally {
+        clearTimeout(timeout);
+        searchClientPromise = null;
+      }
+    })();
+  }
+  return searchClientPromise;
+}
+
+function searchErrorMessage(error) {
+  const keys = {
+    EMPTY_QUERY: 'search-empty', INVALID_REGEX: 'search-invalid-regex',
+    SYNONYMS_INVALID: 'search-synonyms-unavailable', SEARCH_TIMEOUT: 'search-timeout',
+  };
+  return message(keys[error.code] || 'search-unavailable', { detail: error.detail || '' });
+}
+
+async function restoreSearch(restored) {
+  if (!restored.search.active) return { result: { matches: [], highlights: {} }, notice: '' };
+  try {
+    const client = await getSearchClient(restored.search.mode);
+    const result = await client.run(restored.search.query, restored.search.mode);
+    if (!result.matches.length) throw new Error('No remaining matches');
+    const matches = new Set(result.matches);
+    restored.search.visited = new Set([...restored.search.visited].filter(number => matches.has(number)));
+    return { result, notice: '' };
+  } catch {
+    restored.search.active = false;
+    restored.search.visited.clear();
+    return { result: { matches: [], highlights: {} }, notice: message('search-restored-unavailable') };
+  }
+}
 
 function isDirty() {
   if (!session) return false;
@@ -59,7 +134,7 @@ function beforeUnload(event) {
 }
 
 function updateSaveState() {
-  const unavailable = !session || saving || pendingHistory !== null;
+  const unavailable = !session || saving || loadingSession || pendingHistory !== null;
   controls['save-session'].disabled = unavailable;
   setHint(controls['save-session'], !session
     ? 'Saving options become available after the collection loads.'
@@ -89,7 +164,7 @@ function cancelAutoSave() {
 
 function scheduleAutoSave() {
   cancelAutoSave();
-  if (!session?.autoSave || autoSaveFailed || !needsBrowserSave() || saving || pendingHistory !== null) return;
+  if (!session?.autoSave || autoSaveFailed || !needsBrowserSave() || saving || loadingSession || pendingHistory !== null) return;
   // Coalesce rapid changes and let the reading interface update before writing.
   autoSaveTimer = setTimeout(() => {
     autoSaveIdle = typeof window.requestIdleCallback === 'function'
@@ -224,7 +299,6 @@ function initializeHints() {
   document.addEventListener('keydown', event => {
     if (event.key === 'Escape' && !byId('control-hint').hidden) {
       hideHint();
-      event.preventDefault();
     }
   });
   document.addEventListener('scroll', hideHint, true);
@@ -244,7 +318,7 @@ function showMessage(title, message) {
   if (!byId('message-dialog').open) byId('message-dialog').showModal();
 }
 
-function ask(title, message, accept, cancel = 'Cancel', { cancelIsPrimary = false, cancelValue = false } = {}) {
+function ask(title, message, accept, cancel = 'Cancel', { cancelIsPrimary = false, cancelValue = false, acceptHint = '' } = {}) {
   const dialog = byId('confirm-dialog');
   byId('confirm-title').textContent = title;
   byId('confirm-text').textContent = message;
@@ -260,7 +334,7 @@ function ask(title, message, accept, cancel = 'Cancel', { cancelIsPrimary = fals
     'Start new round': 'Reset the visited list and choose another crumb at random. Keep favorites and viewing history.',
     'Load session': 'Restore the selected file, including its auto-saving setting. If enabled, auto saving updates the browser copy.',
   };
-  setHint(byId('confirm-accept'), acceptHints[accept] || 'Carry out the action described in this dialog.');
+  setHint(byId('confirm-accept'), acceptHint || acceptHints[accept] || 'Carry out the action described in this dialog.');
   return new Promise(resolve => {
     let complete = false;
     const finish = value => {
@@ -317,12 +391,33 @@ function rememberScroll() {
   if (session) scrollPositions.set(entryIds[session.historyIndex], pane.scrollTop);
 }
 
-function renderText(element, text, lineBreaks = true) {
+function appendHighlighted(parent, text, offset, ranges) {
+  let cursor = 0;
+  for (const [start, end] of ranges) {
+    const from = Math.max(0, start - offset);
+    const to = Math.min(text.length, end - offset);
+    if (from >= to || to <= cursor) continue;
+    if (from > cursor) parent.append(document.createTextNode(text.slice(cursor, from)));
+    const mark = document.createElement('mark');
+    mark.textContent = text.slice(Math.max(cursor, from), to);
+    parent.append(mark);
+    cursor = to;
+  }
+  if (cursor < text.length) parent.append(document.createTextNode(text.slice(cursor)));
+}
+
+function renderText(element, text, lineBreaks = true, ranges = []) {
   const fragment = document.createDocumentFragment();
+  let offset = 0;
   for (const token of linkTokens(text, corpus.length, lineBreaks)) {
-    if (token.type === 'text') { fragment.append(document.createTextNode(token.text)); continue; }
+    if (token.type === 'text') {
+      appendHighlighted(fragment, token.text, offset, ranges);
+      offset += token.text.length;
+      continue;
+    }
     const link = document.createElement('a');
-    link.textContent = token.text;
+    appendHighlighted(link, token.text, offset, ranges);
+    offset += token.text.length;
     if (token.type === 'crumb') {
       link.href = crumbURL(token.number);
       link.dataset.crumb = String(token.number);
@@ -342,38 +437,45 @@ function renderText(element, text, lineBreaks = true) {
 }
 
 function updateControls() {
-  const unavailable = !session || pendingHistory !== null;
+  const unavailable = !session || loadingSession || pendingHistory !== null;
   for (const [name, control] of Object.entries(controls)) if (name !== 'quit') control.disabled = unavailable;
   if (!session) return;
   controls.back.disabled = unavailable || session.historyIndex === 0;
   controls.forward.disabled = unavailable || session.historyIndex === session.history.length - 1;
-  controls.previous.disabled = unavailable || session.random || session.current === 1;
-  controls.next.disabled = unavailable || (!session.random && session.current === corpus.length);
+  controls.previous.disabled = unavailable || session.current === 1;
+  controls.next.disabled = unavailable || session.current === corpus.length;
   controls['text-smaller'].disabled = unavailable || session.textSize === 0;
   controls['text-larger'].disabled = unavailable || session.textSize === TEXT_SCALES.length - 1;
-  controls['random-order'].setAttribute('aria-checked', String(session.random));
   controls.favorite.setAttribute('aria-pressed', String(session.favorites.has(session.current)));
-  setHint(controls.next, session.random
-    ? 'Choose an unvisited crumb at random. When none remain, a dialog offers a new round.'
-    : session.current === corpus.length ? 'This is the last available crumb in numerical order.' : 'Read the next crumb in numerical order.');
-  setHint(controls.previous, session.random
-    ? 'Previous is unavailable in random order. Back still retraces viewing history.'
-    : session.current === 1 ? 'This is the first crumb in numerical order.' : 'Read the preceding crumb in numerical order.');
+  setHint(controls.next, message(session.search.active ? 'hint-next-search' : 'hint-next'));
+  setHint(controls.previous, message(session.search.active ? 'hint-previous-search' : 'hint-previous'));
+  setHint(controls.random, message(session.search.active ? 'hint-random-search' : 'hint-random'));
+  byId('search-status').hidden = !session.search.active;
+  if (session.search.active) {
+    const index = searchResult.matches.indexOf(session.current);
+    byId('search-position').textContent = message(index === -1 ? 'search-current-outside' : 'search-count', {
+      position: numberFormat.format(index + 1), total: numberFormat.format(searchResult.matches.length),
+    });
+  }
   byId('reading-progress').textContent = `${numberFormat.format(session.visited.size)} of ${numberFormat.format(corpus.length)} visited`;
   document.documentElement.style.setProperty('--text-scale', TEXT_SCALES[session.textSize]);
   updateSaveState();
   scheduleAutoSave();
 }
 
-function renderCrumb({ focus = false, restoreScroll = false } = {}) {
+function renderCrumb({ focus = false, restoreScroll = false, keepScroll = false } = {}) {
   hideHint();
+  clearTimeout(exitSearchTimer);
+  const previousScroll = pane.scrollTop;
   if (lastDisplayedCrumb !== null && lastDisplayedCrumb !== session.current) hasNavigated = true;
   lastDisplayedCrumb = session.current;
   const crumb = corpus[session.current - 1];
+  if (session.search.active && searchMatchSet.has(session.current)) session.search.visited.add(session.current);
+  const highlights = session.search.active ? searchResult.highlights[session.current] : null;
   byId('crumb-number').textContent = `Crumb ${crumb.number}`;
   byId('crumb-title').hidden = crumb.title.length === 0;
-  renderText(byId('crumb-title'), crumb.title, false);
-  renderText(byId('crumb-body'), crumb.body);
+  renderText(byId('crumb-title'), crumb.title, false, highlights?.title || []);
+  renderText(byId('crumb-body'), crumb.body, true, highlights?.body || []);
   byId('crumb').hidden = false;
   byId('loading-state').hidden = true;
   byId('load-error').hidden = true;
@@ -384,7 +486,7 @@ function renderCrumb({ focus = false, restoreScroll = false } = {}) {
   byId('twitter-title').setAttribute('content', pageTitle);
   byId('announcement').textContent = `Crumb ${crumb.number}${crumb.title ? `. ${crumb.title}` : ''}`;
   updateControls();
-  const scroll = restoreScroll ? (scrollPositions.get(entryIds[session.historyIndex]) || 0) : 0;
+  const scroll = keepScroll ? previousScroll : restoreScroll ? (scrollPositions.get(entryIds[session.historyIndex]) || 0) : 0;
   pane.scrollTop = scroll;
   if (focus) pane.focus({ preventScroll: true });
 }
@@ -394,7 +496,7 @@ function navigate(number, { focus = false, replace = false } = {}) {
   rememberScroll();
   const index = session.historyIndex;
   if (!visit(session, number)) {
-    if (focus) pane.focus({ preventScroll: true });
+    renderCrumb({ focus, keepScroll: true });
     return;
   }
   entryIds = [...entryIds.slice(0, index + 1), ++entryCounter].slice(-HISTORY_LIMIT);
@@ -450,9 +552,35 @@ window.addEventListener('popstate', event => {
   updateControls();
 });
 
-async function readNext() {
-  if (!session) return;
-  if (!session.random) { navigate(session.current + 1); return; }
+function readStep(direction) {
+  if (!session || pendingHistory !== null) return;
+  if (!session.search.active) { navigate(session.current + direction); return; }
+  const matches = searchResult.matches;
+  const number = direction > 0
+    ? matches.find(value => value > session.current)
+    : matches.findLast(value => value < session.current);
+  if (number === undefined) showToast(message(direction > 0 ? 'search-no-next' : 'search-no-previous'));
+  else navigate(number);
+}
+
+async function readRandom() {
+  if (!session || pendingHistory !== null) return;
+  if (session.search.active) {
+    if (searchResult.matches.length === 1 && searchMatchSet.has(session.current)) {
+      showToast(message('search-random-only-current'));
+      return;
+    }
+    let number = nextSearchRandom(session, searchResult.matches);
+    if (number === null) {
+      const accepted = await ask(message('search-random-exhausted-title'), message('search-random-exhausted'), message('search-random-restart'), 'Cancel', { acceptHint: message('hint-search-random-restart') });
+      if (!accepted) return;
+      restartSearchRandom(session, searchResult.matches);
+      number = nextSearchRandom(session, searchResult.matches);
+      updateControls();
+    }
+    if (number !== null) navigate(number);
+    return;
+  }
   let number = nextRandom(session, corpus.length);
   if (number === null) {
     const accepted = await ask('Every crumb has been visited', 'Start a new random round? The visited list will be reset. Favorites and viewing history will be kept.', 'Start new round');
@@ -597,22 +725,32 @@ async function saveFile() {
 }
 
 async function importFile(file) {
-  if (!file) return;
+  if (!file || loadingSession) return;
+  loadingSession = true;
+  cancelAutoSave();
+  updateControls();
   try {
     if (file.size > MAX_SESSION_FILE_BYTES) throw new Error('The selected session file is too large.');
     const restored = await decodeSession(await file.text(), corpus.length);
     if (isDirty() && !await ask('Load another session', 'The current session has unsaved changes. Replace it with the session from this file?', 'Load session')) return;
+    const savedFingerprint = fingerprint(restored);
+    const restoredSearch = await restoreSearch(restored);
     cancelAutoSave();
     session = restored;
+    setSearchResult(restoredSearch.result);
     autoSaveFailed = false;
-    markSaved(snapshot(session), 'file');
+    baselineFingerprint = savedFingerprint;
+    baselineStorage = 'file';
     initializeHistory();
     renderCrumb({ focus: true });
-    showToast(session.autoSave
+    showToast(restoredSearch.notice || (session.autoSave
       ? 'Session loaded. Auto saving will update this browser’s saved copy.'
-      : 'Session loaded. The browser’s saved copy has not been changed.');
+      : 'Session loaded. The browser’s saved copy has not been changed.'));
   } catch (error) {
     showMessage('Session could not be loaded', error instanceof SyntaxError ? 'The session file is damaged or incomplete.' : error.message);
+  } finally {
+    loadingSession = false;
+    updateControls();
   }
 }
 
@@ -667,40 +805,126 @@ byId('erase-browser').addEventListener('click', () => {
 });
 byId('save-file').addEventListener('click', saveFile);
 byId('save-dialog').addEventListener('cancel', event => { if (saving) event.preventDefault(); });
-controls['go-to'].addEventListener('click', () => {
-  byId('go-help').textContent = `Crumb number (1–${numberFormat.format(corpus.length)})`;
-  byId('crumb-input').max = corpus.length;
-  byId('crumb-input').value = session.current;
-  byId('go-error').hidden = true;
-  byId('go-dialog').showModal();
-  byId('crumb-input').focus();
-  byId('crumb-input').select();
+function setSearchBusy(busy) {
+  searchBusy = busy;
+  byId('search-form').setAttribute('aria-busy', String(busy));
+  byId('search-submit').disabled = busy;
+  byId('search-mode').disabled = busy;
+  byId('search-input').readOnly = busy;
+  byId('search-submit').textContent = message(busy ? 'search-loading' : 'search-submit');
+}
+
+function showSearchError(text) {
+  byId('search-error').textContent = text;
+  byId('search-error').hidden = false;
+  byId('search-input').setAttribute('aria-invalid', 'true');
+  byId('search-input').focus();
+}
+
+function configureSearchInput() {
+  const mode = byId('search-mode').value;
+  const input = byId('search-input');
+  input.type = 'text';
+  input.inputMode = mode === 'number' ? 'numeric' : 'text';
+  input.enterKeyHint = 'search';
+  input.maxLength = MAX_SEARCH_QUERY_LENGTH;
+  input.setAttribute('aria-label', message(`search-input-${mode}`));
+  input.placeholder = mode === 'number'
+    ? message('search-number-placeholder', { total: numberFormat.format(corpus.length) }) : '';
+  input.removeAttribute('aria-invalid');
+  byId('search-error').hidden = true;
+}
+
+function endSearch({ announce = true } = {}) {
+  if (!session?.search.active) return;
+  session.search.active = false;
+  session.search.visited.clear();
+  setSearchResult({ matches: [], highlights: {} });
+  renderCrumb({ keepScroll: true });
+  if (announce) byId('announcement').textContent = message('search-ended');
+}
+
+controls.search.addEventListener('click', () => {
+  byId('search-mode').value = session.search.mode;
+  byId('search-input').value = session.search.query;
+  searchDraft = session.search.query;
+  previousSearchMode = session.search.mode;
+  configureSearchInput();
+  byId('search-dialog').showModal();
+  byId('search-input').focus();
+  byId('search-input').select();
 });
-byId('go-form').addEventListener('submit', event => {
+byId('search-mode').addEventListener('change', () => {
+  if (previousSearchMode !== 'number') searchDraft = byId('search-input').value;
+  configureSearchInput();
+  previousSearchMode = byId('search-mode').value;
+  byId('search-input').value = previousSearchMode === 'number' ? session.current : searchDraft;
+  byId('search-input').focus();
+  byId('search-input').select();
+});
+byId('search-input').addEventListener('input', () => {
+  byId('search-input').removeAttribute('aria-invalid');
+  byId('search-error').hidden = true;
+});
+byId('search-dialog').addEventListener('close', () => {
+  searchAbort?.abort();
+  searchAbort = null;
+  setSearchBusy(false);
+});
+byId('search-form').addEventListener('submit', async event => {
   event.preventDefault();
-  const number = crumbFromURL(byId('crumb-input').value.trim(), corpus.length);
-  if (!Number.isInteger(number)) {
-    byId('go-error').textContent = `Enter a whole number from 1 to ${numberFormat.format(corpus.length)}.`;
-    byId('go-error').hidden = false;
-    byId('crumb-input').focus();
+  if (!session || searchBusy || pendingHistory !== null) return;
+  const mode = byId('search-mode').value;
+  const query = byId('search-input').value;
+  byId('search-error').hidden = true;
+  byId('search-input').removeAttribute('aria-invalid');
+  if (mode === 'number') {
+    const number = crumbFromURL(query.trim(), corpus.length);
+    if (!Number.isInteger(number)) {
+      showSearchError(message('search-number-invalid', { total: numberFormat.format(corpus.length) }));
+      return;
+    }
+    endSearch({ announce: false });
+    byId('search-dialog').close();
+    navigate(number, { focus: true });
     return;
   }
-  byId('go-dialog').close();
-  navigate(number, { focus: true });
+  if (!query.length || (mode === 'text' && !query.trim())) {
+    showSearchError(message('search-empty'));
+    return;
+  }
+  const abort = new AbortController();
+  searchAbort = abort;
+  setSearchBusy(true);
+  try {
+    const client = await getSearchClient(mode);
+    if (abort.signal.aborted) return;
+    const result = await client.run(query, mode, { signal: abort.signal });
+    if (abort.signal.aborted || !byId('search-dialog').open) return;
+    const next = result.matches.find(number => number >= session.current);
+    if (next === undefined) {
+      showSearchError(message(result.matches.length ? 'search-no-later' : 'search-no-matches'));
+      return;
+    }
+    session.search = { query, mode, active: true, visited: new Set() };
+    setSearchResult(result);
+    byId('search-dialog').close();
+    navigate(next, { focus: true });
+  } catch (error) {
+    if (error.name !== 'AbortError' && !abort.signal.aborted) showSearchError(searchErrorMessage(error));
+  } finally {
+    if (searchAbort === abort) {
+      searchAbort = null;
+      setSearchBusy(false);
+    }
+  }
 });
 controls.favorites.addEventListener('click', showFavorites);
 controls.back.addEventListener('click', () => historyStep(-1));
 controls.forward.addEventListener('click', () => historyStep(1));
-controls.previous.addEventListener('click', () => { if (!session.random) navigate(session.current - 1); });
-controls.next.addEventListener('click', readNext);
-controls['random-order'].addEventListener('click', () => {
-  if (!session || pendingHistory !== null) return;
-  session.random = !session.random;
-  updateControls();
-  showToast(session.random
-    ? 'Random order is on. Next will show a randomly selected crumb you haven’t visited.'
-    : 'Sequential order is on. Next will show the next crumb in numerical order.', 6500);
-});
+controls.previous.addEventListener('click', () => readStep(-1));
+controls.next.addEventListener('click', () => readStep(1));
+controls.random.addEventListener('click', readRandom);
 controls.favorite.addEventListener('click', () => {
   if (!session || pendingHistory !== null) return;
   if (session.favorites.has(session.current)) session.favorites.delete(session.current);
@@ -747,6 +971,64 @@ document.addEventListener('click', event => {
   navigate(Number(link.dataset.crumb), { focus: true });
 });
 
+function initializeSearchExit() {
+  const crumb = byId('crumb');
+  let gesture = null;
+  const selected = () => Boolean(window.getSelection()?.toString());
+  crumb.addEventListener('pointerdown', event => {
+    clearTimeout(exitSearchTimer);
+    gesture = { x: event.clientX, y: event.clientY, time: performance.now(), moved: false, selected: selected() };
+  });
+  crumb.addEventListener('pointermove', event => {
+    if (gesture && Math.hypot(event.clientX - gesture.x, event.clientY - gesture.y) > 6) gesture.moved = true;
+  });
+  crumb.addEventListener('pointercancel', () => { if (gesture) gesture.moved = true; });
+  pane.addEventListener('scroll', () => {
+    if (gesture) gesture.moved = true;
+    clearTimeout(exitSearchTimer);
+  }, { passive: true });
+  crumb.addEventListener('click', event => {
+    clearTimeout(exitSearchTimer);
+    if (!session?.search.active || event.target.closest('a, button, input, select') || event.button !== 0 ||
+        event.ctrlKey || event.metaKey || event.shiftKey || event.altKey || event.detail > 1 ||
+        gesture?.moved || gesture?.selected || selected() ||
+        (gesture && performance.now() - gesture.time > 700)) return;
+    // Allow double-click word selection to complete before treating a click as exit.
+    exitSearchTimer = setTimeout(() => {
+      if (!selected() && !document.querySelector('dialog[open]')) endSearch();
+    }, 250);
+  });
+  document.addEventListener('keydown', event => {
+    if (event.key === 'Escape' && !document.querySelector('dialog[open]') && session?.search.active) {
+      event.preventDefault();
+      endSearch();
+    }
+  });
+}
+
+function initializePhoneHints() {
+  if (window.matchMedia('(max-width: 800px)').matches) document.body.classList.add('initial-hints');
+  const dismiss = () => {
+    document.body.classList.remove('initial-hints');
+    document.removeEventListener('pointerdown', dismiss, true);
+    document.removeEventListener('click', dismiss, true);
+    document.removeEventListener('keydown', dismiss, true);
+  };
+  // Capture removes labels before the action; it never cancels or swallows that action.
+  document.addEventListener('pointerdown', dismiss, true);
+  document.addEventListener('click', dismiss, true);
+  document.addEventListener('keydown', dismiss, true);
+}
+
+function updateDialogViewport() {
+  const viewport = window.visualViewport;
+  document.documentElement.style.setProperty('--dialog-viewport-height', `${viewport?.height || window.innerHeight}px`);
+  document.documentElement.style.setProperty('--dialog-viewport-top', `${viewport?.offsetTop || 0}px`);
+}
+window.visualViewport?.addEventListener('resize', updateDialogViewport);
+window.visualViewport?.addEventListener('scroll', updateDialogViewport);
+window.addEventListener('resize', updateDialogViewport);
+
 async function start() {
   controls.quit.disabled = false;
   byId('loading-state').hidden = false;
@@ -781,6 +1063,9 @@ async function start() {
     }
     if (Number.isNaN(requested)) notices.push(`The address contains an invalid crumb number. Available numbers are 1–${numberFormat.format(corpus.length)}.`);
     else if (requested !== null) visit(session, requested);
+    const restoredSearch = await restoreSearch(session);
+    setSearchResult(restoredSearch.result);
+    if (restoredSearch.notice) notices.push(restoredSearch.notice);
     initializeHistory();
     renderCrumb();
     if (notices.length) showMessage('Reading session', notices.join(' '));
@@ -795,4 +1080,8 @@ async function start() {
 
 byId('retry').addEventListener('click', start);
 initializeHints();
+initializePhoneHints();
+initializeSearchExit();
+updateDialogViewport();
+setSearchBusy(false);
 start();
