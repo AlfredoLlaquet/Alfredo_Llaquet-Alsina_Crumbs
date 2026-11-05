@@ -21,16 +21,16 @@
   <meta name="twitter:image" content="https://www.thecrumbs.org/Reader/img/social-preview.png">
   <meta name="twitter:image:alt" content="TheCrumbs.org. Writing relentlessly to become the most prolific author ever. Stacks of printed pages and loose sheets on a white background.">
   <link rel="icon" type="image/x-icon" href="favicon.ico">
-  <link rel="stylesheet" href="reader.css?v=20261102-5">
-  <script type="module" src="reader.js?v=20261102-6"></script>
+  <link rel="stylesheet" href="reader.css?v=20261105-naming1">
+  <script type="module" src="reader.js?v=20261105-naming1"></script>
 </head>
 <body>
-  <a class="skip-link" href="#reading-pane" data-hint="Move keyboard focus directly to the current crumb, past the controls.">Skip to crumb</a>
+  <a class="skip-link" href="#reading-pane" data-hint="Skip the controls and go directly to the current crumb.">Skip to crumb</a>
   <svg class="icon-definitions" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
     <defs>
       <symbol id="icon-load" viewBox="0 0 24 24"><path d="M4 15v5h16v-5M12 16V4m-5 5 5-5 5 5"/></symbol>
       <symbol id="icon-save" viewBox="0 0 24 24"><path d="M4 15v5h16v-5M12 4v12m-5-5 5 5 5-5"/></symbol>
-      <symbol id="icon-go" viewBox="0 0 24 24"><path d="M12 3v4m0 10v4M3 12h4m10 0h4"/><circle cx="12" cy="12" r="6"/></symbol>
+      <symbol id="icon-search" viewBox="0 0 24 24"><circle cx="10.5" cy="10.5" r="7.5"/><path d="m16 16 6 6"/></symbol>
       <symbol id="icon-star" viewBox="0 0 24 24"><path d="m12 3 2.8 5.8 6.4.9-4.6 4.5 1.1 6.3-5.7-3-5.7 3 1.1-6.3L2.8 9.7l6.4-.9Z"/></symbol>
       <symbol id="icon-favorites" viewBox="0 0 24 24"><path d="m7 5 1.9 3.9 4.3.6-3.1 3 .7 4.3L7 14.8 3.2 17l.7-4.5-3.1-3 4.3-.6ZM17 6h5m-5 6h5m-5 6h5"/></symbol>
       <symbol id="icon-history-back" viewBox="0 0 24 24"><path d="m9 5-6 6 6 6M3 11h9c5 0 8 3 8 8"/></symbol>
@@ -51,26 +51,31 @@
   </svg>
   <div class="reader-shell">
     <header class="reader-header">
-      <a id="reader-home" class="reader-home" href="../" aria-label="TheCrumbs.org homepage" data-reader-home data-hint="Return to the home page of TheCrumbs.org. Unsaved changes are checked after the first move to another crumb.">
+      <a id="reader-home" class="reader-home" href="../" aria-label="TheCrumbs.org homepage" data-reader-home data-hint="Return to the home page of TheCrumbs.org.">
         <img src="img/thecrumbs-logo.png" alt="TheCrumbs.org" width="2168" height="725">
       </a>
-      <h1 class="reader-title">Crumbs by Alfredo Llaquet-Alsina</h1>
-      <nav class="top-controls" aria-label="Reading session and history">
-        <button id="back" type="button" aria-label="Back in viewing history" data-hint="Return to the previous crumb in viewing history, including visits through references and favorites." disabled><svg class="icon" aria-hidden="true"><use href="#icon-history-back"/></svg><span class="control-label">Back</span></button>
-        <button id="forward" type="button" aria-label="Forward in viewing history" data-hint="Move forward through viewing history after using Back." disabled><svg class="icon" aria-hidden="true"><use href="#icon-history-forward"/></svg><span class="control-label">Forward</span></button>
-        <button id="go-to" type="button" class="control-group-start" aria-label="Go to a crumb" data-hint="Enter a crumb number to open that crumb directly." disabled><svg class="icon" aria-hidden="true"><use href="#icon-go"/></svg><span class="control-label">Go to</span></button>
-        <button id="favorites" type="button" aria-label="Favorites list" data-hint="List favorite crumbs by number and title, in numerical order, and open one." disabled><svg class="icon" aria-hidden="true"><use href="#icon-favorites"/></svg><span class="control-label">Favorites</span></button>
-        <button id="load-session" type="button" class="control-group-start" aria-label="Load session" data-hint="Open a saved Crumb Reader text file and restore its reading position, history, favorites, and settings." disabled><svg class="icon" aria-hidden="true"><use href="#icon-load"/></svg><span class="control-label">Load</span></button>
-        <button id="save-session" type="button" aria-label="Save session" data-hint="Open saving options, enable or disable auto saving, or save a portable text file." disabled><svg class="icon" aria-hidden="true"><use href="#icon-save"/></svg><span class="control-label">Save</span></button>
-        <button id="quit" type="button" aria-label="Quit to homepage" data-hint="Return to the homepage. Unsaved changes are checked after the first move to another crumb."><svg class="icon" aria-hidden="true"><use href="#icon-quit"/></svg><span class="control-label">Quit</span></button>
-      </nav>
-      <div class="reading-actions">
-        <div class="text-tools" role="group" aria-label="Text size">
-          <button id="text-smaller" type="button" aria-label="Decrease text size" data-hint="Make the crumb title and body text smaller." disabled>A<span aria-hidden="true">−</span></button>
-          <button id="text-larger" type="button" aria-label="Increase text size" data-hint="Make the crumb title and body text larger." disabled>A<span aria-hidden="true">+</span></button>
-        </div>
-        <button id="reader-help" class="help-button" type="button" aria-label="Help" data-hint="Explain the Reader controls, links, and session-saving behavior.">?</button>
+      <div class="reader-heading">
+        <h1 class="reader-title">Crumbs by Alfredo Llaquet-Alsina</h1>
+        <span id="reading-progress" class="reading-progress">Loading crumbs…</span>
       </div>
+      <nav class="top-controls" aria-label="Search and reading session">
+        <button id="search" class="toolbar-button" type="button" aria-label="Search in the crumbs" data-initial-hint="Search" data-hint="Open the Search in the crumbs form to find text or go to a crumb number." disabled><svg class="icon" aria-hidden="true"><use href="#icon-search"/></svg><span class="control-label">Search</span></button>
+        <div class="toolbar-center">
+          <div class="session-controls">
+            <button id="favorites" class="toolbar-button" type="button" aria-label="Favorites list" data-initial-hint="Favorites" data-hint="Open the Favorites list to choose a favorite crumb to read." disabled><svg class="icon" aria-hidden="true"><use href="#icon-favorites"/></svg><span class="control-label">Favorites</span></button>
+            <button id="load-session" class="toolbar-button" type="button" aria-label="Load session" data-initial-hint="Load" data-hint="Choose a saved session file to continue an earlier reading session." disabled><svg class="icon" aria-hidden="true"><use href="#icon-load"/></svg><span class="control-label">Load</span></button>
+            <button id="save-session" class="toolbar-button" type="button" aria-label="Save session" data-initial-hint="Save" data-hint="Open the Save session form to save your progress in this browser or download a copy." disabled><svg class="icon" aria-hidden="true"><use href="#icon-save"/></svg><span class="control-label">Save</span></button>
+          </div>
+          <div class="text-tools" role="group" aria-label="Text size">
+            <button id="text-smaller" type="button" aria-label="Decrease text size" data-initial-hint="Smaller" data-hint="Make the crumb’s title and text smaller." disabled>A<span aria-hidden="true">−</span></button>
+            <button id="text-larger" type="button" aria-label="Increase text size" data-initial-hint="Larger" data-hint="Make the crumb’s title and text larger." disabled>A<span aria-hidden="true">+</span></button>
+          </div>
+        </div>
+        <div class="reading-actions">
+          <button id="quit" class="toolbar-button" type="button" aria-label="Quit to homepage" data-initial-hint="Quit" data-hint="Return to the home page of TheCrumbs.org."><svg class="icon" aria-hidden="true"><use href="#icon-quit"/></svg><span class="control-label">Quit</span></button>
+          <button id="reader-help" class="help-button" type="button" aria-label="Help" data-initial-hint="Help" data-hint="Get help with the Crumb Reader’s controls and forms.">?</button>
+        </div>
+      </nav>
     </header>
     <main id="reading-pane" class="reading-pane" tabindex="-1" aria-label="Current crumb" aria-busy="true">
       <article id="crumb" class="crumb" aria-labelledby="crumb-number crumb-title" hidden>
@@ -79,19 +84,22 @@
         <div id="crumb-body" class="crumb-body"></div>
       </article>
       <div id="loading-state" class="empty-state" role="status"><span class="loading-mark" aria-hidden="true"></span><p>Loading crumbs…</p></div>
-      <div id="load-error" class="empty-state" role="alert" hidden><h2>The crumbs could not be loaded.</h2><p id="load-error-detail"></p><button id="retry" type="button" class="primary" data-hint="Try loading the collection again.">Try again</button><a href="../" data-reader-home data-hint="Return to the home page of TheCrumbs.org.">Return to TheCrumbs.org</a></div>
+      <div id="load-error" class="empty-state" role="alert" hidden><h2>The crumbs could not be loaded.</h2><p id="load-error-detail"></p><button id="retry" type="button" class="primary" data-hint="Try to load the crumbs again.">Try again</button><a href="../" data-reader-home data-hint="Return to the home page of TheCrumbs.org.">Return to TheCrumbs.org</a></div>
       <noscript><p class="noscript">The Crumb Reader needs JavaScript to display the text and save reading sessions. <a href="../">Return to TheCrumbs.org</a>.</p></noscript>
     </main>
+    <div id="search-status" class="search-status" role="status" aria-live="polite" aria-atomic="true" hidden>
+      <span id="search-position"></span>
+      <span id="search-exit-instruction"><span class="phone-instruction">TAP THE CRUMB TO EXIT SEARCH</span><span class="desktop-instruction">CLICK THE CRUMB TO EXIT SEARCH</span></span>
+    </div>
     <footer class="reader-footer">
-      <div class="reading-order">
-        <button id="random-order" class="random-control toggle-control" type="button" role="switch" aria-checked="false" aria-label="Random order" data-hint="Make Next select an unvisited crumb at random. Previous is disabled; Back and Forward still follow viewing history." disabled><span class="switch-track" aria-hidden="true"><span class="switch-thumb"></span></span><svg class="icon random-icon" aria-hidden="true"><use href="#icon-shuffle"/></svg><span class="control-label">Random Order</span></button>
-        <span id="reading-progress" class="reading-progress">Loading crumbs…</span>
+      <div class="step-controls" role="group" aria-label="Read another crumb and manage favorites">
+        <button id="back" type="button" aria-label="Back in viewing history" data-initial-hint="Back" data-hint="Return to the crumb viewed before this one." disabled><svg class="icon" aria-hidden="true"><use href="#icon-history-back"/></svg><span class="control-label">Back</span></button>
+        <button id="previous" class="previous-control" type="button" aria-label="Previous crumb" data-initial-hint="Previous" data-hint="Read the previous crumb in numerical order." disabled><svg class="icon" aria-hidden="true"><use href="#icon-previous"/></svg><span class="control-label">Previous</span></button>
+        <button id="random" type="button" aria-label="Random crumb" data-initial-hint="Random" data-hint="Read a randomly chosen crumb that has not been visited." disabled><svg class="icon" aria-hidden="true"><use href="#icon-shuffle"/></svg><span class="control-label">Random</span></button>
+        <button id="favorite" class="favorite-control" type="button" aria-pressed="false" aria-label="Favorite this crumb" data-initial-hint="Favorite" data-hint="Add this crumb to Favorites, or remove it if it is already a favorite." disabled><svg class="icon" aria-hidden="true"><use href="#icon-star"/></svg><span class="control-label">Favorite</span></button>
+        <button id="next" type="button" class="primary" aria-label="Next crumb" data-initial-hint="Next" data-hint="Read the next crumb in numerical order." disabled><span class="control-label">Next</span><svg class="icon" aria-hidden="true"><use href="#icon-next"/></svg></button>
+        <button id="forward" type="button" aria-label="Forward in viewing history" data-initial-hint="Forward" data-hint="Move forward again after using Back." disabled><svg class="icon" aria-hidden="true"><use href="#icon-history-forward"/></svg><span class="control-label">Forward</span></button>
       </div>
-      <div class="step-controls" role="group" aria-label="Read another crumb">
-        <button id="previous" type="button" aria-label="Previous crumb" data-hint="Read the preceding crumb in numerical order. Unavailable in random order." disabled><svg class="icon desktop-step" aria-hidden="true"><use href="#icon-back"/></svg><svg class="icon phone-step" aria-hidden="true"><use href="#icon-previous"/></svg><span class="control-label">Previous</span></button>
-        <button id="next" type="button" class="primary" aria-label="Next crumb" data-hint="Read the next crumb in numerical order, or an unvisited crumb when Random Order is active." disabled><span class="control-label">Next</span><svg class="icon desktop-step" aria-hidden="true"><use href="#icon-forward"/></svg><svg class="icon phone-step" aria-hidden="true"><use href="#icon-next"/></svg></button>
-      </div>
-      <button id="favorite" class="favorite-control toggle-control" type="button" aria-pressed="false" aria-label="Favorite this crumb" data-hint="Add this crumb to Favorites, or remove it if already selected." disabled><svg class="icon" aria-hidden="true"><use href="#icon-star"/></svg><span class="control-label">Favorite</span></button>
     </footer>
   </div>
 
@@ -104,27 +112,37 @@
   <dialog id="save-dialog" aria-labelledby="save-title">
     <h2 id="save-title">Save session</h2>
     <p>Choose where to save the current reading session.</p>
-    <button id="auto-save" type="button" class="wide primary" data-hint="Enable or disable automatic browser saving and save that choice immediately.">Enable auto saving in this browser</button>
+    <button id="auto-save" type="button" class="wide primary" data-hint="Turn automatic saving in this browser on or off.">Enable auto saving in this browser</button>
     <p id="auto-save-status" class="dialog-note" role="status" aria-live="polite">Auto saving is disabled. Browser saving and text-file saving are manual.</p>
-    <button id="save-browser" type="button" class="wide" data-hint="Store this session in the current browser, replacing its previous saved copy. It will load automatically when the Reader opens.">Save now in this browser</button>
-    <p class="dialog-note">This browser keeps one saved session and restores it when the Reader opens.</p>
-    <button id="erase-browser" type="button" class="wide" data-hint="Delete this browser’s saved Reader session and disable auto saving. The current reading session stays open." disabled>Erase current browser data</button>
+    <button id="save-browser" type="button" class="wide" data-hint="Save your current progress in this browser so reading can continue here later.">Save now in this browser</button>
+    <p class="dialog-note">This browser keeps one saved session and restores it when the Crumb Reader opens.</p>
+    <button id="erase-browser" type="button" class="wide" data-hint="Erase the session saved in this browser and turn off auto saving. Keep reading the open session." disabled>Erase current browser data</button>
     <div class="dialog-divider"></div>
     <label class="field-label" for="session-filename">Text file name</label>
-    <input id="session-filename" type="text" value="crumbs-session.txt" maxlength="120" autocomplete="off" spellcheck="false" data-hint="Choose a name for the session file. The .txt extension is added automatically if needed.">
-    <button id="save-file" type="button" class="wide" data-hint="Save a portable session file that can be loaded on another device. A Save As dialog appears when the browser supports it.">Save as a text file</button>
+    <input id="session-filename" type="text" value="crumbs-session.txt" maxlength="120" autocomplete="off" spellcheck="false" data-hint="Enter a name for the file that will hold your saved session.">
+    <button id="save-file" type="button" class="wide" data-hint="Download a copy of your session to load later on this or another computer or phone.">Save as a text file</button>
     <p class="dialog-note">A text file can restore the session on another computer or phone. The browser controls the download location.</p>
     <p id="save-error" class="field-error" role="alert" hidden></p>
-    <div class="dialog-actions"><button type="button" data-close="save-dialog" data-hint="Close the Save session dialog.">Close</button></div>
+    <div class="dialog-actions"><button type="button" data-close="save-dialog" data-hint="Close the Save session form and continue reading.">Close</button></div>
   </dialog>
 
-  <dialog id="go-dialog" aria-labelledby="go-title">
-    <form id="go-form" novalidate>
-      <h2 id="go-title">Go to a crumb</h2>
-      <label id="go-help" class="field-label" for="crumb-input">Crumb number</label>
-      <input id="crumb-input" type="number" min="1" step="1" inputmode="numeric" required aria-describedby="go-error" data-hint="Enter the number of the crumb to display, within the available range.">
-      <p id="go-error" class="field-error" role="alert" hidden></p>
-      <div class="dialog-actions"><button type="button" data-close="go-dialog" data-hint="Close this dialog without changing the current crumb.">Cancel</button><button type="submit" class="primary" data-hint="Open the crumb whose number is entered above.">Go to crumb</button></div>
+  <dialog id="search-dialog" aria-labelledby="search-title">
+    <form id="search-form" novalidate>
+      <div class="dialog-heading">
+        <h2 id="search-title">Search in the crumbs</h2>
+        <button id="search-help" type="button" class="help-button" aria-label="Help with search" data-hint="Open the Search help. Close help to return to this form.">?</button>
+      </div>
+      <div class="search-mode-field">
+        <label class="field-label" for="search-mode">Search by</label>
+        <select id="search-mode" data-hint="Choose how to search: text, a crumb number, or a regular expression.">
+          <option value="text">Text</option>
+          <option value="number">Crumb number</option>
+          <option value="regex">Regular expression</option>
+        </select>
+      </div>
+      <input id="search-input" type="text" aria-label="Search text" aria-describedby="search-error" autocomplete="off" autocapitalize="none" spellcheck="false" required>
+      <p id="search-error" class="field-error" role="alert" hidden></p>
+      <div class="dialog-actions"><button type="button" data-close="search-dialog" data-hint="Close the Search in the crumbs form and keep the current crumb and search.">Cancel</button><button id="search-submit" type="submit" class="primary" data-hint="Start the search at the first matching crumb, or go to the entered crumb number.">Search</button></div>
     </form>
   </dialog>
 
@@ -132,46 +150,134 @@
     <h2 id="favorites-title">Favorites</h2>
     <p id="favorites-empty" hidden>No favorites yet. Use Favorite to mark a crumb.</p>
     <ol id="favorites-list" class="favorites-list"></ol>
-    <div class="dialog-actions"><button type="button" data-close="favorites-dialog" data-hint="Close the favorites list and continue with the current crumb.">Close</button></div>
+    <div class="dialog-actions"><button type="button" data-close="favorites-dialog" data-hint="Close the Favorites list and continue reading.">Close</button></div>
   </dialog>
 
   <dialog id="confirm-dialog" aria-labelledby="confirm-title" aria-describedby="confirm-text">
     <h2 id="confirm-title"></h2><p id="confirm-text"></p>
-    <div class="dialog-actions"><button id="confirm-cancel" type="button" data-hint="Cancel this action and keep the current reading session.">Cancel</button><button id="confirm-accept" type="button" class="primary" data-hint="Confirm the action described in this dialog.">Continue</button></div>
+    <div class="dialog-actions"><button id="confirm-cancel" type="button" data-hint="Cancel the proposed action and keep reading.">Cancel</button><button id="confirm-accept" type="button" class="primary" data-hint="Carry out the action described above.">Continue</button></div>
   </dialog>
 
   <dialog id="message-dialog" aria-labelledby="message-title" aria-describedby="message-text">
     <h2 id="message-title"></h2><p id="message-text"></p>
-    <div class="dialog-actions"><button type="button" class="primary" data-close="message-dialog" data-hint="Dismiss this message and return to the Reader.">Close</button></div>
+    <div class="dialog-actions"><button type="button" class="primary" data-close="message-dialog" data-hint="Close this message and continue reading.">Close</button></div>
   </dialog>
 
   <dialog id="help-dialog" class="help-dialog" aria-labelledby="help-title">
-    <h2 id="help-title">Reader help</h2>
-    <div class="help-content" tabindex="0" aria-label="Reader control explanations">
-      <dl class="help-list">
-        <dt><span class="help-icons" aria-hidden="true"><img class="help-wordmark" src="img/thecrumbs-logo.png" alt="" width="2168" height="725"><svg class="icon" aria-hidden="true"><use href="#icon-quit"/></svg></span><span class="help-label">TheCrumbs.org logo / Quit</span></dt><dd>Return to the homepage. Before the first move to another crumb, leaving never triggers a save warning, even if favorites or settings have changed. After navigation, unsaved changes trigger a confirmation. Returning to the initial crumb does not reset this rule.</dd>
-        <dt><span class="help-icons" aria-hidden="true"><svg class="icon" aria-hidden="true"><use href="#icon-load"/></svg></span><span class="help-label">Load session</span></dt><dd>Choose a text file previously saved by the Reader. It restores the current crumb, visited list, favorites, random mode, viewing history, text size, and auto-saving setting. If auto saving is enabled in the file, the restored session is also saved in this browser. Otherwise, the existing browser copy stays unchanged. Older version 1 files load with auto saving disabled.</dd>
-        <dt><span class="help-icons" aria-hidden="true"><svg class="icon" aria-hidden="true"><use href="#icon-save"/></svg></span><span class="help-label">Save session</span></dt><dd>Open browser-saving options or save a portable text file. This control remains available after the collection loads, even when the session is already saved.</dd>
-        <dt><span class="help-icons" aria-hidden="true"><svg class="icon" aria-hidden="true"><use href="#icon-browser"/></svg></span><span class="help-label">Enable / Disable auto saving in this browser</span></dt><dd>Turn automatic browser saving on or off and save that choice immediately. When enabled, navigation, favorites, reading order, and text-size changes are saved shortly after activity stops. Text-file export remains manual. A storage error pauses auto saving until a successful manual browser save or another change to the auto-saving mode.</dd>
-        <dt><span class="help-icons" aria-hidden="true"><svg class="icon" aria-hidden="true"><use href="#icon-browser"/></svg></span><span class="help-label">Save now in this browser</span></dt><dd>Save the current session in this browser now. This button is disabled when the browser already holds the current session. That copy is restored when the Reader opens and stays in this browser profile.</dd>
-        <dt><span class="help-icons" aria-hidden="true"><svg class="icon" aria-hidden="true"><use href="#icon-erase"/></svg></span><span class="help-label">Erase current browser data</span></dt><dd>Delete the Reader session saved in this browser and disable auto saving so the copy is not recreated. The current reading session stays open, and downloaded session files are kept. The button is disabled when there is no saved session to erase.</dd>
-        <dt><span class="help-icons" aria-hidden="true"><svg class="icon" aria-hidden="true"><use href="#icon-save"/></svg></span><span class="help-label">Text file name / Save as a text file</span></dt><dd>Enter a filename and save a portable copy that can be loaded on another computer or phone. The browser controls the download location and whether a Save As dialog is available.</dd>
-        <dt><span class="help-icons" aria-hidden="true"><svg class="icon" aria-hidden="true"><use href="#icon-go"/></svg></span><span class="help-label">Go to</span></dt><dd>Enter a valid crumb number and select Go to crumb to display it directly. Cancel keeps the current crumb.</dd>
-        <dt><span class="help-icons" aria-hidden="true"><svg class="icon" aria-hidden="true"><use href="#icon-favorites"/></svg></span><span class="help-label">Favorites</span></dt><dd>Open the list of favorite crumbs, ordered numerically. Select a number and title to read that crumb, or Close to return.</dd>
-        <dt><span class="help-icons" aria-hidden="true"><svg class="icon" aria-hidden="true"><use href="#icon-history-back"/></svg><svg class="icon" aria-hidden="true"><use href="#icon-history-forward"/></svg></span><span class="help-label">Back / Forward</span></dt><dd>Use the curved arrows to retrace the actual viewing sequence, including reference links and favorites. The session keeps up to 100 history entries. These controls remain available in random order whenever history permits.</dd>
-        <dt><span class="help-icons random-control" aria-hidden="true"><span class="switch-track"><span class="switch-thumb"></span></span><svg class="icon random-icon" aria-hidden="true"><use href="#icon-shuffle"/></svg></span><span class="help-label">Random Order</span></dt><dd>Use the switch on computers or the shuffle icon on phones to make Next choose a random crumb that has not been visited. Changing this setting displays a brief notice and keeps the current crumb in place. Previous is disabled. When all crumbs have been visited, a dialog offers a new round; restarting clears the visited list and keeps favorites and history.</dd>
-        <dt><span class="help-icons" aria-hidden="true"><svg class="icon desktop-step" aria-hidden="true"><use href="#icon-back"/></svg><svg class="icon desktop-step" aria-hidden="true"><use href="#icon-forward"/></svg><svg class="icon phone-step" aria-hidden="true"><use href="#icon-previous"/></svg><svg class="icon phone-step" aria-hidden="true"><use href="#icon-next"/></svg></span><span class="help-label">Previous / Next</span></dt><dd>Read the preceding or following crumb in numerical order. On phones, these controls use straight chevrons. In random order, Next selects an unvisited crumb. Next is disabled at the last crumb in numerical order.</dd>
-        <dt><span class="help-icons" aria-hidden="true"><svg class="icon" aria-hidden="true"><use href="#icon-star"/></svg></span><span class="help-label">Favorite</span></dt><dd>Use the star to add the displayed crumb to Favorites. Select it again to remove the crumb. A filled blue star indicates a favorite. Adding or removing a favorite marks the session as unsaved until a manual or automatic save succeeds.</dd>
-        <dt><span class="help-icons" aria-hidden="true"><span class="help-key">A−</span><span class="help-key">A+</span></span><span class="help-label">A− / A+</span></dt><dd>Decrease or increase the size of the crumb title and body. New sessions on phones start at the smallest size. The setting is included when the session is saved; loading a saved session restores its size.</dd>
-        <dt><span class="help-icons" aria-hidden="true"><svg class="icon" aria-hidden="true"><use href="#icon-link"/></svg></span><span class="help-label">Numbered references</span></dt><dd>Select a linked crumb number to read the referenced crumb. Back returns to the original crumb.</dd>
-        <dt><span class="help-icons" aria-hidden="true"><svg class="icon" aria-hidden="true"><use href="#icon-external"/></svg></span><span class="help-label">Website links</span></dt><dd>Open the address in another tab or window, according to browser preferences. The Reader stays open.</dd>
-        <dt><span class="help-icons" aria-hidden="true"><svg class="icon" aria-hidden="true"><use href="#icon-back"/></svg><svg class="icon" aria-hidden="true"><use href="#icon-forward"/></svg></span><span class="help-label">Browser Back / Forward</span></dt><dd>Navigate the crumb entries created during this visit. Loading a saved session restores history for the Reader’s own controls, without recreating the browser’s entire history. When leaving the Reader, eligible unsaved changes also request the browser’s standard warning; browsers may suppress that warning.</dd>
-        <dt><span class="help-icons" aria-hidden="true"><svg class="icon" aria-hidden="true"><use href="#icon-close"/></svg></span><span class="help-label">Cancel / Close</span></dt><dd>Dismiss the corresponding dialog without carrying out its proposed action. In the return-home dialog, the blue “Stay here and save” button opens Save session. Escape stays in the Reader without opening another dialog. Confirmation buttons perform the action stated in the dialog.</dd>
-        <dt><span class="help-icons" aria-hidden="true"><svg class="icon" aria-hidden="true"><use href="#icon-retry"/></svg></span><span class="help-label">Try again</span></dt><dd>Retry loading the collection if it could not be fetched.</dd>
-        <dt><span class="help-icons" aria-hidden="true"><span class="help-key help-question">?</span></span><span class="help-label">Help</span></dt><dd>Open these explanations on computers or phones. Hover over a control or focus it with the keyboard for its individual hint. Escape dismisses a visible hint.</dd>
-      </dl>
+    <h2 id="help-title" tabindex="-1">Crumb Reader help</h2>
+    <div id="help-content" class="help-content" tabindex="0" aria-label="Crumb Reader control explanations">
+      <section class="help-section">
+        <h3>Reading another crumb</h3>
+        <p>The controls at the bottom of the Crumb Reader move between crumbs. On phones, they appear as symbols; the yellow hints show their names.</p>
+        <ul>
+          <li><strong>Previous / Next</strong> are the straight arrows. Use them to read the previous or next crumb in numerical order. During a search, they move between matching crumbs.</li>
+          <li><strong>Back / Forward</strong> are the curved arrows. Back returns to the crumb viewed before the current one. Forward retraces those steps after Back has been used.</li>
+          <li><strong>Random</strong> is the crossed-arrows button. It chooses a crumb that has not been visited in the current session. During a search, it chooses from the matching crumbs not yet visited during that search.</li>
+        </ul>
+        <p>The visited count shows how many different crumbs have been opened in the current session. Opening a crumb already visited does not increase that count.</p>
+        <p>When Random runs out of unvisited crumbs, a message offers <strong>Start new round</strong>. Outside a search, this starts the visited count again. During a search, it allows matching crumbs to be chosen again without resetting the overall visited count. Favorites and viewing history are kept.</p>
+      </section>
+      <section class="help-section">
+        <h3 id="help-search" tabindex="-1">Search</h3>
+        <p>Select the magnifying glass at the top left of the controls to open the <strong>Search in the crumbs</strong> form. Choose an option under <strong>Search by</strong>, enter what to find, and select the form’s <strong>Search</strong> button.</p>
+        <ul>
+          <li><strong>Text:</strong> find a word or a continuous phrase in crumb titles and text. Uppercase and lowercase letters are treated alike. Text searches also match the names of recurring characters, places, concepts, and more with any of their aliases. For example, “universe 12” also matches “band universe” and “universe band”; “crumb-smith” also matches “Alfredo,” “multi-god,” and other aliases.</li>
+          <li><strong>Crumb number:</strong> enter a number to go directly to that crumb. This also ends any active search.</li>
+          <li><strong>Regular expression:</strong> search for a pattern rather than an exact word or phrase. Enter a pattern on its own for a case-sensitive search, or use <code>/pattern/flags</code>. For example, <code>/cake/i</code> finds “cake” without distinguishing uppercase and lowercase letters. For an introduction to regular expressions, see <a href="https://blog.hpc.qmul.ac.uk/Beginners-Guide-to-Regular-Expressions/" target="_blank" rel="noopener noreferrer">A Beginner’s Guide to Regular Expressions</a>.</li>
+        </ul>
+        <p>A new text or regular-expression search opens the first matching crumb in numerical order. If nothing matches, or <strong>Cancel</strong> is selected, the current crumb and any existing search stay as they were.</p>
+        <p>While a search is active, matching text is highlighted. The blue bar shows the current crumb’s position among the matching crumbs.</p>
+        <ul>
+          <li><strong>Previous / Next</strong> move to the previous or next match in numerical order, whether it has been visited or not. At either end, a message says there are no earlier or later matches.</li>
+          <li><strong>Random</strong> chooses a match not yet visited during this search. A crumb visited before the search began can still be chosen. This separate record of visits is used only by Random; new visits also count toward overall reading progress.</li>
+          <li><strong>Back, Forward, Favorites, and crumb numbers inside a crumb</strong> can open other crumbs without ending the search. If the displayed crumb does not match, the blue bar says so.</li>
+        </ul>
+        <p>To end the search and keep reading the displayed crumb, click or tap its text. Scrolling, selecting text, and selecting a crumb number keep the search active. The <strong>Escape</strong> key also ends the search when no form or Help is open.</p>
+        <p>The yellow <strong>?</strong> in the Search form opens this section. <strong>Close help</strong> returns to the form with the chosen search type and entered text preserved.</p>
+        <p>For experts: the Crumb Reader uses ECMAScript (JavaScript) regular expressions.</p>
+      </section>
+      <section class="help-section">
+        <h3>Favorite / Favorites</h3>
+        <p>Select the <strong>Favorite</strong> star at the bottom to mark the current crumb. A filled blue star means it is a favorite. Select the star again to remove that mark.</p>
+        <p>To return to a favorite, select <strong>Favorites</strong> at the top. The <strong>Favorites</strong> form lists the marked crumbs by number and title, in numerical order. Select an entry to read it, or select <strong>Close</strong> to keep reading the current crumb.</p>
+      </section>
+      <section class="help-section">
+        <h3>Save</h3>
+        <p>Select <strong>Save</strong> at the top to open the <strong>Save session</strong> form. A saved session keeps the current crumb, visited count, Favorites, viewing history, text size, and any active search, so reading can continue later.</p>
+        <p>The <strong>Save session</strong> form contains these controls:</p>
+        <ul>
+          <li><strong>Enable auto saving in this browser</strong> button: turn on automatic saving. The Crumb Reader saves changes shortly after activity stops. When it is on, this button changes to <strong>Disable auto saving in this browser</strong>. Selecting either button saves the current session and the choice immediately.</li>
+          <li><strong>Save now in this browser</strong> button: save the current session here now. The Crumb Reader restores it automatically when it is opened again in the same browser. This button is unavailable when the browser already has the current session saved.</li>
+          <li><strong>Erase current browser data</strong> button: delete the Crumb Reader’s saved session in this browser and turn off auto saving. The session currently open can still be read, and previously downloaded session files are kept. This button is unavailable when there is no saved session to erase.</li>
+          <li><strong>Text file name</strong> field: choose a name for a downloaded copy of the session.</li>
+          <li><strong>Save as a text file</strong> button: download that copy. Keep it to load later, including on another computer or phone. Auto saving does not update downloaded files; use this button again to save a newer copy.</li>
+        </ul>
+        <p>This browser keeps one saved session, so a new browser save replaces the previous one. To keep separate sessions, save them as text files with different names.</p>
+        <p>Select <strong>Close</strong> to leave the form. If saving fails, the form explains the problem. A text file can be used when saving in the browser is unavailable.</p>
+      </section>
+      <section class="help-section">
+        <h3>Load</h3>
+        <p>Select <strong>Load</strong> at the top. In the file chooser, select a text file created with <strong>Save as a text file</strong>. The Crumb Reader restores the session from that file, including its reading position, Favorites, visited count, viewing history, text size, and saved search.</p>
+        <p>If the current session has unsaved changes, the <strong>Load another session</strong> confirmation asks whether to replace it. Select <strong>Load session</strong> to use the file or <strong>Cancel</strong> to keep the current session.</p>
+        <p>The file also restores its auto-saving choice. If auto saving is on, the loaded session is saved in this browser. If it is off, the browser’s previously saved session is kept until a new browser save is made.</p>
+      </section>
+      <section class="help-section">
+        <h3>A− / A+</h3>
+        <p>Select <strong>A−</strong> to make the crumb’s title and text smaller, or <strong>A+</strong> to make them larger. A button becomes unavailable when its size limit is reached. Saving the session also saves this choice.</p>
+      </section>
+      <section class="help-section">
+        <h3>Crumb numbers inside a crumb</h3>
+        <p>Select a crumb number inside a crumb to read that other crumb. Use the curved <strong>Back</strong> arrow at the bottom to return.</p>
+      </section>
+      <section class="help-section">
+        <h3>TheCrumbs.org logo / Quit</h3>
+        <p>Select the logo or <strong>Quit</strong> to return to the home page of TheCrumbs.org.</p>
+        <p>After moving to another crumb, leaving with unsaved changes opens the <strong>Return to TheCrumbs.org</strong> confirmation. Select <strong>Stay here and save</strong> to open the <strong>Save session</strong> form, or <strong>Return home</strong> to leave without saving those changes. Before moving to another crumb, leaving does not show this confirmation.</p>
+      </section>
+      <section class="help-section">
+        <h3>Help and control hints</h3>
+        <p>Select the yellow <strong>?</strong> in the Crumb Reader’s top controls to open this Help. On a computer, pointing at a control with the mouse or reaching it with the keyboard also shows a short explanation of that control.</p>
+        <p>On phones, yellow labels identify the controls when the Crumb Reader opens. The first tap or key press hides those labels and still carries out the chosen action. Opening the Crumb Reader’s Help shows the labels again behind it. After <strong>Close help</strong>, they stay visible until the next tap or key press in the Crumb Reader.</p>
+      </section>
+      <section class="help-section">
+        <h3>Messages, Cancel, and Close</h3>
+        <p>Forms and messages name the action available. <strong>Cancel</strong> leaves the proposed action undone. <strong>Close</strong> returns to reading, and <strong>Close help</strong> returns to the Search form when Help was opened there.</p>
+        <p>If the crumbs cannot be loaded when the Crumb Reader opens, select <strong>Try again</strong> to retry.</p>
+      </section>
     </div>
-    <div class="dialog-actions"><button type="button" class="primary" data-close="help-dialog" data-hint="Close these explanations and continue reading.">Close help</button></div>
+    <div class="dialog-actions"><button type="button" class="primary" data-close="help-dialog" data-hint="Close Help and return to reading or the Search form.">Close help</button></div>
   </dialog>
+  <div id="reader-messages" hidden>
+    <template id="message-hint-next-search">Read the next matching crumb in numerical order.</template>
+    <template id="message-hint-next">Read the next crumb in numerical order.</template>
+    <template id="message-hint-previous-search">Read the previous matching crumb in numerical order.</template>
+    <template id="message-hint-previous">Read the previous crumb in numerical order.</template>
+    <template id="message-hint-random-search">Read a random matching crumb that has not been visited during this search.</template>
+    <template id="message-hint-random">Read a randomly chosen crumb that has not been visited.</template>
+    <template id="message-search-count">Matching crumb {position} of {total}</template>
+    <template id="message-search-current-outside">Outside the {total} matching crumbs</template>
+    <template id="message-search-empty">Enter text or a regular expression to search for.</template>
+    <template id="message-search-invalid-regex">This regular expression is not valid. {detail}</template>
+    <template id="message-search-synonyms-unavailable">Text search is unavailable. Please try again.</template>
+    <template id="message-search-timeout">This search took too long. Try a simpler regular expression.</template>
+    <template id="message-search-unavailable">Search is unavailable. Please try again.</template>
+    <template id="message-search-no-matches">No matching crumbs were found.</template>
+    <template id="message-search-no-previous">No earlier matching crumb.</template>
+    <template id="message-search-no-next">No later matching crumb.</template>
+    <template id="message-search-number-invalid">Enter a whole crumb number from 1 to {total}.</template>
+    <template id="message-search-ended">Search ended.</template>
+    <template id="message-search-restored-unavailable">The saved search could not be restored. The rest of the session is available.</template>
+    <template id="message-search-loading">Searching…</template>
+    <template id="message-search-submit">Search</template>
+    <template id="message-search-input-text">Search text</template>
+    <template id="message-search-input-regex">Regular expression</template>
+    <template id="message-search-input-number">Crumb number</template>
+    <template id="message-search-number-placeholder">Crumb number (1–{total})</template>
+    <template id="message-search-random-exhausted-title">All matching crumbs visited</template>
+    <template id="message-search-random-exhausted">All matching crumbs have been visited during this search. A new random round resets only this search’s visit record. The general visited list, Favorites, and viewing history stay unchanged.</template>
+    <template id="message-search-random-restart">Start new round</template>
+    <template id="message-hint-search-random-restart">Choose a random match from a fresh round. Keep overall reading progress and Favorites.</template>
+    <template id="message-search-random-only-current">The current crumb is the only matching crumb.</template>
+  </div>
 </body>
 </html>

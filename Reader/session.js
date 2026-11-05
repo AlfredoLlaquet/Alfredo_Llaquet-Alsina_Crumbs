@@ -1,4 +1,4 @@
-import { MAX_CRUMB_NUMBER, SESSION_VERSION, restoreSession, snapshot } from './core.js?v=2';
+import { HISTORY_LIMIT, MAX_CRUMB_NUMBER, MAX_SEARCH_QUERY_LENGTH, SESSION_VERSION, restoreSession, snapshot } from './core.js?v=20261105-naming1';
 
 export const SESSION_HEADER = `CRUMB-READER/${SESSION_VERSION}\n`;
 export const MAX_SESSION_FILE_BYTES = 2 * 1024 * 1024;
@@ -47,7 +47,7 @@ function packSetCandidates(numbers) {
 
 function packBinaryCandidates(data) {
   const result = [];
-  for (const number of [data.current, Number(data.random), data.historyIndex, data.textSize, data.history.length]) variable(number, result);
+  for (const number of [data.current, data.historyIndex, data.textSize, data.history.length]) variable(number, result);
   let previous = 0;
   for (const number of data.history) {
     const difference = number - previous;
@@ -57,14 +57,19 @@ function packBinaryCandidates(data) {
   const candidates = [];
   const visited = packSetCandidates(data.visited);
   const favorites = packSetCandidates(data.favorites);
+  const searchVisits = packSetCandidates(data.search.visited);
+  const query = encoder.encode(data.search.query);
+  const search = [Number(data.autoSave), Number(data.search.mode === 'regex'), Number(data.search.active)];
+  variable(query.length, search);
   for (const visits of visited) {
     for (const marks of favorites) {
-      const bytes = new Uint8Array(result.length + visits.length + marks.length + 1);
-      bytes.set(result);
-      bytes.set(visits, result.length);
-      bytes.set(marks, result.length + visits.length);
-      bytes[bytes.length - 1] = Number(data.autoSave);
-      candidates.push(bytes);
+      for (const searchVisited of searchVisits) {
+        const parts = [result, visits, marks, search, query, searchVisited];
+        const bytes = new Uint8Array(parts.reduce((length, part) => length + part.length, 0));
+        let offset = 0;
+        for (const part of parts) { bytes.set(part, offset); offset += part.length; }
+        candidates.push(bytes);
+      }
     }
   }
   return candidates;
@@ -115,8 +120,10 @@ function unpackBinary(bytes, version) {
     } else invalid();
     return numbers;
   };
-  const [current, random, historyIndex, textSize, count] = [next(), next(), next(), next(), next()];
-  if (count < 1 || count > 100 || random > 1) invalid();
+  const current = next();
+  const random = version < 3 ? next() : 0;
+  const [historyIndex, textSize, count] = [next(), next(), next()];
+  if (count < 1 || count > HISTORY_LIMIT || random > 1) invalid();
   const history = [];
   let previous = 0;
   for (let i = 0; i < count; i++) {
@@ -128,8 +135,18 @@ function unpackBinary(bytes, version) {
   const favorites = readSet();
   const autoSave = version === 1 ? 0 : next();
   if (autoSave > 1) invalid();
+  let search;
+  if (version === 3) {
+    const mode = next();
+    const active = next();
+    const queryLength = next();
+    if (mode > 1 || active > 1 || queryLength > MAX_SEARCH_QUERY_LENGTH * 4 || cursor + queryLength > bytes.length) invalid();
+    const query = decoder.decode(bytes.subarray(cursor, cursor + queryLength));
+    cursor += queryLength;
+    search = { query, mode: mode ? 'regex' : 'text', active: Boolean(active), visited: readSet() };
+  }
   if (cursor !== bytes.length) invalid();
-  return { version, current, random: Boolean(random), historyIndex, textSize, history, visited, favorites, autoSave: Boolean(autoSave) };
+  return { version, current, ...(version < 3 ? { random: Boolean(random) } : { search }), historyIndex, textSize, history, visited, favorites, autoSave: Boolean(autoSave) };
 }
 
 function checksum(bytes) {
@@ -163,7 +180,8 @@ async function transform(bytes, name, decompress = false) {
 
 export async function encodeSession(value) {
   const data = snapshot(restoreSession(value.visited instanceof Set ? snapshot(value) : value));
-  const compact = [data.current, Number(data.random), data.historyIndex, data.textSize, data.history, data.visited, data.favorites, Number(data.autoSave)];
+  const compact = [data.current, data.historyIndex, data.textSize, data.history, data.visited, data.favorites,
+    Number(data.autoSave), data.search.query, Number(data.search.mode === 'regex'), Number(data.search.active), data.search.visited];
   const representations = [encoder.encode(JSON.stringify(compact)), ...packBinaryCandidates(data)];
   const candidates = [];
   for (let encoding = 0; encoding < representations.length; encoding++) {
@@ -190,7 +208,7 @@ export async function encodeSession(value) {
 export async function decodeSession(text, total) {
   if (text.length > MAX_SESSION_FILE_BYTES) throw new Error('The session file is too large.');
   const normalized = text.replace(/^\uFEFF/, '').replaceAll('\r\n', '\n');
-  const header = /^CRUMB-READER\/([12])\n/.exec(normalized);
+  const header = /^CRUMB-READER\/([123])\n/.exec(normalized);
   if (!header) throw new Error('Choose a supported text file saved by the Crumb Reader.');
   const version = Number(header[1]);
   const base64 = normalized.slice(header[0].length).replace(/\s+/g, '');
@@ -203,10 +221,17 @@ export async function decodeSession(text, total) {
   let data;
   if (file[3] === 0) {
     const parsed = JSON.parse(decoder.decode(bytes));
-    if (!Array.isArray(parsed) || parsed.length !== (version === 1 ? 7 : 8) || ![0, 1].includes(parsed[1]) ||
-        (version === 2 && ![0, 1].includes(parsed[7]))) throw new Error('The session file is damaged.');
-    const [current, random, historyIndex, textSize, history, visited, favorites, autoSave = 0] = parsed;
-    data = { version, current, random: Boolean(random), historyIndex, textSize, history, visited, favorites, autoSave: Boolean(autoSave) };
+    if (version === 3) {
+      if (!Array.isArray(parsed) || parsed.length !== 11 || ![parsed[6], parsed[8], parsed[9]].every(value => value === 0 || value === 1)) throw new Error('The session file is damaged.');
+      const [current, historyIndex, textSize, history, visited, favorites, autoSave, query, mode, active, searchVisited] = parsed;
+      data = { version, current, historyIndex, textSize, history, visited, favorites, autoSave: Boolean(autoSave),
+        search: { query, mode: mode ? 'regex' : 'text', active: Boolean(active), visited: searchVisited } };
+    } else {
+      if (!Array.isArray(parsed) || parsed.length !== (version === 1 ? 7 : 8) || ![0, 1].includes(parsed[1]) ||
+          (version === 2 && ![0, 1].includes(parsed[7]))) throw new Error('The session file is damaged.');
+      const [current, random, historyIndex, textSize, history, visited, favorites, autoSave = 0] = parsed;
+      data = { version, current, random: Boolean(random), historyIndex, textSize, history, visited, favorites, autoSave: Boolean(autoSave) };
+    }
   } else data = unpackBinary(bytes, version);
   return restoreSession(data, total);
 }
