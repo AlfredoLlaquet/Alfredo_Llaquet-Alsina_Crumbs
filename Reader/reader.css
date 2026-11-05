@@ -62,8 +62,8 @@ a:hover { text-decoration-thickness: 2px; }
 .text-tools button { gap: 2px; width: 36px; min-height: 32px; padding: 5px; border: 0; border-radius: 0; background: transparent; font-size: 15px; }
 .text-tools button + button { border-left: 1px solid var(--line); }
 .text-tools button:focus-visible { outline-offset: -3px; }
-.help-button { width: 34px; min-width: 34px; height: 34px; padding: 0; border-radius: 50%; font-size: 21px; font-weight: 500; color: var(--ink); background: #fff1ad; border-color: #dfcb78; }
-.help-button:hover:not(:disabled) { color: var(--ink); background: #ffe991; border-color: #c9b15b; }
+.help-button { width: 34px; min-width: 34px; height: 34px; padding: 0; border-radius: 50%; font-size: 21px; font-weight: 500; color: var(--ink); background: #fff7ce; border-color: #dfcb78; }
+.help-button:hover:not(:disabled) { color: var(--ink); background: #fff2bd; border-color: #c9b15b; }
 .reading-pane { flex: 1 1 auto; min-height: 0; overflow: auto; overscroll-behavior: contain; scrollbar-gutter: stable both-edges; scroll-padding: 24px; background: #fff; }
 /* Keep the reading area focusable for navigation without outlining the crumb. */
 .reading-pane:focus, .reading-pane:focus-visible,
