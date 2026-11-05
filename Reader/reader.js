@@ -69,7 +69,7 @@ function setSearchResult(result) {
 }
 
 async function getSearchClient(mode) {
-  // Regex searches do not depend on the separate synonym file being reachable.
+  // Regular-expression searches can run even when alias data is unavailable.
   if (mode === 'regex') return regexClient ||= new SearchClient(corpus, '');
   if (searchClient) return searchClient;
   if (!searchClientPromise) {
@@ -137,16 +137,19 @@ function updateSaveState() {
   const unavailable = !session || saving || loadingSession || pendingHistory !== null;
   controls['save-session'].disabled = unavailable;
   setHint(controls['save-session'], !session
-    ? 'Saving options become available after Crumbs loads.'
-    : 'Open saving options, enable or disable auto saving, or save a portable text file.');
+    ? 'The Save session form becomes available when the crumbs finish loading.'
+    : 'Open the Save session form to save your progress in this browser or download a copy.');
   byId('save-browser').disabled = unavailable || !needsBrowserSave();
+  setHint(byId('save-browser'), session && !needsBrowserSave()
+    ? 'This browser already has the current session saved.'
+    : 'Save your current progress in this browser so reading can continue here later.');
   byId('save-file').disabled = unavailable;
   byId('auto-save').disabled = unavailable;
   byId('auto-save').textContent = session?.autoSave
     ? 'Disable auto saving in this browser' : 'Enable auto saving in this browser';
   setHint(byId('auto-save'), session?.autoSave
-    ? 'Turn off automatic browser saving and save that choice immediately. Manual saving stays available.'
-    : 'Save this session now and automatically save later changes in this browser. Text files remain separate.');
+    ? 'Turn off auto saving. Save the current session and this choice now.'
+    : 'Save this session now, then save later changes automatically in this browser.');
   byId('auto-save-status').textContent = autoSaveFailed && session?.autoSave
     ? 'Auto saving is paused after a storage error. Save now in this browser to retry, or save a text file.'
     : session?.autoSave ? 'Auto saving is enabled. Changes are saved shortly after activity stops.'
@@ -327,14 +330,14 @@ function ask(title, message, accept, cancel = 'Cancel', { cancelIsPrimary = fals
   byId('confirm-accept').classList.toggle('primary', !cancelIsPrimary);
   byId('confirm-cancel').classList.toggle('primary', cancelIsPrimary);
   setHint(byId('confirm-cancel'), cancelValue === 'save'
-    ? 'Stay in the Reader and open the Save session dialog.'
+    ? 'Stay in the Reader and open the Save session form.'
     : 'Cancel this action and keep the current reading session.');
   const acceptHints = {
     'Return home': 'Leave the Reader and open the homepage without saving the current changes.',
-    'Start new round': 'Reset the visited list and choose another crumb at random. Keep favorites and viewing history.',
-    'Load session': 'Restore the selected file, including its auto-saving setting. If enabled, auto saving updates the browser copy.',
+    'Start new round': 'Start the visited count again and read a random crumb. Keep Favorites and viewing history.',
+    'Load session': 'Replace the open session with the one saved in the selected file.',
   };
-  setHint(byId('confirm-accept'), acceptHint || acceptHints[accept] || 'Carry out the action described in this dialog.');
+  setHint(byId('confirm-accept'), acceptHint || acceptHints[accept] || 'Carry out the action described above.');
   return new Promise(resolve => {
     let complete = false;
     const finish = value => {
@@ -423,13 +426,11 @@ function renderText(element, text, lineBreaks = true, ranges = []) {
       link.dataset.crumb = String(token.number);
       const title = corpus[token.number - 1].title;
       link.setAttribute('aria-label', `Crumb ${token.number}${title ? `: ${title}` : ''}`);
-      setHint(link, `Open crumb ${token.number}${title ? `: ${title}` : ''}. Back returns to the current crumb.`, false);
+      setHint(link, `Read crumb ${token.number}${title ? `: ${title}` : ''}. Use Back to return.`, false);
     } else {
       link.href = token.href;
       link.target = '_blank';
       link.rel = 'noopener noreferrer';
-      link.setAttribute('aria-label', `${token.text} (opens in a new tab)`);
-      setHint(link, `Open ${token.text} in another tab or window. The Reader stays open.`, false);
     }
     fragment.append(link);
   }
@@ -447,6 +448,16 @@ function updateControls() {
   controls['text-smaller'].disabled = unavailable || session.textSize === 0;
   controls['text-larger'].disabled = unavailable || session.textSize === TEXT_SCALES.length - 1;
   controls.favorite.setAttribute('aria-pressed', String(session.favorites.has(session.current)));
+  setHint(controls.favorite, session.favorites.has(session.current)
+    ? 'Remove this crumb from Favorites.' : 'Add this crumb to Favorites.');
+  setHint(controls.back, session.historyIndex === 0
+    ? 'There is no earlier crumb in the viewing history.' : 'Return to the crumb viewed before this one.');
+  setHint(controls.forward, session.historyIndex === session.history.length - 1
+    ? 'There is no later crumb in the viewing history.' : 'Return to the crumb viewed next after using Back.');
+  setHint(controls['text-smaller'], session.textSize === 0
+    ? 'The crumb’s title and text are already at their smallest size.' : 'Make the crumb’s title and text smaller.');
+  setHint(controls['text-larger'], session.textSize === TEXT_SCALES.length - 1
+    ? 'The crumb’s title and text are already at their largest size.' : 'Make the crumb’s title and text larger.');
   setHint(controls.next, message(session.search.active ? 'hint-next-search' : 'hint-next'));
   setHint(controls.previous, message(session.search.active ? 'hint-previous-search' : 'hint-previous'));
   setHint(controls.random, message(session.search.active ? 'hint-random-search' : 'hint-random'));
@@ -602,7 +613,7 @@ function showFavorites() {
     const link = document.createElement('a');
     link.href = crumbURL(number);
     link.dataset.crumb = String(number);
-    setHint(link, `Open crumb ${number}. Back returns to the current crumb.`, false);
+    setHint(link, `Read crumb ${number}. Use Back to return.`, false);
     const label = document.createElement('span');
     label.textContent = `Crumb ${number}`;
     link.append(label);
@@ -641,11 +652,11 @@ function updateBrowserDataControl() {
     const exists = window.localStorage.getItem(STORAGE_KEY) !== null;
     control.disabled = saving || !exists;
     setHint(control, exists
-      ? 'Delete this browser’s saved Reader session. The current reading session stays open.'
+      ? 'Erase the session saved in this browser and turn off auto saving. Keep reading the open session.'
       : 'There is no saved Reader session in this browser to erase.');
   } catch {
     control.disabled = true;
-    setHint(control, 'Browser storage is unavailable, so its saved session cannot be erased.');
+    setHint(control, 'The browser is not allowing access to its saved session.');
   }
 }
 
@@ -809,6 +820,7 @@ function setSearchBusy(busy) {
   searchBusy = busy;
   byId('search-form').setAttribute('aria-busy', String(busy));
   byId('search-submit').disabled = busy;
+  byId('search-help').disabled = busy;
   byId('search-mode').disabled = busy;
   byId('search-input').readOnly = busy;
   byId('search-submit').textContent = message(busy ? 'search-loading' : 'search-submit');
@@ -829,6 +841,15 @@ function configureSearchInput() {
   input.enterKeyHint = 'search';
   input.maxLength = MAX_SEARCH_QUERY_LENGTH;
   input.setAttribute('aria-label', message(`search-input-${mode}`));
+  const inputHints = {
+    text: 'Enter a word or phrase to find in crumb titles and text.',
+    number: `Enter a whole crumb number from 1 to ${numberFormat.format(corpus.length)}.`,
+    regex: 'Enter a regular expression. Use the yellow question mark for examples and help.',
+  };
+  setHint(input, inputHints[mode]);
+  setHint(byId('search-submit'), mode === 'number'
+    ? 'Go to the entered crumb number and end any active search.'
+    : 'Find matching crumbs and open the first one in numerical order.');
   input.placeholder = mode === 'number'
     ? message('search-number-placeholder', { total: numberFormat.format(corpus.length) }) : '';
   input.removeAttribute('aria-invalid');
@@ -949,7 +970,22 @@ async function returnHome() {
   window.location.assign(new URL('../', window.location.href));
 }
 controls.quit.addEventListener('click', returnHome);
-byId('reader-help').addEventListener('click', () => { hideHint(); byId('help-dialog').showModal(); });
+function openHelp({ section = null, showControlHints = false } = {}) {
+  hideHint();
+  if (showControlHints) showPhoneHints();
+  const dialog = byId('help-dialog');
+  setHint(dialog.querySelector('[data-close]'), section
+    ? 'Close Help and return to the Search form.' : 'Close Help and continue reading.');
+  if (!dialog.open) dialog.showModal();
+  const content = byId('help-content');
+  content.scrollTop = 0;
+  const heading = byId(section || 'help-title');
+  if (section) content.scrollTop += heading.getBoundingClientRect().top - content.getBoundingClientRect().top;
+  heading.focus({ preventScroll: true });
+}
+byId('reader-help').addEventListener('click', () => openHelp({ showControlHints: true }));
+byId('search-help').addEventListener('click', () => openHelp({ section: 'help-search' }));
+byId('help-dialog').addEventListener('close', hideHint);
 
 document.addEventListener('click', event => {
   hideHint();
@@ -1006,13 +1042,16 @@ function initializeSearchExit() {
   });
 }
 
-function initializePhoneHints() {
+function showPhoneHints() {
   if (window.matchMedia('(max-width: 800px)').matches) document.body.classList.add('initial-hints');
-  const dismiss = () => {
+}
+
+function initializePhoneHints() {
+  showPhoneHints();
+  const dismiss = event => {
+    // Help can be read and closed without dismissing the labels behind it.
+    if (byId('help-dialog').open || event.target?.closest?.('#help-dialog')) return;
     document.body.classList.remove('initial-hints');
-    document.removeEventListener('pointerdown', dismiss, true);
-    document.removeEventListener('click', dismiss, true);
-    document.removeEventListener('keydown', dismiss, true);
   };
   // Capture removes labels before the action; it never cancels or swallows that action.
   document.addEventListener('pointerdown', dismiss, true);
