@@ -65,7 +65,9 @@ a:hover { text-decoration-thickness: 2px; }
 .help-button { width: 34px; min-width: 34px; height: 34px; padding: 0; border-radius: 50%; font-size: 21px; font-weight: 500; color: var(--ink); background: #fff1ad; border-color: #dfcb78; }
 .help-button:hover:not(:disabled) { color: var(--ink); background: #ffe991; border-color: #c9b15b; }
 .reading-pane { flex: 1 1 auto; min-height: 0; overflow: auto; overscroll-behavior: contain; scrollbar-gutter: stable both-edges; scroll-padding: 24px; background: #fff; }
-.reading-pane:focus-visible { outline-offset: -3px; }
+/* Keep the reading area focusable for navigation without outlining the crumb. */
+.reading-pane:focus, .reading-pane:focus-visible,
+.crumb:focus, .crumb:focus-visible { outline: none; }
 .crumb { padding: 52px 64px 45px; }
 .crumb-number { margin: 0; color: #435166; font-size: 18px; font-weight: 550; text-align: center; line-height: 1.4; }
 .crumb-title { margin: 18px 0 34px; color: #111820; font-size: calc(40px * var(--text-scale)); font-weight: 650; text-align: center; line-height: 1.2; letter-spacing: -.022em; overflow-wrap: anywhere; }

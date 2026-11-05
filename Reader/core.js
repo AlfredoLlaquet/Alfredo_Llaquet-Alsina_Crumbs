@@ -69,7 +69,7 @@ export function restoreSession(data, total = MAX_CRUMB_NUMBER) {
       search.visited.length > MAX_CRUMB_NUMBER || !search.visited.every(validNumber) ||
       new Set(search.visited).size !== search.visited.length) fail();
   if ([data.history, data.visited, data.favorites, search.visited].some(numbers => numbers.some(n => n > total))) {
-    throw new Error('This session includes crumbs beyond the loaded text. Reload the Reader to get the latest text, then load the session again.');
+    throw new Error('This session includes crumbs beyond the loaded text. Reload the Crumb Reader to get the latest text, then load the session again.');
   }
   const visited = new Set(data.visited);
   if (!visited.has(data.current)) fail();

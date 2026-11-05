@@ -1,4 +1,4 @@
-import { HISTORY_LIMIT, MAX_CRUMB_NUMBER, MAX_SEARCH_QUERY_LENGTH, SESSION_VERSION, restoreSession, snapshot } from './core.js?v=20261104-refine2';
+import { HISTORY_LIMIT, MAX_CRUMB_NUMBER, MAX_SEARCH_QUERY_LENGTH, SESSION_VERSION, restoreSession, snapshot } from './core.js?v=20261105-naming1';
 
 export const SESSION_HEADER = `CRUMB-READER/${SESSION_VERSION}\n`;
 export const MAX_SESSION_FILE_BYTES = 2 * 1024 * 1024;

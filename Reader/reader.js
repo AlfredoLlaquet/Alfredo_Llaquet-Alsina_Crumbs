@@ -2,8 +2,8 @@ import {
   HISTORY_LIMIT, TEXT_SCALES, parseCorpus, createSession, snapshot, fingerprint,
   restoreSession, visit, moveInHistory, nextRandom, restartRandom, nextSearchRandom,
   restartSearchRandom, crumbFromURL, linkTokens, MAX_SEARCH_QUERY_LENGTH,
-} from './core.js?v=20261104-refine2';
-import { encodeSession, decodeSession, MAX_SESSION_FILE_BYTES } from './session.js?v=20261104-refine2';
+} from './core.js?v=20261105-naming1';
+import { encodeSession, decodeSession, MAX_SESSION_FILE_BYTES } from './session.js?v=20261105-naming1';
 import { SearchClient } from './search.js?v=3';
 
 // Keep the existing key and JSON mechanism so previous browser saves remain readable.
@@ -330,10 +330,10 @@ function ask(title, message, accept, cancel = 'Cancel', { cancelIsPrimary = fals
   byId('confirm-accept').classList.toggle('primary', !cancelIsPrimary);
   byId('confirm-cancel').classList.toggle('primary', cancelIsPrimary);
   setHint(byId('confirm-cancel'), cancelValue === 'save'
-    ? 'Stay in the Reader and open the Save session form.'
+    ? 'Stay in the Crumb Reader and open the Save session form.'
     : 'Cancel this action and keep the current reading session.');
   const acceptHints = {
-    'Return home': 'Leave the Reader and open the homepage without saving the current changes.',
+    'Return home': 'Leave the Crumb Reader and open the homepage without saving the current changes.',
     'Start new round': 'Start the visited count again and read a random crumb. Keep Favorites and viewing history.',
     'Load session': 'Replace the open session with the one saved in the selected file.',
   };
@@ -653,7 +653,7 @@ function updateBrowserDataControl() {
     control.disabled = saving || !exists;
     setHint(control, exists
       ? 'Erase the session saved in this browser and turn off auto saving. Keep reading the open session.'
-      : 'There is no saved Reader session in this browser to erase.');
+      : 'There is no saved Crumb Reader session in this browser to erase.');
   } catch {
     control.disabled = true;
     setHint(control, 'The browser is not allowing access to its saved session.');

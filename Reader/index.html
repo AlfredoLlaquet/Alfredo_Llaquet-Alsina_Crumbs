@@ -21,8 +21,8 @@
   <meta name="twitter:image" content="https://www.thecrumbs.org/Reader/img/social-preview.png">
   <meta name="twitter:image:alt" content="TheCrumbs.org. Writing relentlessly to become the most prolific author ever. Stacks of printed pages and loose sheets on a white background.">
   <link rel="icon" type="image/x-icon" href="favicon.ico">
-  <link rel="stylesheet" href="reader.css?v=20261105-help1">
-  <script type="module" src="reader.js?v=20261105-help1"></script>
+  <link rel="stylesheet" href="reader.css?v=20261105-naming1">
+  <script type="module" src="reader.js?v=20261105-naming1"></script>
 </head>
 <body>
   <a class="skip-link" href="#reading-pane" data-hint="Skip the controls and go directly to the current crumb.">Skip to crumb</a>
@@ -73,7 +73,7 @@
         </div>
         <div class="reading-actions">
           <button id="quit" class="toolbar-button" type="button" aria-label="Quit to homepage" data-initial-hint="Quit" data-hint="Return to the home page of TheCrumbs.org."><svg class="icon" aria-hidden="true"><use href="#icon-quit"/></svg><span class="control-label">Quit</span></button>
-          <button id="reader-help" class="help-button" type="button" aria-label="Help" data-initial-hint="Help" data-hint="Get help with the Reader’s controls and forms.">?</button>
+          <button id="reader-help" class="help-button" type="button" aria-label="Help" data-initial-hint="Help" data-hint="Get help with the Crumb Reader’s controls and forms.">?</button>
         </div>
       </nav>
     </header>
@@ -115,7 +115,7 @@
     <button id="auto-save" type="button" class="wide primary" data-hint="Turn automatic saving in this browser on or off.">Enable auto saving in this browser</button>
     <p id="auto-save-status" class="dialog-note" role="status" aria-live="polite">Auto saving is disabled. Browser saving and text-file saving are manual.</p>
     <button id="save-browser" type="button" class="wide" data-hint="Save your current progress in this browser so reading can continue here later.">Save now in this browser</button>
-    <p class="dialog-note">This browser keeps one saved session and restores it when the Reader opens.</p>
+    <p class="dialog-note">This browser keeps one saved session and restores it when the Crumb Reader opens.</p>
     <button id="erase-browser" type="button" class="wide" data-hint="Erase the session saved in this browser and turn off auto saving. Keep reading the open session." disabled>Erase current browser data</button>
     <div class="dialog-divider"></div>
     <label class="field-label" for="session-filename">Text file name</label>
@@ -164,11 +164,11 @@
   </dialog>
 
   <dialog id="help-dialog" class="help-dialog" aria-labelledby="help-title">
-    <h2 id="help-title" tabindex="-1">Reader help</h2>
-    <div id="help-content" class="help-content" tabindex="0" aria-label="Reader control explanations">
+    <h2 id="help-title" tabindex="-1">Crumb Reader help</h2>
+    <div id="help-content" class="help-content" tabindex="0" aria-label="Crumb Reader control explanations">
       <section class="help-section">
         <h3>Reading another crumb</h3>
-        <p>The controls at the bottom of the Reader move between crumbs. On phones, they appear as symbols; the yellow hints show their names.</p>
+        <p>The controls at the bottom of the Crumb Reader move between crumbs. On phones, they appear as symbols; the yellow hints show their names.</p>
         <ul>
           <li><strong>Previous / Next</strong> are the straight arrows. Use them to read the previous or next crumb in numerical order. During a search, they move between matching crumbs.</li>
           <li><strong>Back / Forward</strong> are the curved arrows. Back returns to the crumb viewed before the current one. Forward retraces those steps after Back has been used.</li>
@@ -194,7 +194,7 @@
         </ul>
         <p>To end the search and keep reading the displayed crumb, click or tap its text. Scrolling, selecting text, and selecting a crumb number keep the search active. The <strong>Escape</strong> key also ends the search when no form or Help is open.</p>
         <p>The yellow <strong>?</strong> in the Search form opens this section. <strong>Close help</strong> returns to the form with the chosen search type and entered text preserved.</p>
-        <p>For experts: the Reader uses ECMAScript (JavaScript) regular expressions.</p>
+        <p>For experts: the Crumb Reader uses ECMAScript (JavaScript) regular expressions.</p>
       </section>
       <section class="help-section">
         <h3>Favorite / Favorites</h3>
@@ -206,9 +206,9 @@
         <p>Select <strong>Save</strong> at the top to open the <strong>Save session</strong> form. A saved session keeps the current crumb, visited count, Favorites, viewing history, text size, and any active search, so reading can continue later.</p>
         <p>The <strong>Save session</strong> form contains these controls:</p>
         <ul>
-          <li><strong>Enable auto saving in this browser</strong> button: turn on automatic saving. The Reader saves changes shortly after activity stops. When it is on, this button changes to <strong>Disable auto saving in this browser</strong>. Selecting either button saves the current session and the choice immediately.</li>
-          <li><strong>Save now in this browser</strong> button: save the current session here now. The Reader restores it automatically when it is opened again in the same browser. This button is unavailable when the browser already has the current session saved.</li>
-          <li><strong>Erase current browser data</strong> button: delete the Reader’s saved session in this browser and turn off auto saving. The session currently open can still be read, and previously downloaded session files are kept. This button is unavailable when there is no saved session to erase.</li>
+          <li><strong>Enable auto saving in this browser</strong> button: turn on automatic saving. The Crumb Reader saves changes shortly after activity stops. When it is on, this button changes to <strong>Disable auto saving in this browser</strong>. Selecting either button saves the current session and the choice immediately.</li>
+          <li><strong>Save now in this browser</strong> button: save the current session here now. The Crumb Reader restores it automatically when it is opened again in the same browser. This button is unavailable when the browser already has the current session saved.</li>
+          <li><strong>Erase current browser data</strong> button: delete the Crumb Reader’s saved session in this browser and turn off auto saving. The session currently open can still be read, and previously downloaded session files are kept. This button is unavailable when there is no saved session to erase.</li>
           <li><strong>Text file name</strong> field: choose a name for a downloaded copy of the session.</li>
           <li><strong>Save as a text file</strong> button: download that copy. Keep it to load later, including on another computer or phone. Auto saving does not update downloaded files; use this button again to save a newer copy.</li>
         </ul>
@@ -217,7 +217,7 @@
       </section>
       <section class="help-section">
         <h3>Load</h3>
-        <p>Select <strong>Load</strong> at the top. In the file chooser, select a text file created with <strong>Save as a text file</strong>. The Reader restores the session from that file, including its reading position, Favorites, visited count, viewing history, text size, and saved search.</p>
+        <p>Select <strong>Load</strong> at the top. In the file chooser, select a text file created with <strong>Save as a text file</strong>. The Crumb Reader restores the session from that file, including its reading position, Favorites, visited count, viewing history, text size, and saved search.</p>
         <p>If the current session has unsaved changes, the <strong>Load another session</strong> confirmation asks whether to replace it. Select <strong>Load session</strong> to use the file or <strong>Cancel</strong> to keep the current session.</p>
         <p>The file also restores its auto-saving choice. If auto saving is on, the loaded session is saved in this browser. If it is off, the browser’s previously saved session is kept until a new browser save is made.</p>
       </section>
@@ -236,13 +236,13 @@
       </section>
       <section class="help-section">
         <h3>Help and control hints</h3>
-        <p>Select the yellow <strong>?</strong> in the Reader’s top controls to open this Help. On a computer, pointing at a control with the mouse or reaching it with the keyboard also shows a short explanation of that control.</p>
-        <p>On phones, yellow labels identify the controls when the Reader opens. The first tap or key press hides those labels and still carries out the chosen action. Opening the Reader’s Help shows the labels again behind it. After <strong>Close help</strong>, they stay visible until the next tap or key press in the Reader.</p>
+        <p>Select the yellow <strong>?</strong> in the Crumb Reader’s top controls to open this Help. On a computer, pointing at a control with the mouse or reaching it with the keyboard also shows a short explanation of that control.</p>
+        <p>On phones, yellow labels identify the controls when the Crumb Reader opens. The first tap or key press hides those labels and still carries out the chosen action. Opening the Crumb Reader’s Help shows the labels again behind it. After <strong>Close help</strong>, they stay visible until the next tap or key press in the Crumb Reader.</p>
       </section>
       <section class="help-section">
         <h3>Messages, Cancel, and Close</h3>
         <p>Forms and messages name the action available. <strong>Cancel</strong> leaves the proposed action undone. <strong>Close</strong> returns to reading, and <strong>Close help</strong> returns to the Search form when Help was opened there.</p>
-        <p>If the crumbs cannot be loaded when the Reader opens, select <strong>Try again</strong> to retry.</p>
+        <p>If the crumbs cannot be loaded when the Crumb Reader opens, select <strong>Try again</strong> to retry.</p>
       </section>
     </div>
     <div class="dialog-actions"><button type="button" class="primary" data-close="help-dialog" data-hint="Close Help and return to reading or the Search form.">Close help</button></div>
