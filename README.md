@@ -19,12 +19,12 @@
   <ul id="crumbs-menu-links" class="crumbs-menu-links">
     <li><a href="#progress">Stats</a></li>
     <li><a href="#short-faq">Short FAQ</a></li>
+    <li><a href="#crumb-reader">Crumb Reader</a></li>
     <li><a href="#download">Download</a></li>
     <li><a href="#legal">Legal</a></li>
     <li><a href="#latest">Latest</a></li>
     <li><a href="#disclaimer">Disclaimer</a></li>
     <li><a href="#long-faq">Long FAQ</a></li>
-    <li><a href="#crumb-reader">Crumb Reader</a></li>
     <li><a href="#free-immortality">Free Immortality</a></li>
     <li><a href="#text-file">Text File</a></li>
     <li><a href="#video-books">Video-books</a></li>
@@ -50,6 +50,20 @@
 - They jolt you into creating movies in your head.
 - You never know what the next one will be about.
 - They are very short—each can be read in less than 20 seconds.
+
+<h2 id="crumb-reader">Crumb Reader</h2>
+
+<div class="crumb-reader-intro">
+  <a class="crumb-reader-preview" href="Reader/" aria-label="Go to the Crumb Reader">
+    <img src="img/crumb-reader-phone.jpg?v=20261105-home1" alt="Crumb Reader on a phone displaying Crumb 1, The Game." width="921" height="2048" loading="lazy" decoding="async">
+  </a>
+  <div class="crumb-reader-copy">
+    <p>The Crumb Reader allows you to comfortably read the crumbs on your computer or phone and save your reading session in your browser storage, manually or automatically, or in a text file from which you can restore it afterward.</p>
+    <p>Read the crumbs in numerical order, jump to an unvisited crumb with Random, or use the “Search in the crumbs” form to search by text, crumb number, or regular expression. Text searches match the names of recurring characters, places, concepts, and more with any of their aliases. For instance, “universe 12” also matches “band universe” and “universe band”; “crumb-smith” also matches “Alfredo,” “multi-god,” and other aliases. Matching text is highlighted. Each new text or regular-expression search starts at the lowest-numbered matching crumb. During a search, Previous and Next follow matching crumbs in numerical order, while Random chooses a match not yet visited during that search.</p>
+    <p>Click or tap a crumb number inside a crumb to read that crumb. Use Back to return to the crumb you were reading.</p>
+    <p><a href="Reader/">Go to the Crumb Reader.</a></p>
+  </div>
+</div>
 
 <h2 id="download">As Digital Flipbooks and Downloadable PDF and EPUB (on the Internet Archive)</h2>
 
@@ -537,20 +551,6 @@ The scope and philosophy of the crumbs are explained quickly by the following ha
     </tr>
   </tbody>
 </table>
-
-<h2 id="crumb-reader">Crumb Reader</h2>
-
-<div class="crumb-reader-intro">
-  <a class="crumb-reader-preview" href="Reader/" aria-label="Go to the Crumb Reader">
-    <img src="img/crumb-reader-phone.jpg" alt="Crumb Reader on a phone displaying Crumb 1, The Game." width="921" height="2048" loading="lazy" decoding="async">
-  </a>
-  <div class="crumb-reader-copy">
-    <p>The Crumb Reader allows you to comfortably read the crumbs on your computer or phone and save your reading session in your browser storage, manually or automatically, or in a text file from which you can restore it afterward.</p>
-    <p>Read the crumbs in numerical order, jump to an unvisited crumb with Random, or use the “Search in the crumbs” form to search by text, crumb number, or regular expression. Text searches match the names of recurring characters, places, concepts, and more with any of their aliases. For instance, “universe 12” also matches “band universe” and “universe band”; “crumb-smith” also matches “Alfredo,” “multi-god,” and other aliases. Matching text is highlighted. Each new text or regular-expression search starts at the lowest-numbered matching crumb. During a search, Previous and Next follow matching crumbs in numerical order, while Random chooses a match not yet visited during that search.</p>
-    <p>Click or tap a crumb number inside a crumb to read that crumb. Use Back to return to the crumb you were reading.</p>
-    <p><a href="Reader/">Go to the Crumb Reader.</a></p>
-  </div>
-</div>
 
 <h2 id="free-immortality">Free Immortality Offered</h2>
 
