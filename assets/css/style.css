@@ -420,6 +420,14 @@ html {
   display: none !important;
 }
 
+/* Match the desktop stats gap to the page's 24px spacing. */
+@media (min-width: 601px) {
+  .markdown-body .crumbs-stats-image {
+    display: block;
+    margin-top: 24px;
+  }
+}
+
 /* Increase spacing before section headings. */
 .markdown-body h2 {
   margin-top: 48px;
