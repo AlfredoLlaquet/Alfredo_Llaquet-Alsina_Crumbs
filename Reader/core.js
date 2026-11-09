@@ -1,10 +1,12 @@
 import { topLevelDomains } from './domains.js';
 
 export const HISTORY_LIMIT = 100;
-export const SESSION_VERSION = 3;
+export const SESSION_VERSION = 4;
 export const TEXT_SCALES = [0.9, 1, 1.12, 1.25, 1.4, 1.6];
 export const MAX_CRUMB_NUMBER = 1_000_000;
 export const MAX_SEARCH_QUERY_LENGTH = 8192;
+export const VISITED_ORDERS = ['number-asc', 'number-desc', 'visit-asc', 'visit-desc'];
+const MAX_VISIT_TIME = 8_640_000_000_000_000;
 
 export function parseCorpus(text) {
   const lines = text.replace(/^\uFEFF/, '').split(/\r\n|\n|\r/);
@@ -21,9 +23,10 @@ export function parseCorpus(text) {
   });
 }
 
-export function createSession(number = 1) {
+export function createSession(number = 1, now = Date.now()) {
   return {
     current: number, visited: new Set([number]), favorites: new Set(),
+    lastVisits: new Map([[number, now]]), visitedOrder: VISITED_ORDERS[0],
     history: [number], historyIndex: 0, textSize: 1, autoSave: false,
     search: { query: '', mode: 'text', active: false, visited: new Set() },
   };
@@ -34,6 +37,8 @@ export function snapshot(session) {
     version: SESSION_VERSION, current: session.current,
     visited: [...session.visited].sort((a, b) => a - b),
     favorites: [...session.favorites].sort((a, b) => a - b),
+    lastVisits: [...session.lastVisits].sort((a, b) => a[0] - b[0]),
+    visitedOrder: session.visitedOrder,
     history: [...session.history],
     historyIndex: session.historyIndex, textSize: session.textSize, autoSave: session.autoSave,
     search: {
@@ -47,9 +52,9 @@ export function fingerprint(session) {
   return JSON.stringify(snapshot(session));
 }
 
-export function restoreSession(data, total = MAX_CRUMB_NUMBER) {
+export function restoreSession(data, total = MAX_CRUMB_NUMBER, now = Date.now()) {
   const fail = () => { throw new Error('This file does not contain a valid Crumb Reader session.'); };
-  if (!data || typeof data !== 'object' || Array.isArray(data) || ![1, 2, SESSION_VERSION].includes(data.version)) fail();
+  if (!data || typeof data !== 'object' || Array.isArray(data) || ![1, 2, 3, SESSION_VERSION].includes(data.version)) fail();
   if (data.version >= 2 && typeof data.autoSave !== 'boolean') fail();
   const validNumber = n => Number.isSafeInteger(n) && n >= 1 && n <= MAX_CRUMB_NUMBER;
   if (!validNumber(data.current) || (data.version < 3 && typeof data.random !== 'boolean')) fail();
@@ -73,9 +78,28 @@ export function restoreSession(data, total = MAX_CRUMB_NUMBER) {
   }
   const visited = new Set(data.visited);
   if (!visited.has(data.current)) fail();
-  // A new random round can deliberately clear visits still present in history.
+  // The Random round and the complete visit record have separate lifetimes.
+  const knownVisits = new Set([...visited, ...data.history, ...search.visited]);
+  let lastVisits;
+  if (data.version < 4) {
+    const yesterday = new Date(now);
+    yesterday.setHours(0, 0, 0, 0);
+    yesterday.setDate(yesterday.getDate() - 1);
+    lastVisits = new Map([...knownVisits].map(number => [number, yesterday.getTime()]));
+  } else {
+    if (!VISITED_ORDERS.includes(data.visitedOrder) || !Array.isArray(data.lastVisits) ||
+        data.lastVisits.length > MAX_CRUMB_NUMBER || !data.lastVisits.every(entry =>
+          Array.isArray(entry) && entry.length === 2 && validNumber(entry[0]) &&
+          Number.isSafeInteger(entry[1]) && entry[1] >= 0 && entry[1] <= MAX_VISIT_TIME)) fail();
+    lastVisits = new Map(data.lastVisits);
+    if (lastVisits.size !== data.lastVisits.length || [...knownVisits].some(number => !lastVisits.has(number))) fail();
+    if ([...lastVisits.keys()].some(number => number > total)) {
+      throw new Error('This session includes crumbs beyond the loaded text. Reload the Crumb Reader to get the latest text, then load the session again.');
+    }
+  }
   return {
     current: data.current, visited, favorites: new Set(data.favorites),
+    lastVisits, visitedOrder: data.version < 4 ? VISITED_ORDERS[0] : data.visitedOrder,
     history: [...data.history],
     historyIndex: data.historyIndex, textSize: data.textSize,
     autoSave: data.version === 1 ? false : data.autoSave,
@@ -83,24 +107,41 @@ export function restoreSession(data, total = MAX_CRUMB_NUMBER) {
   };
 }
 
-export function visit(session, number) {
+export function recordVisit(session, number = session.current, now = Date.now()) {
+  session.visited.add(number);
+  session.lastVisits.set(number, now);
+}
+
+export function visitedNumbers(session, corpus, filter = '') {
+  const query = filter.trim().toLocaleLowerCase('en-US');
+  const numbers = [...session.lastVisits.keys()].filter(number => !query ||
+    String(number).includes(query) || corpus[number - 1].title.toLocaleLowerCase('en-US').includes(query));
+  return numbers.sort((a, b) => {
+    if (session.visitedOrder === 'number-desc') return b - a;
+    if (session.visitedOrder === 'visit-asc') return session.lastVisits.get(a) - session.lastVisits.get(b) || a - b;
+    if (session.visitedOrder === 'visit-desc') return session.lastVisits.get(b) - session.lastVisits.get(a) || a - b;
+    return a - b;
+  });
+}
+
+export function visit(session, number, now = Date.now()) {
   if (!Number.isInteger(number) || number < 1) throw new Error('Invalid crumb number.');
+  recordVisit(session, number, now);
   if (number === session.current) return false;
   session.history = session.history.slice(0, session.historyIndex + 1);
   session.history.push(number);
   session.history = session.history.slice(-HISTORY_LIMIT);
   session.historyIndex = session.history.length - 1;
   session.current = number;
-  session.visited.add(number);
   return true;
 }
 
-export function moveInHistory(session, index) {
+export function moveInHistory(session, index, now = Date.now()) {
   if (!Number.isInteger(index) || index < 0 || index >= session.history.length) return false;
+  recordVisit(session, session.history[index], now);
   if (session.historyIndex === index) return false;
   session.historyIndex = index;
   session.current = session.history[index];
-  session.visited.add(session.current);
   return true;
 }
 

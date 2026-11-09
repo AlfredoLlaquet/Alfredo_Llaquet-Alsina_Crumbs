@@ -21,8 +21,8 @@
   <meta name="twitter:image" content="https://www.thecrumbs.org/Reader/img/social-preview.png">
   <meta name="twitter:image:alt" content="TheCrumbs.org. Writing relentlessly to become the most prolific author ever. Stacks of printed pages and loose sheets on a white background.">
   <link rel="icon" type="image/x-icon" href="favicon.ico">
-  <link rel="stylesheet" href="reader.css?v=20261105-home1">
-  <script type="module" src="reader.js?v=20261105-naming1"></script>
+  <link rel="stylesheet" href="reader.css?v=20261109-visited1">
+  <script type="module" src="reader.js?v=20261109-visited1"></script>
 </head>
 <body>
   <a class="skip-link" href="#reading-pane" data-hint="Skip the controls and go directly to the current crumb.">Skip to crumb</a>
@@ -32,6 +32,7 @@
       <symbol id="icon-save" viewBox="0 0 24 24"><path d="M4 15v5h16v-5M12 4v12m-5-5 5 5 5-5"/></symbol>
       <symbol id="icon-search" viewBox="0 0 24 24"><circle cx="10.5" cy="10.5" r="7.5"/><path d="m16 16 6 6"/></symbol>
       <symbol id="icon-star" viewBox="0 0 24 24"><path d="m12 3 2.8 5.8 6.4.9-4.6 4.5 1.1 6.3-5.7-3-5.7 3 1.1-6.3L2.8 9.7l6.4-.9Z"/></symbol>
+      <symbol id="icon-visited" viewBox="0 0 24 24"><circle cx="8" cy="12" r="7"/><path d="M8 8v4l3 2M18 6h4m-4 6h4m-4 6h4"/></symbol>
       <symbol id="icon-favorites" viewBox="0 0 24 24"><path d="m7 5 1.9 3.9 4.3.6-3.1 3 .7 4.3L7 14.8 3.2 17l.7-4.5-3.1-3 4.3-.6ZM17 6h5m-5 6h5m-5 6h5"/></symbol>
       <symbol id="icon-history-back" viewBox="0 0 24 24"><path d="m9 5-6 6 6 6M3 11h9c5 0 8 3 8 8"/></symbol>
       <symbol id="icon-history-forward" viewBox="0 0 24 24"><path d="m15 5 6 6-6 6m6-6h-9c-5 0-8 3-8 8"/></symbol>
@@ -62,6 +63,7 @@
         <button id="search" class="toolbar-button" type="button" aria-label="Search in the crumbs" data-initial-hint="Search" data-hint="Open the Search in the crumbs form to find text or go to a crumb number." disabled><svg class="icon" aria-hidden="true"><use href="#icon-search"/></svg><span class="control-label">Search</span></button>
         <div class="toolbar-center">
           <div class="session-controls">
+            <button id="visited" class="toolbar-button" type="button" aria-label="Visited crumbs list" data-initial-hint="Visited" data-hint="Open all visited crumbs, sorted by crumb number or last visit." disabled><svg class="icon" aria-hidden="true"><use href="#icon-visited"/></svg><span class="control-label">Visited</span></button>
             <button id="favorites" class="toolbar-button" type="button" aria-label="Favorites list" data-initial-hint="Favorites" data-hint="Open the Favorites list to choose a favorite crumb to read." disabled><svg class="icon" aria-hidden="true"><use href="#icon-favorites"/></svg><span class="control-label">Favorites</span></button>
             <button id="load-session" class="toolbar-button" type="button" aria-label="Load session" data-initial-hint="Load" data-hint="Choose a saved session file to continue an earlier reading session." disabled><svg class="icon" aria-hidden="true"><use href="#icon-load"/></svg><span class="control-label">Load</span></button>
             <button id="save-session" class="toolbar-button" type="button" aria-label="Save session" data-initial-hint="Save" data-hint="Open the Save session form to save your progress in this browser or download a copy." disabled><svg class="icon" aria-hidden="true"><use href="#icon-save"/></svg><span class="control-label">Save</span></button>
@@ -146,6 +148,29 @@
     </form>
   </dialog>
 
+  <dialog id="visited-dialog" class="visited-dialog" aria-labelledby="visited-title">
+    <h2 id="visited-title" tabindex="-1" autofocus>Visited crumbs</h2>
+    <div class="visited-controls">
+      <div>
+        <label class="field-label" for="visited-filter">Filter by number or title</label>
+        <input id="visited-filter" type="text" maxlength="200" autocomplete="off" spellcheck="false" enterkeyhint="search" aria-controls="visited-list" data-hint="Filter visited crumbs by any part of their number or title. Uppercase and lowercase letters are treated alike.">
+      </div>
+      <div>
+        <label class="field-label" for="visited-order">Order</label>
+        <select id="visited-order" aria-controls="visited-list" data-hint="Choose the list order. Saving the session preserves this choice.">
+          <option value="number-asc">Crumb number: ascending</option>
+          <option value="number-desc">Crumb number: descending</option>
+          <option value="visit-asc">Last visit: oldest first</option>
+          <option value="visit-desc">Last visit: newest first</option>
+        </select>
+      </div>
+    </div>
+    <p id="visited-count" class="dialog-note" role="status" aria-live="polite" aria-atomic="true"></p>
+    <p id="visited-empty" hidden>No visited crumbs match this filter.</p>
+    <ol id="visited-list" class="favorites-list visited-list" aria-label="Visited crumbs"></ol>
+    <div class="dialog-actions"><button type="button" data-close="visited-dialog" data-hint="Close the Visited crumbs list and continue reading.">Close</button></div>
+  </dialog>
+
   <dialog id="favorites-dialog" class="favorites-dialog" aria-labelledby="favorites-title">
     <h2 id="favorites-title">Favorites</h2>
     <p id="favorites-empty" hidden>No favorites yet. Use Favorite to mark a crumb.</p>
@@ -172,10 +197,10 @@
         <ul>
           <li><strong>Previous / Next</strong> are the straight arrows. Use them to read the previous or next crumb in numerical order. During a search, they move between matching crumbs.</li>
           <li><strong>Back / Forward</strong> are the curved arrows. Back returns to the crumb viewed before the current one. Forward retraces those steps after Back has been used.</li>
-          <li><strong>Random</strong> is the crossed-arrows button. It chooses a crumb that has not been visited in the current session. During a search, it chooses from the matching crumbs not yet visited during that search.</li>
+          <li><strong>Random</strong> is the crossed-arrows button. It chooses a crumb that has not been visited in the current random round. During a search, it chooses from the matching crumbs not yet visited during that search.</li>
         </ul>
         <p>The visited count shows how many different crumbs have been opened in the current session. Opening a crumb already visited does not increase that count.</p>
-        <p>When Random runs out of unvisited crumbs, a message offers <strong>Start new round</strong>. Outside a search, this starts the visited count again. During a search, it allows matching crumbs to be chosen again without resetting the overall visited count. Favorites and viewing history are kept.</p>
+        <p>When Random runs out of unvisited crumbs, a message offers <strong>Start new round</strong>. This allows crumbs to be chosen again, within the current search when one is active. The complete Visited list, overall visited count, Favorites, and viewing history are kept.</p>
       </section>
       <section class="help-section">
         <h3 id="help-search" tabindex="-1">Search</h3>
@@ -190,11 +215,19 @@
         <ul>
           <li><strong>Previous / Next</strong> move to the previous or next match in numerical order, whether it has been visited or not. At either end, a message says there are no earlier or later matches.</li>
           <li><strong>Random</strong> chooses a match not yet visited during this search. A crumb visited before the search began can still be chosen. This separate record of visits is used only by Random; new visits also count toward overall reading progress.</li>
-          <li><strong>Back, Forward, Favorites, and crumb numbers inside a crumb</strong> can open other crumbs without ending the search. If the displayed crumb does not match, the blue bar says so.</li>
+          <li><strong>Back, Forward, Visited, Favorites, and crumb numbers inside a crumb</strong> can open other crumbs without ending the search. If the displayed crumb does not match, the blue bar says so.</li>
         </ul>
         <p>To end the search and keep reading the displayed crumb, click or tap its text. Scrolling, selecting text, and selecting a crumb number keep the search active. The <strong>Escape</strong> key also ends the search when no form or Help is open.</p>
         <p>The yellow <strong>?</strong> in the Search form opens this section. <strong>Close help</strong> returns to the form with the chosen search type and entered text preserved.</p>
         <p>For experts: the Crumb Reader uses ECMAScript (JavaScript) regular expressions.</p>
+      </section>
+      <section class="help-section">
+        <h3>Visited</h3>
+        <p>Select <strong>Visited</strong>, the clock-and-list button immediately left of Favorites, to open every crumb visited in the current session. Each crumb appears once, with its number and title. Selecting an entry closes the form and opens that crumb.</p>
+        <p>The list starts in ascending crumb-number order. <strong>Order</strong> also offers descending crumb numbers, oldest last visit first, and newest last visit first. Sorting by last visit displays each entry’s latest visit date and time in the local time zone. Equal visit times are ordered by ascending crumb number. Saving a session preserves the selected order.</p>
+        <p><strong>Filter by number or title</strong> matches any part of a crumb number or title, ignoring uppercase and lowercase differences. Clear the field to show every entry. The filter starts empty whenever the form opens and does not change the active reading search.</p>
+        <p>Opening a crumb through any reading control, a reference, Favorites, or Visited updates its last visit. Reopening the Reader or restoring a session also counts as a fresh visit to the displayed crumb. Changing text size, opening forms, and changing list order do not count as visits.</p>
+        <p>Older sessions retain their known visited crumbs. Missing dates are assigned to yesterday in the local calendar when the session is restored; the displayed crumb then receives a fresh visit timestamp. Saving the updated session preserves those dates. Starting a new random round never clears the Visited list.</p>
       </section>
       <section class="help-section">
         <h3>Favorite / Favorites</h3>
@@ -203,7 +236,7 @@
       </section>
       <section class="help-section">
         <h3>Save</h3>
-        <p>Select <strong>Save</strong> at the top to open the <strong>Save session</strong> form. A saved session keeps the current crumb, visited count, Favorites, viewing history, text size, and any active search, so reading can continue later.</p>
+        <p>Select <strong>Save</strong> at the top to open the <strong>Save session</strong> form. A saved session keeps the current crumb, complete Visited list with last-visit dates and selected order, random-round progress, Favorites, viewing history, text size, and any active search, so reading can continue later.</p>
         <p>The <strong>Save session</strong> form contains these controls:</p>
         <ul>
           <li><strong>Enable auto saving in this browser</strong> button: turn on automatic saving. The Crumb Reader saves changes shortly after activity stops. When it is on, this button changes to <strong>Disable auto saving in this browser</strong>. Selecting either button saves the current session and the choice immediately.</li>
@@ -217,7 +250,7 @@
       </section>
       <section class="help-section">
         <h3>Load</h3>
-        <p>Select <strong>Load</strong> at the top. In the file chooser, select a text file created with <strong>Save as a text file</strong>. The Crumb Reader restores the session from that file, including its reading position, Favorites, visited count, viewing history, text size, and saved search.</p>
+        <p>Select <strong>Load</strong> at the top. In the file chooser, select a text file created with <strong>Save as a text file</strong>. The Crumb Reader restores the session from that file, including its reading position, Favorites, Visited list and order, random-round progress, viewing history, text size, and saved search. The displayed crumb counts as a fresh visit.</p>
         <p>If the current session has unsaved changes, the <strong>Load another session</strong> confirmation asks whether to replace it. Select <strong>Load session</strong> to use the file or <strong>Cancel</strong> to keep the current session.</p>
         <p>The file also restores its auto-saving choice. If auto saving is on, the loaded session is saved in this browser. If it is off, the browser’s previously saved session is kept until a new browser save is made.</p>
       </section>
@@ -253,7 +286,12 @@
     <template id="message-hint-previous-search">Read the previous matching crumb in numerical order.</template>
     <template id="message-hint-previous">Read the previous crumb in numerical order.</template>
     <template id="message-hint-random-search">Read a random matching crumb that has not been visited during this search.</template>
-    <template id="message-hint-random">Read a randomly chosen crumb that has not been visited.</template>
+    <template id="message-hint-random">Read a randomly chosen crumb that has not been visited in this random round.</template>
+    <template id="message-visited-count">Visited crumbs: {total}</template>
+    <template id="message-visited-filter-count">Matching crumbs: {shown} of {total}</template>
+    <template id="message-visited-loading">Loading entries…</template>
+    <template id="message-visited-last-visit">Last visit: {date}</template>
+    <template id="message-hint-visited-entry">Read crumb {number}. Use Back to return.</template>
     <template id="message-search-count">Matching crumb {position} of {total}</template>
     <template id="message-search-current-outside">Outside the {total} matching crumbs</template>
     <template id="message-search-empty">Enter text or a regular expression to search for.</template>

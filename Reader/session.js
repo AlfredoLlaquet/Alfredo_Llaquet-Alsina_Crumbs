@@ -1,4 +1,4 @@
-import { HISTORY_LIMIT, MAX_CRUMB_NUMBER, MAX_SEARCH_QUERY_LENGTH, SESSION_VERSION, restoreSession, snapshot } from './core.js?v=20261105-naming1';
+import { HISTORY_LIMIT, MAX_CRUMB_NUMBER, MAX_SEARCH_QUERY_LENGTH, SESSION_VERSION, VISITED_ORDERS, restoreSession, snapshot } from './core.js?v=20261109-visited1';
 
 export const SESSION_HEADER = `CRUMB-READER/${SESSION_VERSION}\n`;
 export const MAX_SESSION_FILE_BYTES = 2 * 1024 * 1024;
@@ -61,10 +61,20 @@ function packBinaryCandidates(data) {
   const query = encoder.encode(data.search.query);
   const search = [Number(data.autoSave), Number(data.search.mode === 'regex'), Number(data.search.active)];
   variable(query.length, search);
+  const visitDates = [VISITED_ORDERS.indexOf(data.visitedOrder)];
+  variable(data.lastVisits.length, visitDates);
+  const earliest = data.lastVisits.reduce((minimum, entry) => Math.min(minimum, entry[1]), Infinity);
+  variable(earliest, visitDates);
+  previous = 0;
+  for (const [number, timestamp] of data.lastVisits) {
+    variable(number - previous, visitDates);
+    variable(timestamp - earliest, visitDates);
+    previous = number;
+  }
   for (const visits of visited) {
     for (const marks of favorites) {
       for (const searchVisited of searchVisits) {
-        const parts = [result, visits, marks, search, query, searchVisited];
+        const parts = [result, visits, marks, search, query, searchVisited, visitDates];
         const bytes = new Uint8Array(parts.reduce((length, part) => length + part.length, 0));
         let offset = 0;
         for (const part of parts) { bytes.set(part, offset); offset += part.length; }
@@ -81,10 +91,11 @@ function unpackBinary(bytes, version) {
   const next = () => {
     let value = 0;
     let multiplier = 1;
-    for (let count = 0; count < 5; count++) {
+    for (let count = 0; count < 8; count++) {
       if (cursor >= bytes.length) invalid();
       const byte = bytes[cursor++];
       value += (byte & 127) * multiplier;
+      if (!Number.isSafeInteger(value)) invalid();
       if (!(byte & 128)) return value;
       multiplier *= 128;
     }
@@ -136,7 +147,7 @@ function unpackBinary(bytes, version) {
   const autoSave = version === 1 ? 0 : next();
   if (autoSave > 1) invalid();
   let search;
-  if (version === 3) {
+  if (version >= 3) {
     const mode = next();
     const active = next();
     const queryLength = next();
@@ -145,8 +156,25 @@ function unpackBinary(bytes, version) {
     cursor += queryLength;
     search = { query, mode: mode ? 'regex' : 'text', active: Boolean(active), visited: readSet() };
   }
+  let lastVisits, visitedOrder;
+  if (version >= 4) {
+    const order = next();
+    const count = next();
+    const earliest = next();
+    if (order >= VISITED_ORDERS.length || count < 1 || count > MAX_CRUMB_NUMBER) invalid();
+    visitedOrder = VISITED_ORDERS[order];
+    lastVisits = [];
+    let previous = 0;
+    for (let i = 0; i < count; i++) {
+      const number = previous + next();
+      const timestamp = earliest + next();
+      if (number <= previous || number > MAX_CRUMB_NUMBER || !Number.isSafeInteger(timestamp)) invalid();
+      lastVisits.push([number, timestamp]);
+      previous = number;
+    }
+  }
   if (cursor !== bytes.length) invalid();
-  return { version, current, ...(version < 3 ? { random: Boolean(random) } : { search }), historyIndex, textSize, history, visited, favorites, autoSave: Boolean(autoSave) };
+  return { version, current, ...(version < 3 ? { random: Boolean(random) } : { search }), historyIndex, textSize, history, visited, favorites, autoSave: Boolean(autoSave), ...(version >= 4 ? { lastVisits, visitedOrder } : {}) };
 }
 
 function checksum(bytes) {
@@ -181,7 +209,8 @@ async function transform(bytes, name, decompress = false) {
 export async function encodeSession(value) {
   const data = snapshot(restoreSession(value.visited instanceof Set ? snapshot(value) : value));
   const compact = [data.current, data.historyIndex, data.textSize, data.history, data.visited, data.favorites,
-    Number(data.autoSave), data.search.query, Number(data.search.mode === 'regex'), Number(data.search.active), data.search.visited];
+    Number(data.autoSave), data.search.query, Number(data.search.mode === 'regex'), Number(data.search.active), data.search.visited,
+    VISITED_ORDERS.indexOf(data.visitedOrder), data.lastVisits];
   const representations = [encoder.encode(JSON.stringify(compact)), ...packBinaryCandidates(data)];
   const candidates = [];
   for (let encoding = 0; encoding < representations.length; encoding++) {
@@ -208,7 +237,7 @@ export async function encodeSession(value) {
 export async function decodeSession(text, total) {
   if (text.length > MAX_SESSION_FILE_BYTES) throw new Error('The session file is too large.');
   const normalized = text.replace(/^\uFEFF/, '').replaceAll('\r\n', '\n');
-  const header = /^CRUMB-READER\/([123])\n/.exec(normalized);
+  const header = /^CRUMB-READER\/([1234])\n/.exec(normalized);
   if (!header) throw new Error('Choose a supported text file saved by the Crumb Reader.');
   const version = Number(header[1]);
   const base64 = normalized.slice(header[0].length).replace(/\s+/g, '');
@@ -221,11 +250,13 @@ export async function decodeSession(text, total) {
   let data;
   if (file[3] === 0) {
     const parsed = JSON.parse(decoder.decode(bytes));
-    if (version === 3) {
-      if (!Array.isArray(parsed) || parsed.length !== 11 || ![parsed[6], parsed[8], parsed[9]].every(value => value === 0 || value === 1)) throw new Error('The session file is damaged.');
-      const [current, historyIndex, textSize, history, visited, favorites, autoSave, query, mode, active, searchVisited] = parsed;
+    if (version >= 3) {
+      if (!Array.isArray(parsed) || parsed.length !== (version === 3 ? 11 : 13) || ![parsed[6], parsed[8], parsed[9]].every(value => value === 0 || value === 1) ||
+          (version >= 4 && (!Number.isInteger(parsed[11]) || parsed[11] < 0 || parsed[11] >= VISITED_ORDERS.length))) throw new Error('The session file is damaged.');
+      const [current, historyIndex, textSize, history, visited, favorites, autoSave, query, mode, active, searchVisited, order, lastVisits] = parsed;
       data = { version, current, historyIndex, textSize, history, visited, favorites, autoSave: Boolean(autoSave),
-        search: { query, mode: mode ? 'regex' : 'text', active: Boolean(active), visited: searchVisited } };
+        search: { query, mode: mode ? 'regex' : 'text', active: Boolean(active), visited: searchVisited },
+        ...(version >= 4 ? { lastVisits, visitedOrder: VISITED_ORDERS[order] } : {}) };
     } else {
       if (!Array.isArray(parsed) || parsed.length !== (version === 1 ? 7 : 8) || ![0, 1].includes(parsed[1]) ||
           (version === 2 && ![0, 1].includes(parsed[7]))) throw new Error('The session file is damaged.');

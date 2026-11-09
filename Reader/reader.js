@@ -2,8 +2,9 @@ import {
   HISTORY_LIMIT, TEXT_SCALES, parseCorpus, createSession, snapshot, fingerprint,
   restoreSession, visit, moveInHistory, nextRandom, restartRandom, nextSearchRandom,
   restartSearchRandom, crumbFromURL, linkTokens, MAX_SEARCH_QUERY_LENGTH,
-} from './core.js?v=20261105-naming1';
-import { encodeSession, decodeSession, MAX_SESSION_FILE_BYTES } from './session.js?v=20261105-naming1';
+  recordVisit, visitedNumbers, VISITED_ORDERS,
+} from './core.js?v=20261109-visited1';
+import { encodeSession, decodeSession, MAX_SESSION_FILE_BYTES } from './session.js?v=20261109-visited1';
 import { SearchClient } from './search.js?v=3';
 
 // Keep the existing key and JSON mechanism so previous browser saves remain readable.
@@ -11,11 +12,14 @@ const STORAGE_KEY = 'thecrumbs.reader.session.v1';
 const AUTO_SAVE_DELAY = 500;
 const byId = id => document.getElementById(id);
 const controls = Object.fromEntries([
-  'load-session', 'save-session', 'search', 'favorites', 'back', 'forward', 'quit',
+  'load-session', 'save-session', 'search', 'visited', 'favorites', 'back', 'forward', 'quit',
   'text-smaller', 'text-larger', 'previous', 'next', 'random', 'favorite',
 ].map(id => [id, byId(id)]));
 const pane = byId('reading-pane');
 const numberFormat = new Intl.NumberFormat('en-US');
+const visitDateFormat = new Intl.DateTimeFormat('en-US', { dateStyle: 'medium', timeStyle: 'medium' });
+let visitedRenderFrame = null;
+let visitedFilterTimer;
 let corpus = [];
 let session = null;
 let baselineFingerprint = null;
@@ -203,6 +207,12 @@ document.addEventListener('visibilitychange', () => {
   if (document.visibilityState === 'hidden') flushAutoSave();
 });
 window.addEventListener('pagehide', flushAutoSave);
+window.addEventListener('pageshow', event => {
+  if (!event.persisted || !session) return;
+  recordVisit(session);
+  updateControls();
+  if (byId('visited-dialog').open) renderVisitedList();
+});
 window.addEventListener('storage', event => {
   if (!session || event.storageArea !== window.localStorage ||
       !((event.key === STORAGE_KEY && event.newValue === null) || event.key === null)) return;
@@ -334,7 +344,7 @@ function ask(title, message, accept, cancel = 'Cancel', { cancelIsPrimary = fals
     : 'Cancel this action and keep the current reading session.');
   const acceptHints = {
     'Return home': 'Leave the Crumb Reader and open the homepage without saving the current changes.',
-    'Start new round': 'Start the visited count again and read a random crumb. Keep Favorites and viewing history.',
+    'Start new round': 'Choose from a new random round. Keep the complete Visited list, Favorites, and viewing history.',
     'Load session': 'Replace the open session with the one saved in the selected file.',
   };
   setHint(byId('confirm-accept'), acceptHint || acceptHints[accept] || 'Carry out the action described above.');
@@ -468,7 +478,7 @@ function updateControls() {
       position: numberFormat.format(index + 1), total: numberFormat.format(searchResult.matches.length),
     });
   }
-  byId('reading-progress').textContent = `${numberFormat.format(session.visited.size)} of ${numberFormat.format(corpus.length)} visited`;
+  byId('reading-progress').textContent = `${numberFormat.format(session.lastVisits.size)} of ${numberFormat.format(corpus.length)} visited`;
   document.documentElement.style.setProperty('--text-scale', TEXT_SCALES[session.textSize]);
   updateSaveState();
   scheduleAutoSave();
@@ -594,13 +604,87 @@ async function readRandom() {
   }
   let number = nextRandom(session, corpus.length);
   if (number === null) {
-    const accepted = await ask('Every crumb has been visited', 'Start a new random round? The visited list will be reset. Favorites and viewing history will be kept.', 'Start new round');
+    const accepted = await ask('Every crumb has been visited', 'Start a new random round? Crumbs can be chosen again. The complete Visited list, Favorites, and viewing history will be kept.', 'Start new round');
     if (!accepted) return;
     restartRandom(session);
     number = nextRandom(session, corpus.length);
     updateControls();
   }
   if (number !== null) navigate(number);
+}
+
+function cancelVisitedRender() {
+  if (visitedRenderFrame !== null) cancelAnimationFrame(visitedRenderFrame);
+  visitedRenderFrame = null;
+  clearTimeout(visitedFilterTimer);
+}
+
+function renderVisitedList() {
+  cancelVisitedRender();
+  const list = byId('visited-list');
+  const query = byId('visited-filter').value;
+  const numbers = visitedNumbers(session, corpus, query);
+  const showDates = session.visitedOrder.startsWith('visit-');
+  const count = message(query.trim() ? 'visited-filter-count' : 'visited-count', {
+    shown: numberFormat.format(numbers.length), total: numberFormat.format(session.lastVisits.size),
+  });
+  byId('visited-empty').hidden = numbers.length > 0;
+  list.hidden = numbers.length === 0;
+  list.replaceChildren();
+  list.scrollTop = 0;
+  list.setAttribute('aria-busy', 'true');
+  byId('visited-count').textContent = count + (numbers.length > 250 ? ` — ${message('visited-loading')}` : '');
+  let offset = 0;
+  // Small batches keep typing, closing, and scrolling responsive without capping the list.
+  const appendBatch = () => {
+    visitedRenderFrame = null;
+    if (!byId('visited-dialog').open) return;
+    const fragment = document.createDocumentFragment();
+    const end = Math.min(offset + 250, numbers.length);
+    for (; offset < end; offset++) {
+      const number = numbers[offset];
+      const item = document.createElement('li');
+      const link = document.createElement('a');
+      link.href = crumbURL(number);
+      link.dataset.crumb = String(number);
+      setHint(link, message('hint-visited-entry', { number }), false);
+      const label = document.createElement('span');
+      label.textContent = `Crumb ${number}`;
+      link.append(label);
+      const title = corpus[number - 1].title;
+      if (title) {
+        const strong = document.createElement('strong');
+        strong.textContent = title;
+        link.append(strong);
+      }
+      if (showDates) {
+        const date = new Date(session.lastVisits.get(number));
+        const time = document.createElement('time');
+        time.dateTime = date.toISOString();
+        time.textContent = message('visited-last-visit', { date: visitDateFormat.format(date) });
+        link.append(time);
+      }
+      if (number === session.current) link.setAttribute('aria-current', 'page');
+      item.append(link);
+      fragment.append(item);
+    }
+    list.append(fragment);
+    if (offset < numbers.length) visitedRenderFrame = requestAnimationFrame(appendBatch);
+    else {
+      list.setAttribute('aria-busy', 'false');
+      byId('visited-count').textContent = count;
+    }
+  };
+  appendBatch();
+}
+
+function showVisited() {
+  if (!session || loadingSession || pendingHistory !== null) return;
+  byId('visited-filter').value = '';
+  byId('visited-order').value = session.visitedOrder;
+  byId('visited-dialog').showModal();
+  renderVisitedList();
+  byId('visited-title').focus({ preventScroll: true });
 }
 
 function showFavorites() {
@@ -748,6 +832,7 @@ async function importFile(file) {
     const restoredSearch = await restoreSearch(restored);
     cancelAutoSave();
     session = restored;
+    recordVisit(session);
     setSearchResult(restoredSearch.result);
     autoSaveFailed = false;
     baselineFingerprint = savedFingerprint;
@@ -940,6 +1025,22 @@ byId('search-form').addEventListener('submit', async event => {
     }
   }
 });
+controls.visited.addEventListener('click', showVisited);
+byId('visited-filter').addEventListener('input', () => {
+  clearTimeout(visitedFilterTimer);
+  visitedFilterTimer = setTimeout(renderVisitedList, 100);
+});
+byId('visited-order').addEventListener('change', () => {
+  const order = byId('visited-order').value;
+  if (!VISITED_ORDERS.includes(order)) return;
+  session.visitedOrder = order;
+  renderVisitedList();
+  updateControls();
+});
+byId('visited-dialog').addEventListener('close', () => {
+  cancelVisitedRender();
+  hideHint();
+});
 controls.favorites.addEventListener('click', showFavorites);
 controls.back.addEventListener('click', () => historyStep(-1));
 controls.forward.addEventListener('click', () => historyStep(1));
@@ -1004,6 +1105,7 @@ document.addEventListener('click', event => {
   if (!link || event.button !== 0 || event.metaKey || event.ctrlKey || event.shiftKey || event.altKey) return;
   event.preventDefault();
   if (byId('favorites-dialog').open) byId('favorites-dialog').close();
+  if (byId('visited-dialog').open) byId('visited-dialog').close();
   navigate(Number(link.dataset.crumb), { focus: true });
 });
 
@@ -1105,6 +1207,8 @@ async function start() {
     const restoredSearch = await restoreSearch(session);
     setSearchResult(restoredSearch.result);
     if (restoredSearch.notice) notices.push(restoredSearch.notice);
+    recordVisit(session);
+    if (baselineStorage === 'initial') baselineFingerprint = fingerprint(session);
     initializeHistory();
     renderCrumb();
     if (notices.length) showMessage('Reading session', notices.join(' '));
