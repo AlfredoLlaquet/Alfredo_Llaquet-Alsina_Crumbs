@@ -21,8 +21,8 @@
   <meta name="twitter:image" content="https://www.thecrumbs.org/Reader/img/social-preview.png">
   <meta name="twitter:image:alt" content="TheCrumbs.org. Writing relentlessly to become the most prolific author ever. Stacks of printed pages and loose sheets on a white background.">
   <link rel="icon" type="image/x-icon" href="favicon.ico">
-  <link rel="stylesheet" href="reader.css?v=20261109-visited1">
-  <script type="module" src="reader.js?v=20261109-visited1"></script>
+  <link rel="stylesheet" href="reader.css?v=20261109-visited2">
+  <script type="module" src="reader.js?v=20261109-visited2"></script>
 </head>
 <body>
   <a class="skip-link" href="#reading-pane" data-hint="Skip the controls and go directly to the current crumb.">Skip to crumb</a>
@@ -223,7 +223,7 @@
       </section>
       <section class="help-section">
         <h3>Visited</h3>
-        <p>Select <strong>Visited</strong>, the clock-and-list button immediately left of Favorites, to open every crumb visited in the current session. Each crumb appears once, with its number and title. Selecting an entry closes the form and opens that crumb.</p>
+        <p>Select <strong>Visited</strong>, the clock-and-list button immediately left of Favorites, to open every crumb visited in the current session. Each crumb appears once, with its number and title. A filled star on the right marks a favorite. Selecting an entry closes the form and opens that crumb.</p>
         <p>The list starts in ascending crumb-number order. <strong>Order</strong> also offers descending crumb numbers, oldest last visit first, and newest last visit first. Sorting by last visit displays each entry’s latest visit date and time in the local time zone. Equal visit times are ordered by ascending crumb number. Saving a session preserves the selected order.</p>
         <p><strong>Filter by number or title</strong> matches any part of a crumb number or title, ignoring uppercase and lowercase differences. Clear the field to show every entry. The filter starts empty whenever the form opens and does not change the active reading search.</p>
         <p>Opening a crumb through any reading control, a reference, Favorites, or Visited updates its last visit. Reopening the Reader or restoring a session also counts as a fresh visit to the displayed crumb. Changing text size, opening forms, and changing list order do not count as visits.</p>
@@ -281,6 +281,7 @@
     <div class="dialog-actions"><button type="button" class="primary" data-close="help-dialog" data-hint="Close Help and return to reading or the Search form.">Close help</button></div>
   </dialog>
   <div id="reader-messages" hidden>
+    <template id="visited-favorite-mark"><svg class="icon visited-favorite" role="img" aria-label="Favorite"><use href="#icon-star"/></svg></template>
     <template id="message-hint-next-search">Read the next matching crumb in numerical order.</template>
     <template id="message-hint-next">Read the next crumb in numerical order.</template>
     <template id="message-hint-previous-search">Read the previous matching crumb in numerical order.</template>

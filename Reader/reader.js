@@ -664,6 +664,10 @@ function renderVisitedList() {
         time.textContent = message('visited-last-visit', { date: visitDateFormat.format(date) });
         link.append(time);
       }
+      if (session.favorites.has(number)) {
+        link.classList.add('has-favorite');
+        link.append(byId('visited-favorite-mark').content.cloneNode(true));
+      }
       if (number === session.current) link.setAttribute('aria-current', 'page');
       item.append(link);
       fragment.append(item);

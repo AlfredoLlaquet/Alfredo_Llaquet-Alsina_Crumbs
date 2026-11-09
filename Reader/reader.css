@@ -148,6 +148,8 @@ dialog .dialog-note { margin: 9px 0 0; font-size: 13px; color: var(--muted); }
 .visited-list { min-height: 80px; max-height: calc(var(--dialog-viewport-height) * .52); }
 .visited-list li { content-visibility: auto; contain-intrinsic-size: auto 90px; }
 .visited-list a { overflow-wrap: anywhere; }
+.visited-list a.has-favorite { position: relative; padding-inline-end: 42px; }
+.visited-list .visited-favorite { position: absolute; inset-inline-end: 12px; top: 50%; transform: translateY(-50%); fill: currentColor; }
 .visited-list time { display: block; margin-top: 6px; color: var(--muted); font-size: 12px; line-height: 1.4; }
 .visited-dialog .dialog-actions { margin-top: 16px; }
 @media (max-width: 500px) {
