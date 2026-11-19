@@ -15,7 +15,8 @@ const fullDate=date.toLocaleDateString('en-US',{weekday:'long',month:'long',day:
 const finishDate=`${finish.getUTCDate()} ${month(finish)} ${finish.getUTCFullYear()}`;
 const weekDate=s=>`${asDate(s).getUTCDate()} ${month(asDate(s))}`;
 const C={ink:'#090909',muted:'#454D5D',blue:'#0662EF',rule:'#DDE1E7',track:'#E7EAF0'};
-const serif='Nimbus Roman',sans='Open Sans',title='History’s Most Prolific Writer';
+const serif='Nimbus Roman',sans='Open Sans',title='Becoming History’s Most Prolific Writer';
+const comparison=book=>data.words>book.words?'>':data.words<book.words?'<':'=';
 class Overlay{
   constructor(width,height){this.width=width;this.height=height;this.parts=[];}
   raw(s){this.parts.push(s);}
@@ -39,31 +40,35 @@ function chart(a,{x,y,w,h,font}){
 }
 function desktop(){
   const a=new Overlay(1536,1024);
-  // Both date lines have identical type size and weight.
-  a.rect(1010,39,510,103);a.text(1019,81,'Progress through',34);a.text(1019,126,fullDate,34);
+  // A single subtitle line sits beneath the image-tool title.
+  a.rect(47,87,1450,55);a.text(55,122,`Progress through ${fullDate}`,32);
   a.rect(211,310,540,52);a.text(220,348,`${fmt(data.record)} cataloged haiku`,35);
   a.rect(208,465,560,77);a.goal(217,525,64);
   a.rect(208,666,555,76);a.metric(215,724,fmt(data.crumbs),'crumbs written',66,61);
   a.rect(210,752,553,80);progress(a,{x:218,y:765,w:522,font:28,labelY:816});
   a.rect(184,860,580,81);a.text(192,891,`At a pace of ${data.dailyPace} crumbs/day`,28);a.text(192,929,`Projected finish: ${finishDate}`,28);
-  a.rect(805,299,704,303);chart(a,{x:858,y:318,w:637,h:230,font:24});
+  a.rect(862,347,646,254);chart(a,{x:938,y:370,w:557,h:173,font:24});
   a.rect(939,664,576,77);a.metric(948,720,fmt(data.words),'words in Crumbs',59,49);
   a.rect(1278,807,226,46);a.text(1495,840,`${fmt(data.books[0].words)} words`,30,{anchor:'end'});
   a.rect(1278,918,226,44);a.text(1495,950,`${fmt(data.books[1].words)} words`,30,{anchor:'end'});
+  a.rect(811,776,40,42);a.text(820,811,comparison(data.books[0]),44,{color:C.blue});
+  a.rect(811,887,40,42);a.text(820,922,comparison(data.books[1]),44,{color:C.blue});
   return a;
 }
 function phone(){
-  const a=new Overlay(856,1838);
-  a.rect(34,195,800,98);a.text(43,234,'Progress through',37);a.text(43,281,fullDate,37);
-  a.rect(208,444,625,53);a.text(215,484,`${fmt(data.record)} cataloged haiku`,36);
-  a.rect(207,581,626,82);a.goal(215,642,66);
-  a.rect(207,754,628,79);a.metric(215,814,fmt(data.crumbs),'crumbs written',68,62);
-  a.rect(208,858,625,91);progress(a,{x:215,y:870,w:605,font:32,labelY:929});
-  a.rect(155,962,680,92);a.text(164,1000,`At a pace of ${data.dailyPace} crumbs/day`,34);a.text(164,1044,`Projected finish: ${finishDate}`,34);
-  a.rect(24,1205,810,244);chart(a,{x:87,y:1234,w:733,h:166,font:29});
-  a.rect(180,1508,657,77);a.metric(188,1567,fmt(data.words),'words in Crumbs',66,55);
-  a.rect(576,1641,257,54);a.text(821,1682,`${fmt(data.books[0].words)} words`,34,{anchor:'end'});
-  a.rect(576,1754,257,54);a.text(821,1794,`${fmt(data.books[1].words)} words`,34,{anchor:'end'});
+  const a=new Overlay(936,1680);
+  a.rect(47,150,857,56);a.text(54,190,`Progress through ${fullDate}`,35);
+  a.rect(206,337,665,54);a.text(215,373,`${fmt(data.record)} cataloged haiku`,35);
+  a.rect(208,464,662,77);a.goal(217,520,64);
+  a.rect(208,619,672,79);a.metric(215,674,fmt(data.crumbs),'crumbs written',64,60);
+  a.rect(208,705,680,87);progress(a,{x:216,y:716,w:645,font:32,labelY:773});
+  a.rect(163,806,727,90);a.text(170,839,`At a pace of ${data.dailyPace} crumbs/day`,32);a.text(170,881,`Projected finish: ${finishDate}`,32);
+  a.rect(73,1050,821,219);chart(a,{x:150,y:1071,w:706,h:144,font:30});
+  a.rect(190,1326,710,78);a.metric(199,1382,fmt(data.words),'words in Crumbs',64,52);
+  a.rect(655,1457,247,49);a.text(892,1492,`${fmt(data.books[0].words)} words`,32,{anchor:'end'});
+  a.rect(655,1572,247,51);a.text(892,1608,`${fmt(data.books[1].words)} words`,32,{anchor:'end'});
+  a.rect(47,1448,44,44);a.text(53,1484,comparison(data.books[0]),48,{color:C.blue});
+  a.rect(47,1557,44,50);a.text(53,1599,comparison(data.books[1]),48,{color:C.blue});
   return a;
 }
 function difference(book){const gap=data.words-book.words;return gap>=0?`${fmt(gap)} words ahead`:`${fmt(-gap)} words to go`;}
