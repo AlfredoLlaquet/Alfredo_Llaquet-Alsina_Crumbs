@@ -188,7 +188,16 @@ function trimURL(text) {
 
 // Return text and link tokens. Text is always inserted as text nodes, never HTML.
 export function linkTokens(original, total, lineBreaks = true) {
-  const text = lineBreaks ? original.replaceAll(' / ', '\n') : original;
+  let text = original;
+  if (lineBreaks) {
+    // Verse separators take precedence over dialogue formatting.
+    if (text.includes(' / ')) {
+      text = text.replaceAll(' / ', '\n');
+    } else if (/^“[^“”\r\n]+”(?: “[^“”\r\n]+”)+$/.test(text) && text.endsWith('”')) {
+      // One space becomes one newline, preserving search-highlight offsets.
+      text = text.replaceAll('” “', '”\n“');
+    }
+  }
   const matches = [];
   const urlPattern = /\b(?:https?:\/\/|www\.)[^\s<>"'“”‘’‹›]+|\b(?:[a-z\d](?:[a-z\d-]*[a-z\d])?\.)+(?:[a-z]{2,63}|xn--[a-z\d-]+)(?::\d+)?(?:[/?#][^\s<>"'“”‘’‹›]*)?/gi;
   for (const match of text.matchAll(urlPattern)) {

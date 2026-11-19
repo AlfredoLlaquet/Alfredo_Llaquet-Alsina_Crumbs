@@ -3,7 +3,7 @@ import {
   restoreSession, visit, moveInHistory, nextRandom, restartRandom, nextSearchRandom,
   restartSearchRandom, crumbFromURL, linkTokens, MAX_SEARCH_QUERY_LENGTH,
   recordVisit, visitedNumbers, VISITED_ORDERS,
-} from './core.js?v=20261109-visited1';
+} from './core.js?v=20261119-dialogue1';
 import { encodeSession, decodeSession, MAX_SESSION_FILE_BYTES } from './session.js?v=20261109-visited1';
 import { SearchClient } from './search.js?v=3';
 
