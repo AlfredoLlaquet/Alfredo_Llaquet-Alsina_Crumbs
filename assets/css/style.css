@@ -138,7 +138,7 @@ SOFTWARE.
 
 @media (pointer: coarse) {
   .markdown-body .crumb-reader-link {
-    padding: 0.2em 0.1em;
+    padding: 0.35rem 0.2rem;
   }
 }
 
