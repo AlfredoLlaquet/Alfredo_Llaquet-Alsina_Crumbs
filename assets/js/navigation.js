@@ -2,6 +2,25 @@
 (() => {
   "use strict";
 
+  // The Sunday publishing template also supports cells containing just the literary text.
+  for (const label of document.querySelectorAll(".recent-crumbs-table td > em:first-child")) {
+    const cell = label.parentElement;
+    if (!label.nextElementSibling?.matches("strong") || cell.querySelector(".crumb-reader-link")) continue;
+    const number = /^Crumb ([1-9]\d*)$/.exec(label.textContent.trim())?.[1];
+    if (!number) continue;
+
+    const link = document.createElement("a");
+    link.className = "crumb-reader-link";
+    link.href = `Reader/?crumb=${number}`;
+    link.target = "_self";
+    link.title = "View in the Crumb Reader.";
+    link.setAttribute("aria-label", `View crumb ${number} in the Crumb Reader.`);
+    const mark = document.createElement("strong");
+    mark.textContent = "[➚]";
+    link.append(mark);
+    cell.append("\u00a0", link);
+  }
+
   const header = document.getElementById("crumbs-navigation");
   const trigger = document.getElementById("crumbs-nav-trigger");
   const toggle = document.getElementById("crumbs-menu-toggle");

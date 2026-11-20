@@ -114,6 +114,34 @@ SOFTWARE.
   text-align: left;
 }
 
+.markdown-body .crumb-reader-link,
+.markdown-body .crumb-reader-link:visited {
+  color: #0366d6;
+  text-decoration: none;
+}
+
+.markdown-body .crumb-reader-link strong {
+  font-weight: 700;
+  white-space: nowrap;
+}
+
+.markdown-body .crumb-reader-link:hover,
+.markdown-body .crumb-reader-link:focus-visible {
+  text-decoration: underline;
+  text-underline-offset: 0.15em;
+}
+
+.markdown-body .crumb-reader-link:focus-visible {
+  outline: 2px solid currentColor;
+  outline-offset: 2px;
+}
+
+@media (pointer: coarse) {
+  .markdown-body .crumb-reader-link {
+    padding: 0.2em 0.1em;
+  }
+}
+
 @media (max-width: 600px) {
   .markdown-body .crumb-volumes-table > tbody {
     grid-template-columns: repeat(2, minmax(0, 1fr));
