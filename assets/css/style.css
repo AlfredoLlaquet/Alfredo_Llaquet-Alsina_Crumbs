@@ -420,10 +420,42 @@ html {
   display: none !important;
 }
 
-/* Match the desktop stats gap to the page's 24px spacing. */
+/* Visible artwork in source pixels. The page container supplies the outer margin. */
+.markdown-body .crumbs-stats-image {
+  --stats-source-width: 1536;
+  --stats-left: 37;
+  --stats-top: 21;
+  --stats-view-width: 1460;
+  --stats-view-height: 1039;
+  display: block;
+  position: relative;
+  width: 100%;
+  aspect-ratio: var(--stats-view-width) / var(--stats-view-height);
+  overflow: hidden;
+}
+
+.markdown-body .crumbs-stats-image > img {
+  position: absolute;
+  display: block;
+  width: calc(100% * var(--stats-source-width) / var(--stats-view-width));
+  height: auto;
+  max-width: none;
+  left: calc(-100% * var(--stats-left) / var(--stats-view-width));
+  top: calc(-100% * var(--stats-top) / var(--stats-view-height));
+}
+
+@media (max-width: 600px) {
+  .markdown-body .crumbs-stats-image {
+    --stats-source-width: 936;
+    --stats-left: 37;
+    --stats-top: 14;
+    --stats-view-width: 856;
+    --stats-view-height: 1953;
+  }
+}
+
 @media (min-width: 601px) {
   .markdown-body .crumbs-stats-image {
-    display: block;
     margin-top: 24px;
   }
 }

@@ -2,9 +2,15 @@
 
 The desktop and phone artwork was revised with the built-in image tool using the accepted development images from commit b46f0100a0b0cfe0c237d52ea280dc1f6b260a74. The original main-branch icon and serif style is retained. Main was not changed.
 
-The finished images are img/Progress.jpg (1536 × 1024) and img/ProgressP.jpg (936 × 1680). Both are complete JPGs at quality 100, including all text. The page does not overlay HTML text.
+The finished images are `img/Progress.jpg` (1536 × 1128) and `img/ProgressP.jpg` (936 × 2016). Both are standalone quality-100 JPEGs with all lettering included. The Stats picture in `assets/css/style.css` crops the exterior paper at the same 600 px breakpoint as the image source.
 
-The image tool creates the composition, title, headings, book titles, author names, and icons. scripts/finish-stats.cjs typesets numeric rows from stats-data.json, draws the exact smaller chart and progress bar, and selects the blue comparison signs from the word totals. The script preserves the image-tool artwork. With no artwork arguments, it uses the existing finished JPGs as its base.
+The image tool supplies the composition, title, headings, book titles, author names, icons, and paper. `scripts/finish-stats.cjs` typesets the numeric rows from `stats-data.json`, draws the progress bar and six weekly bars, and selects the blue comparison signs from the word totals. Each bar starts at the same faint baseline and carries its own count and date. The script spaces whole panels when opening a compact master from the prompts below. With no artwork arguments, it updates the existing JPEGs at their finished dimensions.
+
+## Paper for the expanded layout
+
+The background retouch used the following brief. A sample of the resulting unprinted paper fills the new gaps and numeric rows in both images.
+
+This is a precise background retouch of the supplied landscape Crumbs editorial illustration. The edit target is the attached Stats artwork. Match the quiet neutral-white paper in the open gaps between the panels so the new gaps and the older paper read as one continuous clean high-key white surface. Keep the same established black serif title, gray small type, cobalt illustrated round icons and full five-panel layout, existing panel positions, proportions, and margins. All printed content and its locations are locked; focus exclusively on the empty paper. Preserve the open spacing of this wider landscape graphic, the one-line subtitle, and the pair of book comparisons. No framing or decoration. The neutral paper retouch will also supply paper for the companion vertical image; all exact statistics and lettering are protected and are handled outside this retouch.
 
 ## Desktop revision prompt
 
