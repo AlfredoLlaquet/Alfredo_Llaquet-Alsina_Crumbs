@@ -16,7 +16,7 @@
     link.title = "View in the Crumb Reader.";
     link.setAttribute("aria-label", `View crumb ${number} in the Crumb Reader.`);
     const mark = document.createElement("strong");
-    mark.textContent = "[➚]";
+    mark.textContent = "[➜]";
     link.append(mark);
     cell.append("\u00a0", link);
   }
