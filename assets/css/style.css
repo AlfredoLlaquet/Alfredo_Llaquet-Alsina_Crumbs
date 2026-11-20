@@ -427,9 +427,12 @@ html {
   --stats-top: 21;
   --stats-view-width: 1460;
   --stats-view-height: 1039;
+  --stats-panel-gap: 101;
   display: block;
   position: relative;
   width: 100%;
+  /* Match the visible panel gap, allowing for the leading below the preceding text. */
+  margin-top: calc(100% * var(--stats-panel-gap) / var(--stats-view-width) - 0.25em);
   aspect-ratio: var(--stats-view-width) / var(--stats-view-height);
   overflow: hidden;
 }
@@ -451,12 +454,7 @@ html {
     --stats-top: 14;
     --stats-view-width: 856;
     --stats-view-height: 1953;
-  }
-}
-
-@media (min-width: 601px) {
-  .markdown-body .crumbs-stats-image {
-    margin-top: 24px;
+    --stats-panel-gap: 98;
   }
 }
 
