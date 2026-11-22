@@ -21,8 +21,8 @@
   <meta name="twitter:image" content="https://www.thecrumbs.org/Reader/img/social-preview.png">
   <meta name="twitter:image:alt" content="TheCrumbs.org. Writing relentlessly to become the most prolific author ever. Stacks of printed pages and loose sheets on a white background.">
   <link rel="icon" type="image/x-icon" href="favicon.ico">
-  <link rel="stylesheet" href="reader.css?v=20261109-visited2">
-  <script type="module" src="reader.js?v=20261119-dialogue1"></script>
+  <link rel="stylesheet" href="reader.css?v=20261122-pdf1">
+  <script type="module" src="reader.js?v=20261122-pdf1"></script>
 </head>
 <body>
   <a class="skip-link" href="#reading-pane" data-hint="Skip the controls and go directly to the current crumb.">Skip to crumb</a>
@@ -34,6 +34,7 @@
       <symbol id="icon-star" viewBox="0 0 24 24"><path d="m12 3 2.8 5.8 6.4.9-4.6 4.5 1.1 6.3-5.7-3-5.7 3 1.1-6.3L2.8 9.7l6.4-.9Z"/></symbol>
       <symbol id="icon-visited" viewBox="0 0 24 24"><circle cx="8" cy="12" r="7"/><path d="M8 8v4l3 2M18 6h4m-4 6h4m-4 6h4"/></symbol>
       <symbol id="icon-favorites" viewBox="0 0 24 24"><path d="m7 5 1.9 3.9 4.3.6-3.1 3 .7 4.3L7 14.8 3.2 17l.7-4.5-3.1-3 4.3-.6ZM17 6h5m-5 6h5m-5 6h5"/></symbol>
+      <symbol id="icon-pdf" viewBox="0 0 24 24"><path d="M5 2.5h9l5 5v14H5zM14 3v5h5M8.5 12h7M8.5 16h7"/></symbol>
       <symbol id="icon-history-back" viewBox="0 0 24 24"><path d="m9 5-6 6 6 6M3 11h9c5 0 8 3 8 8"/></symbol>
       <symbol id="icon-history-forward" viewBox="0 0 24 24"><path d="m15 5 6 6-6 6m6-6h-9c-5 0-8 3-8 8"/></symbol>
       <symbol id="icon-back" viewBox="0 0 24 24"><path d="m10 5-7 7 7 7M3 12h18"/></symbol>
@@ -65,6 +66,7 @@
           <div class="session-controls">
             <button id="visited" class="toolbar-button" type="button" aria-label="Visited crumbs list" data-initial-hint="Visited" data-hint="Open all visited crumbs, sorted by crumb number or last visit." disabled><svg class="icon" aria-hidden="true"><use href="#icon-visited"/></svg><span class="control-label">Visited</span></button>
             <button id="favorites" class="toolbar-button" type="button" aria-label="Favorites list" data-initial-hint="Favorites" data-hint="Open the Favorites list to choose a favorite crumb to read." disabled><svg class="icon" aria-hidden="true"><use href="#icon-favorites"/></svg><span class="control-label">Favorites</span></button>
+            <button id="to-pdf" class="toolbar-button" type="button" aria-label="Export crumbs as a PDF" aria-haspopup="dialog" data-initial-hint="To PDF" data-hint="Export crumbs as a PDF." disabled><svg class="icon" aria-hidden="true"><use href="#icon-pdf"/></svg><span class="control-label">To PDF</span></button>
             <button id="load-session" class="toolbar-button" type="button" aria-label="Load session" data-initial-hint="Load" data-hint="Choose a saved session file to continue an earlier reading session." disabled><svg class="icon" aria-hidden="true"><use href="#icon-load"/></svg><span class="control-label">Load</span></button>
             <button id="save-session" class="toolbar-button" type="button" aria-label="Save session" data-initial-hint="Save" data-hint="Open the Save session form to save your progress in this browser or download a copy." disabled><svg class="icon" aria-hidden="true"><use href="#icon-save"/></svg><span class="control-label">Save</span></button>
           </div>
@@ -110,6 +112,65 @@
   <div id="toast" class="toast" role="status" aria-live="polite" aria-atomic="true" hidden></div>
   <div id="hint-descriptions" class="sr-only"></div>
   <div id="control-hint" class="control-hint" role="tooltip" hidden></div>
+
+  <dialog id="pdf-dialog" aria-labelledby="pdf-dialog-title">
+    <form id="pdf-form" novalidate>
+      <h2 id="pdf-dialog-title">Export to PDF</h2>
+      <select id="pdf-scope" data-hint="Choose which crumbs to include in the PDF." aria-label="Crumbs to export" aria-controls="pdf-list-field pdf-range-fields" aria-errormessage="pdf-error" autofocus>
+        <option value="current">Current crumb</option>
+        <option value="matching">Matching crumbs</option>
+        <option value="favorites">Favorites</option>
+        <option value="visited">Visited</option>
+        <option value="list">Comma-separated list</option>
+        <option value="range">Range</option>
+      </select>
+      <div id="pdf-list-field" hidden>
+        <label class="field-label" for="pdf-list">List of crumb numbers</label>
+        <input id="pdf-list" data-hint="Separate crumb numbers with commas. The PDF follows their order, including repeats." type="text" placeholder="81, 1, 81" autocomplete="off" autocapitalize="none" spellcheck="false" aria-errormessage="pdf-error">
+      </div>
+      <div id="pdf-range-fields" class="pdf-field-pair" hidden>
+        <div>
+          <label class="field-label" for="pdf-from">From crumb number</label>
+          <input id="pdf-from" data-hint="Enter the first crumb number to include." type="number" min="1" step="1" inputmode="numeric" aria-errormessage="pdf-error">
+        </div>
+        <div>
+          <label class="field-label" for="pdf-to">To crumb number</label>
+          <input id="pdf-to" data-hint="Enter the last crumb number to include." type="number" min="1" step="1" inputmode="numeric" aria-errormessage="pdf-error">
+        </div>
+      </div>
+      <div class="pdf-field-pair">
+        <div>
+          <label class="field-label" for="pdf-format">Format</label>
+          <select id="pdf-format" data-hint="Choose the PDF page size.">
+            <option value="A5">DIN A5</option>
+            <option value="A4">DIN A4</option>
+          </select>
+        </div>
+        <div>
+          <label class="field-label" for="pdf-font-size">Font size</label>
+          <select id="pdf-font-size" data-hint="Choose the size of the body text in the PDF.">
+            <option value="9">Extra small</option>
+            <option value="11">Small</option>
+            <option value="13">Medium</option>
+            <option value="15" selected>Large</option>
+            <option value="18">Extra large</option>
+            <option value="22">XXL</option>
+          </select>
+        </div>
+      </div>
+      <label class="pdf-checkbox" data-hint-for="pdf-new-page"><input id="pdf-new-page" data-hint="Begin each selected crumb on a separate page." type="checkbox" checked>Start each crumb on a new page</label>
+      <label class="field-label" for="pdf-title">Title (optional)</label>
+      <input id="pdf-title" data-hint="Show this title at the top of every page." type="text" autocomplete="off">
+      <p id="pdf-error" class="field-error" role="alert" hidden></p>
+      <div class="dialog-actions"><button type="button" data-close="pdf-dialog" data-hint="Close the export settings and return to reading.">Cancel</button><button id="pdf-export" data-hint="Create and download the PDF." type="submit" class="primary">Export</button></div>
+    </form>
+  </dialog>
+  <dialog id="pdf-progress-dialog" aria-labelledby="pdf-progress-title">
+    <h2 id="pdf-progress-title">Exporting PDF</h2>
+    <label id="pdf-progress-status" for="pdf-progress" role="status" aria-live="polite" aria-atomic="true"></label>
+    <progress id="pdf-progress"></progress>
+    <div class="dialog-actions"><button id="pdf-progress-cancel" data-hint="Pause the export and choose whether to cancel it." type="button" autofocus>Cancel</button></div>
+  </dialog>
 
   <dialog id="save-dialog" aria-labelledby="save-title">
     <h2 id="save-title">Save session</h2>
@@ -235,6 +296,11 @@
         <p>To return to a favorite, select <strong>Favorites</strong> at the top. The <strong>Favorites</strong> form lists the marked crumbs by number and title, in numerical order. Select an entry to read it, or select <strong>Close</strong> to keep reading the current crumb.</p>
       </section>
       <section class="help-section">
+        <h3>Export to PDF</h3>
+        <p>Select <strong>To PDF</strong>, the page icon between Favorites and Load. Export the current crumb, matching crumbs during a search, favorites, visited crumbs, or a range. A comma-separated list preserves the exact order entered, including repeats. Other selections use ascending crumb numbers.</p>
+        <p>The PDF viewer’s bookmarks lead to each crumb. The optional title appears at the top of every page. During export, select <strong>Cancel</strong> to pause and choose whether to continue or cancel the export.</p>
+      </section>
+      <section class="help-section">
         <h3>Save</h3>
         <p>Select <strong>Save</strong> at the top to open the <strong>Save session</strong> form. A saved session keeps the current crumb, complete Visited list with last-visit dates and selected order, random-round progress, Favorites, viewing history, text size, and any active search, so reading can continue later.</p>
         <p>The <strong>Save session</strong> form contains these controls:</p>
@@ -281,6 +347,21 @@
     <div class="dialog-actions"><button type="button" class="primary" data-close="help-dialog" data-hint="Close Help and return to reading or the Search form.">Close help</button></div>
   </dialog>
   <div id="reader-messages" hidden>
+    <template id="message-pdf-empty-selection">This selection contains no crumbs.</template>
+    <template id="message-pdf-list-empty">Enter the crumb numbers in the order to export, separated by commas.</template>
+    <template id="message-pdf-list-invalid">Check entry {position} (“{entry}”). Use a whole crumb number from 1 to {total}.</template>
+    <template id="message-pdf-range-reversed">The ending crumb number must be at least the starting crumb number.</template>
+    <template id="message-pdf-preparing">Preparing PDF…</template>
+    <template id="message-pdf-progress">{done} of {total} crumbs</template>
+    <template id="message-pdf-finalizing">Finishing PDF…</template>
+    <template id="message-pdf-cancel-question">Cancel this export?</template>
+    <template id="message-pdf-cancel-detail">Choose whether to finish this PDF or return to the export settings.</template>
+    <template id="message-pdf-cancel">Cancel export</template>
+    <template id="message-pdf-continue">Continue exporting</template>
+    <template id="message-pdf-cancel-hint">Stop creating the PDF and return to its settings.</template>
+    <template id="message-pdf-continue-hint">Resume creating the PDF.</template>
+    <template id="message-pdf-failed">The PDF could not be created. Try exporting again.</template>
+    <template id="message-pdf-downloading">PDF download started.</template>
     <template id="visited-favorite-mark"><svg class="icon visited-favorite" role="img" aria-label="Favorite"><use href="#icon-star"/></svg></template>
     <template id="message-hint-next-search">Read the next matching crumb in numerical order.</template>
     <template id="message-hint-next">Read the next crumb in numerical order.</template>

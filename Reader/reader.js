@@ -3,16 +3,17 @@ import {
   restoreSession, visit, moveInHistory, nextRandom, restartRandom, nextSearchRandom,
   restartSearchRandom, crumbFromURL, linkTokens, MAX_SEARCH_QUERY_LENGTH,
   recordVisit, visitedNumbers, VISITED_ORDERS,
-} from './core.js?v=20261119-dialogue1';
+} from './core.js?v=20261122-pdf1';
 import { encodeSession, decodeSession, MAX_SESSION_FILE_BYTES } from './session.js?v=20261109-visited1';
 import { SearchClient } from './search.js?v=3';
+import { initializePdfExport } from './pdf-export.js?v=20261122-pdf1';
 
 // Keep the existing key and JSON mechanism so previous browser saves remain readable.
 const STORAGE_KEY = 'thecrumbs.reader.session.v1';
 const AUTO_SAVE_DELAY = 500;
 const byId = id => document.getElementById(id);
 const controls = Object.fromEntries([
-  'load-session', 'save-session', 'search', 'visited', 'favorites', 'back', 'forward', 'quit',
+  'load-session', 'save-session', 'search', 'visited', 'favorites', 'to-pdf', 'back', 'forward', 'quit',
   'text-smaller', 'text-larger', 'previous', 'next', 'random', 'favorite',
 ].map(id => [id, byId(id)]));
 const pane = byId('reading-pane');
@@ -331,7 +332,7 @@ function showMessage(title, message) {
   if (!byId('message-dialog').open) byId('message-dialog').showModal();
 }
 
-function ask(title, message, accept, cancel = 'Cancel', { cancelIsPrimary = false, cancelValue = false, acceptHint = '' } = {}) {
+function ask(title, message, accept, cancel = 'Cancel', { cancelIsPrimary = false, cancelValue = false, acceptHint = '', cancelHint = '' } = {}) {
   const dialog = byId('confirm-dialog');
   byId('confirm-title').textContent = title;
   byId('confirm-text').textContent = message;
@@ -339,9 +340,9 @@ function ask(title, message, accept, cancel = 'Cancel', { cancelIsPrimary = fals
   byId('confirm-cancel').textContent = cancel;
   byId('confirm-accept').classList.toggle('primary', !cancelIsPrimary);
   byId('confirm-cancel').classList.toggle('primary', cancelIsPrimary);
-  setHint(byId('confirm-cancel'), cancelValue === 'save'
+  setHint(byId('confirm-cancel'), cancelHint || (cancelValue === 'save'
     ? 'Stay in the Crumb Reader and open the Save session form.'
-    : 'Cancel this action and keep the current reading session.');
+    : 'Cancel this action and keep the current reading session.'));
   const acceptHints = {
     'Return home': 'Leave the Crumb Reader and open the homepage without saving the current changes.',
     'Start new round': 'Choose from a new random round. Keep the complete Visited list, Favorites, and viewing history.',
@@ -768,6 +769,19 @@ function safeFilename() {
   return filename;
 }
 
+function downloadBlob(blob, filename) {
+  const url = URL.createObjectURL(blob);
+  const link = document.createElement('a');
+  link.href = url;
+  link.download = filename;
+  document.body.append(link);
+  try { link.click(); }
+  finally {
+    link.remove();
+    setTimeout(() => URL.revokeObjectURL(url), 60000);
+  }
+}
+
 async function saveFile() {
   if (saving || !session || pendingHistory !== null) return;
   const data = snapshot(session);
@@ -798,14 +812,7 @@ async function saveFile() {
       try { await writer.write(contents); await writer.close(); }
       catch (error) { try { await writer.abort(); } catch { /* Preserve the write error. */ } throw error; }
     } else {
-      const url = URL.createObjectURL(new Blob([contents], { type: 'text/plain;charset=utf-8' }));
-      const link = document.createElement('a');
-      link.href = url;
-      link.download = filename;
-      document.body.append(link);
-      link.click();
-      link.remove();
-      setTimeout(() => URL.revokeObjectURL(url), 60000);
+      downloadBlob(new Blob([contents], { type: 'text/plain;charset=utf-8' }), filename);
     }
     markSaved(data, 'file');
     byId('save-dialog').close();
@@ -1046,6 +1053,10 @@ byId('visited-dialog').addEventListener('close', () => {
   hideHint();
 });
 controls.favorites.addEventListener('click', showFavorites);
+initializePdfExport({
+  getReader: () => ({ corpus, session, matches: searchResult.matches }),
+  ask, message, downloadBlob, showToast,
+});
 controls.back.addEventListener('click', () => historyStep(-1));
 controls.forward.addEventListener('click', () => historyStep(1));
 controls.previous.addEventListener('click', () => readStep(-1));
