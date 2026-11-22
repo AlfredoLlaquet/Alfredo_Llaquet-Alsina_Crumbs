@@ -22,7 +22,7 @@
   <meta name="twitter:image:alt" content="TheCrumbs.org. Writing relentlessly to become the most prolific author ever. Stacks of printed pages and loose sheets on a white background.">
   <link rel="icon" type="image/x-icon" href="favicon.ico">
   <link rel="stylesheet" href="reader.css?v=20261122-pdf1">
-  <script type="module" src="reader.js?v=20261122-pdf1"></script>
+  <script type="module" src="reader.js?v=20261122-pdf2"></script>
 </head>
 <body>
   <a class="skip-link" href="#reading-pane" data-hint="Skip the controls and go directly to the current crumb.">Skip to crumb</a>
@@ -121,6 +121,7 @@
         <option value="matching">Matching crumbs</option>
         <option value="favorites">Favorites</option>
         <option value="visited">Visited</option>
+        <option value="not-visited">Not visited</option>
         <option value="list">Comma-separated list</option>
         <option value="range">Range</option>
       </select>
@@ -297,7 +298,7 @@
       </section>
       <section class="help-section">
         <h3>Export to PDF</h3>
-        <p>Select <strong>To PDF</strong>, the page icon between Favorites and Load. Export the current crumb, matching crumbs during a search, favorites, visited crumbs, or a range. A comma-separated list preserves the exact order entered, including repeats. Other selections use ascending crumb numbers.</p>
+        <p>Select <strong>To PDF</strong>, the page icon between Favorites and Load. Export the current crumb, matching crumbs during a search, favorites, or a range. <strong>Visited</strong> and <strong>Not visited</strong> use the current session’s complete visit history. A comma-separated list preserves the exact order entered, including repeats. Other selections use ascending crumb numbers.</p>
         <p>The PDF viewer’s bookmarks lead to each crumb. The optional title appears at the top of every page. During export, select <strong>Cancel</strong> to pause and choose whether to continue or cancel the export.</p>
       </section>
       <section class="help-section">
@@ -348,6 +349,7 @@
   </dialog>
   <div id="reader-messages" hidden>
     <template id="message-pdf-empty-selection">This selection contains no crumbs.</template>
+    <template id="message-pdf-all-visited">Every crumb has been visited in this session.</template>
     <template id="message-pdf-list-empty">Enter the crumb numbers in the order to export, separated by commas.</template>
     <template id="message-pdf-list-invalid">Check entry {position} (“{entry}”). Use a whole crumb number from 1 to {total}.</template>
     <template id="message-pdf-range-reversed">The ending crumb number must be at least the starting crumb number.</template>

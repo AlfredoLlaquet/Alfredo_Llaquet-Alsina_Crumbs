@@ -6,7 +6,7 @@ import {
 } from './core.js?v=20261122-pdf1';
 import { encodeSession, decodeSession, MAX_SESSION_FILE_BYTES } from './session.js?v=20261109-visited1';
 import { SearchClient } from './search.js?v=3';
-import { initializePdfExport } from './pdf-export.js?v=20261122-pdf1';
+import { initializePdfExport } from './pdf-export.js?v=20261122-pdf2';
 
 // Keep the existing key and JSON mechanism so previous browser saves remain readable.
 const STORAGE_KEY = 'thecrumbs.reader.session.v1';

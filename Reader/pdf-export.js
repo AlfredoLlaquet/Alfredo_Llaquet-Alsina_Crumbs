@@ -64,6 +64,10 @@ export function initializePdfExport({ getReader, ask, message, downloadBlob, sho
       case 'visited':
         numbers = [...session.lastVisits.keys()];
         break;
+      case 'not-visited': {
+        const remaining = corpus.filter(crumb => !session.lastVisits.has(crumb.number));
+        return remaining.length ? remaining : report(message('pdf-all-visited'), scope);
+      }
       case 'list': {
         if (!list.value.trim()) return report(message('pdf-list-empty'), list);
         const crumbs = [];
