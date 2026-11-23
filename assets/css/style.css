@@ -51,6 +51,17 @@ SOFTWARE.
 
 /* TheCrumbs.org custom styling. */
 
+.crumbs-prose {
+  font-family: "Source Serif 4", Georgia, "Times New Roman", serif;
+  font-size: 20px;
+  line-height: 1.5;
+}
+
+.markdown-body .crumbs-prose > h2 {
+  font-size: 2rem;
+  font-weight: 700;
+}
+
 .markdown-body h1,
 .markdown-body h2 {
   border-bottom: none;
@@ -189,7 +200,7 @@ html {
 
 /* Separate the desktop menu from the introductory heading. */
 @media (min-width: 601px) {
-  .markdown-body .crumbs-nav + h2 {
+  .markdown-body .crumbs-prose > h2:first-child {
     margin-top: 56px;
   }
 }
