@@ -116,7 +116,7 @@ SOFTWARE.
 }
 
 .markdown-body .crumb-volumes-table > tbody > tr > td {
-  padding: 8px 2px;
+  padding: 8px 2px 8px 8px;
   text-align: left;
 }
 
