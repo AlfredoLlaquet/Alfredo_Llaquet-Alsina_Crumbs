@@ -53,12 +53,12 @@ SOFTWARE.
 
 .crumbs-prose {
   font-family: "Source Serif 4", Georgia, "Times New Roman", serif;
-  font-size: 20px;
+  font-size: 18px;
   line-height: 1.5;
 }
 
 .markdown-body .crumbs-prose > h2 {
-  font-size: 2rem;
+  font-size: 1.7rem;
   font-weight: 700;
 }
 
@@ -117,7 +117,7 @@ SOFTWARE.
 
 .markdown-body .crumb-volumes-table > tbody > tr > td {
   padding: 8px 2px;
-  text-align: center;
+  text-align: left;
 }
 
 .markdown-body .recent-crumbs-table > tbody > tr > td {
